@@ -142,6 +142,10 @@ h6 {font-size:1.20rem;}
 .required-field {color:#BF4040;}
 .required-field:after {content: "(*)"; margin-left:0.25em;}
 
+.item-id {margin-right:0.5rem;}
+.item-id:before {content:"["}
+.item-id:after {content:"]"}
+
 /* FontAwesome icon*/
 .icon {width:1.2rem; vertical-align: middle;}
 
@@ -451,7 +455,7 @@ input:checked + .switch-slider:before {
 .btn-submit .icon, .btn-cancel .icon, .btn-modify .icon, .btn-get .icon, .btn-new .icon {color:#fff; margin-right:0.2em;}
 
 /* tag-cloud */
-.tag-cloud {margin-bottom:1.0rem; padding: 1.0rem; background: #f9f9f9;
+.tag-cloud {padding: 0.5rem 0; background: none;
     border-radius:0.5rem; 
     -o-border-radius:0.5rem; 
     -ms-border-radius:0.5rem; 
@@ -465,7 +469,7 @@ input:checked + .switch-slider:before {
     -moz-border-radius:0.5rem; 
     -webkit-border-radius:0.5rem;
 }
-.tag:before {content:"#"; margin-right: 0.3rem;}
+/* .tag:before {content:"#"; margin-right: 0.3rem;} */
 .tag-point:before {content:"("; margin-left:0.2rem;}
 .tag-point:after {content:")";}
 .tag-for-remove a {position:relative;}
@@ -534,6 +538,8 @@ input:checked + .switch-slider:before {
 /*--------------------------------------------------*//* Graphic */
 
 /* img-embed */
+.img-embed-pure img {max-width: 30.0rem;}
+.img-embed-pure.img-w-100 img {width:10.0rem;}
 .img-embed-wrap {position: relative; width: 100%; vertical-align: middle; background:#f6f6f6; overflow: hidden;}
 .img-embed-ratio {padding-top: 75.00%;}  /* is flexable for 4:3 common image */
 .img-embed-code {position: absolute; top: 0; left:0; width: 100%; height: 100%; text-align: center;}
