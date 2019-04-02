@@ -1,0 +1,164 @@
+/*--------------------------------------------------*//* 1024px */
+@media screen and (max-width: 1024px){
+
+    /* Scroll bar */
+    html {-webkit-overflow-scrolling:touch;}
+    
+    /* layout */
+    #article-subside {display:none;}
+    
+    #main-article.article-subside-on #article-content {margin-left:0;}
+    #main-article.article-subside-on + #footer {margin-left:20.0rem;}
+    
+    #main-article.article-subside-on .article-subside-switch {display:block;}
+    #main-article.article-subside-on .article-subside-switch-open {display: block;}
+    #main-article.article-subside-on .article-subside-switch-close {display: none;}
+    
+    /* #header-gnb */
+    .gnb-menu .gnb-search-switch {display:inline-block;}
+    .gnb-menu .gnb-menu-1d li a .menu-title {display: none;} 
+    .gnb-search {display:none; position: absolute; top: 4rem; right:1.0rem; background: #fff;
+        box-shadow: 0 0.3rem 0.5rem 0 rgba(0,0,0,0.3);
+        -ms-box-shadow: 0 0.3rem 0.5rem 0 rgba(0,0,0,0.3);
+        -moz-box-shadow: 0 0.3rem 0.5rem 0 rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0 0.3rem 0.5rem 0 rgba(0,0,0,0.3);
+    }
+}
+
+/*--------------------------------------------------*//* 768px */
+@media screen and (max-width: 768px){ 
+    
+    /* font size */
+    html {font-size: 68.75%; 
+    -webkit-text-size-adjust: none; 
+    -moz-text-size-adjust: none; 
+    -ms-text-size-adjust: none;
+    }
+    
+     /* width, height */
+    .w-ls {width:100%;}
+    .w-lm {width:100%;}
+    .w-ll {width:100%;}
+    .w-xls {width:100%;}
+    .w-xlm {width:100%;}
+    .w-xll {width:100%;}
+    
+    /* layout */
+    #body-wrap {min-width:320px;} 
+    #header-gnb {background:#292e3d; min-width:320px;} 
+    #nav-sidebar {left:-20.0rem; z-index:201;}
+    #main-article {margin-left:0;}
+    #article-subside {position: relative; top: 0; width: 100%; padding-bottom: 1.0rem}
+    #article-content {}
+    #footer {margin-left:0;}
+    
+    #main-article.article-subside-on + #footer {margin-left:0;}
+    
+    .nav-sidebar-switch {display:block;}
+    .article-subside-switch {position:absolute; top: 0; left: inherit; right: 0;}
+    .article-subside-switch-open:before {content: "\f13a";}
+    .article-subside-switch-close:before {content: "\f139";}
+    
+    /* #header-gnb */
+    .gnb-identity .gnb-logo {width:inherit; padding-left: 4.0rem; background:none;}
+    .gnb-identity .gnb-logo a {text-align: left;}
+    .gnb-identity .gnb-subtitle {display:none;}
+    .gnb-identity .gnb-subtitle-img {display:none;}
+    .gnb-menu .gnb-menu-2d {background:#292e3d;}
+    .gnb-menu .gnb-menu-2d li a {color:#fff;}
+    .gnb-search {right:0; width:100%; background: #292e3d;}
+    
+    /* #article-subside */
+    .subside-wrap {padding-bottom: 1.0rem;}
+    
+    /* #article-content */
+    .con-wrap {padding:2.0rem 1.0rem 1.0rem 1.0rem;}
+    .con-body {padding:1.0rem;}
+    
+    /* grid */
+    .grid-2n li {width:48%;}
+    .grid-3n li {width:31.33%;}
+    .grid-4n li {width:48%;}
+    .grid-6n li {width:31.33%;}
+    
+    /* login page */
+    .login-body {font-size: 1.2rem;}
+    .login-body-bg-video {display:none;}
+    .login-body #footer {position: relative;}
+    
+    }
+
+/*--------------------------------------------------*//* 480px */
+@media screen and (max-width: 480px){
+    
+    /* font size */
+    html {font-size: 75.0%;} 
+    
+    /* #header-gnb */
+    .gnb-identity {max-width:50%;}
+    
+    /* #article-content */
+    .con-wrap {padding:2.0rem 0 1.0rem 0}
+    .con-header {padding:0 1.0rem}
+    .con-body {
+        border-radius: 0;
+        -o-border-radius: 0;
+        -ms-border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        }
+    
+    /* label-box */ 
+    .label-box-item-label {float: left; display: block; width:100%; border-bottom: none;}
+    .label-box-item-desc {float: left; display: block; width:100%;}
+    .label-col-2 .label-box-item-label {width: 100%;}
+    
+    /* grid */
+    .grid ul {margin-right: 0;}
+    .grid li {margin-right: 0;}
+    .grid-2n li {width:100%;}
+    .grid-3n li {width:100%;}
+    .grid-4n li {width:100%;}
+    .grid-6n li {width:100%;}
+    .grid-2n-2x1 li.grid-2n-2x1-2 {width:100%;}
+    .grid-2n-2x1 li.grid-2n-2x1-1 {width:100%;}
+    
+    /* status-board */
+    .grid .status-board li {margin-right: 0.5rem;}
+    
+    /* chart */
+    .chart-embed-ratio {padding-top:100.00%;} /* is default */
+    .chart-embed-ratio-1x1 {padding-top:100.00%;} /* is 1:1 */
+    .chart-embed-ratio-2x1 {padding-top:100.00%;} /* is 2:1 */
+    .chart-embed-ratio-3x2 {padding-top:100.00%;} /* is 3:2 */
+    
+    /* media-list */
+        /* media-list (skin.css의 grid > media-list 와 responsive.css 480px > media-list와 같음) */
+        .media-list-item {display: block; width: 100%;}
+        .media-list-item-check {display: block;}
+        .media-list-item-img {display: block; padding:0 0.5rem 0.5rem 0.5rem;} 
+        .media-list-item-info {display: block;}
+        
+        .media-list-item .media-list-item-img {width: 100%; height: 100%;}
+        .media-list-item .media-list-item-img.profile-image {width: 50%; height: 50%; margin: 0 auto;}
+        .media-list-item .media-list-item-img.video-thumbnail {width: 100%; height: 100%;}
+    
+    /* table */
+    .sub-info {display: none;}
+    
+    /* list-option */
+    .list-option-filter {padding:1.0rem;}
+    .list-option-filter > li {display:block; border-right:none; padding:0;} 
+    
+    /* pagenation */
+    .pagenation button {margin-left:0; margin-right: 0;}
+
+    /* layer */
+    .layer-info .layer-body .con-sector p {font-size: 2.4rem;}
+    .layer-info .layer-body .con-sector .submit button {font-size: 1.4rem;}
+    .layer-blocking-browser .layer-body h1 {font-size: 2.4rem;}
+    
+    /* login page */
+    .login-box {width:100%; max-width: 100%; padding:2.0rem;}
+    .login-box h1 {font-size:4.0rem; margin-bottom: 2.0rem;}
+}

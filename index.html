@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article">
+			<p>index</p>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
