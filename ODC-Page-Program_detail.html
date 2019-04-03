@@ -44,19 +44,23 @@
 					</div>
 					<div class="con-body-tabs">
 						<ul class="con-body-tabs-menu scroll-customed">
-							<li><a>Program setting</a></li>
-							<li><a>Episode management</a></li>
+							<li><a>Program DB Setting</a></li>
+							<li><a>Program Publish Setting</a></li>
+							<li><a>Episode Management</a></li>
 						</ul>
-						
-						<!-- program tab start -->
-						<div class="con-body con-body-tabs-content" href="program">
+						<!-- program DB tab start -->
+						<div class="con-body con-body-tabs-content">
 							<div class="con-sector">
 								<table class="label-box">
 									<tbody>
 										<tr>
 											<th class="label-box-item-label required-field">program-DB</th>
 											<td class="label-box-item-desc">
-												<button type="button" class="btn-get">select program-DB</button>
+												<p>
+													<button type="button" class="btn-get">select program-DB</button>
+													<button type="button" class="btn-new">create program-DB</button>
+												</p>
+												<p class="info-message">If there is no program-DB that you need, create new item.</p>
 												<p>
 													<ul class="simple-list">
 						  								<li>
@@ -67,6 +71,297 @@
 						  						</p>
 											</td>
 										</tr>
+									</tbody>
+								</table>
+							</div>
+							<p class="info-message">program-DB를 select하거나, create program-DB를 create하면 (빈 값으로) 아래쪽 container가 나타남</p>
+							
+							<p class="warning-message">This field is linked to Library > DB > Program. Be careful, because it may affect other services that use that DB too.</p>
+							<div class="con-sector">
+								<div class="tabs">
+									<ul class="tabs-menu scroll-customed">
+										<li><a>Engilsh</a></li>
+										<li><a>简体中文</a></li>
+										<li><a>$language name</a></li>
+									</ul>
+									<div class="tabs-content">
+										<table class="label-box">
+											<tbody>
+												<tr>
+													<th class="label-box-item-label required-field">program title</th>
+													<td class="label-box-item-desc">
+														<input class="w-lm" type="text" placeholder="input program title" name=""/>
+													</td>
+												</tr>
+												<tr>
+													<th class="label-box-item-label required-field">program synop</th>
+													<td class="label-box-item-desc">
+														<textarea rows="3" cols="" class="w-100per"></textarea>
+													</td>
+												</tr>
+												<tr>
+													<th class="label-box-item-label required-field">poster</th>
+													<td class="label-box-item-desc">
+														<p class="item-group">
+															<button type="button" class="file-input-replace btn-new">File Upload</button>
+															<span>$imported file name</span>
+														</p>
+														<div class="img-embed-pure img-w-100">
+									            			<img src="resource/image/sample-poster-1.jpg" />
+								            			</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tabs-content">tabs-content-2</div>
+									<div class="tabs-content">tabs-content-3</div>
+								</div>
+								<table class="label-box">
+									<tbody>
+										<tr>
+											<th class="label-box-item-label required-field">genre</th>
+											<td class="label-box-item-desc">
+												<table class="input-btn-group">
+													<tr>
+														<td class="input-btn-group-input input-dropdown w-ls">
+															<input class="input-dropdown-input" type="text" placeholder="search and add" />
+															<ul class="input-dropdown-result scroll-customed">
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$genre name</span>
+	
+																</li>
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$genre name</span>
+																</li>
+															</ul>
+															
+														</td>
+														<td class="input-btn-group-button">
+															<button class="btn-new">add</button>
+														</td>
+													</tr>
+												</table>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$genre name</span>
+													</a>
+													<a>
+														<span class="tag">$genre name</span>
+													</a>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">director</th>
+											<td class="label-box-item-desc">
+												<table class="input-btn-group">
+													<tr>
+														<td class="input-btn-group-input input-dropdown w-ls">
+															<input class="input-dropdown-input" type="text" placeholder="search and add" />
+															<ul class="input-dropdown-result scroll-customed">
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+															</ul>
+															
+														</td>
+														<td class="input-btn-group-button">
+															<button class="btn-new">add</button>
+														</td>
+													</tr>
+												</table>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$people name</span>
+													</a>
+													<a>
+														<span class="tag">$people name</span>
+													</a>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">writer</th>
+											<td class="label-box-item-desc">
+												<table class="input-btn-group">
+													<tr>
+														<td class="input-btn-group-input input-dropdown w-ls">
+															<input class="input-dropdown-input" type="text" placeholder="search and add" />
+															<ul class="input-dropdown-result scroll-customed">
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+															</ul>
+															
+														</td>
+														<td class="input-btn-group-button">
+															<button class="btn-new">add</button>
+														</td>
+													</tr>
+												</table>
+												<p class="tag-cloud tag-for-remove">
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">cast</th>
+											<td class="label-box-item-desc">
+												<table class="input-btn-group">
+													<tr>
+														<td class="input-btn-group-input input-dropdown w-ls">
+															<input class="input-dropdown-input" type="text" placeholder="search and add" />
+															<ul class="input-dropdown-result scroll-customed">
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+															</ul>
+															
+														</td>
+														<td class="input-btn-group-button">
+															<button class="btn-new">add</button>
+														</td>
+													</tr>
+												</table>
+												<p class="tag-cloud tag-for-remove">
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">staff</th>
+											<td class="label-box-item-desc">
+												<table class="input-btn-group">
+													<tr>
+														<td class="input-btn-group-input input-dropdown w-ls">
+															<input class="input-dropdown-input" type="text" placeholder="search and add" />
+															<ul class="input-dropdown-result scroll-customed">
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+																<li>
+																	<span class="item-id">12345</span>
+																	<span>$people name</span>
+																</li>
+															</ul>
+															
+														</td>
+														<td class="input-btn-group-button">
+															<button class="btn-new">add</button>
+														</td>
+													</tr>
+												</table>
+												<p class="tag-cloud tag-for-remove">
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">country</th>
+											<td class="label-box-item-desc">
+												<select>
+													<option>select conutry</option>
+													<option>$country library</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">content provider</th>
+											<td class="label-box-item-desc">
+												<input class="w-lm" type="text" placeholder="input content provider name" name=""/>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">production</th>
+											<td class="label-box-item-desc">
+												<input class="w-lm" type="text" placeholder="input production name" name=""/>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">program type</th>
+											<td class="label-box-item-desc">
+												<p>
+													<label>
+														<input type="radio" >one main content
+													</label>
+												</p>
+												<p>
+													<label>
+														<input type="radio" checked>serise episode
+													</label>
+													<label class="item-group-label">total episode quantity
+														<input class="w-sm" type="text" name=""/>
+													</label>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">release</th>
+											<td class="label-box-item-desc">
+												<div class="datepicker">
+													<label>start
+														<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+													</label>
+													<label>end
+													<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+													</label>
+												</div>
+												<label>on-air day of week
+													<select>
+														<option>select day</option>
+														<option>$monday</option>
+													</select>
+												</label>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">ageRating</th>
+											<td class="label-box-item-desc">
+												<select>
+													<option>select ageRating</option>
+													<option>$name</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">data status</th>
+											<td class="label-box-item-desc">
+												<label><input type="radio" checked>draft</label>
+												<label><input type="radio">edited</label>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<ul class="submit">
+									<li><button type="button" class="btn-cancel">Cancel</button></li>
+									<li><button type="button" class="btn-submit">Save</button></li>
+								</ul>
+								<p class="font-ml">
+									<a href="library-ContentDB-Program.html" class="font-lm">back to list</a>
+								</p>
+							</div>
+						</div>
+						<!-- program Publish tab start -->
+						<div class="con-body con-body-tabs-content">
+							<div class="con-sector">
+								<table class="label-box">
+									<tbody>
 										<tr>
 											<th class="label-box-item-label required-field">program name</th>
 											<td class="label-box-item-desc">
