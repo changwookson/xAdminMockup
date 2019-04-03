@@ -276,9 +276,10 @@ h6 {font-size:1.20rem;}
 .sidebar-menu a {color: #fff; font-weight:100;}
 .sidebar-menu a:hover {text-decoration: none;}
 .sidebar-menu-group {margin-bottom: 1.0rem;}
-.sidebar-menu-group h3 {padding: 0.5rem 1.0rem 0.5rem 1.5rem; font-size: 1.5rem; color:#bbb;}
+.sidebar-menu-group h3 {padding: 0.5rem 1.0rem 0.5rem 1.5rem; font-size: 1.6rem; color:#5cadd6;}
 
-.sidebar-menu-1d li a {position:relative; display:block; padding: 0.8rem 1.0rem 0.8rem 1.5rem;}
+.sidebar-menu-1d {margin-bottom: 1.0rem}
+.sidebar-menu-1d li a {position:relative; display:block; padding: 0.8rem 1.0rem 0.8rem 1.5rem; font-size:1.3rem;}
 .sidebar-menu-1d li a:hover {padding-left:1.3rem; background:#5CADD6; border-left:0.2rem solid #fff;}
 .sidebar-menu-1d li a .icon {margin-right:0.5rem; vertical-align: inherit;}
 .sidebar-menu-1d li .include-2d:after {float: right; font-family: 'FontAwesome'; content: "\f107"; margin-left: 0.5rem; padding: 0.3rem; }
@@ -286,7 +287,7 @@ h6 {font-size:1.20rem;}
 
 .sidebar-menu-2d li a {padding:0.8rem 1.0rem 0.8rem 3.0rem; font-size:1.1rem;}
 .sidebar-menu-2d li a:hover {padding-left:2.8rem;}
-.sidebar-menu-2d li a:before {font-family: 'FontAwesome'; content: "\f105"; margin-right:0.5rem;}
+/*.sidebar-menu-2d li a:before {font-family: 'FontAwesome'; content: "\f105"; margin-right:0.5rem;}*/
 .sidebar-menu-2d li .current {background: #1f222e; background: #3d455c; padding-left:2.8rem;}
 
 .sidebar-menu-badge {float: right; max-width:4.0rem; overflow: hidden; margin-left: 0.5rem; padding:0.2rem 0.5rem; vertical-align: inherit; background:#bf4040; font-size:1.0rem; color:#fff;
@@ -348,7 +349,7 @@ h6 {font-size:1.20rem;}
 .con-body-tabs-content {}
 
 /* tabs */
-.tabs {overflow: hidden; margin-bottom:1.0rem; border:0.1rem solid #ddd; background:#f6f6f6;}
+.tabs {overflow: hidden; margin-bottom:1.0rem; border:0.1rem solid #aaa; background:#f6f6f6;}
 .tabs-menu {position: relative; overflow: visible; white-space: nowrap; overflow-y: auto;}
 .tabs-menu > li {position: relative; display:table-cell;}
 .tabs-menu > li > a {display: block; padding: 0.7rem 1.0rem; color:#222; font-size:1.4rem;}

@@ -85,14 +85,14 @@ $(document).ready(function(){
 
 // sidebar-menu
 $(document).ready(function(){
-    $('.sidebar-menu-2d:not(.opened)').hide();
+    //$('.sidebar-menu-2d:not(.opened)').hide();
 	$('.sidebar-menu-1d-li-a').click(function(){
 		$('.sidebar-menu-2d').removeClass('opened');
 	    $('.sidebar-menu-1d-li-a').removeClass('current');
 	    $('.sidebar-menu-2d-li-a').removeClass('current');
 	    $(this).parents().children('.sidebar-menu-2d:not(.opened)').slideToggle('fast').addClass('opened');
 	    $(this).addClass('current');
-	    $('.sidebar-menu-2d:not(.opened)').hide();
+	    //$('.sidebar-menu-2d:not(.opened)').hide();
 	});
 	$('.sidebar-menu-2d-li-a').click(function(){
 		$('.sidebar-menu-1d-li-a').removeClass('current');
@@ -114,10 +114,11 @@ $(document).ready(function(){
 		var navMenu2dHref = $(this).attr('href');
 		if (recentUrl.indexOf(navMenu2dHref) >= 0){
 			$(this).addClass('current');
-			$(this).parents().children('.sidebar-menu-2d:not(.opened)').slideToggle('fast').addClass('opened');
+			//$(this).parents().children('.sidebar-menu-2d:not(.opened)').slideToggle('fast').addClass('opened');
 		}
 	});
 });
+
 
 //------------------ Tabs------------------// 
 

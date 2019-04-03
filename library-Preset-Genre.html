@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Content DB</span>
-							<span>Program</span>
+							<span>Preset</span>
+							<span>Genre</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -47,24 +47,9 @@
 								<ul class="list-option-filter">
 									<li>
 										<select>
-											<option>involved status</option>
-											<option>involved</option>
-											<option>uninvolved</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>on-air status</option>
-											<option>on-air</option>
-											<option>complete</option>
-											<option>coming soon</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>data status</option>
-											<option>draft</option>
-											<option>edited</option>
+											<option>active status</option>
+											<option>active</option>
+											<option>inactive</option>
 										</select>
 									</li>
 									<li>
@@ -73,8 +58,8 @@
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>program-DB name</option>
-															<option>program-DB ID</option>
+															<option>genre name</option>
+															<option>genre ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -112,11 +97,8 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
-											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-ms sub-info">involved status</th>
-											<th class="w-ms sub-info">on-air status</th>
-											<th class="w-ms sub-info">data status</th>
+											<th class="w-ms sub-info">active status</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -124,22 +106,11 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
 											<td>
-												<a href="#">$program-DB name</a>
+												<a href="#">romance</a>
 											</td>
-											<td class="sub-info">involved</td>
-											<td class="sub-info">on-air</td>
-											<td class="sub-info">edited</td>
-											<td class="sub-info">
+											<td class="w-ms sub-info">active</td>
+											<td class="w-ms sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -149,22 +120,11 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-2.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
 											<td>
-												<a href="#">$program-DB name</a>
+												<a href="#">comedy</a>
 											</td>
-											<td class="sub-info">uninvolved</td>
-											<td class="sub-info">complete</td>
-											<td class="sub-info">draft</td>
-											<td class="sub-info">
+											<td class="w-ms sub-info">inactive</td>
+											<td class="w-ms sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -194,7 +154,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-ContentDB-Program_detail.html" class="font-lm">open detail page</a>
+								<a href="library-Preset-Genre_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
