@@ -323,6 +323,7 @@ h6 {font-size:1.20rem;}
 }
 .con-body.grid {padding:0; margin-bottom:1.0rem; background:none; border:none;}
 .con-sector {position: relative; margin-bottom: 2.0rem;}
+.con-sector.import-field {padding:1.0rem; border: 1px solid #BFAA40;}
 .con-sector-title {margin-bottom:1.0rem;}
 .con-sector-title:before {font-family: 'FontAwesome'; content: "\f041"; margin-right:0.5rem;}
 
