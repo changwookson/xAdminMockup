@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>ODC</span>
+							<span>Page</span>
+							<span>Program</span>
+							<span>$episode ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">video asset</th>
+										<td class="label-box-item-desc">
+											<button type="button" class="btn-get">select video asset</button>
+											<p>
+												<ul class="simple-list">
+					  								<li>
+					  									<span class="item-id">12345</span>
+					  									<span>$selected video asset name</span>
+					  								</li>
+					  							</ul>
+					  						</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">subtitle asset</th>
+										<td class="label-box-item-desc">
+											<button type="button" class="btn-get">add subtitle asset</button>
+											<p>
+												<ul class="simple-list">
+					  								<li>
+					  									<a><span class="simple-list-remove"></span></a>
+					  									<span class="item-id">12345</span>
+					  									<span class="item-id">$code</span>
+					  									<span>$subtitle name</span>
+					  								</li>
+					  								<li>
+					  									<a><span class="simple-list-remove"></span></a>
+					  									<span class="item-id">12345</span>
+					  									<span class="item-id">$code</span>
+					  									<span>$subtitle name</span>
+					  								</li>
+					  							</ul>
+					  						</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label required-field">episode name</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input episode name by english" name=""/>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">custom slug</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input custom slug" name=""/>
+											<p>
+												<span class="warning-message">slug can only be English and numbers, not spaces.</span>
+											</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="tabs">
+								<ul class="tabs-menu scroll-customed">
+									<li><a>Engilsh</a></li>
+									<li><a>简体中文</a></li>
+									<li><a>$language name</a></li>
+								</ul>
+								<div class="tabs-content">
+									<table class="label-box">
+										<tbody>
+											<tr>
+												<th class="label-box-item-label">episode title</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input episode title" name=""/>
+												</td>
+											</tr>
+											<tr>
+												<th class="label-box-item-label">episode synop</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input episode synop" name=""/>
+												</td>
+											</tr>
+											</tr>
+											<tr>
+												<th class="label-box-item-label">custom SEO title</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input custom SEO title" name=""/>
+												</td>
+											</tr>
+											<tr>
+												<th class="label-box-item-label">custom SEO description</th>
+												<td class="label-box-item-desc">
+													<textarea rows="3" cols="" class="w-100per"></textarea>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs-content">tabs-content-2</div>
+								<div class="tabs-content">tabs-content-3</div>
+							</div>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label">episode cast</th>
+										<td class="label-box-item-desc">
+											<table class="input-btn-group">
+												<tr>
+													<td class="input-btn-group-input input-dropdown w-ls">
+														<input class="input-dropdown-input" type="text" placeholder="search and add" />
+														<ul class="input-dropdown-result scroll-customed">
+															<li>
+																<span class="item-id">12345</span>
+							  									<span>$people name</span>
+															</li>
+															<li>
+																<span class="item-id">12345</span>
+							  									<span>$people name</span>
+															</li>
+														</ul>
+														
+													</td>
+													<td class="input-btn-group-button">
+														<button class="btn-new">add</button>
+													</td>
+												</tr>
+											</table>
+											<p class="tag-cloud tag-for-remove">
+												<a>
+													<span class="tag">$people name</span>
+												</a>
+												<a>
+													<span class="tag">$people name</span>
+												</a>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label required-field">episode type</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio">trailer</label>
+											<label><input type="radio">additional clip</label>
+											<label><input type="radio">main (not serise)</label>
+											<label><input type="radio" checked>a episode (in serise)</label>
+											<label class="item-group-label">episode number
+												<input class="w-sm" type="text" name=""/>
+											</label>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">release date</th>
+										<td class="label-box-item-desc">
+											<div class="datepicker">
+												<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">publish schedule</th>
+										<td class="label-box-item-desc">
+											<p>
+												<label><input type="radio" checked>depend on program schedule</label>
+												<label><input type="radio">manual</label>
+											</p>
+											<div class="datepicker">
+												<label>start
+													<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+												</label>
+												<label>end
+													<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+												</label>
+											</div>
+											<p>
+												<label><input type="checkbox">no expired</label>
+												<label><input type="checkbox">pause publish</label>
+												<label><input type="checkbox">publish in 'scheduled' status</label>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">allowed region</th>
+										<td class="label-box-item-desc">
+											<p>
+												<label><input type="radio" checked>depend on program</label>
+												<label><input type="radio">manual</label>
+											</p>
+											<p>
+												<label><input type="radio" checked>white list</label>
+												<label><input type="radio">black list</label>
+											</p>
+											<p>
+												<select>
+													<option>select region</option>
+													<option>$region</option>
+												</select>
+												<button type="button" class="btn-new">add</button>
+											</p>
+											<p class="tag-cloud tag-for-remove">
+												<a>
+													<span class="tag">$region name</span>
+												</a>
+												<a>
+													<span class="tag">$region name</span>
+												</a>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">ageRating</th>
+										<td class="label-box-item-desc">
+											<p>
+												<label><input type="radio" checked>depend on program</label>
+												<label><input type="radio">manual</label>
+											</p>
+											<select>
+												<option>select ageRating</option>
+												<option>$name</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">data status</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" checked>draft</label>
+											<label><input type="radio">edited</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<ul class="submit">
+								<li><button type="button" class="btn-cancel">Cancel</button></li>
+								<li><button type="button" class="btn-submit">Save</button></li>
+							</ul>
+							<p>
+								<a id="open-video-asset-list-modal" class="font-lm">open video asset list modal</a>
+								<script type="text/javascript">
+									$('#open-video-asset-list-modal').click(function(){
+										$('#video-asset-list-modal').show().animate({right:'0'});
+								    });
+								</script>
+							</p>
+							<p>
+								<a id="open-subtitle-asset-list-modal" class="font-lm">open subtitle asset list modal</a>
+								<script type="text/javascript">
+									$('#open-subtitle-asset-list-modal').click(function(){
+										$('#subtitle-asset-list-modal').show().animate({right:'0'});
+								    });
+								</script>
+							</p>
+							<p>
+								<a href="ODC-Page-Program_detail.html" class="font-lm">back to list</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+			<!--layer-detail-sample start-->
+			<div id="video-asset-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>video-asset-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>video asset name</option>
+															<option>video asset ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-ss"><input type="checkbox" /></th>
+											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
+											<th>name</th>
+											<th class="w-ms sub-info">involved status</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$video asset name</a>
+											</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$video asset name</a>
+											</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="subtitle-asset-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>subtitle-asset-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>subtitle asset name</option>
+															<option>subtitle asset ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-ss"><input type="checkbox" /></th>
+											<th class="w-sl">ID</th>
+											<th>name</th>
+											<th class="w-sl">language</th>
+											<th class="w-ms sub-info">involved status</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td>
+												<a href="#">$subtitle asset name</a>
+											</td>
+											<td class="sub-info">$language name</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td>
+												<a href="#">$subtitle asset name</a>
+											</td>
+											<td class="sub-info">$language name</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--layer-detail-sample end-->
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

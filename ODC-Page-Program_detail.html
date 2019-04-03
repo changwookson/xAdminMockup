@@ -39,241 +39,398 @@
 							<span>ODC</span>
 							<span>Page</span>
 							<span>Program</span>
-							<span>$Program-Page ID</span>
+							<span>$program ID</span>
 						</h1>
 					</div>
-					<div class="con-body">
-						<div class="con-sector">
-							<table class="label-box">
-								<tbody>
-									<tr>
-										<th class="label-box-item-label required-field">Program-DB</th>
-										<td class="label-box-item-desc">
-											<table class="input-btn-group">
+					<div class="con-body-tabs">
+						<ul class="con-body-tabs-menu scroll-customed">
+							<li><a>Program setting</a></li>
+							<li><a>Episode management</a></li>
+						</ul>
+						
+						<!-- program tab start -->
+						<div class="con-body con-body-tabs-content" href="program">
+							<div class="con-sector">
+								<table class="label-box">
+									<tbody>
+										<tr>
+											<th class="label-box-item-label required-field">program-DB</th>
+											<td class="label-box-item-desc">
+												<button type="button" class="btn-get">select program-DB</button>
+												<p>
+													<ul class="simple-list">
+						  								<li>
+						  									<span class="item-id">12345</span>
+						  									<span>$selected program-DB name</span>
+						  								</li>
+						  							</ul>
+						  						</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">program name</th>
+											<td class="label-box-item-desc">
+												<input class="w-lm" type="text" placeholder="input program name by english" name=""/>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">custom slug</th>
+											<td class="label-box-item-desc">
+												<input class="w-lm" type="text" placeholder="input custom slug" name=""/>
+												<p>
+													<span class="warning-message">slug can only be English and numbers, not spaces.</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">additional information</th>
+											<td class="label-box-item-desc">
+												<input class="w-lm" type="text" placeholder="" name=""/>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="tabs">
+									<ul class="tabs-menu scroll-customed">
+										<li><a>Engilsh</a></li>
+										<li><a>简体中文</a></li>
+										<li><a>$language name</a></li>
+									</ul>
+									<div class="tabs-content">
+										<table class="label-box">
+											<tbody>
 												<tr>
-													<td class="input-btn-group-input input-dropdown w-ls">
-														<input class="input-dropdown-input" type="text" placeholder="search and select" />
-														<ul class="input-dropdown-result scroll-customed">
-															<li>
-																<span class="item-id">12345</span>
-																<span>$program-DB name</span>
-															</li>
-															<li>
-																<span class="item-id">12345</span>
-																<span>$program-DB name</span>
-															</li>
-														</ul>
-														
-													</td>
-													<td class="input-btn-group-button">
-														<button class="btn-new">select</button>
+													<th class="label-box-item-label">custom SEO title</th>
+													<td class="label-box-item-desc">
+														<input class="w-lm" type="text" placeholder="input custom SEO title" name=""/>
 													</td>
 												</tr>
-											</table>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label required-field">Program-page name</th>
-										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input program-page name by english" name=""/>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">Custom slug</th>
-										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input custom slug" name=""/>
-											<p>
-												<span class="warning-message">slug can only be English and numbers, not spaces.</span>
-											</p>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">Additional infomation</th>
-										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="" name=""/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="tabs">
-								<ul class="tabs-menu scroll-customed">
-									<li><a>Engilsh</a></li>
-									<li><a>简体中文</a></li>
-									<li><a>$language name</a></li>
+												<tr>
+													<th class="label-box-item-label">custom SEO description</th>
+													<td class="label-box-item-desc">
+														<textarea rows="3" cols="" class="w-100per"></textarea>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tabs-content">tabs-content-2</div>
+									<div class="tabs-content">tabs-content-3</div>
+								</div>
+								<table class="label-box">
+									<tbody>
+										<tr>
+											<th class="label-box-item-label">episode list order</th>
+											<td class="label-box-item-desc">
+												<label><input type="radio" checked>newest</label>
+												<label><input type="radio">oldest</label>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">episode list year filter</th>
+											<td class="label-box-item-desc">
+												<label class="switch">
+												  	<input type="checkbox">
+													  	<span class="switch-slider"> </span>
+												</label>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">supported subtitle</th>
+											<td class="label-box-item-desc">
+												<p>
+													<select>
+														<option>select language</option>
+														<option>$language name</option>
+													</select>
+													<button type="button" class="btn-new">add</button>
+												</p>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$language name</span>
+													</a>
+													<a>
+														<span class="tag">$language name</span>
+													</a>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">parent category</th>
+											<td class="label-box-item-desc">
+												<p>
+													<select>
+														<option>select category</option>
+														<option>$category name</option>
+													</select>
+													<button type="button" class="btn-new">add</button>
+												</p>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$category name</span>
+													</a>
+													<a>
+														<span class="tag">$category name</span>
+													</a>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">publish schedule</th>
+											<td class="label-box-item-desc">
+												<div class="datepicker">
+													<label>start
+														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+													</label>
+													<label>end
+														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+													</label>
+												</div>
+												<p>
+													<label><input type="checkbox">no expired</label>
+													<label><input type="checkbox">pause publish</label>
+													<label><input type="checkbox">publish in 'scheduled' status</label>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label required-field">allowed region</th>
+											<td class="label-box-item-desc">
+												<p>
+													<label><input type="radio" checked>white list</label>
+													<label><input type="radio">black list</label>
+												</p>
+												<p>
+													<select>
+														<option>select region</option>
+														<option>$region</option>
+													</select>
+													<button type="button" class="btn-new">add</button>
+												</p>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$region name</span>
+													</a>
+													<a>
+														<span class="tag">$region name</span>
+													</a>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">CP</th>
+											<td class="label-box-item-desc">
+												<select>
+													<option>select CP</option>
+													<option>$CP name</option>
+												</select>
+												<input class="w-mm" type="text" placeholder="license code" name=""/>
+												<input class="w-mm" type="text" placeholder="tracking code" name=""/>
+											</td>
+										</tr>
+										<tr>
+											<th class="label-box-item-label">data status</th>
+											<td class="label-box-item-desc">
+												<label><input type="radio" checked>draft</label>
+												<label><input type="radio">edited</label>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<ul class="submit">
+									<li><button type="button" class="btn-cancel">Cancel</button></li>
+									<li><button type="button" class="btn-submit">Save</button></li>
 								</ul>
-								<div class="tabs-content">
-									<table class="label-box">
+								<p>
+									<a id="open-program-DB-list-modal" class="font-lm">open program-DB list modal</a>
+									<script type="text/javascript">
+										$('#open-program-DB-list-modal').click(function(){
+											$('#program-DB-list-modal').show().animate({right:'0'});
+									    });
+									</script>
+								</p>
+								<p class="font-ml">
+									<a href="ODC-Page-Program.html" class="font-lm">back to list</a>
+								</p>
+							</div>
+						</div>
+						
+						<!-- episode tab start -->
+						
+						<div class="con-body con-body-tabs-content"  id="episode">
+							<div class="con-sector">
+								<div class="list-option">
+									<ul class="list-option-filter">
+										<li>
+											<select>
+												<option>publish status</option>
+												<option>unscheduled</option>
+												<option>scheduled</option>
+												<option>published</option>
+												<option>expired</option>
+												<option>paused</option>
+											</select>
+										</li>
+										<li>
+											<select>
+												<option>data status</option>
+												<option>draft</option>
+												<option>edited</option>
+											</select>
+										</li>
+										<li>
+											<table class="search-bar">
+												<tbody>
+													<tr>
+														<td class="search-bar-option">
+															<select>
+																<option>episode name</option>
+																<option>episode ID</option>
+															</select>
+														</td>
+														<td class="search-bar-input">
+															<input type="search" placeholder="keyword"/>
+														</td>
+														<td class="search-bar-btn">
+															<button type="button"><span class="icon fa fa-search"></span></button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</li>
+										<li>
+											<button type="button" class="btn-submit">filter apply</button>
+										</li>
+									</ul>
+									<ul class="list-option-action">
+										<li>
+											<button type="button" class="btn-new">
+												<span class="icon fa fa-plus"></span>
+						            			<span>create</span>
+											</button>
+										</li>
+										<li>
+											<button type="button" class="btn-cancel">
+												<span class="icon fa fa-times"></span>
+						            			<span>remove</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+								<div class="table-wrap scroll-customed">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="w-ss"><input type="checkbox" /></th>
+												<th class="w-sl">ID</th>
+												<th class="w-sl">image</th>
+												<th>name</th>
+												<th class="w-ms sub-info">episode type</th>
+												<th class="w-ms sub-info">number</th>
+												<th class="w-ms sub-info">publish status</th>
+												<th class="w-ms sub-info">schedule</th>
+												<th class="w-ms sub-info">date</th>
+												<th class="w-sl">video asset</th>
+											</tr>
+										</thead>
 										<tbody>
 											<tr>
-												<th class="label-box-item-label">custom SEO title</th>
-												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input custom SEO title" name=""/>
+												<td><input type="checkbox" /></td>
+												<td>123456789</td>
+												<td class="table-list-item-img video-thumbnail">
+													<div class="img-embed-wrap">
+														<div class="img-embed-ratio">
+															<div class="img-embed-code">
+																<img src="resource/image/sample-video-thumbnail-1.jpg" />
+															</div>
+														</div>
+													</div>
 												</td>
+												<td>
+													<a href="#">$episode name</a>
+												</td>
+												<td class="sub-info">main</td>
+												<td class="sub-info">-</td>
+												<td class="sub-info">
+													<p>published</p>
+												</td>
+												<td class="sub-info">
+													<p class="td-desc">
+														<span>MM-DD-YYYY hh:mm:ss</span>
+													</p>
+													<p class="td-desc">
+														<span>MM-DD-YYYY hh:mm:ss</span>
+													</p>
+												</td>
+												<td class="sub-info">
+													<p>MM-DD-YYYY</p> 
+													<p class="td-desc">
+														<span>hh:mm:ss</span>
+													</p>
+												</td>
+												<td>123456789</td>
 											</tr>
 											<tr>
-												<th class="label-box-item-label">custom SEO description</th>
-												<td class="label-box-item-desc">
-													<textarea rows="3" cols="" class="w-100per"></textarea>
+												<td><input type="checkbox" /></td>
+												<td>123456789</td>
+												<td class="table-list-item-img video-thumbnail">
+													<div class="img-embed-wrap">
+														<div class="img-embed-ratio">
+															<div class="img-embed-code">
+																<img src="resource/image/sample-video-thumbnail-2.jpg" />
+															</div>
+														</div>
+													</div>
 												</td>
+												<td>
+													<a href="#">$episode name</a>
+												</td>
+												<td class="sub-info">a episode</td>
+												<td class="sub-info">7</td>
+												<td class="sub-info">
+													<p>published</p>
+												</td>
+												<td class="sub-info">
+													<p class="td-desc">
+														<span>MM-DD-YYYY hh:mm:ss</span>
+													</p>
+													<p class="td-desc">
+														<span>MM-DD-YYYY hh:mm:ss</span>
+													</p>
+												</td>
+												<td class="sub-info">
+													<p>MM-DD-YYYY</p> 
+													<p class="td-desc">
+														<span>hh:mm:ss</span>
+													</p>
+												</td>
+												<td>123456789</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
-								<div class="tabs-content">tabs-content-2</div>
-								<div class="tabs-content">tabs-content-3</div>
+								<ul class="pagenation-simple">
+									<span>Rows per page</span>
+									<li>
+										<select>
+											<option>10s</option>
+											<option current>20s</option>
+											<option>50s</option>
+											<option>100s</option>
+										</select>
+									</li>
+									<span>1-6 of 9</span>
+									<li>
+										<div class="btn-group">
+											<button type="button" class="btn-common"><</button>
+											<button type="button" class="btn-common">></button>
+										</div>
+									</li>
+								</ul>
+								<p class="font-ml">
+									<a href="ODC-Page-Episode_detail.html" class="font-lm" target="blank">open detail page</a>
+								</p>
 							</div>
-							<table class="label-box">
-								<tbody>
-									<tr>
-										<th class="label-box-item-label">episode list order</th>
-										<td class="label-box-item-desc">
-											<label><input type="radio" checked>newest</label>
-											<label><input type="radio">oldest</label>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">episode list year filter</th>
-										<td class="label-box-item-desc">
-											<label class="switch">
-											  	<input type="checkbox">
-												  	<span class="switch-slider"> </span>
-											</label>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">subtitle</th>
-										<td class="label-box-item-desc">
-											<table class="input-btn-group">
-												<tr>
-													<td class="input-btn-group-input input-dropdown w-ls">
-														<input class="input-dropdown-input" type="text" placeholder="search and add" />
-														<ul class="input-dropdown-result scroll-customed">
-															<li>
-																<span class="item-id">12345</span>
-							  									<span class="item-id">$code</span>
-							  									<span>$subtitle name</span>
-															</li>
-															<li>
-																<span class="item-id">12345</span>
-							  									<span class="item-id">$code</span>
-							  									<span>$subtitle name</span>
-															</li>
-														</ul>
-														
-													</td>
-													<td class="input-btn-group-button">
-														<button class="btn-new">add</button>
-													</td>
-												</tr>
-											</table>
-											<p>
-												<ul class="simple-list">
-					  								<li>
-					  									<a><span class="simple-list-remove"></span></a>
-					  									<span class="item-id">12345</span>
-					  									<span class="item-id">$code</span>
-					  									<span>$subtitle name</span>
-					  								</li>
-					  								<li>
-					  									<a><span class="simple-list-remove"></span></a>
-					  									<span class="item-id">12345</span>
-					  									<span class="item-id">$code</span>
-					  									<span>$subtitle name</span>
-					  								</li>
-					  							</ul>
-					  						</p>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label required-field">Parent category</th>
-										<td class="label-box-item-desc">
-											<p>
-												<select>
-													<option>select category</option>
-													<option>$category name</option>
-												</select>
-												<button type="button" class="btn-new">add</button>
-											</p>
-											<p class="tag-cloud tag-for-remove">
-												<a>
-													<span class="tag">$category name</span>
-												</a>
-												<a>
-													<span class="tag">$category name</span>
-												</a>
-											</p>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">Publish schedule</th>
-										<td class="label-box-item-desc">
-											<div class="datepicker">
-												<label>start
-													<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-												</label>
-												<label>end
-												<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-												</label>
-												
-											</div>
-											<p>
-												<label><input type="checkbox">no expired</label>
-												<label><input type="checkbox">pause publish</label>
-												<label><input type="checkbox">publish in 'scheduled' status</label>
-											</p>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label required-field">allowed region</th>
-										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" checked>white list</label>
-												<label><input type="radio">black list</label>
-											</p>
-											<p>
-												<select>
-													<option>select region</option>
-													<option>$region</option>
-												</select>
-												<button type="button" class="btn-new">add</button>
-											</p>
-											<p class="tag-cloud tag-for-remove">
-												<a>
-													<span class="tag">$region name</span>
-												</a>
-												<a>
-													<span class="tag">$region name</span>
-												</a>
-											</p>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">CP</th>
-										<td class="label-box-item-desc">
-											<select>
-												<option>select CP</option>
-												<option>$CP name</option>
-											</select>
-											<input class="w-mm" type="text" placeholder="license code" name=""/>
-											<input class="w-mm" type="text" placeholder="tracking code" name=""/>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">data status</th>
-										<td class="label-box-item-desc">
-											<label><input type="radio" checked>draft</label>
-											<label><input type="radio">edited</label>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<ul class="submit">
-								<li><button type="button" class="btn-cancel">Cancel</button></li>
-								<li><button type="button" class="btn-submit">Save</button></li>
-							</ul>
-							<p class="font-ml">
-								<a href="ODC-Page-Program.html" class="font-lm">back to list</a>
-							</p>
 						</div>
 					</div>
 				</div>
@@ -288,6 +445,115 @@
 			</script>
 			
 		<section name="hidden-item">
+			<div id="program-DB-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>program-DB-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>program-DB name</option>
+															<option>program-DB ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
+											<th>name</th>
+											<th class="w-ms sub-info">involved status</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program-DB name</a>
+											</td>
+											<td class="sub-info">involved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program-DB name</a>
+											</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 			
 		<!--last import resources start-->

@@ -338,7 +338,7 @@ h6 {font-size:1.20rem;}
 
 /* con-body-tabs */
 .con-body-tabs {padding-top:1.0rem;}
-.con-body-tabs-menu {position: relative; padding:0 1.0rem 0 1.0rem; overflow: visible; white-space: nowrap; overflow-y: auto; text-align:center; text-align: -webkit-center;}
+.con-body-tabs-menu {position: relative; padding:0 1.0rem 0 1.0rem; overflow: visible; white-space: nowrap; overflow-y: auto; text-align:left; text-align: -webkit-left;}
 .con-body-tabs-menu > li {position: relative; display: table-cell;}
 .con-body-tabs-menu > li > a {display:block; padding-bottom:1.0rem; margin-right: 2.0rem; color:#555; font-size:1.6rem; font-weight: bold;}
 .con-body-tabs-menu > li > a:hover {text-decoration:none; color:#0ea5f2;}
