@@ -36,10 +36,10 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Library</span>
+							<span>ODC</span>
 							<span>Preset</span>
-							<span>Genre</span>
-							<span>$genre ID</span>
+							<span>Category</span>
+							<span>$category ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -47,9 +47,9 @@
 							<table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">genre name</th>
+										<th class="label-box-item-label required-field">category name</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input genre name by english" name=""/>
+											<input class="w-lm" type="text" placeholder="input category name by english" name=""/>
 										</td>
 									</tr>
 								</tbody>
@@ -64,9 +64,21 @@
 									<table class="label-box">
 										<tbody>
 											<tr>
-												<th class="label-box-item-label required-field">genre title</th>
+												<th class="label-box-item-label required-field">category title</th>
 												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input genre title" name=""/>
+													<input class="w-lm" type="text" placeholder="input category title" name=""/>
+												</td>
+											</tr>
+											<tr>
+												<th class="label-box-item-label">custom SEO title</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input custom SEO title" name=""/>
+												</td>
+											</tr>
+											<tr>
+												<th class="label-box-item-label">custom SEO description</th>
+												<td class="label-box-item-desc">
+													<textarea rows="3" cols="" class="w-100per"></textarea>
 												</td>
 											</tr>
 										</tbody>
@@ -77,6 +89,36 @@
 							</div>
 							<table class="label-box">
 								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">depth</th>
+										<td class="label-box-item-desc">
+											<select>
+												<option>3depth</option>
+												<option>2depth</option>
+												<option>1depth</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">parent category</th>
+										<td class="label-box-item-desc">
+											<p>
+												<select>
+													<option>select category</option>
+													<option>$category name</option>
+												</select>
+												<button type="button" class="btn-new">add</button>
+											</p>
+											<p class="tag-cloud tag-for-remove">
+												<a>
+													<span class="tag">$category name</span>
+												</a>
+												<a>
+													<span class="tag">$category name</span>
+												</a>
+											</p>
+										</td>
+									</tr>
 									<tr>
 										<th class="label-box-item-label">active status</th>
 										<td class="label-box-item-desc">

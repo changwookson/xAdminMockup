@@ -674,6 +674,10 @@ input:checked + .switch-slider:before {
 .table-no-data tbody tr {height: 20.0rem; text-align: center;}
 .table-no-data tbody td {vertical-align: middle;}
 
+.table-pure {border:none; margin:0;}
+.table-pure tbody {border:none; margin:0;}
+.table-pure tbody td {border:none; margin:0;}
+
 /* list-option */
 .list-option {width:100%;}
 .list-option:after {content:""; display:block; clear:both;} /* float 값 clear 시켜주는 역할 */
@@ -702,6 +706,7 @@ input:checked + .switch-slider:before {
 .sortable-table-rows tbody tr:hover {cursor: move; background:#cfedfc;} /* table에 적용 */
 .sortable-table-rows-placeholer {background:#cfedfc;}
 .sortable-table-rows .sortable-inactive:hover {background:#eee; cursor: not-allowed;}
+.sortable .selected {border:1px solid red;}
 
 /* pure style */
 .pure-ul {list-style-type: square; margin-bottom: 1.0rem;}
