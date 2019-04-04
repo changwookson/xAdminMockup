@@ -37,8 +37,9 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>ODC</span>
-							<span>Publish</span>
+							<span>Content Publish</span>
 							<span>Program</span>
+							<span>Episode Management</span>
 							<span>$episode ID</span>
 						</h1>
 					</div>
@@ -89,11 +90,11 @@
 										</td>
 									</tr>
 									<tr>
-										<th class="label-box-item-label">custom slug</th>
+										<th class="label-box-item-label">custom url</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input custom slug" name=""/>
+											<input class="w-lm" type="text" placeholder="input custom url" name=""/>
 											<p>
-												<span class="warning-message">slug can only be English and numbers, not spaces.</span>
+												<span class="warning-message">url can only be English and numbers, not spaces.</span>
 											</p>
 										</td>
 									</tr>
@@ -176,23 +177,28 @@
 										</td>
 									</tr>
 									<tr>
-										<th class="label-box-item-label required-field">episode type</th>
-										<td class="label-box-item-desc">
-											<label><input type="radio">trailer</label>
-											<label><input type="radio">additional clip</label>
-											<label><input type="radio">main (not serise)</label>
-											<label><input type="radio" checked>a episode (in serise)</label>
-											<label class="item-group-label">episode number
-												<input class="w-sm" type="text" name=""/>
-											</label>
-										</td>
-									</tr>
-									<tr>
 										<th class="label-box-item-label">release date</th>
 										<td class="label-box-item-desc">
 											<div class="datepicker">
 												<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
 											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label required-field">episode type</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio">trailer</label>
+											<label><input type="radio">additional clip</label>
+											<label><input type="radio">main (not serise)</label>
+											<label><input type="radio" checked>a episode (serise)</label>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">episode number</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" checked>order number</label>
+											<input class="w-sm" type="text" name="" placeholder="input"/>
+											<label><input type="radio">depend on release dete</label>
 										</td>
 									</tr>
 									<tr>

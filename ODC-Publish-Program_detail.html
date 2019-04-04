@@ -37,18 +37,18 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>ODC</span>
-							<span>Publish</span>
+							<span>Content Publish</span>
 							<span>Program</span>
 							<span>$program ID</span>
 						</h1>
 					</div>
 					<div class="con-body-tabs">
 						<ul class="con-body-tabs-menu scroll-customed">
-							<li><a>Program DB Setting</a></li>
+							<!--<li><a>Program DB Setting</a></li>-->
 							<li><a>Program Publish Setting</a></li>
 							<li><a>Episode Management</a></li>
 						</ul>
-						<!-- program DB tab start -->
+						<!-- program DB tab start
 						<div class="con-body con-body-tabs-content">
 							<div class="con-sector">
 								<table class="label-box">
@@ -69,19 +69,19 @@
 						  								</li>
 						  							</ul>
 						  						</p>
+						  						<p>
+													<a id="open-program-DB-list-modal" class="font-lm">open program-DB list modal</a>
+													<script type="text/javascript">
+														$('#open-program-DB-list-modal').click(function(){
+															$('#program-DB-list-modal').show().animate({right:'0'});
+													    });
+													</script>
+												</p>
 											</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<p>
-								<a id="open-program-DB-list-modal" class="font-lm">open program-DB list modal</a>
-								<script type="text/javascript">
-									$('#open-program-DB-list-modal').click(function(){
-										$('#program-DB-list-modal').show().animate({right:'0'});
-								    });
-								</script>
-							</p>
 							<p class="info-message">program-DB를 select하거나, create program-DB를 create하면 (빈 값으로) 아래쪽 container가 나타납니다. 필드는 Library > DB > progrma의 정보 입력값과 동일합니다.</p>
 							<br><br>
 							<p class="warning-message">This field is linked to Library > DB > Program. Be careful, because it may affect other services that use same DB too.</p>
@@ -365,11 +365,29 @@
 								</p>
 							</div>
 						</div>
+						-->
 						<!-- program Publish tab start -->
 						<div class="con-body con-body-tabs-content">
 							<div class="con-sector">
 								<table class="label-box">
 									<tbody>
+										<tr>
+											<th class="label-box-item-label required-field">program-DB</th>
+											<td class="label-box-item-desc">
+												<p>
+													<button type="button" class="btn-get">select program-DB</button>
+												</p>
+												<p class="info-message">If there is no program-DB that you need, create new DB item. <a href="library-ContentDB-Program-DB.html" target="blank">go to create program-DB</a></p>
+												<p>
+													<ul class="simple-list">
+						  								<li>
+						  									<span class="item-id">12345</span>
+						  									<span>$selected program-DB name</span>
+						  								</li>
+						  							</ul>
+						  						</p>
+											</td>
+										</tr>
 										<tr>
 											<th class="label-box-item-label required-field">program name</th>
 											<td class="label-box-item-desc">
@@ -377,11 +395,11 @@
 											</td>
 										</tr>
 										<tr>
-											<th class="label-box-item-label">custom slug</th>
+											<th class="label-box-item-label">custom url</th>
 											<td class="label-box-item-desc">
-												<input class="w-lm" type="text" placeholder="input custom slug" name=""/>
+												<input class="w-lm" type="text" placeholder="input custom url" name=""/>
 												<p>
-													<span class="warning-message">slug can only be English and numbers, not spaces.</span>
+													<span class="warning-message">url can only be English and numbers, not spaces.</span>
 												</p>
 											</td>
 										</tr>
@@ -544,6 +562,14 @@
 									<li><button type="button" class="btn-cancel">Cancel</button></li>
 									<li><button type="button" class="btn-submit">Save</button></li>
 								</ul>
+								<p>
+									<a id="open-program-DB-list-modal" class="font-lm">open program-DB list modal</a>
+									<script type="text/javascript">
+										$('#open-program-DB-list-modal').click(function(){
+											$('#program-DB-list-modal').show().animate({right:'0'});
+									    });
+									</script>
+								</p>
 							</div>
 						</div>
 						
@@ -680,7 +706,7 @@
 												<td class="sub-info">a episode</td>
 												<td class="sub-info">7</td>
 												<td class="sub-info">
-													<p>published</p>
+													<p>scheduled</p>
 												</td>
 												<td class="sub-info">
 													<p class="td-desc">

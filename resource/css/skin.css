@@ -287,7 +287,7 @@ h6 {font-size:1.20rem;}
 
 .sidebar-menu-2d li a {padding:0.8rem 1.0rem 0.8rem 3.0rem; font-size:1.1rem;}
 .sidebar-menu-2d li a:hover {padding-left:2.8rem;}
-/*.sidebar-menu-2d li a:before {font-family: 'FontAwesome'; content: "\f105"; margin-right:0.5rem;}*/
+.sidebar-menu-2d li a:before {font-family: 'FontAwesome'; content: "\f105"; margin-right:0.5rem;}
 .sidebar-menu-2d li .current {background: #1f222e; background: #3d455c; padding-left:2.8rem;}
 
 .sidebar-menu-badge {float: right; max-width:4.0rem; overflow: hidden; margin-left: 0.5rem; padding:0.2rem 0.5rem; vertical-align: inherit; background:#bf4040; font-size:1.0rem; color:#fff;
