@@ -191,14 +191,12 @@
 											<label><input type="radio">additional clip</label>
 											<label><input type="radio">main (not serise)</label>
 											<label><input type="radio" checked>a episode (serise)</label>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">episode number</th>
-										<td class="label-box-item-desc">
-											<label><input type="radio" checked>order number</label>
-											<input class="w-sm" type="text" name="" placeholder="input"/>
-											<label><input type="radio">depend on release dete</label>
+											<div class="item-panel">
+												<p>episode number</p>
+												<label><input type="radio" checked>order number</label>
+												<input class="w-sm" type="text" name="" placeholder="input"/>
+												<label><input type="radio">depend on release dete</label>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -208,13 +206,15 @@
 												<label><input type="radio" checked>depend on program schedule</label>
 												<label><input type="radio">manual</label>
 											</p>
-											<div class="datepicker">
-												<label>start
-													<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-												</label>
-												<label>end
-													<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-												</label>
+											<div class="item-panel">
+												<div class="datepicker">
+													<label>start
+														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+													</label>
+													<label>end
+														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+													</label>
+												</div>
 											</div>
 											<p>
 												<label><input type="checkbox">no expired</label>
@@ -230,25 +230,27 @@
 												<label><input type="radio" checked>depend on program</label>
 												<label><input type="radio">manual</label>
 											</p>
-											<p>
-												<label><input type="radio" checked>white list</label>
-												<label><input type="radio">black list</label>
-											</p>
-											<p>
-												<select>
-													<option>select region</option>
-													<option>$region</option>
-												</select>
-												<button type="button" class="btn-new">add</button>
-											</p>
-											<p class="tag-cloud tag-for-remove">
-												<a>
-													<span class="tag">$region name</span>
-												</a>
-												<a>
-													<span class="tag">$region name</span>
-												</a>
-											</p>
+											<div class="item-panel">
+												<p>
+													<label><input type="radio" checked>white list</label>
+													<label><input type="radio">black list</label>
+												</p>
+												<p>
+													<select>
+														<option>select region</option>
+														<option>$region</option>
+													</select>
+													<button type="button" class="btn-new">add</button>
+												</p>
+												<p class="tag-cloud tag-for-remove">
+													<a>
+														<span class="tag">$region name</span>
+													</a>
+													<a>
+														<span class="tag">$region name</span>
+													</a>
+												</p>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -258,10 +260,12 @@
 												<label><input type="radio" checked>depend on program</label>
 												<label><input type="radio">manual</label>
 											</p>
-											<select>
-												<option>select ageRating</option>
-												<option>$name</option>
-											</select>
+											<div class="item-panel">
+												<select>
+													<option>select ageRating</option>
+													<option>$name</option>
+												</select>
+											</div>
 										</td>
 									</tr>
 									<tr>
