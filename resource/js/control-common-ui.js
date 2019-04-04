@@ -103,16 +103,33 @@ $(document).ready(function(){
 
 // page url과 target href를 비교하여 포함하는 경우 current class 추가
 $(document).ready(function(){
-	var recentUrl = $(location).attr('pathname'); 
+	var recentUrl = $(location).attr('pathname');
 	$('.sidebar-menu-1d-li-a').each(function(){
 		var navMenu1dHref = $(this).attr('href');
 		if (recentUrl.indexOf(navMenu1dHref) >= 0){
+			$(this).addClass('current');
+		};
+	});
+	$('.sidebar-menu-2d-li-a').each(function(){
+		var navMenu2dHref = $(this).attr('href');
+		if (recentUrl.indexOf(navMenu2dHref) >= 0){
+			$(this).addClass('current');
+			//$(this).parents().children('.sidebar-menu-2d:not(.opened)').slideToggle('fast').addClass('opened');
+		}
+	});
+});
+
+$(document).ready(function(){
+	var recentUrlChild = $('#main-article').attr('menu');
+	$('.sidebar-menu-1d-li-a').each(function(){
+		var navMenu1dHref = $(this).attr('href');
+		if (recentUrlChild.indexOf(navMenu1dHref) >= 0){
 			$(this).addClass('current');
 		}
 	});
 	$('.sidebar-menu-2d-li-a').each(function(){
 		var navMenu2dHref = $(this).attr('href');
-		if (recentUrl.indexOf(navMenu2dHref) >= 0){
+		if (recentUrlChild.indexOf(navMenu2dHref) >= 0){
 			$(this).addClass('current');
 			//$(this).parents().children('.sidebar-menu-2d:not(.opened)').slideToggle('fast').addClass('opened');
 		}
