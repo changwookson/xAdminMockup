@@ -143,6 +143,11 @@
         .media-list-item .media-list-item-img.profile-image {width: 50%; height: 50%; margin: 0 auto;}
         .media-list-item .media-list-item-img.video-thumbnail {width: 100%; height: 100%;}
     
+    /* img-embed */
+    .img-w-100 img {width:10.0rem;}
+    .img-w-200 img {width:20.0rem;}
+    .img-w-300 img {max-width:100%;}
+    
     /* table */
     .sub-info {display: none;}
     

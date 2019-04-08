@@ -540,8 +540,11 @@ input:checked + .switch-slider:before {
 /*--------------------------------------------------*//* Graphic */
 
 /* img-embed */
+.img-w-100 img {width:10.0rem;}
+.img-w-200 img {width:20.0rem;}
+.img-w-300 img {width:30.0rem;}
+
 .img-embed-pure img {max-width: 30.0rem;}
-.img-embed-pure.img-w-100 img {width:10.0rem;}
 .img-embed-wrap {position: relative; width: 100%; vertical-align: middle; background:#f6f6f6; overflow: hidden;}
 .img-embed-ratio {padding-top: 75.00%;}  /* is flexable for 4:3 common image */
 .img-embed-code {position: absolute; top: 0; left:0; width: 100%; height: 100%; text-align: center;}
