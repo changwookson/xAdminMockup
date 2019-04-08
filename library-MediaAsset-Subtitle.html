@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Preset</span>
-							<span>AgeRating</span>
+							<span>Media Asset</span>
+							<span>Subtitle</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -47,9 +47,9 @@
 								<ul class="list-option-filter">
 									<li>
 										<select>
-											<option>active status</option>
-											<option>active</option>
-											<option>inactive</option>
+											<option>involved status</option>
+											<option>involved</option>
+											<option>uninvolved</option>
 										</select>
 									</li>
 									<li>
@@ -58,8 +58,8 @@
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>preset name</option>
-															<option>preset ID</option>
+															<option>asset name</option>
+															<option>asset ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -98,8 +98,8 @@
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
 											<th>name</th>
-											<th class="w-sl sub-info">allowed age</th>
-											<th class="w-ms sub-info">active status</th>
+                                            <th class="w-sl sub-info">language</th>
+											<th class="w-ms sub-info">involved status</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -108,11 +108,11 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">PG-13</a>
+												<a href="#">$subtitle name</a>
 											</td>
-											<td class="w-sl sub-info">13</td>
-											<td class="w-ms sub-info">active</td>
-											<td class="w-ms sub-info">
+                                            <td class="sub-info">English</td>
+											<td class="sub-info">active</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -123,11 +123,11 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">R-17</a>
+												<a href="#">$subtitle name</a>
 											</td>
-											<td class="w-sl sub-info">17</td>
-											<td class="w-ms sub-info">inactive</td>
-											<td class="w-ms sub-info">
+                                            <td class="sub-info">简体中文</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="ub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -157,7 +157,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-Preset-AgeRating_detail.html" class="font-lm">open detail page</a>
+								<a href="library-MediaAsset-Subtitle_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

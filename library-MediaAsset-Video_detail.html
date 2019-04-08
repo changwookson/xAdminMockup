@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="library-MediaAsset-Video.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Library</span>
+							<span>Media Asset</span>
+							<span>Video</span>
+							<span>$video asset ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">platfrom type</th>
+                                        <td class="label-box-item-desc">
+                                            <span>brightcove</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">media ID</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$brightcove media ID</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">media name</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$brightcove media name</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">create date</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$mm/dd/yyyy - hh:mm:ss</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">update date</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$mm/dd/yyyy - hh:mm:ss </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">duration</th>
+                                        <td class="label-box-item-desc">
+                                            <span>hh:mm:ss </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Source File</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$file name</span>
+                                            <span><a>$https://file.name/path.mp4</a></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Encoded Files</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span class="item-group-label">$width X $height [$bitrate]</span>
+                                                <span class="item-group-desc"><a>$https://file.name/path.mp4</a></span>
+                                                <button class="btn-get">preview</button>
+                                            </p>
+                                            <p class="item-group">
+                                                <span class="item-group-label">$width X $height [$bitrate]</span>
+                                                <span class="item-group-desc"><a>$https://file.name/path.mp4</a></span>
+                                                <button class="btn-get">preview</button>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">video image</th>
+                                        <td class="label-box-item-desc">                                                                       
+                                            <div class="img-embed-pure img-w-200">
+                                                <img src="resource/image/sample-video-thumbnail-1.jpg" />
+                                            </div>
+                                            <p>
+                                                <span><a>$https://file.name/path.png</a></span>
+                                            </p>
+                                            <p class="item-group">
+                                                <button type="button" class="file-input-replace btn-new">change image</button>
+                                                <span>$selected file name</span>
+                                            </p>  
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p>
+                            <a id="open-video-preview-modal" class="font-lm">open video preview modal</a>
+                            <script type="text/javascript">
+                                $('#open-video-preview-modal').click(function(){
+                                    $('#video-asset-preview-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <a href="library-MediaAsset-Video.html" class="font-lm">back to list</a>
+                        </p>
+                    </div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+            <!--layer-detail-sample start-->
+			<div id="video-asset-preview-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>video-asset-preview-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<h3 class="con-sector-title">
+                                <span class="item-group-label">$width X $height [$bitrate]</span>
+                                <span class="item-group-desc"><a>$https://file.name/path.mp4</a></span>
+                            </h3>
+							<div class="video-player-space-wrap float-player-off">
+                                <div class="video-player-space-ratio">
+                                    <div class="video-player-embed-wrap">
+                                        <div class="video-player-embed-ratio">
+                                            <iframe class="video-player-embed-code" src="//players.brightcove.net/5742226948001/default_default/index.html?videoId=6023659538001" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <a class="float-player-off-btn" style="">float player off</a>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

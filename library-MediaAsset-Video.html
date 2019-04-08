@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Preset</span>
-							<span>AgeRating</span>
+							<span>Media Asset</span>
+							<span>Video</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -47,9 +47,9 @@
 								<ul class="list-option-filter">
 									<li>
 										<select>
-											<option>active status</option>
-											<option>active</option>
-											<option>inactive</option>
+											<option>involved status</option>
+											<option>involved</option>
+											<option>uninvolved</option>
 										</select>
 									</li>
 									<li>
@@ -58,8 +58,8 @@
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>preset name</option>
-															<option>preset ID</option>
+															<option>asset name</option>
+															<option>asset ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -78,15 +78,9 @@
 								</ul>
 								<ul class="list-option-action">
 									<li>
-										<button type="button" class="btn-new">
-											<span class="icon fa fa-plus"></span>
-					            			<span>create</span>
-										</button>
-									</li>
-									<li>
-										<button type="button" class="btn-cancel">
-											<span class="icon fa fa-times"></span>
-					            			<span>remove</span>
+										<button type="button" class="btn-modify">
+											<span class="icon fa fa-refresh"></span>
+					            			<span>asset list refresh</span>
 										</button>
 									</li>
 								</ul>
@@ -96,10 +90,12 @@
 									<thead>
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
-											<th class="w-sl">ID</th>
+											<th class="w-sl">ID</th>                                         
+											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-sl sub-info">allowed age</th>
-											<th class="w-ms sub-info">active status</th>
+											<th class="w-ms sub-info">processing status</th>
+											<th class="w-ms sub-info">involved status</th>
+                                            <th class="w-sl sub-info">platform</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -107,12 +103,22 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">PG-13</a>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
-											<td class="w-sl sub-info">13</td>
-											<td class="w-ms sub-info">active</td>
-											<td class="w-ms sub-info">
+											<td>
+												<a href="#">$media name</a>
+											</td>
+											<td class="sub-info">processing</td>
+											<td class="sub-info">involved</td>
+											<td class="sub-info">brightcove</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -122,12 +128,22 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">R-17</a>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
-											<td class="w-sl sub-info">17</td>
-											<td class="w-ms sub-info">inactive</td>
-											<td class="w-ms sub-info">
+											<td>
+												<a href="#">$media name</a>
+											</td>
+											<td class="sub-info">$media status</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">amazon s3</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -136,7 +152,6 @@
 										</tr>
 									</tbody>
 								</table>
-								
 							</div>
 							<ul class="pagenation-simple">
 								<span>Rows per page</span>
@@ -157,7 +172,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-Preset-AgeRating_detail.html" class="font-lm">open detail page</a>
+								<a href="library-MediaAsset-Video_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
