@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>ODC</span>
-							<span>Preset</span>
-							<span>Category</span>
+							<span>Content</span>
+							<span>Program</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -47,17 +47,19 @@
 								<ul class="list-option-filter">
 									<li>
 										<select>
-											<option>active status</option>
-											<option>active</option>
-											<option>inactive</option>
+											<option>publish status</option>
+											<option>unscheduled</option>
+											<option>scheduled</option>
+											<option>published</option>
+											<option>expired</option>
+											<option>paused</option>
 										</select>
 									</li>
 									<li>
 										<select>
-											<option>depth</option>
-											<option>1depth</option>
-											<option>2depth</option>
-											<option>3depth</option>
+											<option>data status</option>
+											<option>draft</option>
+											<option>edited</option>
 										</select>
 									</li>
 									<li>
@@ -66,8 +68,12 @@
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>category name</option>
-															<option>category ID</option>
+															<option>program name</option>
+															<option>program ID</option>
+															<option>parent category name</option>
+															<option>parent category ID</option>
+															<option>partner-CP name</option>
+															<option>partner-CP ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -105,61 +111,89 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-sl">depth</th>
-											<th class="w-sl">child</th>
-											<th class="w-ms sub-info">active status</th>
+											<th class="w-mm sub-info">parent category</th>
+											<th class="w-sl sub-info">episodes</th>
+											<th class="w-ms sub-info">publish status</th>
+											<th class="w-ms sub-info">schedule</th>
 											<th class="w-ms sub-info">date</th>
+											<th class="w-sl">program-DB</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">movie</a>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
-											<td>1depth</td>
-											<td>5</td>
-											<td class="sub-info">active</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">
+												<p>drama</p>
+												<p>movie</p>
+											</td>
+											<td class="sub-info">23</td>
+											<td class="sub-info">
+												<p>published</p>
+											</td>
+											<td class="sub-info">
+												<p class="td-desc">
+													<span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+												<p class="td-desc">
+													<span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+											</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
+											<td>123456789</td>
 										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">drama</a>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
-											<td>2depth</td>
-											<td>3</td>
-											<td class="sub-info">active</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">
+												<p>$category name</p>
+												<p>$category name</p>
+											</td>
+											<td class="sub-info">1</td>
+											<td class="sub-info">
+												<p>unscheduled</p>
+											</td>
+											<td class="sub-info">
+												<p>-</p>
+											</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">drama</a>
-											</td>
-											<td>3depth</td>
-											<td>-</td>
-											<td class="sub-info">inactive</td>
-											<td class="sub-info">
-												<p>MM-DD-YYYY</p> 
-												<p class="td-desc">
-													<span>hh:mm:ss</span>
-												</p>
-											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -184,7 +218,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="ODC-Preset-Category_detail.html" class="font-lm">open detail page</a>
+								<a href="ODC-Content-Program_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Content DB</span>
-							<span>Program</span>
+							<span>Meta</span>
+							<span>People</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -53,28 +53,13 @@
 										</select>
 									</li>
 									<li>
-										<select>
-											<option>on-air status</option>
-											<option>on-air</option>
-											<option>complete</option>
-											<option>coming soon</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>data status</option>
-											<option>draft</option>
-											<option>edited</option>
-										</select>
-									</li>
-									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>program-DB name</option>
-															<option>program-DB ID</option>
+															<option>content name</option>
+															<option>content ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -115,8 +100,6 @@
 											<th class="w-sl">image</th>
 											<th>name</th>
 											<th class="w-ms sub-info">involved status</th>
-											<th class="w-ms sub-info">on-air status</th>
-											<th class="w-ms sub-info">data status</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -124,21 +107,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-2.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
+                                            <td class="table-list-item-img profile-image">                                         
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code" >
+                                                            <img src="resource/image/default-profile.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>									
 											<td>
-												<a href="#">$program-DB name</a>
+												<a href="#">$people name</a>
 											</td>
 											<td class="sub-info">uninvolved</td>
-											<td class="sub-info">complete</td>
-											<td class="sub-info">draft</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -149,21 +130,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
+											<td class="table-list-item-img profile-image">                                         
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code" >
+                                                            <img src="resource/image/sample-profile-1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
 											<td>
-												<a href="#">$program-DB name</a>
+												<a href="#">$people name</a>
 											</td>
 											<td class="sub-info">involved</td>
-											<td class="sub-info">on-air</td>
-											<td class="sub-info">edited</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -193,7 +172,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-ContentDB-Program-DB_detail.html" class="font-lm">open detail page</a>
+								<a href="library-Meta-People_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

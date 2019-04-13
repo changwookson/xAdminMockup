@@ -31,13 +31,13 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="ODC-Publish-Program.html">
+		<main id="main-article" class="article-subside-off" menu="ODC-Content-Program.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>ODC</span>
-							<span>Content Publish</span>
+							<span>Content</span>
 							<span>Program</span>
 							<span>Episode Management</span>
 							<span>$episode ID</span>
@@ -45,27 +45,28 @@
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
+                            <h3 class="con-sector-title">join asset</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
 										<th class="label-box-item-label required-field">video asset</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select video asset</button>
-											<p>
+											<div>
 												<ul class="simple-list">
 					  								<li>
 					  									<span class="item-id">12345</span>
 					  									<span>$selected video asset name</span>
 					  								</li>
 					  							</ul>
-					  						</p>
+					  						</div>
 										</td>
 									</tr>
 									<tr>
 										<th class="label-box-item-label">subtitle asset</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">add subtitle asset</button>
-											<p>
+											<div>
 												<ul class="simple-list">
 					  								<li>
 					  									<a><span class="simple-list-remove"></span></a>
@@ -80,9 +81,16 @@
 					  									<span>$subtitle name</span>
 					  								</li>
 					  							</ul>
-					  						</p>
+					  						</div>
 										</td>
 									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
+							<table class="label-box">
+								<tbody>
 									<tr>
 										<th class="label-box-item-label required-field">episode name</th>
 										<td class="label-box-item-desc">
@@ -121,7 +129,6 @@
 													<input class="w-lm" type="text" placeholder="input episode synop" name=""/>
 												</td>
 											</tr>
-											</tr>
 											<tr>
 												<th class="label-box-item-label">custom SEO title</th>
 												<td class="label-box-item-desc">
@@ -140,6 +147,9 @@
 								<div class="tabs-content">tabs-content-2</div>
 								<div class="tabs-content">tabs-content-3</div>
 							</div>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">meta</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -176,7 +186,7 @@
 											</p>
 										</td>
 									</tr>
-									<tr>
+                                    <tr>
 										<th class="label-box-item-label">on-air release date</th>
 										<td class="label-box-item-desc">
 											<div class="datepicker">
@@ -184,21 +194,28 @@
 											</div>
 										</td>
 									</tr>
-									<tr>
-										<th class="label-box-item-label required-field">episode type</th>
+                                    <tr>
+										<th class="label-box-item-label">ageRating</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio">trailer</label>
-											<label><input type="radio">additional clip</label>
-											<label><input type="radio">main (not serise)</label>
-											<label><input type="radio" checked>a episode (serise)</label>
+											<p>
+												<label><input type="radio" checked>depend on program</label>
+												<label><input type="radio">manual</label>
+											</p>
 											<div class="item-panel">
-												<p>episode number</p>
-												<label><input type="radio" checked>order number</label>
-												<input class="w-sm" type="text" name="" placeholder="input"/>
-												<label><input type="radio">depend on on-air release dete</label>
+												<select>
+													<option>select ageRating</option>
+													<option>$name</option>
+												</select>
 											</div>
 										</td>
 									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">publish</h3>
+							<table class="label-box">
+								<tbody>
 									<tr>
 										<th class="label-box-item-label">publish schedule</th>
 										<td class="label-box-item-desc">
@@ -214,13 +231,13 @@
 													<label>end
 														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
 													</label>
-													<label><input type="checkbox">no expired</label>
+													
 												</div>
-											</div>
-											<p>
-												<label><input type="checkbox">publish in 'scheduled' status</label>
-												<label><input type="checkbox">pause publish</label>
-											</p>
+                                                <p>
+                                                    <label><input type="checkbox">no expired</label>
+                                                    <label><input type="checkbox">pause publish</label>
+                                                </p>
+											</div>								
 										</td>
 									</tr>
 									<tr>
@@ -231,10 +248,6 @@
 												<label><input type="radio">manual</label>
 											</p>
 											<div class="item-panel">
-												<p>
-													<label><input type="radio" checked>white list</label>
-													<label><input type="radio">black list</label>
-												</p>
 												<p>
 													<select>
 														<option>select region</option>
@@ -252,43 +265,29 @@
 												</p>
 											</div>
 										</td>
-									</tr>
+									</tr>								
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">type</h3>
+							<table class="label-box">
+								<tbody>
 									<tr>
-										<th class="label-box-item-label">ageRating</th>
+										<th class="label-box-item-label required-field">episode type</th>
 										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" checked>depend on program</label>
-												<label><input type="radio">manual</label>
-											</p>
+											<label><input type="radio">trailer</label>
+											<label><input type="radio">additional clip</label>
+											<label><input type="radio">main (not serise)</label>
+											<label><input type="radio" checked>a episode (serise)</label>
 											<div class="item-panel">
-												<select>
-													<option>select ageRating</option>
-													<option>$name</option>
-												</select>
+												<p>episode number</p>
+												<label><input type="radio" checked>order number</label>
+												<input class="w-sm" type="text" name="" placeholder="input"/>
+												<label><input type="radio">depend on on-air release dete</label>
 											</div>
 										</td>
 									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">que point</th>
-                                        <td class="label-box-item-desc">
-                                            <p class="item-group">
-                                                <span class="item-group-label">
-                                                    intro que point
-                                                </span>
-                                                <span class="item-group-desc">
-                                                    <input class="w-sl" type="text" placeholder="hh:mm:ss" name=""/>
-                                                </span>
-                                            </p>
-                                            <p class="item-group">
-                                                <span class="item-group-label">
-                                                    ending que point
-                                                </span>
-                                                <span class="item-group-desc">
-                                                    <input class="w-sl" type="text" placeholder="hh:mm:ss" name=""/>
-                                                </span>
-                                            </p>
-                                        </td>
-                                    </tr>
 									<tr>
 										<th class="label-box-item-label">data status</th>
 										<td class="label-box-item-desc">
@@ -297,33 +296,33 @@
 										</td>
 									</tr>
 								</tbody>
-							</table>
-							<ul class="submit">
-								<li><button type="button" class="btn-cancel">Cancel</button></li>
-								<li><button type="button" class="btn-submit">Save</button></li>
-							</ul>
-							<p>
-								<a id="open-video-asset-list-modal" class="font-lm">open video asset list modal</a>
-								<script type="text/javascript">
-									$('#open-video-asset-list-modal').click(function(){
-										$('#video-asset-list-modal').show().animate({right:'0'});
-								    });
-								</script>
-							</p>
-							<p>
-								<a id="open-subtitle-asset-list-modal" class="font-lm">open subtitle asset list modal</a>
-								<script type="text/javascript">
-									$('#open-subtitle-asset-list-modal').click(function(){
-										$('#subtitle-asset-list-modal').show().animate({right:'0'});
-								    });
-								</script>
-							</p>
-							<p>
-								<a href="ODC-Publish-Program_detail.html" class="font-lm">back to list</a>
-							</p>
-						</div>
-					</div>
-				</div>
+							</table>						
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p>
+                            <a id="open-video-asset-list-modal" class="font-lm">open video asset list modal</a>
+                            <script type="text/javascript">
+                                $('#open-video-asset-list-modal').click(function(){
+                                    $('#video-asset-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <a id="open-subtitle-asset-list-modal" class="font-lm">open subtitle asset list modal</a>
+                            <script type="text/javascript">
+                                $('#open-subtitle-asset-list-modal').click(function(){
+                                    $('#subtitle-asset-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <a href="ODC-Content-Program_detail.html" class="font-lm">back to list</a>
+                        </p>
+				    </div>
+                </div>
 			</article>
 		</main>
 		<footer id="footer"></footer>

@@ -37,8 +37,8 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Media Asset</span>
-							<span>Video</span>
+							<span>Meta</span>
+							<span>Program-DB</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -53,13 +53,28 @@
 										</select>
 									</li>
 									<li>
+										<select>
+											<option>on-air status</option>
+											<option>on-air</option>
+											<option>complete</option>
+											<option>coming soon</option>
+										</select>
+									</li>
+									<li>
+										<select>
+											<option>data status</option>
+											<option>draft</option>
+											<option>edited</option>
+										</select>
+									</li>
+									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>asset name</option>
-															<option>asset ID</option>
+															<option>content name</option>
+															<option>content ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -78,9 +93,15 @@
 								</ul>
 								<ul class="list-option-action">
 									<li>
-										<button type="button" class="btn-modify">
-											<span class="icon fa fa-refresh"></span>
-					            			<span>asset list refresh</span>
+										<button type="button" class="btn-new">
+											<span class="icon fa fa-plus"></span>
+					            			<span>create</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn-cancel">
+											<span class="icon fa fa-times"></span>
+					            			<span>remove</span>
 										</button>
 									</li>
 								</ul>
@@ -90,12 +111,12 @@
 									<thead>
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
-											<th class="w-sl">ID</th>                                         
+											<th class="w-sl">ID</th>
 											<th class="w-sl">image</th>
 											<th>name</th>
-                                            <th class="w-sl sub-info">platform</th>
-											<th class="w-ms sub-info">processing status</th>
 											<th class="w-ms sub-info">involved status</th>
+											<th class="w-ms sub-info">on-air status</th>
+											<th class="w-ms sub-info">data status</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -107,17 +128,17 @@
 												<div class="img-embed-wrap">
 													<div class="img-embed-ratio">
 														<div class="img-embed-code">
-															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+															<img src="resource/image/sample-poster-2.jpg" />
 														</div>
 													</div>
 												</div>
 											</td>
 											<td>
-												<a href="#">$media name</a>
+												<a href="#">$program-DB name</a>
 											</td>
-                                            <td class="sub-info">brightcove</td>
-											<td class="sub-info">processing</td>
-                                            <td class="sub-info">involved</td>
+											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">complete</td>
+											<td class="sub-info">draft</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -132,17 +153,17 @@
 												<div class="img-embed-wrap">
 													<div class="img-embed-ratio">
 														<div class="img-embed-code">
-															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+															<img src="resource/image/sample-poster-1.jpg" />
 														</div>
 													</div>
 												</div>
 											</td>
 											<td>
-												<a href="#">$media name</a>
+												<a href="#">$program-DB name</a>
 											</td>
-                                            <td class="sub-info">amazon s3</td>
-											<td class="sub-info">$media status</td>
-											<td class="sub-info">uninvolved</td>
+											<td class="sub-info">involved</td>
+											<td class="sub-info">on-air</td>
+											<td class="sub-info">edited</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -172,7 +193,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-MediaAsset-Video_detail.html" class="font-lm">open detail page</a>
+								<a href="library-Meta-Program-DB_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

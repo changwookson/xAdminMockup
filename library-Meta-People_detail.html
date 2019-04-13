@@ -31,19 +31,20 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="library-ContentDB-People-DB.html">
+		<main id="main-article" class="article-subside-off" menu="library-Meta-people.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Content DB</span>
+							<span>Meta</span>
 							<span>People</span>
-							<span>$people-DB ID</span>
+							<span>$people ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -72,6 +73,34 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr>
+										<th class="label-box-item-label">role type</th>
+										<td class="label-box-item-desc">
+                                            <label><input type="checkbox">actor</label>
+                                            <label><input type="checkbox">director</label>
+                                            <label><input type="checkbox">writer</label>
+                                            <label><input type="checkbox">staff</label>
+                                            <label><input type="checkbox">etc</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">gender</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>others</option>
+                                                <option>female</option>
+                                                <option>male</option>
+                                            </select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">country</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>$country library</option>
+                                            </select>
+										</td>
+									</tr>               
 								</tbody>
 							</table>
 							<div class="tabs">
@@ -94,47 +123,15 @@
 								</div>
 								<div class="tabs-content">tabs-content-2</div>
 								<div class="tabs-content">tabs-content-3</div>
-							</div>
-							<table class="label-box">
-								<tbody>
-                                    <tr>
-										<th class="label-box-item-label">role type</th>
-										<td class="label-box-item-desc">
-                                            <label><input type="checkbox">actor</label>
-                                            <label><input type="checkbox">director</label>
-                                            <label><input type="checkbox">writer</label>
-                                            <label><input type="checkbox">staff</label>
-                                            <label><input type="checkbox">etc</label>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">gender</th>
-										<td class="label-box-item-desc">
-											<select>
-                                                <option>none select</option>
-                                                <option>female</option>
-                                                <option>male</option>
-                                            </select>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">country</th>
-										<td class="label-box-item-desc">
-											<select>
-                                                <option>$country</option>
-                                            </select>
-										</td>
-									</tr>                                   
-								</tbody>
-							</table>
-							<ul class="submit">
-								<li><button type="button" class="btn-cancel">Cancel</button></li>
-								<li><button type="button" class="btn-submit">Save</button></li>
-							</ul>
-							<p class="font-ml">
-								<a href="library-ContentDB-People-DB.html" class="font-lm">back to list</a>
-							</p>
+							</div>						
 						</div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p class="font-ml">
+                            <a href="library-Meta-People.html" class="font-lm">back to list</a>
+                        </p>
 					</div>
 				</div>
 			</article>

@@ -31,69 +31,69 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="library-Preset-Genre.html">
+		<main id="main-article" class="article-subside-off" menu="library-Meta-AgeRating.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Preset</span>
-							<span>Genre</span>
-							<span>$genre ID</span>
+							<span>Meta</span>
+							<span>AgeRating</span>
+							<span>$ ageRating ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">genre name</th>
+										<th class="label-box-item-label required-field">ageRating name</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input genre name by english" name=""/>
+											<input class="w-lm" type="text" placeholder="input ageRating name" name=""/>
 										</td>
 									</tr>
-								</tbody>
-							</table>
-							<div class="tabs">
-								<ul class="tabs-menu scroll-customed">
-									<li><a>Engilsh</a></li>
-									<li><a>简体中文</a></li>
-									<li><a>$language name</a></li>
-								</ul>
-								<div class="tabs-content">
-									<table class="label-box">
-										<tbody>
-											<tr>
-												<th class="label-box-item-label required-field">genre title</th>
-												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input genre title" name=""/>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="tabs-content">tabs-content-2</div>
-								<div class="tabs-content">tabs-content-3</div>
-							</div>
-							<table class="label-box">
-								<tbody>
 									<tr>
-										<th class="label-box-item-label">active status</th>
+										<th class="label-box-item-label required-field">allowd age</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" checked>inactive</label>
-											<label><input type="radio">active</label>
+											<select>
+												<option>0</option>
+												<option>1</option>
+												<option>21</option>
+											</select>
+											<label>years</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label required-field">region</th>
+										<td class="label-box-item-desc">
+											<select>
+												<option>$country library</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">use blocking</th>
+										<td class="label-box-item-desc">
+											<label>
+												<label class="switch">
+												  	<input type="checkbox">
+													  	<span class="switch-slider"> </span>
+												</label>
+												<span class="info-message">Use blocking to check viewer age in front side.</span>
+											</label>
 										</td>
 									</tr>
 								</tbody>
-							</table>
-							<ul class="submit">
-								<li><button type="button" class="btn-cancel">Cancel</button></li>
-								<li><button type="button" class="btn-submit">Save</button></li>
-							</ul>
-							<p class="font-ml">
-								<a href="library-Preset-Genre.html" class="font-lm">back to list</a>
-							</p>
+							</table>						
 						</div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p class="font-ml">
+                            <a href="library-Meta-AgeRating.html" class="font-lm">back to list</a>
+                        </p>
 					</div>
 				</div>
 			</article>

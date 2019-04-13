@@ -31,19 +31,20 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="library-MediaAsset-Subtitle.html">
+		<main id="main-article" class="article-subside-off" menu="library-Asset-Subtitle.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Library</span>
-							<span>Media Asset</span>
+							<span>Asset</span>
 							<span>Subtitle</span>
 							<span>$subtitle ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -53,13 +54,20 @@
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label required-field">subtitle language</th>
+										<th class="label-box-item-label required-field">language</th>
 										<td class="label-box-item-desc">
 											<select>
-                                                <option>language name</option>
+                                                <option>$language code</option>
                                             </select>
 										</td>
 									</tr>
+                                </tbody>
+							</table>													
+						</div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">file</h3>
+							<table class="label-box">
+								<tbody>
                                     <tr>
 										<th class="label-box-item-label required-field">subtitle file</th>
 										<td class="label-box-item-desc">
@@ -77,14 +85,15 @@
 									</tr>
 								</tbody>
 							</table>						
-							<ul class="submit">
-								<li><button type="button" class="btn-cancel">Cancel</button></li>
-								<li><button type="button" class="btn-submit">Save</button></li>
-							</ul>
-							<p class="font-ml">
-								<a href="library-MediaAsset-Subtitle.html" class="font-lm">back to list</a>
-							</p>
+							
 						</div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p class="font-ml">
+                            <a href="library-Asset-Subtitle.html" class="font-lm">back to list</a>
+                        </p>
 					</div>
 				</div>
 			</article>
