@@ -43,7 +43,7 @@ label span {vertical-align:middle;}
 input, select, button, label {cursor:pointer; vertical-align:middle; }
 input, select, button, label, textarea {margin: 0.2rem 0.5rem 0.2rem 0;}
 input, select, button, label, textarea:focus {outline: none;}
-input[type=text]:focus, input[type=search]:focus, input[type=password]:focus, select:focus, textarea:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=search]:focus, input[type=password]:focus, select:focus, textarea:focus {
     border: 0.1rem solid #0DA6F2; 
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
 } 
@@ -54,7 +54,7 @@ input, select, button {height: 2.3em;} /* 서로 높이를 맞추는 ui가 많�
 textarea {padding: 0.5rem, 0.5rem; border: 0.1rem solid #aaa;}
 select {padding: 0 0.3rem; border: 0.1rem solid #aaa; color:#777;}
 input {padding: 0 0.5rem;}
-input[type=text], input[type=search], input[type=password] {border: 0.1rem solid #aaa;
+input[type=text], input[type=number], input[type=search], input[type=password] {border: 0.1rem solid #aaa;
     -o-border-radius:0;
     -ms-border-radius:0; 
     -moz-border-radius:0; 
