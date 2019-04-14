@@ -523,9 +523,8 @@ input:checked + .switch-slider:before {
 .search-bar-btn button .icon {margin-bottom: 0.25rem;}
 
 /* file-upload */
-.file-upload {display:inline-block;cursor: pointer;}
 .file-upload p {position: absolute;}
-.file-upload span {vertical-align: middle;cursor: pointer;}
+.file-upload span {vertical-align: middle;}
 .file-upload .file-input-replace {cursor: pointer;}
 .file-upload .file-input {cursor: pointer; width:100%; opacity: 0; padding:0;}
 
