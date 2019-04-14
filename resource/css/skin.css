@@ -343,6 +343,7 @@ h6 {font-size:1.20rem;}
 .con-body-tabs-menu {position: relative; padding:0 1.0rem 0 1.0rem; overflow: visible; white-space: nowrap; overflow-y: auto; text-align:left; text-align: -webkit-left;}
 .con-body-tabs-menu > li {position: relative; display: table-cell;}
 .con-body-tabs-menu > li > a {display:block; padding-bottom:1.0rem; margin-right: 2.0rem; color:#555; font-size:1.6rem; font-weight: bold;}
+.con-body-tabs-menu > li > a:before {font-family: 'FontAwesome'; content: "\f1de"; margin-right:0.5rem;}
 .con-body-tabs-menu > li > a:hover {text-decoration:none; color:#0ea5f2;}
 .con-body-tabs-menu > li > a:focus {outline: none;}
 .con-body-tabs-menu > li > a.current {border-bottom: 0.2rem solid #0ea5f2; color:#0ea5f2;}
