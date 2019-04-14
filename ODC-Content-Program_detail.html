@@ -156,10 +156,10 @@
 												</p>
 												<p class="tag-cloud tag-for-remove">
 													<a>
-														<span class="tag">$region name</span>
+														<span class="tag">$region</span>
 													</a>
 													<a>
-														<span class="tag">$region name</span>
+														<span class="tag">$region</span>
 													</a>
 												</p>
 											</td>
@@ -192,15 +192,26 @@
 												</p>
 											</td>
 										</tr>
-										<tr>
-											<th class="label-box-item-label">episode list order</th>
+                                        <tr>
+                                            <th class="label-box-item-label">child episode type</th>
+                                            <td class="label-box-item-desc">
+                                                <label>
+                                                    <input type="radio" name="episode-type" checked>series episode
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="episode-type">one main episode
+                                                </label>										
+                                            </td>
+                                        </tr>
+                                        <tr>
+											<th class="label-box-item-label">child episode list order</th>
 											<td class="label-box-item-desc">
-												<label><input type="radio" checked>newest</label>
-												<label><input type="radio">oldest</label>
+												<label><input type="radio" name="episode-list-order" checked>newest</label>
+												<label><input type="radio" name="episode-list-order">oldest</label>
 											</td>
 										</tr>
 										<tr>
-											<th class="label-box-item-label">use episode list year filter</th>
+											<th class="label-box-item-label">child episode list year filter</th>
 											<td class="label-box-item-desc">
 												<label class="switch">
 												  	<input type="checkbox">
@@ -208,7 +219,6 @@
 												</label>
 											</td>
 										</tr>
-										
                                         <tr>
 											<th class="label-box-item-label">CP</th>
 											<td class="label-box-item-desc">
@@ -220,15 +230,22 @@
 												<input class="w-mm" type="text" placeholder="tracking code" name=""/>
 											</td>
 										</tr>		
-                                        <tr>
-											<th class="label-box-item-label">data status</th>
-											<td class="label-box-item-desc">
-												<label><input type="radio" checked>draft</label>
-												<label><input type="radio">edited</label>
-											</td>
-										</tr>
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="con-sector">
+                                <h3 class="con-sector-title">status</h3>
+                                <table class="label-box">
+                                    <tbody>								
+                                        <tr>
+                                            <th class="label-box-item-label">data status</th>
+                                            <td class="label-box-item-desc">
+                                                <label><input type="radio" name="data-status" checked>draft</label>
+                                                <label><input type="radio" name="data-status">edited</label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>					
                             </div>
                             <ul class="submit">
                                 <li><button type="button" class="btn-cancel">Cancel</button></li>

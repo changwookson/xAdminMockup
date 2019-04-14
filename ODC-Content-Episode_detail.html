@@ -198,14 +198,38 @@
 										<th class="label-box-item-label">ageRating</th>
 										<td class="label-box-item-desc">
 											<p>
-												<label><input type="radio" checked>depend on program</label>
-												<label><input type="radio">manual</label>
+												<label><input type="radio" name="ageRating" checked>depend on program</label>
+												<label><input type="radio" name="ageRating">manual</label>
 											</p>
 											<div class="item-panel">
-												<select>
-													<option>select ageRating</option>
-													<option>$name</option>
-												</select>
+												<table class="input-btn-group">
+                                                    <tr>
+                                                        <td class="input-btn-group-input input-dropdown w-ls">
+                                                            <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                            <ul class="input-dropdown-result scroll-customed">
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                            </ul>														
+                                                        </td>
+                                                        <td class="input-btn-group-button">
+                                                            <button class="btn-new">add</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p class="tag-cloud tag-for-remove">
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                </p>
 											</div>
 										</td>
 									</tr>
@@ -220,8 +244,8 @@
 										<th class="label-box-item-label">publish schedule</th>
 										<td class="label-box-item-desc">
 											<p>
-												<label><input type="radio" checked>depend on program schedule</label>
-												<label><input type="radio">manual</label>
+												<label><input type="radio" name="publish-schedule" checked>depend on program schedule</label>
+												<label><input type="radio" name="publish-schedule">manual</label>
 											</p>
 											<div class="item-panel">
 												<div class="datepicker">
@@ -244,8 +268,8 @@
 										<th class="label-box-item-label">allowed region</th>
 										<td class="label-box-item-desc">
 											<p>
-												<label><input type="radio" checked>depend on program</label>
-												<label><input type="radio">manual</label>
+												<label><input type="radio" name="allowed-region" checked>depend on program</label>
+												<label><input type="radio" name="allowed-region">manual</label>
 											</p>
 											<div class="item-panel">
 												<p>
@@ -274,28 +298,60 @@
 							<table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">episode type</th>
+										<th class="label-box-item-label">episode type</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio">trailer</label>
-											<label><input type="radio">additional clip</label>
-											<label><input type="radio">main (not serise)</label>
-											<label><input type="radio" checked>a episode (serise)</label>
+                                            <label>
+                                                <input type="radio" name="episode-type" checked>series episode
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type">one main episode
+                                            </label>
+											<label>
+                                                <input type="radio" name="episode-type">trailer
+                                            </label>
+											<label>
+                                                <input type="radio" name="episode-type">additional clip
+                                            </label>
 											<div class="item-panel">
 												<p>episode number</p>
-												<label><input type="radio" checked>order number</label>
+												<label><input type="radio" name="episode-type-number-type" checked>order number</label>
 												<input class="w-sl" type="number" name=""/>
-												<label><input type="radio">depend on on-air release dete</label>
+												<label><input type="radio" name="episode-type-number-type">depend on on-air release dete</label>
 											</div>
 										</td>
 									</tr>
-									<tr>
+                                    <tr>
+                                        <th class="label-box-item-label">CP</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label><input type="radio" name="allowed-region" checked>depend on program</label>
+                                                <label><input type="radio" name="allowed-region">manual</label>
+                                            </p>
+                                            <div class="item-panel">
+                                                <select>
+                                                    <option>select CP</option>
+                                                    <option>$CP name</option>
+                                                </select>
+                                                <input class="w-mm" type="text" placeholder="license code" name=""/>
+                                                <input class="w-mm" type="text" placeholder="tracking code" name=""/>
+                                            </div>
+                                        </td>
+                                    </tr>	
+								</tbody>
+							</table>						
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">status</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
 										<th class="label-box-item-label">data status</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" checked>draft</label>
-											<label><input type="radio">edited</label>
+											<label><input type="radio" name="data-status" checked>draft</label>
+											<label><input type="radio" name="data-status">edited</label>
 										</td>
 									</tr>
-								</tbody>
+                                </tbody>
 							</table>						
                         </div>
                         <ul class="submit">

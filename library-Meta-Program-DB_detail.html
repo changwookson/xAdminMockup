@@ -241,8 +241,7 @@
 																<span class="item-id">12345</span>
 																<span>$people name</span>
 															</li>
-														</ul>
-														
+														</ul>														
 													</td>
 													<td class="input-btn-group-button">
 														<button class="btn-new">add</button>
@@ -269,6 +268,24 @@
 												<option>select year</option>
 												<option>$2019~$1900</option>
 											</select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">rating score</th>
+										<td class="label-box-item-desc">
+											<input type="number" onkeyup="imsi(this)" class="w-sl"/> 
+                                            <script>
+                                                var prev = ""; 
+                                                var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                function imsi(obj) { 
+                                                    if(obj.value.search(regexp)==-1) { 
+                                                        obj.value = prev; 
+                                                    } 
+                                                    else { 
+                                                        prev = obj.value; 
+                                                    } 
+                                                } 
+                                            </script>
 										</td>
 									</tr>
 									<tr>
@@ -305,54 +322,48 @@
 									<tr>
 										<th class="label-box-item-label">ageRating</th>
 										<td class="label-box-item-desc">
-											<select>
-												<option>select ageRating</option>
-												<option>$name</option>
-											</select>
+											<table class="input-btn-group">
+												<tr>
+													<td class="input-btn-group-input input-dropdown w-ls">
+														<input class="input-dropdown-input" type="text" placeholder="search and add" />
+														<ul class="input-dropdown-result scroll-customed">
+															<li>
+																<span class="item-id">12345</span>
+																<span>$ageRating name</span>
+															</li>
+															<li>
+																<span class="item-id">12345</span>
+																<span>$ageRating name</span>
+															</li>
+														</ul>														
+													</td>
+													<td class="input-btn-group-button">
+														<button class="btn-new">add</button>
+													</td>
+												</tr>
+											</table>
+											<p class="tag-cloud tag-for-remove">
+												<a>
+													<span class="tag">$ageRating name</span>
+												</a>
+												<a>
+													<span class="tag">$ageRating name</span>
+												</a>
+											</p>
 										</td>
 									</tr>
                                 </tbody>
                             </table>                         
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">type</h3>
+                            <h3 class="con-sector-title">status</h3>
 							<table class="label-box">
-								<tbody>
-									<tr>
-										<th class="label-box-item-label required-field">program type</th>
-										<td class="label-box-item-desc">
-											<p>
-												<label>
-													<input type="radio" >movie
-												</label>
-											</p>
-											<p>
-												<label>
-													<input type="radio" >tv - one episode
-												</label>
-											</p>
-											<p>
-												<label>
-													<input type="radio" checked>tv - limited series
-												</label>
-											</p>
-											<p>
-												<label>
-													<input type="radio" >tv - unlimited episode
-												</label>
-											</p>
-											<p>
-												<label>
-													<input type="radio" >etc
-												</label>
-											</p>
-										</td>
-									</tr>
+								<tbody>								
 									<tr>
 										<th class="label-box-item-label">data status</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" checked>draft</label>
-											<label><input type="radio">edited</label>
+											<label><input type="radio" name="data-status" checked>draft</label>
+											<label><input type="radio" name="data-status">edited</label>
 										</td>
 									</tr>
 								</tbody>
