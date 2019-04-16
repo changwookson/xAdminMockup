@@ -716,6 +716,11 @@ input:checked + .switch-slider:before {
 .sortable-table-rows .sortable-inactive:hover {background:#eee; cursor: not-allowed;}
 .sortable .selected {border:1px solid red;}
 
+.sortable-container > li {border:1px solid #555; background:#eee;}
+.sortable-container > li:hover {cursor: move; border:1px solid #333; background:#ddd;} 
+.sortable-container .sortable > li {cursor: move; border:1px solid #aaa;}
+.sortable-container .sortable > li:hover {cursor: move; border:1px solid #999; background:#cfedfc;}
+
 /* pure style */
 .pure-ul {list-style-type: square; margin-bottom: 1.0rem;}
 .pure-ul h6 {margin:0.5rem 0 0.5rem 0; font-weight: bold;}
