@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="ODC-Item-Cover.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>ODC</span>
+							<span>Item</span>
+							<span>Cover</span>
+							<span>$cover item ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">name</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input Cover name" name=""/>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">cover image</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <button type="button" class="file-input-replace btn-new">add image</button>
+                                            </p>
+                                            <div class="img-embed-pure img-w-300">
+                                                <img src="resource/image/sample-cover-1.jpg" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">cover shortcut image</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <button type="button" class="file-input-replace btn-new">add image</button>
+                                            </p>
+                                            <div class="img-embed-pure img-w-200">
+                                                <img src="resource/image/sample-cover-1.jpg" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">duration</th>
+                                        <td class="label-box-item-desc">
+                                            <input class="w-sl item-group-desc" type="number" value="5000" name=""/>milliseconds
+                                        </td>
+                                    </tr>
+								</tbody>
+							</table>
+                            <div class="tabs">
+								<ul class="tabs-menu scroll-customed">
+									<li><a>Engilsh</a></li>
+									<li><a>简体中文</a></li>
+									<li><a>$language name</a></li>
+								</ul>
+								<div class="tabs-content">
+									<table class="label-box">
+										<tbody>
+											<tr>
+												<th class="label-box-item-label required-field">title</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input cover title" name=""/>
+												</td>
+											</tr>
+											<tr>
+												<th class="label-box-item-label required-field">description</th>
+												<td class="label-box-item-desc">
+													<textarea rows="3" cols="" placeholder="input cover description" class="w-100per"></textarea>
+												</td>
+											</tr>										
+                                            <tr>
+												<th class="label-box-item-label required-field">call to action</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input text for action button" name=""/>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs-content">tabs-content-2</div>
+								<div class="tabs-content">tabs-content-3</div>
+							</div>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">landing target</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">select type</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="data-status" checked>program</label>
+											<label><input type="radio" name="data-status">episode</label>
+                                            <label><input type="radio" name="data-status">url</label>
+											<div class="item-box">
+                                                <button type="button" class="btn-get">select program</button>
+                                                <ul class="simple-list">
+                                                    <li>
+                                                        <span class="item-id">12345</span>
+                                                        <span>$selected program name</span>
+                                                    </li>
+                                                </ul>
+											</div>
+                                            <div class="item-box">
+												<button type="button" class="btn-get">select episode</button>
+                                                <ul class="simple-list">
+                                                    <li>
+                                                        <span class="item-id">12345</span>
+                                                        <span>$sselected episode name</span>
+                                                    </li>
+                                                </ul>
+											</div>
+                                            <div class="item-box">
+												<input class="w-lm" type="text" placeholder="input landing url" name=""/>
+											</div>
+										</td>
+									</tr>
+                                    
+                                </tbody>
+                            </table>                         
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+                        <p>
+                            <a id="open-program-list-modal" class="font-lm">open program list modal</a>
+                            <script type="text/javascript">
+                                $('#open-program-list-modal').click(function(){
+                                    $('#program-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <a id="open-episode-list-modal" class="font-lm">open episode list modal</a>
+                            <script type="text/javascript">
+                                $('#open-episode-list-modal').click(function(){
+                                    $('#episode-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
+                        <p class="font-ml">
+                            <a href="ODC-Item-Cover.html" class="font-lm">back to list</a>
+                        </p>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+            <div id="program-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>program-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>program name</option>
+															<option>program ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
+											<th>name</th>
+											<th class="w-ms sub-info">publish status</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">published</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">expired</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            <div id="episode-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>episode-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>episode name</option>
+															<option>episode ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-ss"><input type="checkbox" /></th>
+											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
+											<th>name</th>
+											<th class="w-ms sub-info">published status</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$episode name</a>
+											</td>
+											<td class="sub-info">published</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$episode name</a>
+											</td>
+											<td class="sub-info">expired</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

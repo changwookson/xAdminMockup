@@ -565,6 +565,10 @@ input:checked + .switch-slider:before {
 .video-thumbnail .img-embed-ratio {padding-top:56.25%;} /* is flexable for 16:9 video thumbnail */
 .video-thumbnail .video-thumbnail-duration {position: absolute; right: 0; bottom: 0; padding: 0.2rem 0.4rem; background: rgba(0, 0, 0, 0.5); color: #fff; font-size: 1.1rem;}
 
+.cover-thumbnail .img-embed-wrap {background: #000;}
+.cover-thumbnail .img-embed-ratio {padding-top:40.00%;} /* is flexable for 16:9 video thumbnail */
+.cover-thumbnail .video-thumbnail-duration {position: absolute; right: 0; bottom: 0; padding: 0.2rem 0.4rem; background: rgba(0, 0, 0, 0.5); color: #fff; font-size: 1.1rem;}
+
 /* video-player-embed */
 .video-player-space-wrap {position:relative; width:100%; vertical-align:middle; text-align: center;}
 .video-player-space-ratio {padding-top:56.25%;} /* is for 16:9 video */
