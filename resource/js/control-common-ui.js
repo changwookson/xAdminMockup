@@ -152,6 +152,18 @@ $('.con-body-tabs').each(function(){
 	});
 });
 
+// con-body-tabs url
+$(document).ready(function() { 
+    if (location.hash == '#program-tabs-PP') { 
+     $('#program-tabs-PP a').trigger('click'); 
+    }
+});
+$(document).ready(function() { 
+    if (location.hash == '#program-tabs-EM') { 
+     $('#program-tabs-EM a').trigger('click'); 
+    } 
+});
+
 // tabs
 $('.tabs').each(function(){
 	$(this).find('.tabs-menu li:first a').addClass('current');
