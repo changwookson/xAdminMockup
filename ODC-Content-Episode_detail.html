@@ -246,28 +246,38 @@
                             <h3 class="con-sector-title">publish</h3>
 							<table class="label-box">
 								<tbody>
-									<tr>
+                                    <tr>
 										<th class="label-box-item-label">publish schedule</th>
 										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" name="publish-schedule" checked>depend on program schedule</label>
-												<label><input type="radio" name="publish-schedule">manual</label>
-											</p>
-											<div class="item-panel">
-												<div class="datepicker">
-													<label>start
-														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-													</label>
-													<label>end
-														<input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-													</label>
-												</div>
-                                                <p>
-                                                    <label><input type="checkbox">no expired</label>
-                                                    <label><input type="checkbox">pause publish</label>
-                                                </p>
-											</div>								
-										</td>
+                                            <p class="item-group">
+                                                <span class="item-group-label">start</span>
+                                                <label><input type="radio" name="publish-schedule-start">depend on program schedule</label>
+                                                <label>
+                                                    <input type="radio" name="publish-schedule-start" checked>manual
+                                                    <span class="datepicker">
+                                                        <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                    </span>
+                                                </label>
+                                            </p>
+                                            <p class="item-group">
+                                                <span class="item-group-label">end</span>
+                                                <span class="item-group-desc">
+                                                    <label>
+                                                        <input type="radio" name="publish-schedule-end" checked>depend on program schedule
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="publish-schedule-end">manual
+                                                        <span class="datepicker">
+                                                            <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <label><input type="checkbox">no expired</label>
+                                                <label><input type="checkbox">pause publish</label>
+											</p> 
+                                        </td>
 									</tr>
 									<tr>
 										<th class="label-box-item-label">allowed region</th>
@@ -329,8 +339,8 @@
                                         <th class="label-box-item-label">CP</th>
                                         <td class="label-box-item-desc">
                                             <p>
-                                                <label><input type="radio" name="allowed-region" checked>depend on program</label>
-                                                <label><input type="radio" name="allowed-region">manual</label>
+                                                <label><input type="radio" name="select-cp" checked>depend on program</label>
+                                                <label><input type="radio" name="select-cp">manual</label>
                                             </p>
                                             <div class="item-panel">
                                                 <select>
