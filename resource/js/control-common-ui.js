@@ -152,7 +152,7 @@ $('.con-body-tabs').each(function(){
 	});
 });
 
-// con-body-tabs url
+// con-body-tabs (url 공유용)
 $(document).ready(function() { 
     if (location.hash == '#program-tabs-EM') { 
     $('#program-tabs-EM a').trigger('click'); 
