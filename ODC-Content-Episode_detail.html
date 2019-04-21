@@ -200,45 +200,6 @@
 											</div>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">ageRating</th>
-										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" name="ageRating" checked>depend on program</label>
-												<label><input type="radio" name="ageRating">manual</label>
-											</p>
-											<div class="item-panel">
-												<table class="input-btn-group">
-                                                    <tr>
-                                                        <td class="input-btn-group-input input-dropdown w-ls">
-                                                            <input class="input-dropdown-input" type="text" placeholder="search and add" />
-                                                            <ul class="input-dropdown-result scroll-customed">
-                                                                <li>
-                                                                    <span class="item-id">12345</span>
-                                                                    <span>$ageRating name</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span class="item-id">12345</span>
-                                                                    <span>$ageRating name</span>
-                                                                </li>
-                                                            </ul>														
-                                                        </td>
-                                                        <td class="input-btn-group-button">
-                                                            <button class="btn-new">add</button>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <p class="tag-cloud tag-for-remove">
-                                                    <a>
-                                                        <span class="tag">$ageRating name</span>
-                                                    </a>
-                                                    <a>
-                                                        <span class="tag">$ageRating name</span>
-                                                    </a>
-                                                </p>
-											</div>
-										</td>
-									</tr>
                                 </tbody>
                             </table>
                         </div>
@@ -278,6 +239,45 @@
                                                 <label><input type="checkbox">pause publish</label>
 											</p> 
                                         </td>
+									</tr>
+                                     <tr>
+										<th class="label-box-item-label">ageRating</th>
+										<td class="label-box-item-desc">
+											<p>
+												<label><input type="radio" name="ageRating" checked>depend on program</label>
+												<label><input type="radio" name="ageRating">manual</label>
+											</p>
+											<div class="item-panel">
+												<table class="input-btn-group">
+                                                    <tr>
+                                                        <td class="input-btn-group-input input-dropdown w-ls">
+                                                            <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                            <ul class="input-dropdown-result scroll-customed">
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                            </ul>														
+                                                        </td>
+                                                        <td class="input-btn-group-button">
+                                                            <button class="btn-new">add</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p class="tag-cloud tag-for-remove">
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                </p>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<th class="label-box-item-label">allowed region</th>
@@ -328,10 +328,13 @@
                                                 <input type="radio" name="episode-type">additional clip
                                             </label>
 											<div class="item-panel">
-												<p>episode number</p>
-												<label><input type="radio" name="episode-type-number-type" checked>order number</label>
-												<input class="w-sl" type="number" name=""/>
-												<label><input type="radio" name="episode-type-number-type">depend on on-air release dete</label>
+												<p>episode order</p>
+												<label><input type="radio" name="episode-type-number-type" checked>order number
+												    <input class="w-sl" type="number" name=""/>
+                                                </label>
+												<label><input type="radio" name="episode-type-number-type">date
+                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                </label>
 											</div>
 										</td>
 									</tr>
