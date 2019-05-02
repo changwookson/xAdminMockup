@@ -43,14 +43,15 @@
 						</h1>
 					</div>
 					<div class="con-body-tabs" id="program-tabs">
-						<ul class="con-body-tabs-menu scroll-customed">
-							<!--<li><a>Program DB Setting</a></li>-->
+						<ul class="con-body-tabs-menu scroll-customed">					
 							<li><a href="#program-tabs-PP">Program Publish Setting</a></li>
+                            <li><a>Program Meta</a></li>
 							<li id="program-tabs-EM"><a href="#program-tabs-EM">Episode Management</a></li>
                         </ul>
 						<!-- program Publish tab start -->
 						<div class="con-body con-body-tabs-content">
-							<div class="con-sector">
+							<!--
+                            <div class="con-sector">
                                 <h3 class="con-sector-title">join Meta</h3>
 								<table class="label-box">
 									<tbody>
@@ -74,6 +75,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            -->
                             <div class="con-sector">
                                 <h3 class="con-sector-title">information</h3>
 								<table class="label-box">
@@ -150,6 +152,39 @@
 												</p>
 											</td>
 										</tr>
+                                        <tr>
+                                            <th class="label-box-item-label">ageRating</th>
+                                            <td class="label-box-item-desc">
+                                                <table class="input-btn-group">
+                                                    <tr>
+                                                        <td class="input-btn-group-input input-dropdown w-ls">
+                                                            <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                            <ul class="input-dropdown-result scroll-customed">
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="item-id">12345</span>
+                                                                    <span>$ageRating name</span>
+                                                                </li>
+                                                            </ul>														
+                                                        </td>
+                                                        <td class="input-btn-group-button">
+                                                            <button class="btn-new">add</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p class="tag-cloud tag-for-remove">
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                    <a>
+                                                        <span class="tag">$ageRating name</span>
+                                                    </a>
+                                                </p>
+                                            </td>                                       
+                                        </tr>
 										<tr>
 											<th class="label-box-item-label required-field">allowed region</th>
 											<td class="label-box-item-desc">
@@ -198,6 +233,20 @@
 												</p>
 											</td>
 										</tr>
+                                        <tr>
+                                            <th class="label-box-item-label">program type</th>
+                                            <td class="label-box-item-desc">
+                                                <label>
+                                                    <input type="radio" name="program-type" checked>tv
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="program-type">movie
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="program-type">online
+                                                </label>										
+                                            </td>
+                                        </tr>                                     
                                         <tr>
                                             <th class="label-box-item-label">child episode type</th>
                                             <td class="label-box-item-desc">
@@ -265,16 +314,288 @@
                                 <li><button type="button" class="btn-cancel">Cancel</button></li>
                                 <li><button type="button" class="btn-submit">Save</button></li>
                             </ul>
-                            <p>
-                                <a id="open-program-DB-list-modal" class="font-lm">open program-DB list modal</a>
-                                <script type="text/javascript">
-                                    $('#open-program-DB-list-modal').click(function(){
-                                        $('#program-DB-list-modal').show().animate({right:'0'});
-                                    });
-                                </script>
-                            </p>
 						</div>
 						
+                        <!-- program meta start -->
+                        
+                        <div class="con-body con-body-tabs-content">
+							<div class="con-sector">
+                                <div class="con-sector">
+                                    <h3 class="con-sector-title">information</h3>
+                                    <div class="tabs">
+                                        <ul class="tabs-menu scroll-customed">
+                                            <li><a>Engilsh</a></li>
+                                            <li><a>简体中文</a></li>
+                                            <li><a>$language name</a></li>
+                                        </ul>
+                                        <div class="tabs-content">
+                                            <table class="label-box">
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="label-box-item-label required-field">program title</th>
+                                                        <td class="label-box-item-desc">
+                                                            <input class="w-lm" type="text" placeholder="input program title" name=""/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="label-box-item-label required-field">program synop</th>
+                                                        <td class="label-box-item-desc">
+                                                            <textarea rows="3" cols="" class="w-100per"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="label-box-item-label required-field">poster</th>
+                                                        <td class="label-box-item-desc">
+                                                            <p class="item-group">
+                                                                <button type="button" class="file-input-replace btn-new">add image</button>
+                                                            </p>
+                                                            <div class="img-embed-pure img-w-200">
+                                                                <img src="resource/image/sample-poster-1.jpg" />
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tabs-content">tabs-content-2</div>
+                                        <div class="tabs-content">tabs-content-3</div>
+                                    </div>
+                                </div>
+                                <div class="con-sector">
+                                    <h3 class="con-sector-title">meta</h3>
+                                    <table class="label-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label-box-item-label required-field">genre</th>
+                                                <td class="label-box-item-desc">
+                                                    <table class="input-btn-group">
+                                                        <tr>
+                                                            <td class="input-btn-group-input input-dropdown w-ls">
+                                                                <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                                <ul class="input-dropdown-result scroll-customed">
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$genre name</span>
+
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$genre name</span>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </td>
+                                                            <td class="input-btn-group-button">
+                                                                <button class="btn-new">add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="tag-cloud tag-for-remove">
+                                                        <a>
+                                                            <span class="tag">$genre name</span>
+                                                        </a>
+                                                        <a>
+                                                            <span class="tag">$genre name</span>
+                                                        </a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label required-field">cast</th>
+                                                <td class="label-box-item-desc">
+                                                    <table class="input-btn-group">
+                                                        <tr>
+                                                            <td class="input-btn-group-input input-dropdown w-ls">
+                                                                <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                                <ul class="input-dropdown-result scroll-customed">
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </td>
+                                                            <td class="input-btn-group-button">
+                                                                <button class="btn-new">add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="tag-cloud tag-for-remove">
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">director</th>
+                                                <td class="label-box-item-desc">
+                                                    <table class="input-btn-group">
+                                                        <tr>
+                                                            <td class="input-btn-group-input input-dropdown w-ls">
+                                                                <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                                <ul class="input-dropdown-result scroll-customed">
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </td>
+                                                            <td class="input-btn-group-button">
+                                                                <button class="btn-new">add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="tag-cloud tag-for-remove">
+                                                        <a>
+                                                            <span class="tag">$people name</span>
+                                                        </a>
+                                                        <a>
+                                                            <span class="tag">$people name</span>
+                                                        </a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">writer</th>
+                                                <td class="label-box-item-desc">
+                                                    <table class="input-btn-group">
+                                                        <tr>
+                                                            <td class="input-btn-group-input input-dropdown w-ls">
+                                                                <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                                <ul class="input-dropdown-result scroll-customed">
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                </ul>
+
+                                                            </td>
+                                                            <td class="input-btn-group-button">
+                                                                <button class="btn-new">add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="tag-cloud tag-for-remove">
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th class="label-box-item-label">staff</th>
+                                                <td class="label-box-item-desc">
+                                                    <table class="input-btn-group">
+                                                        <tr>
+                                                            <td class="input-btn-group-input input-dropdown w-ls">
+                                                                <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                                <ul class="input-dropdown-result scroll-customed">
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="item-id">12345</span>
+                                                                        <span>$people name</span>
+                                                                    </li>
+                                                                </ul>														
+                                                            </td>
+                                                            <td class="input-btn-group-button">
+                                                                <button class="btn-new">add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="tag-cloud tag-for-remove">
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">country</th>
+                                                <td class="label-box-item-desc">
+                                                    <select>
+                                                        <option>select conutry</option>
+                                                        <option>$country library</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">produced year</th>
+                                                <td class="label-box-item-desc">
+                                                    <select>
+                                                        <option>select year</option>
+                                                        <option>$2019~$1900</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">rating score</th>
+                                                <td class="label-box-item-desc">
+                                                    <input type="number" onkeyup="imsi(this)" class="w-ls" placeholder="input douban content number ID"/> 
+                                                    <script>
+                                                        var prev = ""; 
+                                                        var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                        function imsi(obj) { 
+                                                            if(obj.value.search(regexp)==-1) { 
+                                                                obj.value = prev; 
+                                                            } 
+                                                            else { 
+                                                                prev = obj.value; 
+                                                            } 
+                                                        } 
+                                                    </script>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">content provider</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="input content provider name" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">production</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="input production name" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">on-air released</th>
+                                                <td class="label-box-item-desc">
+                                                    <div class="datepicker">
+                                                        <label>start
+                                                            <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                        </label>
+                                                        <label>end
+                                                        <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                        </label>
+                                                    </div>
+                                                    <label>on-air day of week
+                                                        <select>
+                                                            <option>select day</option>
+                                                            <option>$monday</option>
+                                                        </select>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>                         
+                                </div>
+                                <ul class="submit">
+                                    <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                    <li><button type="button" class="btn-submit">Save</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
 						<!-- episode tab start -->
 						
 						<div class="con-body con-body-tabs-content">
@@ -466,6 +787,7 @@
 			
 		<section name="hidden-item">
 			<!-- program-DB-list-modal start-->
+            <!--
 			<div id="program-DB-list-modal" class="layer-wrap layer-detail">
 				<div class="layer-box w-xlm">
 					<div class="layer-close">
@@ -575,7 +897,8 @@
 					</div>
 				</div>
 			</div>
-			<!-- program-DB-list-modal end-->
+            -->
+			<!--program-DB-list-modal end-->
 		</section>
 			
 		<!--last import resources start-->

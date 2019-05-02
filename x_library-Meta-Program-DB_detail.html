@@ -95,6 +95,21 @@
 								<div class="tabs-content">tabs-content-3</div>
 							</div>
                         </div>
+                         <div class="con-sector">
+                            <h3 class="con-sector-title">type</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">program type</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="program-type" checked>movie</label>
+											<label><input type="radio" name="program-type">tv</label>
+                                            <label><input type="radio" name="program-type">online</label>
+										</td>
+									</tr>
+                                </tbody>
+                             </table>
+                        </div>
                         <div class="con-sector">
                             <h3 class="con-sector-title">meta</h3>
 							<table class="label-box">
@@ -273,7 +288,8 @@
                                     <tr>
 										<th class="label-box-item-label">rating score</th>
 										<td class="label-box-item-desc">
-											<input type="number" onkeyup="imsi(this)" class="w-sl"/> 
+											<input type="number" onkeyup="imsi(this)" class="w-ml" placeholder="input douban movie ID"/> 
+                                            <!--
                                             <script>
                                                 var prev = ""; 
                                                 var regexp = /^\d*(\.\d{0,1})?$/; 
@@ -286,6 +302,7 @@
                                                     } 
                                                 } 
                                             </script>
+                                            -->
 										</td>
 									</tr>
 									<tr>
@@ -318,40 +335,7 @@
 												</select>
 											</label>
 										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">ageRating</th>
-										<td class="label-box-item-desc">
-											<table class="input-btn-group">
-												<tr>
-													<td class="input-btn-group-input input-dropdown w-ls">
-														<input class="input-dropdown-input" type="text" placeholder="search and add" />
-														<ul class="input-dropdown-result scroll-customed">
-															<li>
-																<span class="item-id">12345</span>
-																<span>$ageRating name</span>
-															</li>
-															<li>
-																<span class="item-id">12345</span>
-																<span>$ageRating name</span>
-															</li>
-														</ul>														
-													</td>
-													<td class="input-btn-group-button">
-														<button class="btn-new">add</button>
-													</td>
-												</tr>
-											</table>
-											<p class="tag-cloud tag-for-remove">
-												<a>
-													<span class="tag">$ageRating name</span>
-												</a>
-												<a>
-													<span class="tag">$ageRating name</span>
-												</a>
-											</p>
-										</td>
-									</tr>
+									</tr>									
                                 </tbody>
                             </table>                         
                         </div>
