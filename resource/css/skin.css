@@ -201,8 +201,8 @@ h6 {font-size:1.20rem;}
 .gnb-identity {float:left; padding:0;}
 .gnb-identity:after {content:""; display:block; clear:both;}
 .gnb-logo {float:left; width:20.0rem; padding: 0.5rem; background:#292e3d; height: 4.0rem;}
-.gnb-logo a {display: block; height: 3.0rem; color:#fff; font-size: 1.8rem; text-align: center;}
-.gnb-logo a:hover {text-decoration:none; color:#5CADD6;}
+.gnb-logo a {display: block; height: 3.0rem; color:#fff; font-size: 2.0rem; text-align: center; font-weight: 100;}
+.gnb-logo a:hover {text-decoration:none;}
 .gnb-logo a span {font-weight: 100;} /* text로 로고 넣을 때 */
 .gnb-logo a img {width:100%; max-width: 12rem; vertical-align: middle;} /* 이미지 로고 넣을 때 */
 .gnb-subtitle {float:left; padding: 1rem;}
@@ -212,11 +212,13 @@ h6 {font-size:1.20rem;}
 
 .gnb-menu {float:right; padding: 0 0.5rem;}
 .gnb-menu:after {content:""; display:block; clear:both;}
+.gnb-menu-left {float:left;}
 .gnb-menu-group {float: left;}
 .gnb-menu-group a {color:#222;}
 .gnb-menu-group a:hover {color:#5CADD6; text-decoration:none;}
 .gnb-menu-group a:hover .icon {background: #5CADD6;}
 .gnb-menu-1d {position:relative; display: inline-block;}
+.gnb-menu-1d li select {display:block; margin: 0.6rem 0.4rem; border:1px solid #5cadd6; font-weight: bold; color:#5cadd6; }
 .gnb-menu-1d li a {display:block; padding: 0.8rem 0.4rem;}
 .gnb-menu-1d li a .icon {display:inline-block; width:2.4rem; height: 2.4rem; padding: 0.6rem; background: #3d455c; text-align: center; color: #fff;
     border-radius: 50%;
@@ -272,11 +274,11 @@ h6 {font-size:1.20rem;}
 .sidebar-header-img img {width:100%; border:0.3rem solid #fff;}
 .sidebar-header-desc {padding: 0 0.1rem; text-align: center; color:#5cadd6;}
 
-.sidebar-menu {margin-top:1.5rem; margin-bottom:3.0rem;}
+.sidebar-menu {margin-top:2.0rem; margin-bottom:3.0rem;}
 .sidebar-menu a {color: #fff; font-weight:100;}
 .sidebar-menu a:hover {text-decoration: none;}
 .sidebar-menu-group {margin-bottom: 1.0rem;}
-.sidebar-menu-group h3 {padding: 0.5rem 1.0rem 0.5rem 1.5rem; font-size: 1.6rem; color:#5cadd6;}
+.sidebar-menu-group h3 {padding: 0.5rem 1.0rem 0.5rem 1.5rem; font-size: 1.6rem; color:#5cadd6; font-weight: 100;}
 
 .sidebar-menu-1d {margin-bottom: 1.0rem}
 .sidebar-menu-1d li a {position:relative; display:block; padding: 0.8rem 1.0rem 0.8rem 1.5rem; font-size:1.3rem;}

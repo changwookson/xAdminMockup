@@ -36,9 +36,8 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Library</span>
-							<span>Meta</span>
-							<span>AgeRating</span>
+							<span>Meta Property</span>
+							<span>Category</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -46,13 +45,28 @@
 							<div class="list-option">
 								<ul class="list-option-filter">
 									<li>
+										<select>
+											<option>active status</option>
+											<option>active</option>
+											<option>inactive</option>
+										</select>
+									</li>
+									<li>
+										<select>
+											<option>depth</option>
+											<option>1depth</option>
+											<option>2depth</option>
+											<option>3depth</option>
+										</select>
+									</li>
+									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>content name</option>
-															<option>content ID</option>
+															<option>category name</option>
+															<option>category ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -91,7 +105,9 @@
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
 											<th>name</th>
-											<th class="w-sl sub-info">allowed age</th>
+											<th class="w-sl">depth</th>
+											<th class="w-sl">child</th>
+											<th class="w-ms sub-info">active status</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -100,10 +116,12 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">PG-13</a>
+												<a href="#">movie</a>
 											</td>
-											<td class="w-sl sub-info">13</td>
-											<td class="w-ms sub-info">
+											<td>1depth</td>
+											<td>5</td>
+											<td class="sub-info">active</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -114,10 +132,28 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">R-17</a>
+												<a href="#">drama</a>
 											</td>
-											<td class="w-sl sub-info">17</td>
-											<td class="w-ms sub-info">
+											<td>2depth</td>
+											<td>3</td>
+											<td class="sub-info">active</td>
+											<td class="sub-info">
+												<p>MM-DD-YYYY</p> 
+												<p class="td-desc">
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td>
+												<a href="#">drama</a>
+											</td>
+											<td>3depth</td>
+											<td>-</td>
+											<td class="sub-info">inactive</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -147,7 +183,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-Meta-AgeRating_detail.html" class="font-lm">open detail page</a>
+								<a href="Category_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

@@ -36,9 +36,8 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>ODC</span>
-							<span>Content</span>
-							<span>Home - Cover Slide</span>
+							<span>Home</span>
+							<span>Curation Item</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -46,13 +45,24 @@
 							<div class="list-option">
 								<ul class="list-option-filter">
 									<li>
-										<select>
-											<option>publish status</option>
-											<option>unscheduled</option>
-											<option>scheduled</option>
-											<option>published</option>
-											<option>expired</option>
-										</select>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>cover item name </option>
+															<option>cover item ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</li>
 									<li>
 										<button type="button" class="btn-submit">filter apply</button>
@@ -80,11 +90,7 @@
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
 											<th>name</th>
-											<th class="w-sl sub-info">items</th>
-											<th class="w-ms sub-info">publish status</th>
-											<th class="w-ms sub-info">schedule</th>
 											<th class="w-ms sub-info">date</th>
-											<th class="w-sl">duplicate</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -92,51 +98,27 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">$home cover slide set name</a>
+												<a href="#">$curation item name</a>
 											</td>
-                                            <td>3</td>
-											<td class="sub-info">
-												<p>scheduled</p>
-											</td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-													<span>MM-DD-YYYY hh:mm:ss</span>
-												</p>
-                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-                                            <td>
-                                                <button class="btn-new">duplicate</button>
-                                            </td>
 										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">$home cover slide set name</a>
+												<a href="#">$curation item name</a>
 											</td>
-                                            <td>5</td>
-											<td class="sub-info">
-												<p>published</p>
-											</td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-													<span>MM-DD-YYYY hh:mm:ss</span>
-												</p>
-                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-                                            <td>
-                                                <button class="btn-new">duplicate</button>
-                                            </td>
 										</tr>
 									</tbody>
 								</table>
@@ -161,7 +143,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="ODC-Content-Home-cover-slide_detail.html" class="font-lm">open detail page</a>
+								<a href="Curation-Item_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

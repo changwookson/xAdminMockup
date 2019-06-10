@@ -36,9 +36,8 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Library</span>
-							<span>Meta</span>
-							<span>People</span>
+							<span>Home</span>
+							<span>Curation Set</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -46,24 +45,13 @@
 							<div class="list-option">
 								<ul class="list-option-filter">
 									<li>
-										<table class="search-bar">
-											<tbody>
-												<tr>
-													<td class="search-bar-option">
-														<select>
-															<option>content name</option>
-															<option>content ID</option>
-														</select>
-													</td>
-													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
-													</td>
-													<td class="search-bar-btn">
-														<button type="button"><span class="icon fa fa-search"></span></button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+										<select>
+											<option>publish status</option>
+											<option>unscheduled</option>
+											<option>scheduled</option>
+											<option>published</option>
+											<option>expired</option>
+										</select>
 									</li>
 									<li>
 										<button type="button" class="btn-submit">filter apply</button>
@@ -90,58 +78,68 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
-											<th class="w-sm">image</th>
 											<th>name</th>
+											<th class="w-sl sub-info">items</th>
+											<th class="w-ms sub-info">publish status</th>
+											<th class="w-ms sub-info">schedule</th>
 											<th class="w-ms sub-info">date</th>
+											<th class="w-sl">duplicate</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-                                            <td class="table-list-item-img profile-image">                                         
-                                                <div class="img-embed-wrap">
-                                                    <div class="img-embed-ratio">
-                                                        <div class="img-embed-code" >
-                                                            <img src="resource/image/default-profile.png" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>									
 											<td>
-												<a href="#">$people name</a>
+												<a href="#">$home cover slide set name</a>
 											</td>
+                                            <td>3</td>
+											<td class="sub-info">
+												<p>scheduled</p>
+											</td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+													<span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
+                                            <td>
+                                                <button class="btn-new">duplicate</button>
+                                            </td>
 										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td class="table-list-item-img profile-image">                                         
-                                                <div class="img-embed-wrap">
-                                                    <div class="img-embed-ratio">
-                                                        <div class="img-embed-code" >
-                                                            <img src="resource/image/sample-profile-1.jpg" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
 											<td>
-												<a href="#">$people name</a>
+												<a href="#">$home cover slide set name</a>
 											</td>
+                                            <td>5</td>
+											<td class="sub-info">
+												<p>published</p>
+											</td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+													<span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
+                                            <td>
+                                                <button class="btn-new">duplicate</button>
+                                            </td>
 										</tr>
 									</tbody>
 								</table>
+								
 							</div>
 							<ul class="pagenation-simple">
 								<span>Rows per page</span>
@@ -162,7 +160,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="library-Meta-People_detail.html" class="font-lm">open detail page</a>
+								<a href="Curation-Set_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

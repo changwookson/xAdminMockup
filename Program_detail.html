@@ -31,12 +31,11 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="ODC-Content-Program.html">
+		<main id="main-article" class="article-subside-off" menu="Program_list.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>ODC</span>
 							<span>Content</span>
 							<span>Program</span>
 							<span>$program ID</span>
@@ -44,38 +43,11 @@
 					</div>
 					<div class="con-body-tabs" id="program-tabs">
 						<ul class="con-body-tabs-menu scroll-customed">					
-							<li><a href="#program-tabs-PP">Program Publish Setting</a></li>
-                            <li><a>Program Meta</a></li>
-							<li id="program-tabs-EM"><a href="#program-tabs-EM">Episode Management</a></li>
+							<li><a>Publish</a></li>
+                            <li><a>Meta</a></li>
                         </ul>
 						<!-- program Publish tab start -->
 						<div class="con-body con-body-tabs-content">
-							<!--
-                            <div class="con-sector">
-                                <h3 class="con-sector-title">join Meta</h3>
-								<table class="label-box">
-									<tbody>
-										<tr>
-											<th class="label-box-item-label required-field">program-DB</th>
-											<td class="label-box-item-desc">
-												<p>
-													<button type="button" class="btn-get">select program-DB</button>
-												</p>
-												<p class="info-message">If there is no program-DB that you need, create new DB item. <a href="library-Meta-Program-DB.html" target="blank">go to create program-DB</a></p>
-												<div>
-													<ul class="simple-list">
-						  								<li>
-						  									<span class="item-id">12345</span>
-						  									<span>$selected program-DB name</span>
-						  								</li>
-						  							</ul>
-						  						</div>
-											</td>
-										</tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            -->
                             <div class="con-sector">
                                 <h3 class="con-sector-title">information</h3>
 								<table class="label-box">
@@ -595,183 +567,6 @@
                                 </ul>
                             </div>
                         </div>
-                        
-						<!-- episode tab start -->
-						
-						<div class="con-body con-body-tabs-content">
-							<div class="con-sector">
-								<div class="list-option">
-									<ul class="list-option-filter">
-                                        <li>
-											<select>
-												<option>active status</option>
-												<option>active</option>
-												<option>inactive</option>
-											</select>
-										</li>
-										<li>
-											<select>
-												<option>publish status</option>
-												<option>unscheduled</option>
-												<option>scheduled</option>
-												<option>published</option>
-												<option>expired</option>
-											</select>
-										</li>										
-										<li>
-											<table class="search-bar">
-												<tbody>
-													<tr>
-														<td class="search-bar-option">
-															<select>
-																<option>episode name</option>
-																<option>episode ID</option>
-															</select>
-														</td>
-														<td class="search-bar-input">
-															<input type="search" placeholder="keyword"/>
-														</td>
-														<td class="search-bar-btn">
-															<button type="button"><span class="icon fa fa-search"></span></button>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</li>
-										<li>
-											<button type="button" class="btn-submit">filter apply</button>
-										</li>
-									</ul>
-									<ul class="list-option-action">
-										<li>
-											<button type="button" class="btn-new">
-												<span class="icon fa fa-plus"></span>
-						            			<span>create</span>
-											</button>
-										</li>
-										<li>
-											<button type="button" class="btn-cancel">
-												<span class="icon fa fa-times"></span>
-						            			<span>remove</span>
-											</button>
-										</li>
-									</ul>
-								</div>
-								<div class="table-wrap scroll-customed">
-									<table class="table">
-										<thead>
-											<tr>
-												<th class="w-ss"><input type="checkbox" /></th>
-												<th class="w-sl">ID</th>
-												<th class="w-sl">image</th>
-												<th>name</th>
-												<th class="w-ms sub-info">episode type</th>
-												<th class="w-ms sub-info">number</th>
-												<th class="w-ms sub-info">active status</th>
-												<th class="w-ms sub-info">schedule</th>
-												<th class="w-ms sub-info">date</th>
-												<th class="w-sl">video asset</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><input type="checkbox" /></td>
-												<td>123456789</td>
-												<td class="table-list-item-img video-thumbnail">
-													<div class="img-embed-wrap">
-														<div class="img-embed-ratio">
-															<div class="img-embed-code">
-																<img src="resource/image/sample-video-thumbnail-1.jpg" />
-															</div>
-														</div>
-													</div>
-												</td>
-												<td>
-													<a href="#">$episode name</a>
-												</td>
-												<td class="sub-info">main</td>
-												<td class="sub-info">-</td>
-												<td class="sub-info">
-													<p>active</p>
-												</td>
-												<td class="sub-info">
-													<p class="td-desc">
-														<span>MM-DD-YYYY hh:mm:ss</span>
-													</p>
-													<p class="td-desc">
-														<span>MM-DD-YYYY hh:mm:ss</span>
-													</p>
-												</td>
-												<td class="sub-info">
-													<p>MM-DD-YYYY</p> 
-													<p class="td-desc">
-														<span>hh:mm:ss</span>
-													</p>
-												</td>
-												<td>123456789</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" /></td>
-												<td>123456789</td>
-												<td class="table-list-item-img video-thumbnail">
-													<div class="img-embed-wrap">
-														<div class="img-embed-ratio">
-															<div class="img-embed-code">
-																<img src="resource/image/sample-video-thumbnail-2.jpg" />
-															</div>
-														</div>
-													</div>
-												</td>
-												<td>
-													<a href="#">$episode name</a>
-												</td>
-												<td class="sub-info">a episode</td>
-												<td class="sub-info">7</td>
-												<td class="sub-info">
-													<p>inactive</p>
-												</td>
-												<td class="sub-info">
-													<p class="td-desc">
-														<span>MM-DD-YYYY hh:mm:ss</span>
-													</p>
-													<p class="td-desc">
-														<span>MM-DD-YYYY hh:mm:ss</span>
-													</p>
-												</td>
-												<td class="sub-info">
-													<p>MM-DD-YYYY</p> 
-													<p class="td-desc">
-														<span>hh:mm:ss</span>
-													</p>
-												</td>
-												<td>123456789</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<ul class="pagenation-simple">
-									<span>Rows per page</span>
-									<li>
-										<select>
-											<option>10s</option>
-											<option current>20s</option>
-											<option>50s</option>
-											<option>100s</option>
-										</select>
-									</li>
-									<span>1-6 of 9</span>
-									<li>
-										<div class="btn-group">
-											<button type="button" class="btn-common"><</button>
-											<button type="button" class="btn-common">></button>
-										</div>
-									</li>
-								</ul>
-								<p class="font-ml">
-									<a href="ODC-Content-Episode_detail.html" class="font-lm">open detail page</a>
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</article>
@@ -785,119 +580,6 @@
 			</script>
 			
 		<section name="hidden-item">
-			<!-- program-DB-list-modal start-->
-            <!--
-			<div id="program-DB-list-modal" class="layer-wrap layer-detail">
-				<div class="layer-box w-xlm">
-					<div class="layer-close">
-						<a class="layer-detail-close layer-close-icon"></a>
-					</div>
-					<div class="layer-header">
-						<h2>program-DB-list-modal</h2> 
-					</div> 
-					<div class="layer-body">
-						<div class="con-sector">
-							<div class="list-option">
-								<ul class="list-option-filter">
-									<li>
-										<table class="search-bar">
-											<tbody>
-												<tr>
-													<td class="search-bar-option">
-														<select>
-															<option>program-DB name</option>
-															<option>program-DB ID</option>
-														</select>
-													</td>
-													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
-													</td>
-													<td class="search-bar-btn">
-														<button type="button"><span class="icon fa fa-search"></span></button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</li>
-								</ul>
-							</div>
-							<div class="table-wrap scroll-customed">
-								<table class="table">
-									<thead>
-										<tr>
-											<th class="w-sl">ID</th>
-											<th class="w-sl">image</th>
-											<th>name</th>
-											<th class="w-ms sub-info">involved status</th>
-											<th class="w-ms sub-info">select</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-											<td>
-												<a href="#">$program-DB name</a>
-											</td>
-											<td class="sub-info">involved</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
-											</td>
-										</tr>
-										<tr>
-											<td>123456789</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="resource/image/sample-poster-2.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-											<td>
-												<a href="#">$program-DB name</a>
-											</td>
-											<td class="sub-info">uninvolved</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<ul class="pagenation-simple">
-								<span>Rows per page</span>
-								<li>
-									<select>
-										<option>10s</option>
-										<option current>20s</option>
-										<option>50s</option>
-										<option>100s</option>
-									</select>
-								</li>
-								<span>1-6 of 9</span>
-								<li>
-									<div class="btn-group">
-										<button type="button" class="btn-common"><</button>
-										<button type="button" class="btn-common">></button>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-            -->
-			<!--program-DB-list-modal end-->
 		</section>
 			
 		<!--last import resources start-->
