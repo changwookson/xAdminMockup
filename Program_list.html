@@ -43,29 +43,23 @@
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
-								<ul class="list-option-filter">                                
+								<ul class="list-option-filter">
                                     <li>
 										<select>
-											<option>active status</option>
-											<option>active</option>
-											<option>inactive</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>publish status</option>
+											<option>schedule</option>
 											<option>unscheduled</option>
 											<option>scheduled</option>
 											<option>published</option>
 											<option>expired</option>
 										</select>
 									</li>
-									<li>
+                                    <li>
 										<select>
-											<option>CP</option>
-											<option>$Partner-CP</option>
+											<option>active</option>
+                                            <option>inactive</option>
+											<option>active</option>										
 										</select>
-									</li>
+									</li>								
 									<li>
 										<table class="search-bar">
 											<tbody>
@@ -74,6 +68,8 @@
 														<select>
 															<option>program name</option>
 															<option>program ID</option>
+                                                            <option>parent category name</option>
+															<option>parent category ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -113,17 +109,21 @@
 											<th class="w-sl">ID</th>
 											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-mm sub-info">parent category</th>
+											<th class="w-mm sub-info">category</th>
 											<th class="w-sl sub-info">episodes</th>
-											<th class="w-ms sub-info">active status</th>
-											<th class="w-ms sub-info">schedule</th>
+                                            <th class="w-ms sub-info">schedule</th>
+											<th class="w-ms sub-info">active</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td><input type="checkbox" /></td>
-											<td>123456789</td>
+											<td>
+                                                <p><input type="checkbox" /></p>
+                                            </td>
+											<td>
+                                                <p>123456789</p>
+                                            </td>
 											<td class="table-list-item-img video-thumbnail">
 												<div class="img-embed-wrap">
 													<div class="img-embed-ratio">
@@ -140,17 +140,24 @@
 												<p>drama</p>
 												<p>movie</p>
 											</td>
-											<td class="sub-info">23</td>
 											<td class="sub-info">
-												<p>active</p>
+                                                <p>23</p>
+                                            </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
 											</td>
 											<td class="sub-info">
-												<p class="td-desc">
-													<span>MM-DD-YYYY hh:mm:ss</span>
-												</p>
-												<p class="td-desc">
-													<span>MM-DD-YYYY hh:mm:ss</span>
-												</p>
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
@@ -160,8 +167,12 @@
 											</td>
 										</tr>
 										<tr>
-											<td><input type="checkbox" /></td>
-											<td>123456789</td>
+											<td>
+                                                <p><input type="checkbox" /></p>
+                                            </td>
+											<td>
+                                                <p>123456789</p>
+                                            </td>
 											<td class="table-list-item-img video-thumbnail">
 												<div class="img-embed-wrap">
 													<div class="img-embed-ratio">
@@ -178,12 +189,24 @@
 												<p>$category name</p>
 												<p>$category name</p>
 											</td>
-											<td class="sub-info">1</td>
 											<td class="sub-info">
-												<p>inactive</p>
+                                                <p>1</p>
+                                            </td>
+                                            <td class="sub-info">
+												<p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
 											</td>
 											<td class="sub-info">
-												<p>-</p>
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 

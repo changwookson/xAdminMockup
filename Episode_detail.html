@@ -31,23 +31,102 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="Episode_list.html">
+		<main id="main-article" class="article-subside-on" menu="Episode_list.html">
+            <div class="article-subside-switch">
+				<a class="article-subside-switch-close">Hide sub-siderbar</a>
+				<a class="article-subside-switch-open">Show sub-siderbar</a>
+			</div>			
+            <aside id="article-subside"></aside>
+                <script type="text/javascript">
+				$(document).ready(function(){
+					$("#article-subside").load("Episode_list.html .subside-wrap");
+				});
+			</script>
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Content</span>
                             <span>Episode</span>
+                            <span>$Program ID</span>
 							<span>$Episode ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
-                            <h3 class="con-sector-title">join asset</h3>
+                            <h3 class="con-sector-title">Program</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">parent program</th>
+										<td class="label-box-item-desc">
+											<p>
+                                                <span class="item-id">12345</span>
+                                                <span>$parent program name</span>
+                                            </p>
+										</td>
+									</tr>
+									
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">type</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">video asset</th>
+										<th class="label-box-item-label">episode kind</th>
+										<td class="label-box-item-desc">
+                                            <label>
+                                                <input type="radio" name="episode-type" checked>a episode of series
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type">one main episode
+                                            </label>
+											<label>
+                                                <input type="radio" name="episode-type">trailer
+                                            </label>
+											<label>
+                                                <input type="radio" name="episode-type">additional clip
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">episode number</th>
+										<td class="label-box-item-desc">
+                                            <label>
+                                                <input type="radio" name="episode-type-number-type" checked>order number
+                                                <input class="w-sl" type="number" name=""/>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type-number-type">date
+                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                            </label>
+                                            <p>
+                                                <span class="warning-message">There is same number aleady.</span>
+                                            </p>
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">episode part number</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input class="w-sl" type="number" name=""/>
+                                            </p>    
+                                            <p>
+                                                <span class="warning-message">There is same number aleady.</span>
+                                            </p>
+										</td>
+									</tr>
+								</tbody>
+							</table>						
+                        </div>
+						<div class="con-sector">
+                            <h3 class="con-sector-title">asset</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">join asset</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select video asset</button>
 											<div>
@@ -60,33 +139,193 @@
 					  						</div>
 										</td>
 									</tr>
-									<tr>
-										<th class="label-box-item-label">subtitle asset</th>
-										<td class="label-box-item-desc">
-											<button type="button" class="btn-get">add subtitle asset</button>
-											<div>
-												<ul class="simple-list">
-					  								<li>
-					  									<a><span class="simple-list-remove"></span></a>
-					  									<span class="item-id">12345</span>
-					  									<span class="item-id">$code</span>
-					  									<span>$subtitle name</span>
-					  								</li>
-					  								<li>
-					  									<a><span class="simple-list-remove"></span></a>
-					  									<span class="item-id">12345</span>
-					  									<span class="item-id">$code</span>
-					  									<span>$subtitle name</span>
-					  								</li>
-					  							</ul>
-					  						</div>
-										</td>
-									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">asset info</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+												<span class="item-group-label">platform</span>
+												<span class="item-group-desc">brightcove</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">media ID</span>
+												<span class="item-group-desc">$brightcove media ID</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">media name</span>
+												<span class="item-group-desc">$brightcove media name</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">create</span>
+												<span class="item-group-desc">$mm/dd/yyyy - hh:mm:ss</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">upadte</span>
+												<span class="item-group-desc">$mm/dd/yyyy - hh:mm:ss</span>
+											</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">source file</th>
+                                        <td class="label-box-item-desc">
+                                            <p><span>$file name</span></p>
+                                            <p><span><a>$https://file.name/path.mp4</a></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">encoded files</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">bitrate</th>
+                                                            <th class="w-ms">resolution</th>
+                                                            <th>path</th>
+                                                            <th class="w-sl sub-info">preview</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span>3500bps</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>1920X1080</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.mp4</a>
+                                                            </td>
+                                                            <td class="sub-info">
+                                                                <button type="button" class="btn-get font-sm">preview</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span>3500bps</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>1280X720</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.mp4</a>
+                                                            </td>
+                                                            <td class="sub-info">
+                                                                <button type="button" class="btn-get font-sm">preview</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>                                  
+                                    <tr>
+                                        <th class="label-box-item-label">subtitles</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">language code</th>
+                                                            <th class="w-ms">language name</th>
+                                                            <th class="w-sl sub-info">MIME</th>
+                                                            <th>path</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span>en</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>English</span>
+                                                            </td>                                                    
+                                                            <td class="sub-info">
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.mp4</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span>zh</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>Chinese</span>
+                                                            </td>                                                    
+                                                            <td class="sub-info">
+                                                                <span>srt</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.mp4</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">duration</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <input class="w-sm" type="number" name="" placeholder="hh"/>
+                                                <input class="w-sm" type="number" name="" placeholder="mm"/>
+                                                <input class="w-sm" type="number" name="" placeholder="ss"/>
+                                            </p>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">information</h3>
+                            <h3 class="con-sector-title">image</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">thumbnail</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="file-upload">
+                                                <p class="item-group">
+                                                    <button type="button" class="file-input-replace btn-new">add image</button>
+                                                    <span>$imported file name</span>
+                                                </p>
+                                                <input type="file" class="file-input">
+                                            </div>
+                                            <ul>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <label>
+                                                        <input type="radio" name="select thumbnail" checked>
+                                                        <p class="img-embed-pure img-w-200">
+                                                            <img src="resource/image/sample-video-thumbnail-1.jpg" />
+                                                        </p>
+                                                    </label>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <label>
+                                                        <input type="radio" name="select thumbnail" >
+                                                        <p class="img-embed-pure img-w-200">
+                                                            <img src="resource/image/sample-video-thumbnail-1.jpg" />
+                                                        </p>
+                                                    </label>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <label>
+                                                        <input type="radio" name="select thumbnail" >
+                                                        <p class="img-embed-pure img-w-200">
+                                                            <img src="resource/image/sample-video-thumbnail-1.jpg" />
+                                                        </p>
+                                                    </label>
+                                                </li>
+                                            </ul> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">content info</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -95,22 +334,13 @@
 											<input class="w-lm" type="text" placeholder="input episode name by english" name=""/>
 										</td>
 									</tr>
-									<tr>
-										<th class="label-box-item-label">custom url</th>
-										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input custom url" name=""/>
-											<p>
-												<span class="warning-message">url can only be English and numbers, not spaces.</span>
-											</p>
-										</td>
-									</tr>
 								</tbody>
 							</table>
 							<div class="tabs">
 								<ul class="tabs-menu scroll-customed">
-									<li><a>Engilsh</a></li>
-									<li><a>简体中文</a></li>
-									<li><a>$language name</a></li>
+									<li><a class="required-field">简体中文</a></li>
+                                    <li><a>傳統中文</a></li>
+                                    <li><a>Engilsh</a></li>
 								</ul>
 								<div class="tabs-content">
 									<table class="label-box">
@@ -118,25 +348,25 @@
 											<tr>
 												<th class="label-box-item-label">episode title</th>
 												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input episode title" name=""/>
+													<input class="w-lm" type="text" placeholder="input episode special title" name=""/>
 												</td>
 											</tr>
 											<tr>
 												<th class="label-box-item-label">episode synop</th>
 												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input episode synop" name=""/>
+													<input class="w-lm" type="text" placeholder="input episode highlight" name=""/>
 												</td>
 											</tr>
 											<tr>
 												<th class="label-box-item-label">custom SEO title</th>
 												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input custom SEO title" name=""/>
+													<input class="w-lm" type="text" placeholder="input SEO title" name=""/>
 												</td>
 											</tr>
 											<tr>
 												<th class="label-box-item-label">custom SEO description</th>
 												<td class="label-box-item-desc">
-													<textarea rows="3" cols="" placeholder="input custom SEO description" class="w-100per"></textarea>
+													<textarea rows="3" cols="" placeholder="input SEO description" class="w-100per"></textarea>
 												</td>
 											</tr>
                                             <tr>
@@ -153,7 +383,7 @@
 							</div>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">meta</h3>
+                            <h3 class="con-sector-title">people</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -190,59 +420,65 @@
 											</p>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">on-air release date</th>
-										<td class="label-box-item-desc">
-											<div class="datepicker">
-												<input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-											</div>
-										</td>
-									</tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">publish</h3>
+                            <h3 class="con-sector-title">released</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">on-air date</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>
+                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                        </div>                                                    
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">permission</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
-										<th class="label-box-item-label">publish schedule</th>
-										<td class="label-box-item-desc">
-                                            <p class="item-group">
-                                                <span class="item-group-label">start</span>
-                                                <label><input type="radio" name="publish-schedule-start">depend on program schedule</label>
-                                                <label>
-                                                    <input type="radio" name="publish-schedule-start" checked>manual
-                                                    <span class="datepicker">
-                                                        <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-                                                    </span>
-                                                </label>
+                                        <th class="label-box-item-label">allowed region</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label><input type="radio" name="allowed-region" checked>depend on program</label>
+                                                <label><input type="radio" name="allowed-region">manual</label>
                                             </p>
-                                            <p class="item-group">
-                                                <span class="item-group-label">end</span>
-                                                <span class="item-group-desc">
-                                                    <label>
-                                                        <input type="radio" name="publish-schedule-end" checked>depend on program schedule
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="publish-schedule-end">manual
-                                                        <span class="datepicker">
-                                                            <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-                                                        </span>
-                                                    </label>
-                                                </span>
-                                            </p>
+                                            <div class="item-panel">
+                                                <p>
+                                                    <select>
+                                                        <option>select region</option>
+                                                        <option>$region</option>
+                                                    </select>
+                                                    <button type="button" class="btn-new">add</button>
+                                                </p>
+                                                <p class="tag-cloud tag-for-remove">
+                                                    <a>
+                                                        <span class="tag">$region name</span>
+                                                    </a>
+                                                    <a>
+                                                        <span class="tag">$region name</span>
+                                                    </a>
+                                                </p>
+                                            </div>
                                         </td>
-									</tr>
-                                     <tr>
-										<th class="label-box-item-label">ageRating</th>
-										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" name="ageRating" checked>depend on program</label>
-												<label><input type="radio" name="ageRating">manual</label>
-											</p>
-											<div class="item-panel">
-												<table class="input-btn-group">
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">ageRating</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label><input type="radio" name="ageRating" checked>depend on program</label>
+                                                <label><input type="radio" name="ageRating">manual</label>
+                                            </p>
+                                            <div class="item-panel">
+                                                <table class="input-btn-group">
                                                     <tr>
                                                         <td class="input-btn-group-input input-dropdown w-ls">
                                                             <input class="input-dropdown-input" type="text" placeholder="search and add" />
@@ -270,102 +506,55 @@
                                                         <span class="tag">$ageRating name</span>
                                                     </a>
                                                 </p>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">allowed region</th>
-										<td class="label-box-item-desc">
-											<p>
-												<label><input type="radio" name="allowed-region" checked>depend on program</label>
-												<label><input type="radio" name="allowed-region">manual</label>
-											</p>
-											<div class="item-panel">
-												<p>
-													<select>
-														<option>select region</option>
-														<option>$region</option>
-													</select>
-													<button type="button" class="btn-new">add</button>
-												</p>
-												<p class="tag-cloud tag-for-remove">
-													<a>
-														<span class="tag">$region name</span>
-													</a>
-													<a>
-														<span class="tag">$region name</span>
-													</a>
-												</p>
-											</div>
-										</td>
-									</tr>								
+                                            </div>
+                                        </td>
+                                    </tr>                               								
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">type</h3>
+                            <h3 class="con-sector-title">publish</h3>
 							<table class="label-box">
 								<tbody>
-									<tr>
-										<th class="label-box-item-label">episode type</th>
-										<td class="label-box-item-desc">
-                                            <label>
-                                                <input type="radio" name="episode-type" checked>series episode
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="episode-type">one main episode
-                                            </label>
-											<label>
-                                                <input type="radio" name="episode-type">trailer
-                                            </label>
-											<label>
-                                                <input type="radio" name="episode-type">additional clip
-                                            </label>
-											<div class="item-panel">
-												<p>episode order</p>
-												<label><input type="radio" name="episode-type-number-type" checked>order number
-												    <input class="w-sl" type="number" name=""/>
-                                                </label>
-												<label><input type="radio" name="episode-type-number-type">date
-                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-                                                </label>
-											</div>
-										</td>
-									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">CP</th>
+                                        <th class="label-box-item-label">schedule</th>
                                         <td class="label-box-item-desc">
-                                            <p>
-                                                <label><input type="radio" name="select-cp" checked>depend on program</label>
-                                                <label><input type="radio" name="select-cp">manual</label>
+                                            <p class="item-group">
+                                                <span class="item-group-label">start</span>
+                                                <label><input type="radio" name="publish-schedule-start">depend on program schedule</label>
+                                                <label>
+                                                    <input type="radio" name="publish-schedule-start" checked>manual
+                                                    <span class="datepicker">
+                                                        <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                    </span>
+                                                </label>
                                             </p>
-                                            <div class="item-panel">
-                                                <select>
-                                                    <option>select CP</option>
-                                                    <option>$CP name</option>
-                                                </select>
-                                                <input class="w-mm" type="text" placeholder="license code" name=""/>
-                                                <input class="w-mm" type="text" placeholder="tracking code" name=""/>
-                                            </div>
+                                            <p class="item-group">
+                                                <span class="item-group-label">end</span>
+                                                <span class="item-group-desc">
+                                                    <label>
+                                                        <input type="radio" name="publish-schedule-end" checked>depend on program schedule
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="publish-schedule-end">manual
+                                                        <span class="datepicker">
+                                                            <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </p>
                                         </td>
-                                    </tr>	
-								</tbody>
-							</table>						
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">status</h3>
-							<table class="label-box">
-								<tbody>
+                                    </tr>
                                     <tr>
-										<th class="label-box-item-label">active status</th>
+										<th class="label-box-item-label">active</th>
 										<td class="label-box-item-desc">
 											<label><input type="radio" name="data-status" checked>inactive</label>
 											<label><input type="radio" name="data-status">active</label>
 										</td>
 									</tr>
                                 </tbody>
-							</table>						
-                        </div>
+                            </table>
+                        </div>   
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
@@ -377,17 +566,6 @@
                                     $('#video-asset-list-modal').show().animate({right:'0'});
                                 });
                             </script>
-                        </p>
-                        <p>
-                            <a id="open-subtitle-asset-list-modal" class="font-lm">open subtitle asset list modal</a>
-                            <script type="text/javascript">
-                                $('#open-subtitle-asset-list-modal').click(function(){
-                                    $('#subtitle-asset-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p>
-                            <a href="ODC-Content-Program_detail.html" class="font-lm">back to list</a>
                         </p>
 				    </div>
                 </div>

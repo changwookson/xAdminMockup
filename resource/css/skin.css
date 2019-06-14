@@ -173,7 +173,7 @@ h6 {font-size:1.20rem;}
 }
 #nav-sidebar {position: fixed; top:4.0rem; padding-bottom: 4.0rem; width:20.0rem; height:100%; overflow-y:auto; overflow-x:hidden; background: #292e3d; font-size:1.2rem;}
 #main-article {position:relative; margin-top:4.0rem; margin-left:20.0rem;}
-#article-subside {position: fixed; top:4.0rem; padding-bottom: 4.0rem; width:24.0rem; height:100%; overflow-y:auto; overflow-x:hidden;}
+#article-subside {position: fixed; top:4.0rem; padding-bottom: 4.0rem; width:24.0rem; height:100%; overflow-y:auto; overflow-x:hidden; border-right: 1px solid #eee;}
 #article-content {position:relative; height: 100%; overflow: auto; background:#f6f6f6;}
 #footer {position:relative; margin-left:20.0rem; background:#f6f6f6;}
 
@@ -412,8 +412,35 @@ h6 {font-size:1.20rem;}
 }
 
 /*--------------------------------------------------*//* Component */
-
 /* switch-slider */
+.switch {position: relative; display: inline-block; width: 3.4rem; height: 2.0rem;}
+.switch input {display:none;}
+.switch-slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc;
+    transition: .4s;
+    -webkit-transition: .4s;
+    border-radius: 2.0rem;
+    -o-border-radius: 2.0rem;
+    -ms-border-radius: 2.0rem;
+    -moz-border-radius: 2.0rem;
+    -webkit-border-radius: 2.0rem;
+}
+.switch-slider:before {position: absolute; content: ""; height: 1.2rem; width: 1.2rem; left: 0.4rem; bottom: 0.4rem; background-color: #fff;
+    transition: .4s; 
+    -webkit-transition: .4s;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+input:checked + .switch-slider {background-color: #5CADD6;}
+input:checked + .switch-slider:before {
+    transform: translateX(1.4rem);
+    -ms-transform: translateX(1.4rem);
+    -webkit-transform: translateX(1.4rem);
+}
+
+/* switch-slider
 .switch {position: relative; display: inline-block; width: 5.4rem; height: 2.4rem;}
 .switch input {display:none;}
 .switch-slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc;
@@ -442,6 +469,7 @@ input:checked + .switch-slider:before {
     -ms-transform: translateX(3.0rem);
     -webkit-transform: translateX(3.0rem);
 }
+*/
 
 /* button */
 .btn-common {background: none; border:0.1rem solid #aaa;}

@@ -31,13 +31,110 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off">
+		<main id="main-article" class="article-subside-on">
+            <div class="article-subside-switch">
+				<a class="article-subside-switch-close">Hide sub-siderbar</a>
+				<a class="article-subside-switch-open">Show sub-siderbar</a>
+			</div>			
+			<aside id="article-subside">
+				<div class="subside-wrap scroll-customed">
+					<ul class="subside-list-filter">
+						<li>
+							<h6>program search</h6>
+                            <table class="search-bar">
+                                <tbody>
+                                    <tr>
+                                        <td class="search-bar-option">
+                                            <select>
+                                                <option>name</option>
+                                                <option>ID</option>
+                                            </select>
+                                        </td>
+                                        <td class="search-bar-input">
+                                            <input type="search" placeholder="keyword"/>
+                                        </td>
+                                        <td class="search-bar-btn">
+                                            <button type="button"><span class="icon fa fa-search"></span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+						</li>
+						<li>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>										
+											<th>program</th>
+                                            <th class="w-ss">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+                                                <p class="td-desc">
+													<span>123456789</span>
+												</p>
+                                                <a href="#">$program name</a>
+                                                
+											</td>
+											<td>
+												<p>
+                                                    <button type="button" class="btn-get font-sm">select</button>
+                                                </p>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>                                        
+                                                <p class="td-desc">
+                                                    <span>123456789</span>
+                                                </p>
+                                                <a href="#">$program name</a>
+                                                </td>
+											<td>
+												<p>
+                                                    <button type="button" class="btn-get font-sm">select</button>
+                                                </p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+							</div>
+							<ul class="pagenation-simple">
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</aside>
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Content</span>
 							<span>Episode</span>
+                            <span>$Selected Program ID</span>
 						</h1>
 					</div>					
                     <div class="con-body">
@@ -60,28 +157,6 @@
                                             <option>expired</option>
                                         </select>
                                     </li>										
-                                    <li>
-                                        <table class="search-bar">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="search-bar-option">
-                                                        <select>
-                                                            <option>program name</option>
-                                                            <option>program ID</option>
-                                                            <option>episode name</option>
-                                                            <option>episode ID</option>
-                                                        </select>
-                                                    </td>
-                                                    <td class="search-bar-input">
-                                                        <input type="search" placeholder="keyword"/>
-                                                    </td>
-                                                    <td class="search-bar-btn">
-                                                        <button type="button"><span class="icon fa fa-search"></span></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </li>
                                     <li>
                                         <button type="button" class="btn-submit">filter apply</button>
                                     </li>
@@ -108,13 +183,12 @@
                                             <th class="w-ss"><input type="checkbox" /></th>
                                             <th class="w-sl">ID</th>
                                             <th class="w-sl">image</th>
-                                            <th>Parent Program</th>
+                                            <th>Program</th>
                                             <th class="w-ms sub-info">episode type</th>
                                             <th class="w-ms sub-info">number</th>
-                                            <th class="w-ms sub-info">active status</th>
                                             <th class="w-ms sub-info">schedule</th>
+                                            <th class="w-ms sub-info">active</th>                                        
                                             <th class="w-ms sub-info">date</th>
-                                            <th class="w-sl">video asset</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -131,19 +205,27 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="#">$program name [program ID]</a>
+                                                <p class="td-desc">
+                                                    <span>123456789</span>
+                                                </p>
+                                                <a href="#">$program name</a>                                              
                                             </td>
                                             <td class="sub-info">main</td>
-                                            <td class="sub-info">-</td>
-                                            <td class="sub-info">
-                                                <p>active</p>
-                                            </td>
+                                            <td class="sub-info">-</td>                                       
                                             <td class="sub-info">
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
                                                 </p>
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                            </td>
+                                            <td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
                                                 </p>
                                             </td>
                                             <td class="sub-info">
@@ -152,7 +234,6 @@
                                                     <span>hh:mm:ss</span>
                                                 </p>
                                             </td>
-                                            <td>123456789</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" /></td>
@@ -167,19 +248,27 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="#">$program name [program ID]</a>
+                                                <p class="td-desc">
+                                                    <span>123456789</span>
+                                                </p>
+                                                <a href="#">$program name</a> 
                                             </td>
                                             <td class="sub-info">a episode</td>
                                             <td class="sub-info">7</td>
-                                            <td class="sub-info">
-                                                <p>inactive</p>
-                                            </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
                                                 </p>
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                            </td>
+                                            <td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
                                                 </p>
                                             </td>
                                             <td class="sub-info">
@@ -188,7 +277,6 @@
                                                     <span>hh:mm:ss</span>
                                                 </p>
                                             </td>
-                                            <td>123456789</td>
                                         </tr>
                                     </tbody>
                                 </table>
