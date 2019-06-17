@@ -61,6 +61,14 @@
                                         <th class="label-box-item-label required-field">parent program</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select program</button>
+                                            <span>
+                                                <a id="open-program-list-modal" class="font-mm">*open program list modal</a>
+                                                <script type="text/javascript">
+                                                    $('#open-program-list-modal').click(function(){
+                                                        $('#program-list-modal').show().animate({right:'0'});
+                                                    });
+                                                </script>
+                                            </span>
 											<div>
 												<ul class="simple-list">
 					  								<li>
@@ -136,6 +144,14 @@
 										<th class="label-box-item-label required-field">join asset</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select video asset</button>
+                                            <span>
+                                                <a id="open-video-asset-list-modal" class="font-mm">*open video asset list modal</a>
+                                                <script type="text/javascript">
+                                                    $('#open-video-asset-list-modal').click(function(){
+                                                        $('#video-asset-list-modal').show().animate({right:'0'});
+                                                    });
+                                                </script>
+                                            </span>
 											<div>
 												<ul class="simple-list">
 					  								<li>
@@ -616,22 +632,7 @@
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
                         </ul>
-                        <p>
-                            <a id="open-program-list-modal" class="font-lm">open program list modal</a>
-                            <script type="text/javascript">
-                                $('#open-program-list-modal').click(function(){
-                                    $('#program-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p>
-                            <a id="open-video-asset-list-modal" class="font-lm">open video asset list modal</a>
-                            <script type="text/javascript">
-                                $('#open-video-asset-list-modal').click(function(){
-                                    $('#video-asset-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
+                        
 				    </div>
                 </div>
 			</article>
