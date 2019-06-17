@@ -58,15 +58,20 @@
 							<table class="label-box">
 								<tbody>
                                     <tr>
-										<th class="label-box-item-label">parent program</th>
+                                        <th class="label-box-item-label required-field">parent program</th>
 										<td class="label-box-item-desc">
-											<p>
-                                                <span class="item-id">12345</span>
-                                                <span>$parent program name</span>
-                                            </p>
+											<button type="button" class="btn-get">select program</button>
+											<div>
+												<ul class="simple-list">
+					  								<li>
+					  									<span class="item-id">12345</span>
+					  									<span>$selected program name</span>
+					  								</li>
+					  							</ul>
+					  						</div>
+                                            <p class="info-message">list에서 program을 select하고 create한 경우, 자동으로 입력되어 생성</p>
 										</td>
-									</tr>
-									
+									</tr>									
                                 </tbody>
                             </table>
                         </div>
@@ -107,6 +112,7 @@
                                             </p>
                                         </td>                                    
                                     </tr>
+                                    <!--
                                     <tr>
                                         <th class="label-box-item-label">episode part number</th>
 										<td class="label-box-item-desc">
@@ -118,6 +124,7 @@
                                             </p>
 										</td>
 									</tr>
+                                    -->
 								</tbody>
 							</table>						
                         </div>
@@ -596,10 +603,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-										<th class="label-box-item-label">active</th>
+										<th class="label-box-item-label">enable</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" name="data-status" checked>inactive</label>
-											<label><input type="radio" name="data-status">active</label>
+											<label><input type="radio" name="data-status" checked>disable</label>
+											<label><input type="radio" name="data-status">enable</label>
 										</td>
 									</tr>
                                 </tbody>
@@ -609,6 +616,14 @@
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
                         </ul>
+                        <p>
+                            <a id="open-program-list-modal" class="font-lm">open program list modal</a>
+                            <script type="text/javascript">
+                                $('#open-program-list-modal').click(function(){
+                                    $('#program-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
                         <p>
                             <a id="open-video-asset-list-modal" class="font-lm">open video asset list modal</a>
                             <script type="text/javascript">
@@ -630,7 +645,116 @@
 			</script>
 			
 		<section name="hidden-item">
-			<!--layer-detail-sample start-->
+            <!--layer-detail-sample start-->
+			<div id="program-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>program-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-option">
+														<select>
+															<option>program name</option>
+															<option>program ID</option>
+														</select>
+													</td>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-ss"><input type="checkbox" /></th>
+											<th class="w-sl">ID</th>
+											<th class="w-sl">image</th>
+											<th>name</th>
+											<th class="w-ms sub-info">select</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>123456789</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<a href="#">$program name</a>
+											</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div id="video-asset-list-modal" class="layer-wrap layer-detail">
 				<div class="layer-box w-xlm">
 					<div class="layer-close">
@@ -741,99 +865,6 @@
 				</div>
 			</div>
 			
-			<div id="subtitle-asset-list-modal" class="layer-wrap layer-detail">
-				<div class="layer-box w-xlm">
-					<div class="layer-close">
-						<a class="layer-detail-close layer-close-icon"></a>
-					</div>
-					<div class="layer-header">
-						<h2>subtitle-asset-list-modal</h2> 
-					</div> 
-					<div class="layer-body">
-						<div class="con-sector">
-							<div class="list-option">
-								<ul class="list-option-filter">
-									<li>
-										<table class="search-bar">
-											<tbody>
-												<tr>
-													<td class="search-bar-option">
-														<select>
-															<option>subtitle asset name</option>
-															<option>subtitle asset ID</option>
-														</select>
-													</td>
-													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
-													</td>
-													<td class="search-bar-btn">
-														<button type="button"><span class="icon fa fa-search"></span></button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</li>
-								</ul>
-							</div>
-							<div class="table-wrap scroll-customed">
-								<table class="table">
-									<thead>
-										<tr>
-											<th class="w-ss"><input type="checkbox" /></th>
-											<th class="w-sl">ID</th>
-											<th>name</th>
-											<th class="w-sl">language</th>
-											<th class="w-ms sub-info">select</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="checkbox" /></td>
-											<td>123456789</td>
-											<td>
-												<a href="#">$subtitle asset name</a>
-											</td>
-											<td class="sub-info">$language name</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" /></td>
-											<td>123456789</td>
-											<td>
-												<a href="#">$subtitle asset name</a>
-											</td>
-											<td class="sub-info">$language name</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<ul class="pagenation-simple">
-								<span>Rows per page</span>
-								<li>
-									<select>
-										<option>10s</option>
-										<option current>20s</option>
-										<option>50s</option>
-										<option>100s</option>
-									</select>
-								</li>
-								<span>1-6 of 9</span>
-								<li>
-									<div class="btn-group">
-										<button type="button" class="btn-common"><</button>
-										<button type="button" class="btn-common">></button>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!--layer-detail-sample end-->
 		</section>
 			

@@ -37,21 +37,28 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Meta Property</span>
-							<span>People</span>
+							<span>Person</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
 								<ul class="list-option-filter">
+                                    <li>
+										<select>
+											<option>enable</option>
+											<option>disable</option>
+											<option>enable</option>
+										</select>
+									</li>
 									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>content name</option>
-															<option>content ID</option>
+															<option>person name</option>
+															<option>person ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -91,6 +98,7 @@
 											<th class="w-sl">ID</th>
 											<th class="w-sm">image</th>
 											<th>name</th>
+                                            <th class="w-ms">enable</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -108,8 +116,16 @@
                                                 </div>
                                             </td>									
 											<td>
-												<a href="#">$people name</a>
+												<a href="#">$person name</a>
 											</td>
+                                            <td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -130,8 +146,16 @@
                                                 </div>
                                             </td>
 											<td>
-												<a href="#">$people name</a>
+												<a href="#">$person name</a>
 											</td>
+                                            <td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -161,7 +185,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="People_detail.html" class="font-lm">open detail page</a>
+								<a href="Person_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

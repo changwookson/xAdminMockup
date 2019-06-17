@@ -46,9 +46,9 @@
 								<ul class="list-option-filter">
 									<li>
 										<select>
-											<option>active status</option>
-											<option>active</option>
-											<option>inactive</option>
+											<option>enable</option>
+											<option>disable</option>
+											<option>enable</option>
 										</select>
 									</li>
 									<li>
@@ -106,8 +106,7 @@
 											<th class="w-sl">ID</th>
 											<th>name</th>
 											<th class="w-sl">depth</th>
-											<th class="w-sl">child</th>
-											<th class="w-ms sub-info">active status</th>
+											<th class="w-ms sub-info">enable</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -116,11 +115,17 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">movie</a>
+												<a href="#">TVseries</a>
 											</td>
 											<td>1depth</td>
-											<td>5</td>
-											<td class="sub-info">active</td>
+											<td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -135,8 +140,14 @@
 												<a href="#">drama</a>
 											</td>
 											<td>2depth</td>
-											<td>3</td>
-											<td class="sub-info">active</td>
+											<td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
@@ -148,11 +159,17 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">drama</a>
+												<a href="#">k-drama</a>
 											</td>
 											<td>3depth</td>
-											<td>-</td>
-											<td class="sub-info">inactive</td>
+											<td class="sub-info">
+                                                <p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
+                                            </td>
 											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">

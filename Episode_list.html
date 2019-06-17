@@ -141,22 +141,22 @@
                         <div class="con-sector">
                             <div class="list-option">
                                 <ul class="list-option-filter">
-                                    <li>
+                                   <li>
                                         <select>
-                                            <option>active status</option>
-                                            <option>active</option>
-                                            <option>inactive</option>
-                                        </select>
-                                    </li>
-                                    <li>
-                                        <select>
-                                            <option>publish status</option>
+                                            <option>schedule</option>
                                             <option>unscheduled</option>
                                             <option>scheduled</option>
                                             <option>published</option>
                                             <option>expired</option>
                                         </select>
-                                    </li>										
+                                    </li>	
+                                    <li>
+                                        <select>
+                                            <option>enable</option>
+                                            <option>disable</option>
+											<option>enable</option>	
+                                        </select>
+                                    </li>                                									
                                     <li>
                                         <button type="button" class="btn-submit">filter apply</button>
                                     </li>
@@ -183,11 +183,11 @@
                                             <th class="w-ss"><input type="checkbox" /></th>
                                             <th class="w-sl">ID</th>
                                             <th class="w-sl">image</th>
-                                            <th>Program</th>
-                                            <th class="w-ms sub-info">episode type</th>
+                                            <th>episode</th>
+                                            <th class="w-ms sub-info">kind</th>
                                             <th class="w-ms sub-info">number</th>
                                             <th class="w-ms sub-info">schedule</th>
-                                            <th class="w-ms sub-info">active</th>                                        
+                                            <th class="w-ms sub-info">enable</th>                                        
                                             <th class="w-ms sub-info">date</th>
                                         </tr>
                                     </thead>
@@ -205,10 +205,11 @@
                                                 </div>
                                             </td>
                                             <td>
+                                                <a href="#">$episode name</a>
                                                 <p class="td-desc">
-                                                    <span>123456789</span>
-                                                </p>
-                                                <a href="#">$program name</a>                                              
+                                                    <span class="item-id">123456789</span>
+                                                    <span>$program name</span>
+                                                </p>                                                                                        
                                             </td>
                                             <td class="sub-info">main</td>
                                             <td class="sub-info">-</td>                                       
@@ -248,10 +249,11 @@
                                                 </div>
                                             </td>
                                             <td>
+                                                <a href="#">$episode name</a>
                                                 <p class="td-desc">
-                                                    <span>123456789</span>
-                                                </p>
-                                                <a href="#">$program name</a> 
+                                                    <span class="item-id">123456789</span>
+                                                    <span>$program name</span>
+                                                </p> 
                                             </td>
                                             <td class="sub-info">a episode</td>
                                             <td class="sub-info">7</td>
