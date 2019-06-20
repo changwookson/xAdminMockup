@@ -43,7 +43,7 @@
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
-                            <h3 class="con-sector-title">information</h3>
+                            <h3 class="con-sector-title">content info</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -56,9 +56,9 @@
 							</table>
                             <div class="tabs">
 								<ul class="tabs-menu scroll-customed">
-									<li><a>Engilsh</a></li>
-									<li><a>简体中文</a></li>
-									<li><a>$language name</a></li>
+									<li><a class="required-field">简体中文</a></li>
+                                    <li><a>傳統中文</a></li>
+                                    <li><a>Engilsh</a></li>
 								</ul>
 								<div class="tabs-content">
 									<table class="label-box">
@@ -75,112 +75,66 @@
 								<div class="tabs-content">tabs-content-2</div>
 								<div class="tabs-content">tabs-content-3</div>
 							</div>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">type</h3>
-							<table class="label-box">
+                            <table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">content type</th>
+										<th class="label-box-item-label">title landing target</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" name="content-type" checked>auto-program-from category</label>
-											<label><input type="radio" name="content-type">auto-episode-from category</label>
-                                            <label><input type="radio" name="content-type">auto-episode-from program</label>
-                                            <label><input type="radio" name="content-type">manual-program</label>
-                                            <label><input type="radio" name="content-type">manual-episode</label>
+											<div class="item-box">
+												<input class="w-lm" type="text" placeholder="input landing url" name=""/>
+											</div>
 										</td>
-									</tr>                               
+									</tr>
+								</tbody>
+							</table>
+                            
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">curation type</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">content level</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="content level" checked>program</label>
+											<label><input type="radio" name="content level">episode</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">curating method</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="curating method" checked>manual</label>
+											<label><input type="radio" name="curating method">logical</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">content landing target</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="content landing target" checked>program page</label>
+                                            <label><input type="radio" name="content landing target">episode page</label>
+                                            <div>
+                                                <p class="info-message">when select (content level = program) & (landing = episode), go to first episode or last episode page. That is depend on on-air status.<br>
+                                                </p>
+                                            </div>
+										</td>
+									</tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">curating</h3>
                             <div class="item-box">
-                                <p class="info-message">when seleted *auto-program-from category</p>
-                                <table class="label-box">
-                                    <tbody>
-                                        <tr>
-                                            <th class="label-box-item-label required-field">select parent</th>
-                                            <td class="label-box-item-desc">
-                                                <select>
-                                                    <option>select parent</option>
-                                                    <option>$category</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="label-box-item-label">list order</th>
-                                            <td class="label-box-item-desc">
-                                                <label><input type="radio" name="apc-order" checked>newest</label>
-                                                <label><input type="radio" name="apc-order">oldest</label>
-                                            </td>
-                                        </tr> 
-                                        <tr>
-                                            <th class="label-box-item-label">landing type</th>
-                                            <td class="label-box-item-desc">
-                                                <label><input type="radio" name="apc-landing" checked>program page</label>
-                                                <label><input type="radio" name="apc-landing">episode page (last or first by program's child episode list order set)</label>
-                                            </td>
-                                        </tr> 
-                                    </tbody>
-                                </table>   
-                            </div>
-                            <div class="item-box">
-                                <p class="info-message">when seleted *auto-episode-from category</p>
-                                <table class="label-box">
-                                    <tbody>
-                                        <tr>
-                                            <th class="label-box-item-label required-field">select parent</th>
-                                            <td class="label-box-item-desc">
-                                                <select>
-                                                    <option>select parent</option>
-                                                    <option>$category</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="label-box-item-label">list order</th>
-                                            <td class="label-box-item-desc">
-                                                <label><input type="radio" name="aec-order" checked>newest</label>
-                                                <label><input type="radio" name="aec-order">oldest</label>
-                                            </td>
-                                        </tr> 
-                                        <tr>
-                                            <th class="label-box-item-label">filter</th>
-                                            <td class="label-box-item-desc">
-                                                <label><input type="checkbox" checked>filter same program</label>
-                                            </td>
-                                        </tr> 
-                                    </tbody>
-                                </table>   
-                            </div>
-                            <div class="item-box">
-                                <p class="info-message">when seleted *auto-episode-from program</p>
-                                <table class="label-box">
-                                    <tbody>
-                                        <tr>
-                                            <th class="label-box-item-label required-field">select parent</th>
-                                            <td class="label-box-item-desc">
-                                                <button type="button" class="btn-get">select program</button>
-                                                <ul class="simple-list">
-                                                    <li>
-                                                        <span class="item-id">12345</span>
-                                                        <span>$selected program name</span>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="label-box-item-label">list order</th>
-                                            <td class="label-box-item-desc">
-                                                <label><input type="radio" name="aep-order" checked>newest</label>
-                                                <label><input type="radio" name="aep-order">oldest</label>
-                                            </td>
-                                        </tr> 
-                                    </tbody>
-                                </table> 
-                            </div>
-                            <div class="item-box">
-                                <p class="info-message">when seleted *manual-program</p>
+                                <p class="info-message">when seleted [program] & [manual]</p>
                                 <ul class="list-option-action">
                                     <li>
+                                         <span>
+                                            <a id="open-program-list-modal" class="font-mm">*open program list modal sample</a>
+                                            <script type="text/javascript">
+                                                $('#open-program-list-modal').click(function(){
+                                                    $('#program-list-modal').show().animate({right:'0'});
+                                                });
+                                            </script>
+                                        </span>
                                         <button type="button" class="btn-get">
                                             <span class="icon fa fa-plus"></span>
                                             <span>add program</span>
@@ -191,6 +145,7 @@
                                     <thead>
                                         <tr>
                                             <th class="w-sl">ID</th>
+                                            <th class="w-sl">image</th>
                                             <th>name</th>
                                             <th class="w-sl sub-info">order</th>
                                             <th class="w-sl sub-info">remove</th>
@@ -199,6 +154,15 @@
                                     <tbody>
                                         <tr>
                                             <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
                                             <td>$program name</td>
                                             <td>
                                                 <button class="btn-modify">▲</button>
@@ -208,6 +172,15 @@
                                         </tr>
                                         <tr>
                                             <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
                                             <td>$program name</td>
                                             <td>
                                                 <button class="btn-modify">▲</button>
@@ -218,30 +191,137 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [episode] & [manual]</p>
+                                <ul class="list-option-action">
+                                    <li>
+                                        <span>
+                                            <a id="open-episode-list-modal" class="font-mm">*open episode list modal sample</a>
+                                            <script type="text/javascript">
+                                                $('#open-episode-list-modal').click(function(){
+                                                    $('#episode-list-modal').show().animate({right:'0'});
+                                                });
+                                            </script>
+                                        </span>
+                                        <button type="button" class="btn-get">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>add episode</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <table class="table sortable-table-rows">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-sl">ID</th>
+                                            <th class="w-sl">image</th>
+                                            <th>name</th>
+                                            <th class="w-sl sub-info">order</th>
+                                            <th class="w-sl sub-info">remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>$episode name</td>
+                                            <td>
+                                                <button class="btn-modify">▲</button>
+                                                <button class="btn-modify">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel">remove</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>$episode name</td>
+                                            <td>
+                                                <button class="btn-modify">▲</button>
+                                                <button class="btn-modify">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel">remove</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="item-box">
+                                <p class="info-message">when seleted [program] & [logical]</p>
+                                <table class="label-box">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">range</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select range</option>
+                                                    <option>all category</option>
+                                                    <option>$category name</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">sort logic</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select logic</option>
+                                                    <option>#1-popular</option>
+                                                    <option>#2-recent Updated</option>
+                                                    <option>#3-custom logic name</option>
+                                                    <option>#4-custom logic name</option>
+                                                    <option>#5-custom logic name</option>
+                                                    <option>#6-custom logic name</option>
+                                                </select>
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>   
+                            </div>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [episode] & [logical]</p>
+                                <table class="label-box">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">range</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select range</option>
+                                                    <option>all category</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">sort logic</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select logic</option>
+                                                    <option>#1-continue watching</option>
+                                                </select>
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>  
+                            </div>
+                            
                         </div>
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
-                        <p>
-                            <a id="open-program-list-modal" class="font-lm">open program list modal</a>
-                            <script type="text/javascript">
-                                $('#open-program-list-modal').click(function(){
-                                    $('#program-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p>
-                            <a id="open-episode-list-modal" class="font-lm">open episode list modal</a>
-                            <script type="text/javascript">
-                                $('#open-episode-list-modal').click(function(){
-                                    $('#episode-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p class="font-ml">
-                            <a href="ODC-Item-Curation.html" class="font-lm">back to list</a>
-                        </p>
+                        </ul>                     
 					</div>
 				</div>
 			</article>
@@ -296,7 +376,6 @@
 											<th class="w-sl">ID</th>
 											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-ms sub-info">publish status</th>
 											<th class="w-ms sub-info">select</th>
 										</tr>
 									</thead>
@@ -315,7 +394,6 @@
 											<td>
 												<a href="#">$program name</a>
 											</td>
-											<td class="sub-info">published</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
@@ -334,7 +412,6 @@
 											<td>
 												<a href="#">$program name</a>
 											</td>
-											<td class="sub-info">expired</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
@@ -407,7 +484,6 @@
 											<th class="w-sl">ID</th>
 											<th class="w-sl">image</th>
 											<th>name</th>
-											<th class="w-ms sub-info">published status</th>
 											<th class="w-ms sub-info">select</th>
 										</tr>
 									</thead>
@@ -427,7 +503,6 @@
 											<td>
 												<a href="#">$episode name</a>
 											</td>
-											<td class="sub-info">published</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
@@ -447,7 +522,6 @@
 											<td>
 												<a href="#">$episode name</a>
 											</td>
-											<td class="sub-info">expired</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>

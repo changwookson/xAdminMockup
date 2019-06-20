@@ -43,7 +43,7 @@
 					</div>
 					<div class="con-body">
                         <div class="con-sector">
-                            <h3 class="con-sector-title">information</h3>
+                            <h3 class="con-sector-title">content info</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -52,39 +52,21 @@
 											<input class="w-lm" type="text" placeholder="input cover slide set name" name=""/>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">slide output rules</th>
-										<td class="label-box-item-desc">
-											<label><input type="radio" name="data-status" checked>random</label>
-                                            <label><input type="radio" name="data-status">depend on slide order</label>
-										</td>
-									</tr>
 								</tbody>
 							</table>
                         </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">publish</h3>
-							<table class="label-box">
-								<tbody>
-									<tr>
-										<th class="label-box-item-label">schedule</th>
-										<td class="label-box-item-desc">
-											<div class="datepicker">
-                                                <label>start
-                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-                                                </label>
-                                            </div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-                        </div>
-                        
-                        
                         <div class="con-sector">
                             <h3 class="con-sector-title">cover item</h3>
                             <ul class="list-option-action">
                                 <li>
+                                    <span>
+                                        <a id="open-item-list-modal" class="font-mm">*open item list modal sample</a>
+                                        <script type="text/javascript">
+                                            $('#open-item-list-modal').click(function(){
+                                                $('#item-list-modal').show().animate({right:'0'});
+                                            });
+                                        </script>
+                                    </span>
                                     <button type="button" class="btn-get">
                                         <span class="icon fa fa-plus"></span>
                                         <span>add cover item</span>
@@ -141,22 +123,41 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">rule</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">display order rule</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="data-status" checked>random</label>
+                                            <label><input type="radio" name="data-status">depend on manual order</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">publish</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label">schedule</th>
+										<td class="label-box-item-desc">
+											<div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
-                        <p>
-                            <a id="open-item-list-modal" class="font-lm">open item list modal</a>
-                            <script type="text/javascript">
-                                $('#open-item-list-modal').click(function(){
-                                    $('#item-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p>
-                            <a href="ODC-Content-Home-cover-slide.html" class="font-lm">back to list</a>
-                        </p>
+                        </ul>         
 				    </div>
                 </div>
 			</article>

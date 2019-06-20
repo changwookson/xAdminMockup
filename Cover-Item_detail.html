@@ -43,7 +43,7 @@
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
-                            <h3 class="con-sector-title">information</h3>
+                            <h3 class="con-sector-title">content info</h3>
 							<table class="label-box">
 								<tbody>
 									<tr>
@@ -84,9 +84,9 @@
 							</table>
                             <div class="tabs">
 								<ul class="tabs-menu scroll-customed">
-									<li><a>Engilsh</a></li>
-									<li><a>简体中文</a></li>
-									<li><a>$language name</a></li>
+									<li><a class="required-field">简体中文</a></li>
+                                    <li><a>傳統中文</a></li>
+                                    <li><a>Engilsh</a></li>
 								</ul>
 								<div class="tabs-content">
 									<table class="label-box">
@@ -121,13 +121,19 @@
 							<table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">select type</th>
+										<th class="label-box-item-label required-field">link of call to action</th>
 										<td class="label-box-item-desc">
 											<label><input type="radio" name="data-status" checked>program</label>
-											<label><input type="radio" name="data-status">episode</label>
-                                            <label><input type="radio" name="data-status">url</label>
-											<div class="item-box">
+                                            <div class="item-box">
                                                 <button type="button" class="btn-get">select program</button>
+                                                <span>
+                                                    <a id="open-program-list-modal" class="font-mm">*open program list modal sample</a>
+                                                    <script type="text/javascript">
+                                                        $('#open-program-list-modal').click(function(){
+                                                            $('#program-list-modal').show().animate({right:'0'});
+                                                        });
+                                                    </script>
+                                                </span>                                           
                                                 <ul class="simple-list">
                                                     <li>
                                                         <span class="item-id">12345</span>
@@ -135,8 +141,17 @@
                                                     </li>
                                                 </ul>
 											</div>
+											<label><input type="radio" name="data-status">episode</label>
                                             <div class="item-box">
 												<button type="button" class="btn-get">select episode</button>
+                                                <span>
+                                                    <a id="open-episode-list-modal" class="font-mm">*open episode list modal sample</a>
+                                                    <script type="text/javascript">
+                                                        $('#open-episode-list-modal').click(function(){
+                                                            $('#episode-list-modal').show().animate({right:'0'});
+                                                        });
+                                                    </script>
+                                                </span>
                                                 <ul class="simple-list">
                                                     <li>
                                                         <span class="item-id">12345</span>
@@ -144,6 +159,7 @@
                                                     </li>
                                                 </ul>
 											</div>
+                                            <label><input type="radio" name="data-status">url</label>
                                             <div class="item-box">
 												<input class="w-lm" type="text" placeholder="input landing url" name=""/>
 											</div>
@@ -156,26 +172,7 @@
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
-                        <p>
-                            <a id="open-program-list-modal" class="font-lm">open program list modal</a>
-                            <script type="text/javascript">
-                                $('#open-program-list-modal').click(function(){
-                                    $('#program-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p>
-                            <a id="open-episode-list-modal" class="font-lm">open episode list modal</a>
-                            <script type="text/javascript">
-                                $('#open-episode-list-modal').click(function(){
-                                    $('#episode-list-modal').show().animate({right:'0'});
-                                });
-                            </script>
-                        </p>
-                        <p class="font-ml">
-                            <a href="ODC-Item-Cover.html" class="font-lm">back to list</a>
-                        </p>
+                        </ul>                     
 					</div>
 				</div>
 			</article>
