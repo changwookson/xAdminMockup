@@ -90,21 +90,10 @@
                                                     </div>
                                                     <ul>
                                                         <li class="item-panel" style="display:inline-block;">
-                                                            <label>
-                                                                <input type="radio" name="select thumbnail" checked>
-                                                                <p class="img-embed-pure img-w-200">
-                                                                    <img src="resource/image/sample-poster-1.jpg" />
-                                                                </p>
-                                                            </label>
-                                                        </li>
-                                                        <li class="item-panel" style="display:inline-block;">
-                                                            <label>
-                                                                <input type="radio" name="select thumbnail" >
-                                                                <p class="img-embed-pure img-w-200">
-                                                                    <img src="resource/image/sample-poster-2.jpg" />
-                                                                </p>
-                                                            </label>
-                                                        </li>                                                      
+                                                            <p class="img-embed-pure img-w-200">
+                                                                <img src="resource/image/sample-poster-1.jpg" />
+                                                            </p>
+                                                        </li>                                                     
                                                     </ul> 
                                                 </td>
                                             </tr>
@@ -353,11 +342,45 @@
                              </table>
                         </div>
                         <div class="con-sector">
+                            <h3 class="con-sector-title">episodes info</h3>
+                            <table class="label-box">
+                                <tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">series type</th>
+                                        <td class="label-box-item-desc">
+                                            <label>
+                                                <input type="radio" name="episode-type" checked>series episodes
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type">one main episode
+                                            </label>										
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">total episodes</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>		
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">episode list default order</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option>select order</option>
+                                                <option>newest</option>
+                                                <option>oldest</option>
+                                            </select>
+                                        </td>
+                                    </tr>	
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
                             <h3 class="con-sector-title">etc</h3>
                             <table class="label-box">
                                 <tbody>                                 
                                     <tr>
-                                        <th class="label-box-item-label">score</th>
+                                        <th class="label-box-item-label">rating score</th>
                                         <td class="label-box-item-desc">
                                             <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/> 
                                             <script>
@@ -374,6 +397,7 @@
                                             </script>
                                         </td>
                                     </tr>
+                                    <!--
                                     <tr>
                                         <th class="label-box-item-label">cover image</th>
                                         <td class="label-box-item-desc">
@@ -385,34 +409,10 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    -->
                                 </tbody>
                             </table>
                         </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">type</h3>
-                            <table class="label-box">
-                                <tbody>                                 
-                                    <tr>
-                                        <th class="label-box-item-label">series type</th>
-                                        <td class="label-box-item-desc">
-                                            <label>
-                                                <input type="radio" name="episode-type" checked>series episodes
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="episode-type">one main episode
-                                            </label>										
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">episode list order</th>
-                                        <td class="label-box-item-desc">
-                                            <label><input type="radio" name="episode-list-order" checked>newest</label>
-                                            <label><input type="radio" name="episode-list-order">oldest</label>
-                                        </td>
-                                    </tr>	
-                                </tbody>
-                            </table>
-                        </div>                      
                         <div class="con-sector">
                             <h3 class="con-sector-title">permission</h3>
                             <table class="label-box">
