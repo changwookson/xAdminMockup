@@ -31,7 +31,7 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="Curation-Set_list.html">
+		<main id="main-article" class="article-subside-off" menu="Home-Curation_list.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
@@ -49,7 +49,7 @@
 									<tr>
 										<th class="label-box-item-label required-field">name</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input curation slide set name" name=""/>
+											<input class="w-lm" type="text" placeholder="input curation name" name=""/>
 										</td>
 									</tr>
 								</tbody>
@@ -59,14 +59,6 @@
                             <h3 class="con-sector-title">Curation item</h3>
                             <ul class="list-option-action">
                                 <li>
-                                    <span>
-                                        <a id="open-item-list-modal" class="font-mm">*open item list modal sample</a>
-                                        <script type="text/javascript">
-                                            $('#open-item-list-modal').click(function(){
-                                                $('#item-list-modal').show().animate({right:'0'});
-                                            });
-                                        </script>
-                                    </span>
                                     <button type="button" class="btn-get">
                                         <span class="icon fa fa-plus"></span>
                                         <span>add Curation item</span>
@@ -78,8 +70,8 @@
                                     <tr>
                                         <th class="w-sl">ID</th>
                                         <th>name</th>
+                                        <th class="w-sl sub-info">modify</th>
                                         <th class="w-sl sub-info">order</th>
-                                        <th class="w-sl sub-info">remove</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -87,19 +79,25 @@
                                         <td>12345</td>
                                         <td>$Curation item name</td>
                                         <td>
-                                            <button class="btn-modify">▲</button>
-                                            <button class="btn-modify">▼</button>
+                                            <button class="btn-modify font-sm">edit</button>
+                                            <button class="btn-cancel font-sm">del</button>
                                         </td>
-                                        <td><button class="btn-cancel">remove</button></td>
+                                        <td>
+                                            <button class="btn-common font-ms">▲</button>
+                                            <button class="btn-common font-ms">▼</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>12345</td>
                                         <td>$Curation item name</td>
                                         <td>
-                                            <button class="btn-modify">▲</button>
-                                            <button class="btn-modify">▼</button>
+                                            <button class="btn-modify font-sm">edit</button>
+                                            <button class="btn-cancel font-sm">del</button>
                                         </td>
-                                        <td><button class="btn-cancel">remove</button></td>
+                                        <td>
+                                            <button class="btn-common font-ms">▲</button>
+                                            <button class="btn-common font-ms">▼</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -124,7 +122,15 @@
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
                             <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>         
+                        </ul>
+                        <p>
+                            <a id="open-item-list-modal" class="font-lm">add(edit) curation list modal</a>
+                            <script type="text/javascript">
+                                $('#open-item-list-modal').click(function(){
+                                    $('#item-list-modal').show().animate({right:'0'});
+                                });
+                            </script>
+                        </p>
 				    </div>
                 </div>
 			</article>
@@ -147,78 +153,293 @@
 					<div class="layer-header">
 						<h2>item-list-modal</h2> 
 					</div> 
-					<div class="layer-body">
+                    <div class="layer-body">
 						<div class="con-sector">
-							<div class="list-option">
-								<ul class="list-option-filter">
-									<li>
-										<table class="search-bar">
-											<tbody>
-												<tr>
-													<td class="search-bar-option">
-														<select>
-															<option>item name</option>
-															<option>item ID</option>
-														</select>
-													</td>
-													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
-													</td>
-													<td class="search-bar-btn">
-														<button type="button"><span class="icon fa fa-search"></span></button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</li>
+                            <h3 class="con-sector-title">content info</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">name(tracking code)</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input Curation name" name=""/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+                            <div class="tabs">
+								<ul class="tabs-menu scroll-customed">
+									<li><a class="required-field">简体中文</a></li>
+                                    <li><a>傳統中文</a></li>
+                                    <li><a>Engilsh</a></li>
 								</ul>
+								<div class="tabs-content">
+									<table class="label-box">
+										<tbody>
+											<tr>
+												<th class="label-box-item-label required-field">title</th>
+												<td class="label-box-item-desc">
+													<input class="w-lm" type="text" placeholder="input curation title" name=""/>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs-content">tabs-content-2</div>
+								<div class="tabs-content">tabs-content-3</div>
 							</div>
-							<div class="table-wrap scroll-customed">
-								<table class="table">
-									<thead>
+                            <table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label">title landing target</th>
+										<td class="label-box-item-desc">
+											<div class="item-box">
+												<input class="w-lm" type="text" placeholder="input landing url" name=""/>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>                           
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">curation type</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">content level</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="content level" checked>program</label>
+											<label><input type="radio" name="content level">episode</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">curating method</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="curating method" checked>manual</label>
+											<label><input type="radio" name="curating method">logical</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">content landing target</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="content landing target" checked>program page</label>
+                                            <label><input type="radio" name="content landing target">episode page</label>
+                                            <label><input type="radio" name="content landing target">auto landing by release-status</label>
+                                            <div>
+                                                <p class="info-message">when select auto landing, go to first episode or last episode page. That is depend on release-status.<br>
+                                                </p>
+                                            </div>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">image ratio on program list</th>
+                                        <td class="label-box-item-desc">
+                                            <label>
+                                                <input type="radio" name="poster-ratio" checked>landscape(16:9)
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="poster-ratio">portrate(9:16)
+                                            </label>										
+                                        </td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">curating</h3>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [program] & [manual]</p>
+                                <ul class="list-option-action">
+                                    <li>
+                                        <button type="button" class="btn-get">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>add program</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <table class="table sortable-table-rows">
+                                    <thead>
                                         <tr>
                                             <th class="w-sl">ID</th>
+                                            <th class="w-sl">image</th>
                                             <th>name</th>
-											<th class="w-ms sub-info">select</th>
+                                            <th class="w-sl sub-info">order</th>
+                                            <th class="w-sl sub-info">remove</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>12345</td>
-                                            <td>$curation item name</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
+                                            <td>$program name</td>
+                                            <td>
+                                                <button class="btn-common font-ms">▲</button>
+                                                <button class="btn-common font-ms">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel font-sm">del</button></td>
                                         </tr>
                                         <tr>
                                             <td>12345</td>
-                                            <td>$Curation item name</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-poster-2.jpg" />
+														</div>
+													</div>
+												</div>
 											</td>
+                                            <td>$program name</td>
+                                            <td>
+                                                <button class="btn-common font-ms">▲</button>
+                                                <button class="btn-common font-ms">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel font-sm">del</button></td>
                                         </tr>
                                     </tbody>
-								</table>
-							</div>
-							<ul class="pagenation-simple">
-								<span>Rows per page</span>
-								<li>
-									<select>
-										<option>10s</option>
-										<option current>20s</option>
-										<option>50s</option>
-										<option>100s</option>
-									</select>
-								</li>
-								<span>1-6 of 9</span>
-								<li>
-									<div class="btn-group">
-										<button type="button" class="btn-common"><</button>
-										<button type="button" class="btn-common">></button>
-									</div>
-								</li>
-							</ul>
-						</div>
+                                </table>
+                            </div>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [episode] & [manual]</p>
+                                <ul class="list-option-action">
+                                    <li>
+                                        <button type="button" class="btn-get">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>add episode</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <table class="table sortable-table-rows">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-sl">ID</th>
+                                            <th class="w-sl">image</th>
+                                            <th>name</th>
+                                            <th class="w-sl sub-info">order</th>
+                                            <th class="w-sl sub-info">remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                <p>$program name</p>
+                                                <p class="td-desc">
+                                                    <span>$episode name</span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-ms">▲</button>
+                                                <button class="btn-common font-ms">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel font-sm">del</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                <p>$program name</p>
+                                                <p class="td-desc">
+                                                    <span>$episode name</span>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-ms">▲</button>
+                                                <button class="btn-common font-ms">▼</button>
+                                            </td>
+                                            <td><button class="btn-cancel font-sm">del</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [program] & [logical]</p>
+                                <table class="label-box">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">range</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select range</option>
+                                                    <option>all category</option>
+                                                    <option>$category name</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">sort logic</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select logic</option>
+                                                    <option>popular</option>
+                                                    <option>recent Updated</option>
+                                                    <option>#1-custom logic name</option>
+                                                    <option>#2-custom logic name</option>
+                                                    <option>#3-custom logic name</option>
+                                                    <option>#4-custom logic name</option>
+                                                    <option>#5-custom logic name</option>
+                                                    <option>#6-custom logic name</option>
+                                                </select>
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>   
+                            </div>
+                            <div class="item-box">
+                                <p class="info-message">when seleted [episode] & [logical]</p>
+                                <table class="label-box">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">range</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select range</option>
+                                                    <option>all category</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="label-box-item-label required-field">sort logic</th>
+                                            <td class="label-box-item-desc">
+                                                <select>
+                                                    <option>select logic</option>
+                                                    <option>continue watching</option>
+                                                </select>
+                                            </td>
+                                        </tr> 
+                                    </tbody>
+                                </table>  
+                            </div>
+                            
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>                     
 					</div>
 				</div>
 			</div>
