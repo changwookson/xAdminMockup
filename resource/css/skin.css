@@ -502,6 +502,8 @@ input:checked + .switch-slider:before {
     -moz-border-radius:0.5rem; 
     -webkit-border-radius:0.5rem;
 }
+.tag-cloud.sortable li {display: inline-block;}
+
 /* .tag:before {content:"#"; margin-right: 0.3rem;} */
 .tag-point:before {content:"("; margin-left:0.2rem;}
 .tag-point:after {content:")";}
