@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<title>IO Guide</title>
+		<title>Admin Guide</title>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
 		<!--resource end-->
 	</head>
 	<body>
@@ -36,29 +36,21 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Meta Property</span>
-							<span>Genre</span>
+							<span>Asset</span>
+							<span>Image</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
 								<ul class="list-option-filter">
-                                    <li>
-										<select>
-											<option>enable</option>
-											<option>disable</option>
-											<option>enable</option>
-										</select>
-									</li>
 									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>genre name</option>
-															<option>genre ID</option>
+															<option>Asset name</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -96,8 +88,8 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
-											<th>name</th>
-                                            <th class="w-ms">enable</th>
+                                            <th class="w-sl">Image</th>
+											<th>name</th>										
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -105,18 +97,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">romance</a>
-											</td>
-                                            <td class="sub-info">
-                                                <p>
-                                                    <label class="switch">
-                                                        <input type="checkbox" checked>
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+                                            <td class="table-list-item-img video-thumbnail">
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code">
+                                                            <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
-											<td class="w-ms sub-info">
+											<td>
+												<a href="#">$image name</a>
+											</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -126,18 +119,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">comedy</a>
-											</td>
-                                            <td class="sub-info">
-                                                <p>
-                                                    <label class="switch">
-                                                        <input type="checkbox">
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+                                            <td class="table-list-item-img video-thumbnail">
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code">
+                                                            <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
-											<td class="w-ms sub-info">
+											<td>
+												<a href="#">$image name</a>
+											</td>
+											<td class="sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -167,7 +161,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="Genre_detail.html" class="font-lm">open detail page</a>
+								<a href="AssetImage_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
@@ -189,7 +183,7 @@
 		<section name="last-import-resources" style="display:none"></section>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
 				});
 			</script>
 		<!--last import resource end-->

@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>IO Guide</title>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
 		<!--resource end-->
 	</head>
 	<body>
@@ -36,22 +36,29 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>User</span>
-							<span>Account</span>
+							<span>Meta Property</span>
+							<span>Genre</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
 								<ul class="list-option-filter">
+                                    <li>
+										<select>
+											<option>enable</option>
+											<option>disable</option>
+											<option>enable</option>
+										</select>
+									</li>
 									<li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>account ID</option>
-															<option>user name</option>
+															<option>genre name</option>
+															<option>genre ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -68,6 +75,20 @@
 										<button type="button" class="btn-submit">filter apply</button>
 									</li>
 								</ul>
+								<ul class="list-option-action">
+									<li>
+										<button type="button" class="btn-new">
+											<span class="icon fa fa-plus"></span>
+					            			<span>create</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn-cancel">
+											<span class="icon fa fa-times"></span>
+					            			<span>remove</span>
+										</button>
+									</li>
+								</ul>
 							</div>
 							<div class="table-wrap scroll-customed">
 								<table class="table">
@@ -75,59 +96,48 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
-											<th>account ID</th>
-                                            <th class="w-ms">name</th>
-                                            <th class="w-ms">status</th>
-											<th class="w-ms sub-info">c-date</th>
-                                            <th class="w-ms sub-info">d-date</th>
+											<th>name</th>
+                                            <th class="w-ms">enable</th>
+											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td><input type="checkbox" /></td>
-											<td>123456789</td>								
+											<td>123456789</td>
 											<td>
-												<a href="#">$account ID</a>
-											</td>
-                                            <td class="sub-info">
-                                                <p>$user name</p>
+												<a href="#">romance</a>
 											</td>
                                             <td class="sub-info">
                                                 <p>
-                                                    active
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
                                                 </p>
                                             </td>
-                                            <td class="sub-info">
+											<td class="w-ms sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
 												</p>
-											</td>
-											<td class="sub-info">
-                                                <p>-</p>
 											</td>
 										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
-											<td>123456789</td>								
+											<td>123456789</td>
 											<td>
-												<a href="#">$account ID</a>
-											</td>
-                                            <td class="sub-info">
-                                                <p>$user name</p>
+												<a href="#">comedy</a>
 											</td>
                                             <td class="sub-info">
                                                 <p>
-                                                    deleted
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
                                                 </p>
                                             </td>
-                                            <td class="sub-info">
-												<p>MM-DD-YYYY</p> 
-												<p class="td-desc">
-													<span>hh:mm:ss</span>
-												</p>
-											</td>
-											<td class="sub-info">
+											<td class="w-ms sub-info">
 												<p>MM-DD-YYYY</p> 
 												<p class="td-desc">
 													<span>hh:mm:ss</span>
@@ -136,6 +146,7 @@
 										</tr>
 									</tbody>
 								</table>
+								
 							</div>
 							<ul class="pagenation-simple">
 								<span>Rows per page</span>
@@ -156,7 +167,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="Account_detail.html" class="font-lm">open detail page</a>
+								<a href="Genre_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
@@ -178,7 +189,7 @@
 		<section name="last-import-resources" style="display:none"></section>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
 				});
 			</script>
 		<!--last import resource end-->

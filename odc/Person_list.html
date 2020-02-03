@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>IO Guide</title>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
 		<!--resource end-->
 	</head>
 	<body>
@@ -37,26 +37,18 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Meta Property</span>
-							<span>Category</span>
+							<span>Person</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
 								<ul class="list-option-filter">
-									<li>
+                                    <li>
 										<select>
 											<option>enable</option>
 											<option>disable</option>
 											<option>enable</option>
-										</select>
-									</li>
-									<li>
-										<select>
-											<option>depth</option>
-											<option>1depth</option>
-											<option>2depth</option>
-											<option>3depth</option>
 										</select>
 									</li>
 									<li>
@@ -65,8 +57,8 @@
 												<tr>
 													<td class="search-bar-option">
 														<select>
-															<option>category name</option>
-															<option>category ID</option>
+															<option>person name</option>
+															<option>person ID</option>
 														</select>
 													</td>
 													<td class="search-bar-input">
@@ -104,9 +96,9 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
+											<th class="w-sm">image</th>
 											<th>name</th>
-											<th class="w-sl">depth</th>
-											<th class="w-ms sub-info">enable</th>
+                                            <th class="w-ms">enable</th>
 											<th class="w-ms sub-info">date</th>
 										</tr>
 									</thead>
@@ -114,11 +106,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
+                                            <td class="table-list-item-img profile-image">                                         
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code" >
+                                                            <img src="../resource/image/default-profile.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>									
 											<td>
-												<a href="#">TVseries</a>
+												<a href="#">$person name</a>
 											</td>
-											<td>1depth</td>
-											<td class="sub-info">
+                                            <td class="sub-info">
                                                 <p>
                                                     <label class="switch">
                                                         <input type="checkbox" checked>
@@ -136,33 +136,19 @@
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
-											<td>
-												<a href="#">drama</a>
-											</td>
-											<td>2depth</td>
-											<td class="sub-info">
-                                                <p>
-                                                    <label class="switch">
-                                                        <input type="checkbox" checked>
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+											<td class="table-list-item-img profile-image">                                         
+                                                <div class="img-embed-wrap">
+                                                    <div class="img-embed-ratio">
+                                                        <div class="img-embed-code" >
+                                                            <img src="../resource/image/sample-profile-1.jpg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
-											<td class="sub-info">
-												<p>MM-DD-YYYY</p> 
-												<p class="td-desc">
-													<span>hh:mm:ss</span>
-												</p>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" /></td>
-											<td>123456789</td>
 											<td>
-												<a href="#">k-drama</a>
+												<a href="#">$person name</a>
 											</td>
-											<td>3depth</td>
-											<td class="sub-info">
+                                            <td class="sub-info">
                                                 <p>
                                                     <label class="switch">
                                                         <input type="checkbox">
@@ -179,7 +165,6 @@
 										</tr>
 									</tbody>
 								</table>
-								
 							</div>
 							<ul class="pagenation-simple">
 								<span>Rows per page</span>
@@ -200,7 +185,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="Category_detail.html" class="font-lm">open detail page</a>
+								<a href="Person_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
@@ -222,7 +207,7 @@
 		<section name="last-import-resources" style="display:none"></section>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
 				});
 			</script>
 		<!--last import resource end-->

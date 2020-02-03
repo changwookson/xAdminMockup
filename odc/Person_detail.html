@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>IO Guide</title>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
 		<!--resource end-->
 	</head>
 	<body>
@@ -31,33 +31,33 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off" menu="Genre_list.html">
+		<main id="main-article" class="article-subside-off" menu="People_list.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Meta Property</span>
-							<span>Genre</span>
-							<span>$genre ID</span>
+							<span>Person</span>
+							<span>$person ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
                             <h3 class="con-sector-title">content info</h3>
-							<table class="label-box">
+                            <table class="label-box">
 								<tbody>
 									<tr>
-										<th class="label-box-item-label required-field">genre name</th>
+										<th class="label-box-item-label required-field">person name</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input genre name by english" name=""/>
+											<input class="w-lm" type="text" placeholder="input people name by english" name=""/>
                                             <p>
                                                 <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
                                             </p>
 										</td>
-									</tr>
+									</tr>           
 								</tbody>
 							</table>
-							<div class="tabs">
+                            <div class="tabs">
 								<ul class="tabs-menu scroll-customed">
 									<li><a class="required-field">简体中文</a></li>
                                     <li><a>傳統中文</a></li>
@@ -67,9 +67,9 @@
 									<table class="label-box">
 										<tbody>
 											<tr>
-												<th class="label-box-item-label required-field">genre title</th>
+												<th class="label-box-item-label required-field">people title</th>
 												<td class="label-box-item-desc">
-													<input class="w-lm" type="text" placeholder="input genre title" name=""/>
+													<input class="w-lm" type="text" placeholder="input people title" name=""/>
 												</td>
 											</tr>
 										</tbody>
@@ -77,8 +77,63 @@
 								</div>
 								<div class="tabs-content">tabs-content-2</div>
 								<div class="tabs-content">tabs-content-3</div>
-							</div>						
-						</div>
+							</div>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">profile info</h3>
+                            <table class="label-box">
+								<tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">profile image</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <button type="button" class="file-input-replace btn-new">File Upload</button>
+                                                <span>$imported file name</span>
+                                            </p>
+                                            <div class="img-embed-pure img-w-100">
+                                                <img src="../resource/image/sample-profile-1.jpg" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+										<th class="label-box-item-label">gender</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>undefined</option>
+                                                <option>female</option>
+                                                <option>male</option>
+                                            </select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">birthday</th>
+										<td class="label-box-item-desc">
+											<div class="datepicker">
+                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />			
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">birth place</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>$country library</option>
+                                            </select>
+										</td>
+									</tr> 
+                                    <tr>
+										<th class="label-box-item-label">job type</th>
+										<td class="label-box-item-desc">
+                                            <label><input type="checkbox">actor</label>
+                                            <label><input type="checkbox">director</label>
+                                            <label><input type="checkbox">writer</label>
+                                            <label><input type="checkbox">staff</label>
+                                            <label><input type="checkbox">etc</label>
+										</td>
+									</tr>          
+								</tbody>
+							</table>
+                        </div>
                         <div class="con-sector">
                             <h3 class="con-sector-title">publish</h3>
                             <table class="label-box">
@@ -116,7 +171,7 @@
 		<section name="last-import-resources" style="display:none"></section>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("[name=last-import-resources]").load("resource/load-resource-foot.js");
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
 				});
 			</script>
 		<!--last import resource end-->

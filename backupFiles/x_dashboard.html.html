@@ -6,20 +6,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>Dashboard - Media CMS</title>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-head.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
 		<!--resource end-->
 	</head>
-	<body id="body-wrap">
-		<header id="header-gnb">
-			$gnb
-			<div class="nav-sidebar-switch">
-				<a class="nav-sidebar-switch-open"></a>
-				<a class="nav-sidebar-switch-close"></a>
-			</div>
-		</header>
-		<nav id="nav-sidebar">
-			$sidebar
-		</nav>
+	<body>
+		 <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
 		<main id="main-article" class="article-subside-off">
 			<div class="article-subside-switch">
 				<a class="article-subside-switch-close">Hide sub-siderbar</a>
@@ -197,7 +208,7 @@
 							<li class="grid-2n-2x1-2 item-box round-edge">
 								<div class="chart-embed-wrap">
 									<div class="chart-embed-ratio-3x2">
-										<script type='text/javascript' src='resource/sample/highchart-sample-dash-1.js'></script>
+										<script type='text/javascript' src='../resource/sample/highchart-sample-dash-1.js'></script>
 										<div class="chart-embed-code" id="highchart-sample-dash-1"></div>
 									</div>
 								</div>
@@ -205,7 +216,7 @@
 							<li class="grid-2n-2x1-1 item-box round-edge">
 								<div class="chart-embed-wrap">
 									<div class="chart-embed-ratio-1x1">
-										<script type='text/javascript' src='resource/sample/highchart-sample-dash-2.js'></script>
+										<script type='text/javascript' src='../resource/sample/highchart-sample-dash-2.js'></script>
 										<div class="chart-embed-code" id="highchart-sample-dash-2"></div>
 									</div>
 								</div>
@@ -219,7 +230,7 @@
 			$footer
 		</footer>
 		<!--resource start-->
-		<script type="text/javascript" src="resource/load-resource-foot.js"></script>
+		<script type="text/javascript" src="../resource/load-resource-foot.js"></script>
 		<!--resource end-->
 	</body>
 </html>
