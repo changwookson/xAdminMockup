@@ -138,7 +138,7 @@
                                                         <p class="item-group">
                                                             <button type="button" class="file-input-replace btn-get">import asset</button>
                                                             <span>
-                                                                <a id="open-asset-list-modal" class="font-ls">*open asset list modal sample</a>
+                                                                <a id="open-asset-list-modal" class="font-ls">*open asset finder modal</a>
                                                                 <script type="text/javascript">
                                                                     $('#open-asset-list-modal').click(function(){
                                                                         $('#asset-list-modal').show().animate({right:'0'});
@@ -165,7 +165,7 @@
                                                 </td>
                                             </tr>
 											<tr>
-												<th class="label-box-item-label">platform</th>
+												<th class="label-box-item-label required-field">platform</th>
 												<td class="label-box-item-desc">
 													<p>
                                                         <label><input type="checkbox" name="platform" checked>web</label>
@@ -220,8 +220,12 @@
                                     <tr>
 										<th class="label-box-item-label">enable</th>
 										<td class="label-box-item-desc">
-											<label><input type="radio" name="data-status" checked>disable</label>
-											<label><input type="radio" name="data-status">enable</label>
+											<p>
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                        <span class="switch-slider"> </span>
+                                                </label>
+                                            </p>
 										</td>
 									</tr>
                                 </tbody>
