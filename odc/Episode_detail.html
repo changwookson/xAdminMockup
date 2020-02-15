@@ -188,17 +188,6 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">duration</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <input class="w-sm" type="number" name="" placeholder="hh"/>
-                                                <input class="w-sm" type="number" name="" placeholder="mm"/>
-                                                <input class="w-sm" type="number" name="" placeholder="ss"/>
-                                            </p>
-                                            <p class="info-message">Auto input as it possible</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <th class="label-box-item-label">source file</th>
                                         <td class="label-box-item-desc">
                                             <p><span>$file name</span></p>
@@ -301,47 +290,122 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">quepoint</th>
+                                        <th class="label-box-item-label">preview</th>
+                                        <td class="label-box-item-desc"><div class="video-player-space-wrap float-player-on">
+                                                <div style="position: relative; display: block; max-width: 960px;">
+                                                    <div style="padding-top: 56.25%;">
+                                                        <iframe src="https://players.brightcove.net/5742226948001/default_default/index.html?videoId=6084837132001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+                                                    </div>
+                                                </div>
+						            		</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">duration</th>
                                         <td class="label-box-item-desc">
+                                            <p>
+                                                <input class="w-sm" type="number" name="" placeholder="hh"/>
+                                                <input class="w-sm" type="number" name="" placeholder="mm"/>
+                                                <input class="w-sm" type="number" name="" placeholder="ss"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">cue point</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group item-panel">
+                                                <span>timecode</span>
+                                                <input class="w-sm" type="number" name="" placeholder="hh"/>
+                                                <input class="w-sm" type="number" name="" placeholder="mm"/>
+                                                <input class="w-sm" type="number" name="" placeholder="ss"/>            
+                                                <span>type</span>
+                                                <select name="cue_type">
+                                                    <option>code</option>
+                                                    <option>ad</option>
+                                                </select>
+                                                <span>name</span>
+                                                <input class="w-mm" type="number" name="" placeholder="name"/>
+                                                <button type="button" class="btn-new font-mm">add</button>
+                                            </div>
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th class="w-ms">key name</th>
-                                                            <th>value</th>                                                    
+                                                            <th class="w-ms">timecode</th>
+                                                            <th class="w-ms">type</th>
+                                                            <th>name</th>
+                                                            <th class="w-ms"></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <span>intro_start</span>
+                                                                hh:mm:ss
+                                                            </td>
+                                                            <td>
+                                                                code
+                                                            </td>
+                                                            <td>
+                                                                <span>intro-start</span>
                                                             </td>                                                 
                                                             <td>
-                                                                <a>345.34</a>
+                                                                <button type="button" class="btn-cancel font-sm">remove</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <span>intro_end</span>
+                                                                hh:mm:ss
+                                                            </td>
+                                                            <td>
+                                                                code
+                                                            </td>
+                                                            <td>
+                                                                <span>intro-end</span>
                                                             </td>                                                 
                                                             <td>
-                                                                <a>445.34</a>
+                                                                <button type="button" class="btn-cancel font-sm">remove</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <span>outro_start</span>
+                                                                hh:mm:ss
+                                                            </td>
+                                                            <td>
+                                                                ad
+                                                            </td>
+                                                            <td>
+                                                                <span>midroll-1</span>
                                                             </td>                                                 
                                                             <td>
-                                                                <a>345.34</a>
+                                                                <button type="button" class="btn-cancel font-sm">remove</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <span>outro_end</span>
+                                                                hh:mm:ss
+                                                            </td>
+                                                            <td>
+                                                                ad
+                                                            </td>
+                                                            <td>
+                                                                <span>midroll-2</span>
                                                             </td>                                                 
                                                             <td>
-                                                                <a>445.34</a>
+                                                                <button type="button" class="btn-cancel font-sm">remove</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                hh:mm:ss
+                                                            </td>
+                                                            <td>
+                                                                code
+                                                            </td>
+                                                            <td>
+                                                                <span>ending-start</span>
+                                                            </td>                                                 
+                                                            <td>
+                                                                <button type="button" class="btn-cancel font-sm">remove</button>
                                                             </td>
                                                         </tr>
                                                     </tbody>
