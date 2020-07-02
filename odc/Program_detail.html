@@ -438,38 +438,113 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">ageRating</th>
+                                        <th class="label-box-item-label required-field">ageRatings</th>
                                         <td class="label-box-item-desc">
-                                            <table class="input-btn-group">
+                                            <table class="label-box">
                                                 <tr>
-                                                    <td class="input-btn-group-input input-dropdown w-ls">
-                                                        <input class="input-dropdown-input" type="text" placeholder="search and add" />
-                                                        <ul class="input-dropdown-result scroll-customed">
-                                                            <li>
-                                                                <span class="item-id">12345</span>
-                                                                <span>$ageRating name</span>
-                                                            </li>
-                                                            <li>
-                                                                <span class="item-id">12345</span>
-                                                                <span>$ageRating name</span>
-                                                            </li>
-                                                        </ul>														
+                                                    <th class="label-box-item-label required-field">default</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
                                                     </td>
-                                                    <td class="input-btn-group-button">
-                                                        <button class="btn-new">add</button>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">USA</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">CA-Quebec</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">CA-OutsideQuebec</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <p class="tag-cloud tag-for-remove">
-                                                <a>
-                                                    <span class="tag">$ageRating name</span>
-                                                </a>
-                                                <a>
-                                                    <span class="tag">$ageRating name</span>
-                                                </a>
-                                            </p>
-                                        </td>                                       
-                                    </tr>																								
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">Allowed Membership</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group">
+												<span class="item-group-label">
+                                                    <input type="checkbox" name="allowed_free">Guest
+                                                </span>
+											</div>
+                                            <div class="item-group">
+												<span class="item-group-label">
+                                                    <input type="checkbox" name="allowed_free" checked>Free
+                                                </span>
+												<span class="item-group-desc">
+                                                    <label><input type="radio" name="memb-sch-free" checked>all time</label>
+                                                    <label><input type="radio" name="memb-sch-free" checked>scheduled</label>
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="07/01/2020 10:00" />
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="07/02/2020 10:00" />
+                                                </span>
+											</div>
+                                            <div class="item-group">
+												<span class="item-group-label">
+                                                    <input type="checkbox" name="allowed_free" checked>Plus
+                                                </span>
+												<span class="item-group-desc">
+                                                    <label><input type="radio" name="memb-sch-plus">all time</label>
+                                                    <label><input type="radio" name="memb-sch-plus" checked>scheduled</label>
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="07/01/2020 10:00" />
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="07/02/2020 10:00" />
+                                                </span>
+											</div>
+                                            <div class="item-group">
+												<div class="item-group-label">
+                                                    <input type="checkbox" name="allowed_free" checked>Premium
+                                                </div>
+												<div class="item-group-desc">
+                                                    <label><input type="radio" name="memb-sch-pre" checked>all time</label>
+                                                    <label><input type="radio" name="memb-sch-pre">scheduled</label>
+                                                </div>
+											</div>
+                                            <div class="item-group">
+												<div class="item-group-label">
+                                                    <input type="checkbox" name="allowed_free" checked>Kocowa
+                                                </div>
+												<div class="item-group-desc">
+                                                    <label><input type="radio" name="memb-sch-kocowa" checked>all time</label>
+                                                    <label><input type="radio" name="memb-sch-kocowa">scheduled</label>
+                                                </div>
+											</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Allowed PPV</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="checkbox" name="allowed_free" checked>is_ppv?
+                                            {$matched ppv product}
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>								
                         </div>

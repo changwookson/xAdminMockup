@@ -397,7 +397,7 @@ h6 {font-size:1.20rem;}
 .item-group {margin-bottom: 0.5rem;} /* div, p, ul 사용 가능 */
 .item-group span {vertical-align: middle;}
 .item-group > li {display: inline-block; margin-right: 0.5rem;}
-.item-group-label {display: inline-block; min-width:5.0rem; margin-right:1.0rem; color:#888;}
+.item-group-label {display: inline-block; min-width:10.0rem; margin-right:1.0rem; color:#888;}
 .item-group-desc {display:inline-block;}
 
 /* item-box */
