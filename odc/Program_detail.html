@@ -59,9 +59,9 @@
                             </table>
                             <div class="tabs">
                                 <ul class="tabs-menu scroll-customed">
-                                    <li><a class="required-field">简体中文</a></li>
-                                    <li><a>傳統中文</a></li>
-                                    <li><a>Engilsh</a></li>
+                                    <li><a class="required-field">Default Langs</a></li>
+                                    <li><a>langs</a></li>
+                                    <li><a>langs</a></li>
                                 </ul>
                                 <div class="tabs-content">
                                     <table class="label-box">
@@ -91,7 +91,45 @@
                                                     <ul>
                                                         <li class="item-panel" style="display:inline-block;">
                                                             <p class="img-embed-pure img-w-200">
-                                                                <img src="../resource/image/sample-poster-1.jpg" />
+                                                                <img src="../resource/image/sample-poster-2.jpg" />
+                                                            </p>
+                                                        </li>                                                     
+                                                    </ul> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label new-item">poster-portrait</th>
+                                                <td class="label-box-item-desc">
+                                                    <div class="file-upload">
+                                                        <p class="item-group">
+                                                            <button type="button" class="file-input-replace btn-new">add image</button>
+                                                            <span>$imported file name</span>
+                                                        </p>
+                                                        <input type="file" class="file-input">
+                                                    </div>
+                                                    <ul>
+                                                        <li class="item-panel" style="display:inline-block;">
+                                                            <p class="img-embed-pure img-w-200">
+                                                                <img src="../resource/image/sample-poster-2.jpg" />
+                                                            </p>
+                                                        </li>                                                     
+                                                    </ul> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label new-item">poster-landscape</th>
+                                                <td class="label-box-item-desc">
+                                                    <div class="file-upload">
+                                                        <p class="item-group">
+                                                            <button type="button" class="file-input-replace btn-new">add image</button>
+                                                            <span>$imported file name</span>
+                                                        </p>
+                                                        <input type="file" class="file-input">
+                                                    </div>
+                                                    <ul>
+                                                        <li class="item-panel" style="display:inline-block;">
+                                                            <p class="img-embed-pure img-w-200">
+                                                                <img src="../resource/image/sample-poster-2.jpg" />
                                                             </p>
                                                         </li>                                                     
                                                     </ul> 
@@ -218,6 +256,187 @@
                             </table>
                         </div>
                         <div class="con-sector">
+                            <h3 class="con-sector-title">released</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">on-air date</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                </label>
+                                                <label>end
+                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">release weekday</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <input type="checkbox" checked/><label>sunday</label>
+                                                <input type="checkbox"/><label>monday</label>
+                                                <input type="checkbox"/><label>tuesday</label>
+                                                <input type="checkbox"/><label>wednesday</label>
+                                                <input type="checkbox"/><label>thursday</label>
+                                                <input type="checkbox"/><label>friday</label>
+                                                <input type="checkbox"/><label>saturday</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">produce year</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <span>$YYYY</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">produce year-manual</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" class="w-ms" placeholder="yyyy"/>
+                                                <span class="info-message">input manually if it needed</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">release status</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <span>$release status</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">release status-manual</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option>select status</option>
+                                                    <option>on-air</option>
+                                                    <option>coming-soon</option>
+                                                    <option>completed</option>
+                                                </select>
+                                                <span class="info-message">select manually if it needed</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">meta</h3>
+                            <table class="label-box">
+                                <tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">rating score</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/> 
+                                            <script>
+                                                var prev = ""; 
+                                                var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                function imsi(obj) { 
+                                                    if(obj.value.search(regexp)==-1) { 
+                                                        obj.value = prev; 
+                                                    } 
+                                                    else { 
+                                                        prev = obj.value; 
+                                                    } 
+                                                } 
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">cc languages</th>
+                                        <td class="label-box-item-desc">
+                                            <table class="input-btn-group">
+                                                <tr>
+                                                    <td class="input-btn-group-input input-dropdown w-ls">
+                                                        <input class="input-dropdown-input" type="text" placeholder="search and add" />
+                                                        <ul class="input-dropdown-result scroll-customed">
+                                                            <li>
+                                                                <span>en</span>
+
+                                                            </li>
+                                                            <li>
+                                                                <span>zh-Hans</span>
+                                                            </li>
+                                                        </ul>
+
+                                                    </td>
+                                                    <td class="input-btn-group-button">
+                                                        <button class="btn-new">add</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p class="tag-cloud tag-for-remove">
+                                                <a>
+                                                    <span class="tag">en</span>
+                                                </a>
+                                                <a>
+                                                    <span class="tag">zh-Hans</span>
+                                                </a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">running time</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <input class="w-sm" type="number" name="" placeholder="hh"/>
+                                                <input class="w-sm" type="number" name="" placeholder="mm"/>
+                                                <input class="w-sm" type="number" name="" placeholder="ss"/>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">CP</th>
+                                        <td class="label-box-item-desc">
+                                            <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">episodes info</h3>
+                            <table class="label-box">
+                                <tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">series type</th>
+                                        <td class="label-box-item-desc">
+                                            <label>
+                                                <input type="radio" name="episode-type" checked>series episodes
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type">one main episode
+                                            </label>										
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">total episodes</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>		
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">episode list default order</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option>select order</option>
+                                                <option>newest</option>
+                                                <option>oldest</option>
+                                            </select>
+                                        </td>
+                                    </tr>	
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
                             <h3 class="con-sector-title">classify</h3>
                             <table class="label-box">
                                 <tbody>
@@ -313,107 +532,6 @@
                             </table>
                         </div>                      
                         <div class="con-sector">
-                            <h3 class="con-sector-title">released</h3>
-                            <table class="label-box">
-                                <tbody>
-                                    <tr>
-                                        <th class="label-box-item-label required-field">on-air date</th>
-                                        <td class="label-box-item-desc">
-                                            <div class="datepicker">
-                                                <label>start
-                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-                                                </label>
-                                                <label>end
-                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">produce year</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <span>$YYYY</span>
-                                                <span class="info-message">auto input from released start date</span>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                             </table>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">episodes info</h3>
-                            <table class="label-box">
-                                <tbody>                                 
-                                    <tr>
-                                        <th class="label-box-item-label">series type</th>
-                                        <td class="label-box-item-desc">
-                                            <label>
-                                                <input type="radio" name="episode-type" checked>series episodes
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="episode-type">one main episode
-                                            </label>										
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">total episodes</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>		
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">episode list default order</th>
-                                        <td class="label-box-item-desc">
-                                            <select>
-                                                <option>select order</option>
-                                                <option>newest</option>
-                                                <option>oldest</option>
-                                            </select>
-                                        </td>
-                                    </tr>	
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">etc</h3>
-                            <table class="label-box">
-                                <tbody>                                 
-                                    <tr>
-                                        <th class="label-box-item-label">rating score</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/> 
-                                            <script>
-                                                var prev = ""; 
-                                                var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                function imsi(obj) { 
-                                                    if(obj.value.search(regexp)==-1) { 
-                                                        obj.value = prev; 
-                                                    } 
-                                                    else { 
-                                                        prev = obj.value; 
-                                                    } 
-                                                } 
-                                            </script>
-                                        </td>
-                                    </tr>
-                                    <!--
-                                    <tr>
-                                        <th class="label-box-item-label">cover image</th>
-                                        <td class="label-box-item-desc">
-                                            <p class="item-group">
-                                                <button type="button" class="file-input-replace btn-new">add image</button>
-                                            </p>
-                                            <div class="img-embed-pure img-w-300">
-                                                <img src="../resource/image/sample-cover-1.jpg" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    -->
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="con-sector">
                             <h3 class="con-sector-title">permission</h3>
                             <table class="label-box">
                                 <tbody>
@@ -438,7 +556,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label required-field">ageRatings</th>
+                                        <th class="label-box-item-label required-field new-item">ageRatings</th>
                                         <td class="label-box-item-desc">
                                             <table class="label-box">
                                                 <tr>
@@ -489,7 +607,7 @@
                                         </td>                                    
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label required-field">Allowed Membership</th>
+                                        <th class="label-box-item-label new-item">Allowed Membership</th>
                                         <td class="label-box-item-desc">
                                             <div class="item-group">
 												<span class="item-group-label">
@@ -539,10 +657,16 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">Allowed PPV</th>
+                                        <th class="label-box-item-label new-item">Allowed PPV</th>
                                         <td class="label-box-item-desc">
-                                            <input type="checkbox" name="allowed_free" checked>is_ppv?
-                                            {$matched ppv product}
+                                            <p>
+                                                <input type="checkbox" name="allowed_free" checked>is_ppv?
+                                            </p>
+                                            <span class="tag-cloud">
+                                                <a>
+                                                    <span class="tag">$matched ppv product's name</span>
+                                                </a>
+                                            </span>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -563,10 +687,6 @@
                                                     <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
                                                 </label>
                                             </div>
-                                            <p>
-                                                <label><input type="checkbox">no expired</label>
-                                                <label><input type="checkbox">pause publish</label>
-                                            </p>
                                         </td>
                                     </tr>                                 			
                                     <tr>
@@ -578,6 +698,74 @@
 									</tr>
                                 </tbody>
                             </table>					
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">temporary meta for ODK Migration</h3>
+                            <div class="tabs">
+                                <ul class="tabs-menu scroll-customed">
+                                    <li><a class="required-field">Default Langs</a></li>
+                                    <li><a>langs</a></li>
+                                </ul>
+                                <div class="tabs-content">
+                                    <table class="label-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label-box-item-label new-item">tags</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label new-item">tags_director</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label new-item">tags_actor</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">limited_free</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="checkbox"/><label>24hours free for Kocowa</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">hide_badge</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="checkbox"/><label>hide membership badge on program list</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">popularity_adjust</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" class="w-ms" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">popularity_adjust_schedule</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                                <label>end
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
