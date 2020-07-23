@@ -61,6 +61,8 @@ input[type=text], input[type=number], input[type=search], input[type=password] {
     -webkit-border-radius:0;
     -webkit-appearance: none;
 }
+input:disabled, select:disabled {background: #eee; color: #aaa; border:0.1rem solid #aaa;}
+
 button {padding:0 1.0rem; text-decoration: none;
     border-radius:0.3rem;
     -o-border-radius:0.3rem;
