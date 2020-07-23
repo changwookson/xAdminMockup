@@ -656,25 +656,44 @@
 											</div>
                                         </td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">sales rules</h3>
+                            <table class="label-box">
+                                <tbody>
                                     <tr>
-                                        <th class="label-box-item-label new-item">Allowed PPV</th>
+                                        <th class="label-box-item-label new-item">sales type</th>
                                         <td class="label-box-item-desc">
                                             <p>
-                                                <input type="checkbox" name="allowed_free" checked>is_ppv?
+                                                <input type="checkbox" checked>
+                                                    <label>membership plan</label>
+                                                <input type="checkbox" checked>
+                                                    <label>package plan</label>
+                                                <input type="checkbox" checked>
+                                                    <label>ppv plan</label>
                                             </p>
-                                            <span class="tag-cloud">
-                                                <a>
-                                                    <span class="tag">$matched ppv product's name</span>
-                                                </a>
-                                            </span>
+                                            <p>
+                                                <input type="radio" name="sales-type" checked>
+                                                    <label>membership plan</label>
+                                                <input type="radio" name="sales-type">
+                                                    <label>package plan</label>
+                                                <input type="radio" name="sales-type">
+                                                    <label>ppv plan</label>
+                                            </p>
+                                            <p class="info-message">
+                                                data tracking priority when multiful slaes : ppv > package > membership
+                                            </p>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label new-item">Allowed Membership 2</th>
+                                        <th class="label-box-item-label new-item">Membership Plan</th>
                                         <td class="label-box-item-desc">
                                             <div class="item-group">
                                                 <label>default is</label>
                                                 <select>
+                                                    <option>guest</option>
                                                     <option>free</option>
                                                     <option>plus</option>
                                                     <option selected>premium</option>
@@ -683,200 +702,470 @@
 											</div>
                                             <div class="item-group item-panel">
 												<span class="item-group-label">
-                                                    <input type="checkbox" name="allowed_free" checked>
-                                                    <label>1</label>
-                                                    <select>
-                                                        <option selected>first</option>
-                                                        <option>recent</option>
-                                                        <option>all</option>
-                                                        <option>a</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="1">
-                                                    <label>EPs</label>
-                                                    <label> / </label>
-                                                    <label>from</label>
-                                                    <select>
-                                                        <option selected>ep_pub_date</option>
-                                                        <option>specified_date</option>
-                                                    </select>
-                                                    <select>
-                                                        <option selected>immediately</option>
-                                                        <option>after</option>
-                                                        <option>until</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="0" alt=""disabled>
-                                                    <select disabled>
-                                                        <option selected>null</option>
-                                                        <option>hours</option>
-                                                        <option>days</option>
-                                                        <option>weeks</option>
-                                                        <option>months</option>
-                                                        <option>years</option>
-                                                    </select>
-                                                    <label> / </label>
-                                                    <label>to</label>
-                                                    <select>
-                                                        <option selected>free</option>
-                                                        <option>plus</option>
-                                                        <option>premium</option>
-                                                    </select>
-                                                    <label>and above</label>
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>1</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>first</option>
+                                                            <option>recent</option>
+                                                            <option>all</option>
+                                                            <option>a</option>
+                                                            <option selected>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>from</label>
+                                                        <select>
+                                                            <option selected>ep_pub_date</option>
+                                                            <option>specified_date</option>
+                                                        </select>
+                                                        <input type="text" class="datepicker-input w-ms" placeholder="yyyy.mm.dd" disabled />
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>to</label>
+                                                        <select>
+                                                            <option selected>immediately</option>
+                                                            <option>after</option>
+                                                            <option>until</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" alt=""disabled>
+                                                        <select disabled>
+                                                            <option selected>null</option>
+                                                            <option>hours</option>
+                                                            <option>days</option>
+                                                            <option>weeks</option>
+                                                            <option>months</option>
+                                                            <option>years</option>
+                                                        </select>
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
                                                 </span>
 											</div>
                                             <div class="item-group item-panel">
 												<span class="item-group-label">
-                                                    <input type="checkbox" name="allowed_free" checked>
-                                                    <label>2</label>
-                                                    <select>
-                                                        <option>first</option>
-                                                        <option selected>recent</option>
-                                                        <option>all</option>
-                                                        <option>a</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="1">
-                                                    <label>EPs</label>
-                                                    <label> / </label>
-                                                    <label>from</label>
-                                                    <select>
-                                                        <option selected>ep_pub_date</option>
-                                                        <option>specified_date</option>
-                                                    </select>
-                                                    <select>
-                                                        <option>immediately</option>
-                                                        <option>after</option>
-                                                        <option selected>until</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="23">
-                                                    <select>
-                                                        <option selected>hours</option>
-                                                        <option>days</option>
-                                                        <option>weeks</option>
-                                                        <option>months</option>
-                                                        <option>years</option>
-                                                    </select>
-                                                    <label> / </label>
-                                                    <label>to</label>
-                                                    <select>
-                                                        <option selected>free</option>
-                                                        <option>plus</option>
-                                                        <option>premium</option>
-                                                    </select>
-                                                    <label>and above</label>
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>2</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option selected>first</option>
+                                                            <option>recent</option>
+                                                            <option>all</option>
+                                                            <option>a</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="1">
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>from</label>
+                                                        <select>
+                                                            <option selected>ep_pub_date</option>
+                                                            <option>specified_date</option>
+                                                        </select>
+                                                        <input type="text" class="datepicker-input w-ms" placeholder="yyyy.mm.dd" disabled />
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>to</label>
+                                                        <select>
+                                                            <option selected>immediately</option>
+                                                            <option>after</option>
+                                                            <option>until</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" alt=""disabled>
+                                                        <select disabled>
+                                                            <option selected>null</option>
+                                                            <option>hours</option>
+                                                            <option>days</option>
+                                                            <option>weeks</option>
+                                                            <option>months</option>
+                                                            <option>years</option>
+                                                        </select>
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
                                                 </span>
 											</div>
                                             <div class="item-group item-panel">
 												<span class="item-group-label">
-                                                    <input type="checkbox" name="allowed_free" checked>
-                                                    <label>3</label>
-                                                    <select>
-                                                        <option>first</option>
-                                                        <option>recent</option>
-                                                        <option selected>all</option>
-                                                        <option>a</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="0" disabled>
-                                                    <label>EPs</label>
-                                                    <label> / </label>
-                                                    <label>from</label>
-                                                    <select>
-                                                        <option selected>ep_pub_date</option>
-                                                        <option>specified_date</option>
-                                                    </select>
-                                                    <select>
-                                                        <option>immediately</option>
-                                                        <option selected>after</option>
-                                                        <option>until</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="1">
-                                                    <select>
-                                                        <option>hours</option>
-                                                        <option>days</option>
-                                                        <option>weeks</option>
-                                                        <option>months</option>
-                                                        <option selected>years</option>
-                                                    </select>
-                                                    <label> / </label>
-                                                    <label>to</label>
-                                                    <select>
-                                                        <option selected>free</option>
-                                                        <option>plus</option>
-                                                        <option>premium</option>
-                                                    </select>
-                                                    <label>and above</label>
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>3</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option selected>recent</option>
+                                                            <option>recent</option>
+                                                            <option>all</option>
+                                                            <option>a</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="1">
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>from</label>
+                                                        <select>
+                                                            <option selected>ep_pub_date</option>
+                                                            <option>specified_date</option>
+                                                        </select>
+                                                        <input type="text" class="datepicker-input w-ms" placeholder="yyyy.mm.dd" disabled />
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>to</label>
+                                                        <select>
+                                                            <option>immediately</option>
+                                                            <option>after</option>
+                                                            <option selected>until</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="23" alt="">
+                                                        <select>
+                                                            <option>null</option>
+                                                            <option selected>hours</option>
+                                                            <option>days</option>
+                                                            <option>weeks</option>
+                                                            <option>months</option>
+                                                            <option>years</option>
+                                                        </select>
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
                                                 </span>
 											</div>
                                             <div class="item-group item-panel">
 												<span class="item-group-label">
-                                                    <input type="checkbox" name="allowed_free" checked>
-                                                    <label>4</label>
-                                                    <select>
-                                                        <option>first</option>
-                                                        <option>recent</option>
-                                                        <option selected>all</option>
-                                                        <option>a</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="0" disabled>
-                                                    <label>EPs</label>
-                                                    <label> / </label>
-                                                    <label>from</label>
-                                                    <select>
-                                                        <option>ep_pub_date</option>
-                                                        <option selected>specified_date</option>
-                                                    </select>
-                                                    <select>
-                                                        <option>immediately</option>
-                                                        <option selected>after</option>
-                                                        <option>until</option>
-                                                    </select>
-                                                    <input type="text" class="datetimepicker-input w-ms" placeholder="yyyy.mm.dd" />
-                                                    <label> / </label>
-                                                    <label>to</label>
-                                                    <select>
-                                                        <option selected>free</option>
-                                                        <option>plus</option>
-                                                        <option>premium</option>
-                                                    </select>
-                                                    <label>and above</label>
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>4</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>first</option>
+                                                            <option>recent</option>
+                                                            <option selected>all</option>
+                                                            <option>a</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>from</label>
+                                                        <select>
+                                                            <option selected>ep_pub_date</option>
+                                                            <option>specified_date</option>
+                                                        </select>
+                                                        <input type="text" class="datepicker-input w-ms" placeholder="yyyy.mm.dd" disabled />
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>to</label>
+                                                        <select>
+                                                            <option>immediately</option>
+                                                            <option selected>after</option>
+                                                            <option>until</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="1" alt="">
+                                                        <select>
+                                                            <option>null</option>
+                                                            <option>hours</option>
+                                                            <option>days</option>
+                                                            <option>weeks</option>
+                                                            <option>months</option>
+                                                            <option selected>years</option>
+                                                        </select>
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option>guest</option>
+                                                            <option selected>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
                                                 </span>
 											</div>
                                             <div class="item-group item-panel">
 												<span class="item-group-label">
-                                                    <input type="checkbox" name="allowed_free" checked>
-                                                    <label>5</label>
-                                                    <select>
-                                                        <option>first</option>
-                                                        <option>recent</option>
-                                                        <option>all</option>
-                                                        <option selected>a</option>
-                                                    </select>
-                                                    <input class="w-sm" type=number value="17">
-                                                    <label>EP</label>
-                                                    <label> / </label>
-                                                    <label>from</label>
-                                                    <select>
-                                                        <option>ep_pub_date</option>
-                                                        <option selected>specified_date</option>
-                                                    </select>
-                                                    <select>
-                                                        <option>immediately</option>
-                                                        <option selected>after</option>
-                                                        <option>until</option>
-                                                    </select>
-                                                    <input type="text" class="datetimepicker-input w-ms" placeholder="yyyy.mm.dd" />
-                                                    <label> / </label>
-                                                    <label>to</label>
-                                                    <select>
-                                                        <option>free</option>
-                                                        <option selected>plus</option>
-                                                        <option>premium</option>
-                                                    </select>
-                                                    <label>and above</label>
+                                                    <span>
+                                                        <input type="checkbox">
+                                                        <label>5</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>first</option>
+                                                            <option>recent</option>
+                                                            <option>all</option>
+                                                            <option selected>a</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="17">
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>from</label>
+                                                        <select>
+                                                            <option>ep_pub_date</option>
+                                                            <option selected>specified_date</option>
+                                                        </select>
+                                                        <input type="text" class="datepicker-input w-ms" placeholder="yyyy.mm.dd" />
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>to</label>
+                                                        <select>
+                                                            <option selected>immediately</option>
+                                                            <option>after</option>
+                                                            <option>until</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" alt="" disabled>
+                                                        <select disabled>
+                                                            <option selected>null</option>
+                                                            <option>hours</option>
+                                                            <option>days</option>
+                                                            <option>weeks</option>
+                                                            <option>months</option>
+                                                            <option>years</option>
+                                                        </select>
+                                                        <label> | </label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option>guest</option>
+                                                            <option>free</option>
+                                                            <option selected>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
                                                 </span>
 											</div>
-                                            <div>
-                                                <button type="button" class="btn-new">Add Rule</button>
-                                                <button type="button" class="btn-get">Rules Validate</button>
-                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">PPV Plan</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group item-panel">
+												<span class="item-group-label">
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>1</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>each</option>
+                                                            <option>first</option>
+                                                            <option selected>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>none ppv</option>
+                                                            <option>ppv plan #1</option>
+                                                            <option>ppv plan #2</option>
+                                                        </select>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
+                                                </span>
+											</div>
+                                            <div class="item-group item-panel">
+												<span class="item-group-label">
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>2</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option selected>each</option>
+                                                            <option>first</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option>none ppv</option>
+                                                            <option selected>ppv plan #1</option>
+                                                            <option>ppv plan #2</option>
+                                                        </select>
+                                                    </span>
+                                                </span>
+											</div>
+                                            <div class="item-group item-panel">
+												<span class="item-group-label">
+                                                    <span>
+                                                        <input type="checkbox">
+                                                        <label>3</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>each</option>
+                                                            <option selected>first</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="1">
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>none ppv</option>
+                                                            <option>ppv plan #1</option>
+                                                            <option>ppv plan #2</option>
+                                                        </select>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
+                                                </span>
+											</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label new-item">Package Plan</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group item-panel">
+												<span class="item-group-label">
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>1</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option>all</option>
+                                                            <option selected>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>none package</option>
+                                                            <option>package plan #1</option>
+                                                            <option>package plan #2</option>
+                                                        </select>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option selected>guest</option>
+                                                            <option>free</option>
+                                                            <option>plus</option>
+                                                            <option>premium</option>
+                                                        </select>
+                                                        <label>and above</label>
+                                                    </span>
+                                                </span>
+											</div>
+                                            <div class="item-group item-panel">
+												<span class="item-group-label">
+                                                    <span>
+                                                        <input type="checkbox" checked>
+                                                        <label>2</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <select>
+                                                            <option selected>all</option>
+                                                            <option>except</option>
+                                                        </select>
+                                                        <input class="w-sm" type=number value="0" disabled>
+                                                        <label>main or series EP(s)</label>
+                                                        <label>|</label>
+                                                    </span>
+                                                    <span>
+                                                        <label>for</label>
+                                                        <select>
+                                                            <option>none package</option>
+                                                            <option selected>package plan #1</option>
+                                                            <option>package plan #2</option>
+                                                        </select>
+                                                    </span>
+                                                </span>
+											</div>
                                         </td>
                                     </tr>
                                 </tbody>

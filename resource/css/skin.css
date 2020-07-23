@@ -315,7 +315,7 @@ h6 {font-size:1.20rem;}
 .subside-list-filter-apply {margin-bottom:1.0rem;}
 
 /* #article-content */
-.con-wrap {padding:2.0rem; max-width: 128.0rem; margin: 0 auto;}
+.con-wrap {padding:2.0rem; max-width: 1920.0rem; margin: 0 auto;}
 .con-header {margin-bottom:1.0rem;}
 .con-header-title {color:#222; font-weight:100;}
 .con-header-sub-title {margin-top:0.5rem; color:#555; font-weight:100;}
@@ -394,7 +394,7 @@ h6 {font-size:1.20rem;}
 
 /* label-box */
 .label-box {width:100%;  margin-bottom:1.0rem; border-top: 0.1rem solid #ddd; text-align: left;}
-.label-box-item-label {width: 30%; padding: 1.0rem; background: #f6f6f6; border-bottom: 0.1rem solid #ddd;}
+.label-box-item-label {width: 25%; padding: 1.0rem; background: #f6f6f6; border-bottom: 0.1rem solid #ddd;}
 .label-box-item-desc {padding: 1.0rem; background: #fff; border-bottom: 0.1rem solid #ddd;}
 .label-col-2 .label-box-item-label {width: 20%;}
 
