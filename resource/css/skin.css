@@ -61,7 +61,7 @@ input[type=text], input[type=number], input[type=search], input[type=password] {
     -webkit-border-radius:0;
     -webkit-appearance: none;
 }
-input:disabled, select:disabled {background: #eee; color: #aaa; border:0.1rem solid #aaa;}
+input:disabled, select:disabled {background: #eee; color: #555; border:0.1rem solid #aaa;}
 
 button {padding:0 1.0rem; text-decoration: none;
     border-radius:0.3rem;
@@ -143,8 +143,10 @@ h6 {font-size:1.20rem;}
 
 .required-field {color:#BF4040;}
 .required-field:after {content: "(*)"; margin-left:0.25em;}
+/*
 .new-item {font-weight: bold}
-.new-item:after {content: "new"; font-size:0.5em; color:#4095BF; background: #fff; margin-left:1em; border: 0.1rem solid #4095BF; padding:0.2em; border-radius: 0.5em;}
+.new-item:after {content: "new"; font-size:0.5em; color:#4095BF; background: #fff; margin-left:1em; border: 0.1rem solid #4095BF; padding:0.2em; border-radius: 0.5em;} 
+*/
 
 .item-id {margin-right:0.5rem;}
 .item-id:before {content:"["}
