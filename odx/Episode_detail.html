@@ -598,11 +598,11 @@
                              </table>
                         </div>                                                    
                         <div class="con-sector">
-                            <h3 class="con-sector-title">permission</h3>
+                            <h3 class="con-sector-title">region</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
-                                        <th class="label-box-item-label">allowed region</th>
+                                        <th class="label-box-item-label">allowed countries</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <label><input type="radio" name="allowed-region" checked>depend on program</label>
@@ -627,42 +627,67 @@
                                             </div>
                                         </td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">age rating</h3>
+                            <table class="label-box">
+                                <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">ageRating</th>
+                                        <th class="label-box-item-label">ageRatings</th>
                                         <td class="label-box-item-desc">
                                             <p>
-                                                <label><input type="radio" name="ageRating" checked>depend on program</label>
-                                                <label><input type="radio" name="ageRating">manual</label>
+                                                <label><input type="radio" name="ageRating">depend on program</label>
+                                                <label><input type="radio" name="ageRating" checked>manual</label>
                                             </p>
                                             <div class="item-panel">
-                                                <table class="input-btn-group">
-                                                    <tr>
-                                                        <td class="input-btn-group-input input-dropdown w-ls">
-                                                            <input class="input-dropdown-input" type="text" placeholder="search and add" />
-                                                            <ul class="input-dropdown-result scroll-customed">
-                                                                <li>
-                                                                    <span class="item-id">12345</span>
-                                                                    <span>$ageRating name</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span class="item-id">12345</span>
-                                                                    <span>$ageRating name</span>
-                                                                </li>
-                                                            </ul>														
-                                                        </td>
-                                                        <td class="input-btn-group-button">
-                                                            <button class="btn-new">add</button>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                <p class="tag-cloud tag-for-remove">
-                                                    <a>
-                                                        <span class="tag">$ageRating name</span>
-                                                    </a>
-                                                    <a>
-                                                        <span class="tag">$ageRating name</span>
-                                                    </a>
-                                                </p>
+                                                <table class="label-box">
+                                                <tr>
+                                                    <th class="label-box-item-label required-field">default</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">USA</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">CA-Quebec</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="label-box-item-label">CA-OutsideQuebec</th>
+                                                    <td class="label-box-item-desc">
+                                                        <select>
+                                                            <option>select rating</option>
+                                                            <option>All</option>
+                                                            <option>PG</option>
+                                                            <option>12+</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                             </div>
                                         </td>
                                     </tr>                               								

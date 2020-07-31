@@ -695,7 +695,7 @@ input:checked + .switch-slider:before {
 /* table */
 .table-wrap {overflow: auto;}
 .table {width:100%; text-align: left; margin-bottom:1.0rem;}
-.table thead th {border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; padding: 0.5rem; vertical-align: middle; background: #f6f6f6;}
+.table thead th {border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; padding: 0.5rem; vertical-align: middle; background: #f6f6f6; font-weight: bold}
 .table tbody td {border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; padding: 0.5rem; vertical-align: middle;}
 .table tfoot td {border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; padding: 0.5rem; vertical-align: middle;}
 .table tbody td .td-desc {margin-top: 0.5rem; line-height: 100%; max-height: 6.0rem; overflow: hidden;}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Billing Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="plan_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Product</span>
+							<span>Plan</span>
+							<span>$plan ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">plan info</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">plan name</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input plan name by english" name=""/>
+                                            <p>
+                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label required-field">service</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>odk</option>
+                                                <option>odc</option>
+                                            </select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label required-field">plan type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="radio" name="plan_type" value="onetime" checked>
+                                                    <label>membership_plan</label>
+                                                <select>
+                                                    <option>{a membership}</option>
+                                                    <option>{a membership}</option>
+                                                </select>
+                                            </p>
+                                            <input type="radio" name="plan_type" value="recurring">
+                                                <label>ppv_plan</label>
+										</td>
+									</tr>
+									<tr>
+                                        <th class="label-box-item-label required-field">description</th>
+										<td class="label-box-item-desc">
+											<div class="tabs">
+                                                <ul class="tabs-menu scroll-customed">
+                                                    <li><a class="required-field">简体中文</a></li>
+                                                    <li><a>傳統中文</a></li>
+                                                    <li><a>Engilsh</a></li>
+                                                </ul>
+                                                <div class="tabs-content">
+                                                    <table class="label-box">
+                                                        <input class="w-lm" type="text" placeholder="input description title" name=""/>
+                                                    </table>
+                                                </div>
+                                                <div class="tabs-content">tabs-content-2</div>
+                                                <div class="tabs-content">tabs-content-3</div>
+                                            </div>
+										</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">pricing (memberhsip_plan type 일 때)</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">bill type</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="radio" name="bill_type" value="onetime" disabled>
+                                                <label>onetime</label>
+                                            <input type="radio" name="bill_type" value="recurring" checked disabled>
+                                                <label>recurring</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">billing period</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option>daily</option>
+                                                <option>weekly</option>
+                                                <option selected>monthly</option>
+                                                <option>yearly</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">onetime validity</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl" disabled>
+                                            <label>days</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">price</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label>default</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>					
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">pricing (ppv_plan type 일 때)</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">bill type</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="radio" name="bill_type_ppv" value="onetime" checked disabled>
+                                                <label>onetime</label>
+                                            <input type="radio" name="bill_type_ppv" value="recurring" disabled>
+                                                <label>recurring</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">billing period</th>
+                                        <td class="label-box-item-desc">
+                                            <select disabled>
+                                                <option>daily</option>
+                                                <option>weekly</option>
+                                                <option>monthly</option>
+                                                <option>yearly</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">onetime validity</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl">
+                                            <label>days</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">price</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label>default</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>					
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">matched episodes (ppv_plan type 일 때만 활성됨. 현황을 보는 곳이며, 매칭은 content side에서 실행.)</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-sl">ID</th>
+                                        <th>program</th>
+                                        <th>episode</th>
+                                        <th>kind</th>
+                                        <th>number</th>
+                                        <th>part</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12345</td>
+                                        <td>{program slug}</td>
+                                        <td>{episode slug}</td>
+                                        <td>{episode kind}</td>
+                                        <td>{ep number}</td>
+                                        <td>{part nmmber}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345</td>
+                                        <td>{program slug}</td>
+                                        <td>{episode slug}</td>
+                                        <td>{episode kind}</td>
+                                        <td>{ep number}</td>
+                                        <td>{part nmmber}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">publish</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">purchase_enable</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="purchase_enable" checked>disable</label>
+                                            <label><input type="radio" name="purchase_enable">enable</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">status</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="active-status" checked>active</label>
+                                            <label><input type="radio" name="active-status">archived</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>					
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
