@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Contract Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="cp_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Contract</span>
+							<span>CP</span>
+							<span>$cp ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">CP information</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label required-field">CP Code</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input CP code by english and number" name=""/>
+                                            <p>
+                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">Company Name</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input CP name" name=""/>
+                                            <p>
+                                                <span class="warning-message">It is required field. Please input the company name.</span>
+                                            </p>
+										</td>
+                                    </tr>
+                                    <tr>
+										<th class="label-box-item-label">Country</th>
+										<td class="label-box-item-desc">
+                                            <p class="info-message">Designate the nationality of this CP.</p>
+                                            <p>
+                                                <select>
+                                                    <option selected>Country</option>
+                                                    <option>KR</option>
+                                                    <option>CN</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Manager</th>
+										<td class="label-box-item-desc">
+                                            <p class="info-message">Designate the management officers of this CP.</p>
+											<table class="input-btn-group">
+                                                <tr>
+                                                    <td class="input-btn-group-input input-dropdown w-ls">
+                                                        <input class="input-dropdown-input" type="text" placeholder="search staff and add" />
+                                                        <ul class="input-dropdown-result scroll-customed">
+                                                            <li>
+                                                                <span class="item-id">user_name</span>
+                                                                <span>user_email</span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="item-id">user_name</span>
+                                                                <span>user_email</span>
+                                                            </li>
+                                                        </ul>
+
+                                                    </td>
+                                                    <td class="input-btn-group-button">
+                                                        <button class="btn-new">add</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <p class="tag-cloud tag-for-remove">
+                                                <a>
+                                                    <span class="tag">$user_name</span>
+                                                </a>
+                                                <a>
+                                                    <span class="tag">$user_name</span>
+                                                </a>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Memo</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-100per"></textarea>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
