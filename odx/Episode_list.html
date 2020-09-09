@@ -40,25 +40,34 @@
 				<div class="subside-wrap scroll-customed">
 					<ul class="subside-list-filter">
 						<li>
-							<h6>program search</h6>
-                            <table class="search-bar">
-                                <tbody>
-                                    <tr>
-                                        <td class="search-bar-option">
-                                            <select>
-                                                <option>name</option>
-                                                <option>ID</option>
-                                            </select>
-                                        </td>
-                                        <td class="search-bar-input">
-                                            <input type="search" placeholder="keyword"/>
-                                        </td>
-                                        <td class="search-bar-btn">
-                                            <button type="button"><span class="icon fa fa-search"></span></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+							<ul class="list-option-filter">
+                                <li>
+                                    <select>
+                                        <option>Category: All</option>
+                                        <option>$category</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select>
+                                        <option>CP: All</option>
+                                        <option>$cp_code</option>									
+                                    </select>
+                                </li>								
+                                <li>
+                                    <table class="search-bar">
+                                        <tbody>
+                                            <tr>
+                                                <td class="search-bar-input">
+                                                    <input type="search" placeholder="keyword"/>
+                                                </td>
+                                                <td class="search-bar-btn">
+                                                    <button type="button"><span class="icon fa fa-search"></span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
 						</li>
 						<li>
 							<div class="table-wrap scroll-customed">
@@ -141,32 +150,10 @@
                         <div class="con-sector">
                             <div class="list-option">
                                 <ul class="list-option-filter">
-                                   <li>
-                                        <select>
-                                            <option>schedule</option>
-                                            <option>unscheduled</option>
-                                            <option>scheduled</option>
-                                            <option>published</option>
-                                            <option>expired</option>
-                                        </select>
-                                    </li>	
-                                    <li>
-                                        <select>
-                                            <option>enable</option>
-                                            <option>disable</option>
-											<option>enable</option>	
-                                        </select>
-                                    </li>
                                     <li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
-													<td class="search-bar-option">
-														<select>
-															<option>episode name</option>
-															<option>episode ID</option>
-														</select>
-													</td>
 													<td class="search-bar-input">
 														<input type="search" placeholder="keyword"/>
 													</td>
@@ -177,9 +164,6 @@
 											</tbody>
 										</table>
 									</li>
-                                    <li>
-                                        <button type="button" class="btn-submit">filter apply</button>
-                                    </li>
                                 </ul>
                                 <ul class="list-option-action">
                                     <li>
