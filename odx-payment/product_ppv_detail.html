@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Billing Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="product_ppv_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Product</span>
+							<span>PPV</span>
+							<span>$product ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">product info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label required-field">service</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>odk</option>
+                                                <option>odc</option>
+                                            </select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label required-field">code</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input product name by english" name=""/>
+                                            <p>
+                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">name</th>
+										<td class="label-box-item-desc">
+                                            <input class="w-lm" type="text" placeholder="input product name" name=""/>
+										</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">pricing</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">price</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <label>default</label>
+                                                <select>
+                                                    <option>USD</option>
+                                                </select>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                    <script>
+                                                        var prev = ""; 
+                                                        var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                        function imsi(obj) { 
+                                                            if(obj.value.search(regexp)==-1) { 
+                                                                obj.value = prev; 
+                                                            } 
+                                                            else { 
+                                                                prev = obj.value; 
+                                                            } 
+                                                        } 
+                                                    </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <select>
+                                                    <option>USD</option>
+                                                </select>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                    <script>
+                                                        var prev = ""; 
+                                                        var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                        function imsi(obj) { 
+                                                            if(obj.value.search(regexp)==-1) { 
+                                                                obj.value = prev; 
+                                                            } 
+                                                            else { 
+                                                                prev = obj.value; 
+                                                            } 
+                                                        } 
+                                                    </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
+                                                <select>
+                                                    <option>USD</option>
+                                                </select>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                    <script>
+                                                        var prev = ""; 
+                                                        var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                        function imsi(obj) { 
+                                                            if(obj.value.search(regexp)==-1) { 
+                                                                obj.value = prev; 
+                                                            } 
+                                                            else { 
+                                                                prev = obj.value; 
+                                                            } 
+                                                        } 
+                                                    </script>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">period</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option selected>day</option>
+                                                <option>week</option>
+                                                <option>month</option>
+                                                <option>year</option>
+                                            </select>
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>					
+                        </div>
+  
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">publish</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">purchase_enable</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="purchase_enable" checked>archived</label>
+                                            <label><input type="radio" name="purchase_enable">active</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">enable</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="active-status" checked>disable</label>
+                                            <label><input type="radio" name="active-status">enable</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>					
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
