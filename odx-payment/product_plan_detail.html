@@ -67,35 +67,37 @@
                                     <tr>
                                         <th class="label-box-item-label required-field">name</th>
 										<td class="label-box-item-desc">
-											<div class="tabs">
-                                                <ul class="tabs-menu scroll-customed">
-                                                    <li><a class="required-field">简体中文</a></li>
-                                                    <li><a>傳統中文</a></li>
-                                                    <li><a>Engilsh</a></li>
-                                                </ul>
-                                                <div class="tabs-content">
-                                                    <table class="label-box">
-                                                        <input class="w-lm" type="text" placeholder="input product name" name=""/>
-                                                    </table>
-                                                </div>
-                                                <div class="tabs-content">tabs-content-2</div>
-                                                <div class="tabs-content">tabs-content-3</div>
-                                            </div>
+                                            <input class="w-lm" type="text" placeholder="input product name" name=""/>
 										</td>
                                     </tr>
                                     <tr>
-										<th class="label-box-item-label required-field">product type</th>
+										<th class="label-box-item-label required-field">membership</th>
 										<td class="label-box-item-desc">
                                             <p>
-                                                <input type="radio" name="product_type" value="onetime" checked>
-                                                    <label>plan</label>
                                                 <select>
+                                                    <option>guest</option>
+                                                    <option>free</option>
                                                     <option>{a membership}</option>
                                                     <option>{a membership}</option>
                                                 </select>
                                             </p>
-                                            <input type="radio" name="product_type" value="recurring">
-                                                <label>ppv</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label required-field">permissions</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=checkbox name="plan_permissions">guest
+                                                <input type=checkbox name="plan_permissions">free
+                                                <input type=checkbox name="plan_permissions">{a membership}
+                                                <input type=checkbox name="plan_permissions">{a membership}
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">description</th>
+										<td class="label-box-item-desc">
+                                            <textarea rows="5" cols="" class="w-100per"></textarea>
 										</td>
 									</tr>
                                 </tbody>
@@ -106,39 +108,12 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">bill type</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="radio" name="bill_type" value="onetime" disabled>
-                                                <label>onetime</label>
-                                            <input type="radio" name="bill_type" value="recurring" checked disabled>
-                                                <label>recurring</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">billing period</th>
+                                        <th class="label-box-item-label required-field">price</th>
                                         <td class="label-box-item-desc">
                                             <select>
-                                                <option>daily</option>
-                                                <option>weekly</option>
-                                                <option selected>monthly</option>
-                                                <option>yearly</option>
+                                                <option>USD</option>
                                             </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">onetime validity</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="number" onkeyup="imsi(this)" class="w-sl" disabled>
-                                            <label>days</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">price</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <label>default</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
-                                                <label>$</label>
+                                            <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
                                                 <script>
                                                     var prev = ""; 
                                                     var regexp = /^\d*(\.\d{0,1})?$/; 
@@ -151,82 +126,61 @@
                                                         } 
                                                     } 
                                                 </script>
-                                            </p>
-                                            <p>
-                                                <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                            <p>
-                                                <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>					
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">pricing (ppv type 일 때)</h3>
-                            <table class="label-box">
-                                <tbody>
-                                    <tr>
-                                        <th class="label-box-item-label">bill type</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="radio" name="bill_type_ppv" value="onetime" checked disabled>
-                                                <label>onetime</label>
-                                            <input type="radio" name="bill_type_ppv" value="recurring" disabled>
-                                                <label>recurring</label>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">billing period</th>
+                                        <th class="label-box-item-label required-field">interval</th>
                                         <td class="label-box-item-desc">
-                                            <select disabled>
-                                                <option>daily</option>
-                                                <option>weekly</option>
-                                                <option>monthly</option>
-                                                <option>yearly</option>
+                                            <select>
+                                                <option>day</option>
+                                                <option>week</option>
+                                                <option selected>month</option>
+                                                <option>year</option>
                                             </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">onetime validity</th>
-                                        <td class="label-box-item-desc">
                                             <input type="number" onkeyup="imsi(this)" class="w-sl">
-                                            <label>days</label>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">free_trial</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <input type=radio name="plan_trial" checked>true
+                                                <input type=radio name="plan_trial">false
+                                            </p>
+                                            <p>
+                                                <select>
+                                                    <option>day</option>
+                                                    <option>week</option>
+                                                    <option selected>month</option>
+                                                    <option>year</option>
+                                                </select>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <!--
                                     <tr>
                                         <th class="label-box-item-label">price</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <label>default</label>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <label>$</label>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <label>{a membership}</label>
                                                 <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
                                                 <label>$</label>
                                                 <script>
@@ -244,24 +198,7 @@
                                             </p>
                                             <p>
                                                 <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                            <p>
-                                                <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
                                                 <label>$</label>
                                                 <script>
                                                     var prev = ""; 
@@ -278,60 +215,11 @@
                                             </p>
                                         </td>
                                     </tr>
+                                    -->
                                 </tbody>
                             </table>					
                         </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">matched episodes (ppv type 일 때만 활성됨. 현황을 보는 곳이며, 매칭은 content side에서 실행.)</h3>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="w-sl">ID</th>
-                                        <th>program</th>
-                                        <th>episode</th>
-                                        <th>kind</th>
-                                        <th>number</th>
-                                        <th>part</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>12345</td>
-                                        <td>{program slug}</td>
-                                        <td>{episode slug}</td>
-                                        <td>{episode kind}</td>
-                                        <td>{ep number}</td>
-                                        <td>{part nmmber}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12345</td>
-                                        <td>{program slug}</td>
-                                        <td>{episode slug}</td>
-                                        <td>{episode kind}</td>
-                                        <td>{ep number}</td>
-                                        <td>{part nmmber}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <ul class="pagenation-simple">
-								<span>Rows per page</span>
-								<li>
-									<select>
-										<option>10s</option>
-										<option current>20s</option>
-										<option>50s</option>
-										<option>100s</option>
-									</select>
-								</li>
-								<span>1-6 of 9</span>
-								<li>
-									<div class="btn-group">
-										<button type="button" class="btn-common"><</button>
-										<button type="button" class="btn-common">></button>
-									</div>
-								</li>
-							</ul>
-                        </div>
+  
                         <div class="con-sector">
                             <h3 class="con-sector-title">publish</h3>
                             <table class="label-box">
