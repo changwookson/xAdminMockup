@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="asset_video_list.html">
+            <div class="article-subside-switch">
+				<a class="article-subside-switch-close">Hide sub-siderbar</a>
+				<a class="article-subside-switch-open">Show sub-siderbar</a>
+			</div>			
+            <aside id="article-subside"></aside>
+                <script type="text/javascript">
+				$(document).ready(function(){
+					$("#article-subside").load("asset_video_list.html .subside-wrap");
+				});
+			</script>
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Asset</span>
+                            <span>Video</span>
+                            <span>$Video ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">Video Information</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">ID</th>
+										<td class="label-box-item-desc">
+											<span>12345</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Platform</th>
+										<td class="label-box-item-desc">
+											<span>S3 / Brightcove</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Ingest Type</th>
+										<td class="label-box-item-desc">
+											<span>Manual / MediaHold</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">S3 ID</th>
+										<td class="label-box-item-desc">
+											<span>123456789 (이런게 있나?)</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Brightcove ID</th>
+										<td class="label-box-item-desc">
+											<span>123456789</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">file name</th>
+										<td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span>original-file-name.mp4</span>
+                                                <button class="btn-modify font-sm">change file name</button>
+                                            </p>
+                                            <p class=item-panel>
+                                                <input type="text" class="w-lm">
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">transcoding</th>
+										<td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span>wait / progressing / done / fail / null</span>
+                                                <button class="btn-modify font-sm">retry</button>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">segmentagion</th>
+										<td class="label-box-item-desc">
+											<p class="item-group">
+                                                <span>wait / progressing / done / fail / null</span>
+                                                <button class="btn-modify font-sm">retry</button>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">created</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy (PST/D)</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">updated</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy (PST/D)</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+						<div class="con-sector">
+                            <h3 class="con-sector-title">Media Information</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">source urls</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">type</th>
+                                                            <th class="w-ms">resolution</th>
+                                                            <th>path</th>
+                                                            <th>action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span>hls</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>1080</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>https://file.name/path.m3u8</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-common">preview</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span>hls</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>720</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>https://file.name/path.m3u8</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-common">preview</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>                                  
+                                    <tr>
+                                        <th class="label-box-item-label">subtitles</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group item-panel">
+                                                <button type="button" class="btn-get">file upload</button>
+                                                <input type="text" placeholder="uloaded file path" disabled>
+                                                <select>
+                                                    <option>MIME</option>
+                                                    <option>VTT</option>
+                                                    <option>SRT</option>
+                                                </select>
+                                                <select>
+                                                    <option>language code</option>
+                                                    <option>KO</option>
+                                                    <option>EN</option>
+                                                </select>
+                                                <input type="text" class="w-mm" placeholder="language name">
+                                                <button type="button" class="btn-new">add</button>
+                                            </div>
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-sl sub-info">MIME</th>
+                                                            <th class="w-ms">language code</th>
+                                                            <th class="w-ms">language name</th>
+                                                            <th>path</th>
+                                                            <th>action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="sub-info">
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>KO</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>한국어</span>
+                                                            </td>                                                    
+                                                            
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-cancel">remove</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="sub-info">
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>EN</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>English</span>
+                                                            </td>                                                    
+                                                            
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-cancel">remove</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">images</th>
+                                        <td class="label-box-item-desc">
+                                            <ul>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                            </ul> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">meta</th>
+                                        <td class="label-box-item-desc">
+                                            <textarea rows="10" class="w-100per">meta.json</textarea>
+                                        </td>
+                                    </tr>                                  
+                                </tbody>
+                            </table>
+                        </div>
+				    </div>
+                </div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
