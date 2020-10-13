@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Billing Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="product_plan_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Coupon</span>
+							<span>Stripe</span>
+							<span>$coupon ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">coupon info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">pg</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>stripe</option>
+                                            </select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>odk</option>
+                                                <option>odc</option>
+                                            </select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label required-field">name</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input product name by english" name=""/>
+                                            <p>
+                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">discount type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=radio name="discount type" checked>percentage
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                            </p>
+                                            <p>
+                                                <input type=radio name="discount type">fixed amount
+                                                <select>
+                                                    <option>USD</option>
+                                                </select>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                    <script>
+                                                        var prev = ""; 
+                                                        var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                        function imsi(obj) { 
+                                                            if(obj.value.search(regexp)==-1) { 
+                                                                obj.value = prev; 
+                                                            } 
+                                                            else { 
+                                                                prev = obj.value; 
+                                                            } 
+                                                        } 
+                                                    </script>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">applied product</th>
+										<td class="label-box-item-desc">
+											<select>
+                                                <option>{a plan code}</option>
+                                                <option>{a plan code}</option>
+                                            </select>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">duration</th>
+										<td class="label-box-item-desc">
+											<p>
+                                                <input type=radio name="discount type">forever
+                                            </p>
+                                            <p>
+                                                <input type=radio name="discount type" checked>onetime
+                                            </p>
+                                            <p>
+                                                <input type=radio name="discount type">months
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder=""/>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">limit</th>
+										<td class="label-box-item-desc">
+											<p>
+                                                <input type=checkbox name="limit type">limit the date
+                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                            </p>
+                                            <p>
+                                                <input type=checkbox name="limit type" checked>limit the times
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder=""/>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">code</th>
+										<td class="label-box-item-desc">
+											<div>
+                                                <input type=radio name="code type" checked>single
+                                            </div>
+                                            <div>
+                                                <input type=radio name="code type">bulk coupon codes
+                                                <p class="item-panel">
+                                                    <label>code prefix</label>
+                                                    <input type="text" onkeyup="imsi(this)" class="w-mm" placeholder=""/>
+                                                    <label>code amounts</label>
+                                                    <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder=""/>
+                                                </p>
+
+                                            </div>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">publish</h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">purchase_enable</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="purchase_enable" checked>archived</label>
+                                            <label><input type="radio" name="purchase_enable">active</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">enable</th>
+                                        <td class="label-box-item-desc">
+                                            <label><input type="radio" name="active-status" checked>disable</label>
+                                            <label><input type="radio" name="active-status">enable</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>	
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Promotion Codes</h3>
+                            <div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>promotion code</th>
+                                            <th>api id</th>
+                                            <th>redemptions</th>
+											<th>expires</th>
+                                            <th>created</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>{code}</td>
+                                            <td>{api id}</td>
+                                            <td>{used} / {total}</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+                                        <tr>
+											<td>{code}</td>
+                                            <td>{api id}</td>
+                                            <td>{used} / {total}</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+                        </div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

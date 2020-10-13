@@ -157,28 +157,7 @@
                                             <p>
                                                 <button class="btn-modify">change plan</button>
                                             </p>
-                                            <div class="item-panel">
-                                                <p class="info-message">The user's membership plan will be changed immediately. If a refund is needed, it can be processed in the payment list below.</p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">reason</label>
-                                                    <textarea rows="5" cols="" class="w-ll"></textarea>
-                                                </p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">plan</label>
-                                                    <select>
-                                                        <option>plan code</option>
-                                                        <option>plan code</option>
-                                                    </select>
-                                                </p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">password</label>
-                                                    <input type="text" class="w-mm" placeholder="input admin password">
-                                                </p>
-                                                <p class="item-group">
-                                                    <button class="btn-submit">submit</button>
-                                                </p>
-                                            </div>
-                                            
+                                            <p class="info-message">The user's membership plan will be changed immediately. If a refund is needed, it can be processed in the payment list below.</p>
 										</td>
 									</tr>
                                     <tr>
@@ -187,20 +166,7 @@
                                             <p>
                                                 <button class="btn-modify">cancel subscription</button>
                                             </p>
-                                            <div class="item-panel">
-                                                <p class="info-message">The subscriptions will be maintained until current cycle and then suspended from next cycle.</p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">reason</label>
-                                                    <textarea rows="5" cols="" class="w-ll"></textarea>
-                                                </p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">password</label>
-                                                    <input type="text" class="w-mm" placeholder="input admin password">
-                                                </p>
-                                                <p class="item-group">
-                                                    <button class="btn-submit">submit</button>
-                                                </p>
-                                            </div>
+                                            <p class="info-message">The subscriptions will be maintained until current cycle and then suspended from next cycle.</p>
 										</td>
 									</tr>
                                     <tr>
@@ -209,20 +175,7 @@
                                             <p>
                                                 <button class="btn-modify">terminate subscription</button>
                                             </p>
-                                            <div class="item-panel">
-                                                <p class="info-message">The subscriptions will be terminated immediately. If a refund is needed, it can be processed in the payment list below.</p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">reason</label>
-                                                    <textarea rows="5" cols="" class="w-ll"></textarea>
-                                                </p>
-                                                <p class="item-group">
-                                                    <label class="item-group-label">password</label>
-                                                    <input type="text" class="w-mm" placeholder="input admin password">
-                                                </p>
-                                                <p class="item-group">
-                                                    <button class="btn-submit">submit</button>
-                                                </p>
-                                            </div>
+                                            <p class="info-message">The subscriptions will be terminated immediately. If a refund is needed, it can be processed in the payment list below.</p>
 										</td>
 									</tr>
                                 </tbody>
@@ -234,30 +187,31 @@
 								<table class="table">
 									<thead>
 										<tr>
-											<th class="w-sl">ID</th>
-                                            <th>service</th>
-                                            <th>product</th>
-                                            <th>customer</th>
+											<th>ID</th>
+                                            <th>pg</th>
                                             <th>status</th>
+                                            <th>service</th>
+                                            <th>customer</th>
+                                            <th>product</th>
                                             <th>amount</th>
                                             <th>refunded</th>
                                             <th>description</th>
                                             <th>period</th>
 											<th>date</th>
-                                            <th>actions</th>
 										</tr>
 									</thead>
 									<tbody>
                                         <tr>
-											<td>{payment id}</td>
-                                            <td>ODK</td>
-                                            <td>ODK-Plus-Monthly</td>
-											<td>
+                                            <td><a>{payment id}</a></td>
+                                            <td>stripe</td>
+                                            <td>succeeded</td>
+                                            <td>ODK</td> 
+                                            <td>
 												jay@odkmedia.net
 											</td>
-                                            <td>succeeded</td>
+                                            <td>{product code}</td>
                                             <td>4.99 / USD</td>
-                                            <td>0 / USD</td>
+                                            <td>0.00 / USD</td>
                                             <td>subscription update</td>
                                             <td>
 												<p>
@@ -272,19 +226,16 @@
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-                                            <td>
-                                                <button class="btn-modify">refund</button>
-                                                <button class="btn-get">send receipt</button>
-                                            </td>
 										</tr>
 										<tr>
-											<td>{payment id}</td>
+                                            <td><a>{payment id}</a></td>
+                                            <td>stripe</td>
+                                            <td>refunded</td>
                                             <td>ODK</td>
-                                            <td>ODK-Plus-Monthly</td>
-											<td>
+                                            <td>
 												jay@odkmedia.net
 											</td>
-                                            <td>refunded</td>
+                                            <td>{product code}</td>
                                             <td>4.99 / USD</td>
                                             <td>4.99 / USD</td>
                                             <td>subscription update</td>
@@ -301,18 +252,16 @@
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-                                            <td>
-                                                <button class="btn-get">receipt</button>
-                                            </td>
 										</tr>
                                         <tr>
-											<td>{payment id}</td>
+											<td><a>{payment id}</a></td>
+                                            <td>stripe</td>
+                                            <td>partial refunded</td>
                                             <td>ODK</td>
-                                            <td>ODK-Plus-Monthly</td>
-											<td>
+                                            <td>
 												jay@odkmedia.net
 											</td>
-                                            <td>partial refunded</td>
+                                            <td>{product code}</td>
                                             <td>4.99 / USD</td>
                                             <td>1.99 / USD</td>
                                             <td>subscription update</td>
@@ -329,10 +278,6 @@
 													<span>hh:mm:ss</span>
 												</p>
 											</td>
-                                            <td>
-                                                <button class="btn-modify">refund</button>
-                                                <button class="btn-get">send receipt</button>
-                                            </td>
 										</tr>
 									</tbody>
 								</table>
@@ -357,14 +302,92 @@
 							</ul>
 						</div>
                         <div class="con-sector">
+                            <h3 class="con-sector-title">change plan modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">reason</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-ll"></textarea>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">plan</th>
+										<td class="label-box-item-desc">
+											 <select>
+                                                <option>plan code</option>
+                                                <option>plan code</option>
+                                            </select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">password</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-mm" placeholder="input admin password">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">cancel subscription modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">reason</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-ll"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">password</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-mm" placeholder="input admin password">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">terminate subscription modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">reason</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-ll"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">password</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-mm" placeholder="input admin password">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
                             <h3 class="con-sector-title">refund option modal</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
 										<th class="label-box-item-label">reason</th>
 										<td class="label-box-item-desc">
-											<input type="radio" name="refund-reason">change plan
-                                            <input type="radio" name="refund-reason">calcel subscription
+											<input type="radio" name="refund-reason" checked>change plan
+                                            <input type="radio" name="refund-reason">cancel subscription
                                             <input type="radio" name="refund-reason">terminate subscription
 										</td>
 									</tr>
