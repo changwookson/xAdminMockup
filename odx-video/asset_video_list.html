@@ -78,7 +78,13 @@
                                     <li>
                                         <button type="button" class="btn-new">
                                             <span class="icon fa fa-plus"></span>
-                                            <span>ingest</span>
+                                            <span>ingest S3</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-new">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>ingest LiveStream</span>
                                         </button>
                                     </li>
                                     <li>
@@ -140,6 +146,22 @@
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                         </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
+                                            <td>
+                                                <a href="#">$file name</a>         
+                                            </td>
+                                            <td>LiveStream</td>
+                                            <td>
+                                                -
+                                            </td>
+                                            <td>
+                                                -
+                                            </td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -167,7 +189,7 @@
                         </div>
                         <br/><br/><br/>
                         <div class="con-sector item-box" style="width:50%;">
-                            <h3 class="con-sector-title">Video Ingest Modal</h3>
+                            <h3 class="con-sector-title">Ingest S3 Video Modal</h3>
 							<div class="list-option">
                                 <ul class="list-option-filter">
                                     <li>
@@ -239,6 +261,29 @@
                                         <button type="button" class="btn-common">></button>
                                     </div>
                                 </li>
+                            </ul>
+                        </div>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">Ingest LiveStream Modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">name</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-lm" placeholder=""/>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">stream url</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-lm" placeholder=""/>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">submit</button></li>
                             </ul>
                         </div>
                     </div>
