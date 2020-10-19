@@ -596,7 +596,28 @@
                                     </tr>
                                 </tbody>
                              </table>
-                        </div>                                                    
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">temporary Meta for ODK Migration</h3>
+                            <div class="tabs">
+                                <ul class="tabs-menu scroll-customed">
+                                    <li><a class="required-field">Default Langs</a></li>
+                                    <li><a>langs</a></li>
+                                </ul>
+                                <div class="tabs-content">
+                                    <table class="label-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label-box-item-label">episode tags</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                         <div class="con-sector">
                             <h3 class="con-sector-title">region</h3>
 							<table class="label-box">
@@ -824,6 +845,14 @@
 										<td class="label-box-item-desc">
 											<label><input type="radio" name="data-status" checked>disable</label>
 											<label><input type="radio" name="data-status">enable</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">in review</th>
+										<td class="label-box-item-desc">
+                                            <p class="info-message">If set the in review option, it will be displayed only in office IP.</p>
+											<label><input type="radio" name="in_review-status" checked>public</label>
+											<label><input type="radio" name="in_review-status">in review</label>
 										</td>
 									</tr>
                                 </tbody>

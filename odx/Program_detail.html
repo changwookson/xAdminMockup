@@ -81,6 +81,7 @@
                                             <tr>
                                                 <th class="label-box-item-label">poster</th>
                                                 <td class="label-box-item-desc">
+                                                    <p class="info-message">it is used for app's landscape posters in ODK. (legacy path = /mainposter/file.image)</p>
                                                     <div class="file-upload">
                                                         <p class="item-group">
                                                             <button type="button" class="file-input-replace btn-new">add image</button>
@@ -100,25 +101,7 @@
                                             <tr>
                                                 <th class="label-box-item-label new-item">poster-portrait</th>
                                                 <td class="label-box-item-desc">
-                                                    <div class="file-upload">
-                                                        <p class="item-group">
-                                                            <button type="button" class="file-input-replace btn-new">add image</button>
-                                                            <span>$imported file name</span>
-                                                        </p>
-                                                        <input type="file" class="file-input">
-                                                    </div>
-                                                    <ul>
-                                                        <li class="item-panel" style="display:inline-block;">
-                                                            <p class="img-embed-pure img-w-200">
-                                                                <img src="../resource/image/sample-poster-2.jpg" />
-                                                            </p>
-                                                        </li>                                                     
-                                                    </ul> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="label-box-item-label new-item">poster-landscape</th>
-                                                <td class="label-box-item-desc">
+                                                    <p class="info-message">it is used for web's portrait posters in ODK. (legacy path = /poster/file.image)</p>
                                                     <div class="file-upload">
                                                         <p class="item-group">
                                                             <button type="button" class="file-input-replace btn-new">add image</button>
@@ -260,7 +243,7 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label required-field">on-air date</th>
+                                        <th class="label-box-item-label">on-air date</th>
                                         <td class="label-box-item-desc">
                                             <div class="datepicker">
                                                 <label>start
@@ -273,7 +256,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label required-field">release weekday</th>
+                                        <th class="label-box-item-label">release weekday</th>
                                         <td class="label-box-item-desc">
                                             <div class="datepicker">
                                                 <input type="checkbox" checked/><label>sunday</label>
@@ -295,33 +278,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label new-item">produce year-manual</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" class="w-ms" placeholder="yyyy"/>
-                                                <span class="info-message">input manually if it needed</span>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <th class="label-box-item-label new-item">release status</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <span>$release status</span>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label new-item">release status-manual</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <select>
-                                                    <option>select status</option>
-                                                    <option>on-air</option>
-                                                    <option>coming-soon</option>
-                                                    <option>completed</option>
-                                                </select>
-                                                <span class="info-message">select manually if it needed</span>
                                             </p>
                                         </td>
                                     </tr>
@@ -362,11 +322,28 @@
                                             </p>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">CP Tag (temporary)</th>
+                                        <td class="label-box-item-desc">
+                                            <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">CP Tag (temporary)</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option>select CP</option>
+                                                <option>CP1</option>
+                                                <option>CP2</option>
+                                                <option>CP3</option>
+                                            </select>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">ETC (meta)</h3>
+                            <h3 class="con-sector-title">Common Meta</h3>
                             <table class="label-box">
                                 <tbody>                                 
                                     <tr>
@@ -421,7 +398,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label new-item">running time</th>
+                                        <th class="label-box-item-label">running time</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <input class="w-sm" type="number" name="" placeholder="hh"/>
@@ -430,10 +407,78 @@
                                             </p>
                                         </td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">temporary Meta for ODK Migration</h3>
+                            <div class="tabs">
+                                <ul class="tabs-menu scroll-customed">
+                                    <li><a class="required-field">Default Langs</a></li>
+                                    <li><a>langs</a></li>
+                                </ul>
+                                <div class="tabs-content">
+                                    <table class="label-box">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label-box-item-label">tags</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">director</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="label-box-item-label">actor</th>
+                                                <td class="label-box-item-desc">
+                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="label-box">
+                                <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">CP</th>
+                                        <th class="label-box-item-label">limited_free</th>
                                         <td class="label-box-item-desc">
-                                            <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
+                                            <input type="checkbox"/><label>24hours free for Kocowa</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">hide badge</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="checkbox"/><label>hide membership badge on program list</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">popularity_current</th>
+                                        <td class="label-box-item-desc">
+                                            <span>$$200000</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">popularity_adjust</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="number" class="w-ms" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">popularity_adjust_schedule</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>from
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                                <label>to
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -1281,7 +1326,7 @@
                                                 </label>
                                             </div>
                                         </td>
-                                    </tr>                                 			
+                                    </tr>
                                     <tr>
 										<th class="label-box-item-label">enable</th>
 										<td class="label-box-item-desc">
@@ -1289,76 +1334,16 @@
 											<label><input type="radio" name="data-status">enable</label>
 										</td>
 									</tr>
+                                    <tr>
+										<th class="label-box-item-label">in review</th>
+										<td class="label-box-item-desc">
+                                            <p class="info-message">If set the in review option, it will be displayed only in office IP.</p>
+											<label><input type="radio" name="in_review-status" checked>public</label>
+											<label><input type="radio" name="in_review-status">in review</label>
+										</td>
+									</tr>
                                 </tbody>
                             </table>					
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">temporary meta for ODK Migration</h3>
-                            <div class="tabs">
-                                <ul class="tabs-menu scroll-customed">
-                                    <li><a class="required-field">Default Langs</a></li>
-                                    <li><a>langs</a></li>
-                                </ul>
-                                <div class="tabs-content">
-                                    <table class="label-box">
-                                        <tbody>
-                                            <tr>
-                                                <th class="label-box-item-label new-item">tags</th>
-                                                <td class="label-box-item-desc">
-                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="label-box-item-label new-item">tags_director</th>
-                                                <td class="label-box-item-desc">
-                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="label-box-item-label new-item">tags_actor</th>
-                                                <td class="label-box-item-desc">
-                                                    <input class="w-lm" type="text" placeholder="keyword, keyword, keyword" name=""/>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <table class="label-box">
-                                <tbody>
-                                    <tr>
-                                        <th class="label-box-item-label new-item">limited_free</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="checkbox"/><label>24hours free for Kocowa</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label new-item">hide_badge</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="checkbox"/><label>hide membership badge on program list</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label new-item">popularity_adjust</th>
-                                        <td class="label-box-item-desc">
-                                            <input type="number" class="w-ms" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label new-item">popularity_adjust_schedule</th>
-                                        <td class="label-box-item-desc">
-                                            <div class="datepicker">
-                                                <label>start
-                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-                                                </label>
-                                                <label>end
-                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                         <ul class="submit">
                             <li><button type="button" class="btn-cancel">Cancel</button></li>
