@@ -61,14 +61,14 @@
                                         <th class="label-box-item-label required-field">parent program</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select program</button>
-                                            <span>
+                                            <!--<span>
                                                 <a id="open-program-list-modal" class="font-mm">*open program list modal sample</a>
                                                 <script type="text/javascript">
                                                     $('#open-program-list-modal').click(function(){
                                                         $('#program-list-modal').show().animate({right:'0'});
                                                     });
                                                 </script>
-                                            </span>
+                                            </span>-->
 											<div>
 												<ul class="simple-list">
 					  								<li>
@@ -144,19 +144,19 @@
 										<th class="label-box-item-label required-field">join asset</th>
 										<td class="label-box-item-desc">
 											<button type="button" class="btn-get">select video asset</button>
-                                            <span>
+                                            <!--<span>
                                                 <a id="open-video-asset-list-modal" class="font-mm">*open video asset list modal sample</a>
                                                 <script type="text/javascript">
                                                     $('#open-video-asset-list-modal').click(function(){
                                                         $('#video-asset-list-modal').show().animate({right:'0'});
                                                     });
                                                 </script>
-                                            </span>
+                                            </span>-->
 											<div>
 												<ul class="simple-list">
 					  								<li>
 					  									<span class="item-id">12345</span>
-					  									<span>$selected video asset name</span>
+					  									<span>$selected video asset file name</span>
 					  								</li>
 					  							</ul>
 					  						</div>
@@ -166,16 +166,25 @@
                                         <th class="label-box-item-label">asset info</th>
                                         <td class="label-box-item-desc">
                                             <p class="item-group">
-												<span class="item-group-label">platform</span>
-												<span class="item-group-desc">brightcove</span>
+												<span class="item-group-label">asset id</span>
+												<span class="item-group-desc">$video asset id</span>
 											</p>
                                             <p class="item-group">
-												<span class="item-group-label">media ID</span>
-												<span class="item-group-desc">$brightcove media ID</span>
+												<span class="item-group-label">asset file name</span>
+												<span class="item-group-desc">$file name</span>
 											</p>
                                             <p class="item-group">
-												<span class="item-group-label">media name</span>
-												<span class="item-group-desc">$brightcove media name</span>
+												<span class="item-group-label">asset type</span>
+												<span class="item-group-desc">S3(inhouse) / brightcove / live</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">brightcove ID</span>
+												<span class="item-group-desc">$media ID</span>
+                                                <span class="info-message">brightcove가 아닐 때는 null</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">duration</span>
+												<span class="item-group-desc">$hh:mm:ss</span>
 											</p>
                                             <p class="item-group">
 												<span class="item-group-label">create</span>
@@ -188,52 +197,34 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">source file</th>
-                                        <td class="label-box-item-desc">
-                                            <p><span>$file name</span></p>
-                                            <p><span><a>$https://file.name/path.mp4</a></span></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="label-box-item-label">encoded files</th>
+                                        <th class="label-box-item-label">sources</th>
                                         <td class="label-box-item-desc">
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th class="w-ms">bitrate</th>
-                                                            <th class="w-ms">resolution</th>
+                                                            <th class="w-ms">type</th>
+                                                            <th class="w-ms">preset</th>
                                                             <th>path</th>
-                                                            <th class="w-sl sub-info">preview</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>hls</td>
                                                             <td>
-                                                                <span>3500bps</span>
+                                                                <span>1080p</span>
                                                             </td>
                                                             <td>
-                                                                <span>1920X1080</span>
-                                                            </td>
-                                                            <td>
-                                                                <a>$https://file.name/path.mp4</a>
-                                                            </td>
-                                                            <td class="sub-info">
-                                                                <button type="button" class="btn-get font-sm">preview</button>
+                                                                <a>$https://file.name/path.m3u8</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td>hls</td>
                                                             <td>
-                                                                <span>3500bps</span>
+                                                                <span>720p</span>
                                                             </td>
                                                             <td>
-                                                                <span>1280X720</span>
-                                                            </td>
-                                                            <td>
-                                                                <a>$https://file.name/path.mp4</a>
-                                                            </td>
-                                                            <td class="sub-info">
-                                                                <button type="button" class="btn-get font-sm">preview</button>
+                                                                <a>$https://file.name/path.m3u8</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -242,17 +233,17 @@
                                         </td>
                                     </tr>                                  
                                     <tr>
-                                        <th class="label-box-item-label">subtitles</th>
+                                        <th class="label-box-item-label">text tracks</th>
                                         <td class="label-box-item-desc">
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th class="w-ms">language code</th>
-                                                            <th class="w-ms">language name</th>
+                                                            <th class="w-ms">code</th>
+                                                            <th class="w-ms">label</th>
                                                             <th class="w-sl sub-info">MIME</th>
+                                                            <th class="w-ms">default</th>
                                                             <th>path</th>
-                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -266,8 +257,9 @@
                                                             <td class="sub-info">
                                                                 <span>vtt</span>
                                                             </td>
+                                                            <td><input type="radio" name="text-default" checked></td>
                                                             <td>
-                                                                <a>$https://file.name/path.mp4</a>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -280,8 +272,9 @@
                                                             <td class="sub-info">
                                                                 <span>srt</span>
                                                             </td>
+                                                            <td><input type="radio" name="text-default"></td>
                                                             <td>
-                                                                <a>$https://file.name/path.mp4</a>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -292,6 +285,7 @@
                                     <tr>
                                         <th class="label-box-item-label">preview</th>
                                         <td class="label-box-item-desc">
+                                            <!--
                                             <div class="item-panel">
                                                 <label>Quality</label>
                                                 <select>
@@ -310,17 +304,22 @@
                                                     <option>zh-Hant</option>
                                                 </select>
                                                 <button type="button" class="btn-get font-mm">Apply & Start</button>
-                                            </div>
-                                            <div class="video-player-space-wrap float-player-on">
+                                            </div>-->
+                                            <div class="video-player-space-wrap">
                                                 <div style="position: relative; display: block; max-width: 960px;">
                                                     <div style="padding-top: 56.25%;">
                                                         <iframe src="https://players.brightcove.net/5742226948001/default_default/index.html?videoId=6084837132001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
                                                     </div>
                                                 </div>
+                                                <div class="item-panel item-group">
+                                                    <span>Capture current screen position and </span>
+                                                    <button type="button" class="btn-get font-mm">Download image</button>
+                                                    <button type="button" class="btn-get font-mm">Save to Thumbnail image</button>
+                                                </div>
 						            		</div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <!--<tr>
                                         <th class="label-box-item-label">duration</th>
                                         <td class="label-box-item-desc">
                                             <p>
@@ -329,7 +328,7 @@
                                                 <input class="w-sm" type="number" name="" placeholder="ss"/>
                                             </p>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                     <tr>
                                         <th class="label-box-item-label">cue point</th>
                                         <td class="label-box-item-desc">
@@ -857,36 +856,13 @@
 									</tr>
                                 </tbody>
                             </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
                         </div>   
-                        <ul class="submit">
-                            <li><button type="button" class="btn-cancel">Cancel</button></li>
-                            <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
-                        
-				    </div>
-                </div>
-			</article>
-		</main>
-		<footer id="footer"></footer>
-			<!--layout-footer.html에서 #footer 내용을 로드-->
-			<script type="text/javascript">
-				$(document).ready(function(){
-					$("#footer").load("layout-footer.html .footer-wrap");
-				});
-			</script>
-			
-		<section name="hidden-item">
-            <!--layer-detail-sample start-->
-			<div id="program-list-modal" class="layer-wrap layer-detail">
-				<div class="layer-box w-xlm">
-					<div class="layer-close">
-						<a class="layer-detail-close layer-close-icon"></a>
-					</div>
-					<div class="layer-header">
-						<h2>program-list-modal</h2> 
-					</div> 
-					<div class="layer-body">
-						<div class="con-sector">
+                        <div class="con-sector item-box">
+                            <h3 class="con-sector-title">program select modal</h3>
 							<div class="list-option">
 								<ul class="list-option-filter">
 									<li>
@@ -983,19 +959,8 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div id="video-asset-list-modal" class="layer-wrap layer-detail">
-				<div class="layer-box w-xlm">
-					<div class="layer-close">
-						<a class="layer-detail-close layer-close-icon"></a>
-					</div>
-					<div class="layer-header">
-						<h2>video-asset-list-modal</h2> 
-					</div> 
-					<div class="layer-body">
-						<div class="con-sector">
+                        <div class="con-sector item-box">
+                            <h3 class="con-sector-title">video asset select modal</h3>
 							<div class="list-option">
 								<ul class="list-option-filter">
 									<li>
@@ -1024,16 +989,17 @@
 								<table class="table">
 									<thead>
 										<tr>
-											<th class="w-ss"><input type="checkbox" /></th>
-											<th class="w-sl">ID</th>
+											<th class="w-sl">asset ID</th>
 											<th class="w-sl">image</th>
 											<th>name</th>
+                                            <th>platform</th>
+                                            <th>stream</th>
+                                            <th>ingest</th>
 											<th class="w-ms sub-info">select</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td class="table-list-item-img video-thumbnail">
 												<div class="img-embed-wrap">
@@ -1047,12 +1013,14 @@
 											<td>
 												<a href="#">$video asset name</a>
 											</td>
+                                            <td>s3</td>
+                                            <td>vod</td>
+                                            <td>mediahold</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
 										</tr>
 										<tr>
-											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td class="table-list-item-img video-thumbnail">
 												<div class="img-embed-wrap">
@@ -1066,6 +1034,9 @@
 											<td>
 												<a href="#">$video asset name</a>
 											</td>
+                                            <td>brightcove</td>
+                                            <td>live</td>
+                                            <td>manual</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
@@ -1092,6 +1063,42 @@
 								</li>
 							</ul>
 						</div>
+				    </div>
+                </div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+            <!--layer-detail-sample start-->
+			<div id="program-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>program-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+					</div>
+				</div>
+			</div>
+			<div id="video-asset-list-modal" class="layer-wrap layer-detail">
+				<div class="layer-box w-xlm">
+					<div class="layer-close">
+						<a class="layer-detail-close layer-close-icon"></a>
+					</div>
+					<div class="layer-header">
+						<h2>video-asset-list-modal</h2> 
+					</div> 
+					<div class="layer-body">
+						
 					</div>
 				</div>
 			</div>
