@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="asset_live_list.html">
+            <div class="article-subside-switch">
+				<a class="article-subside-switch-close">Hide sub-siderbar</a>
+				<a class="article-subside-switch-open">Show sub-siderbar</a>
+			</div>			
+            <aside id="article-subside"></aside>
+                <script type="text/javascript">
+				$(document).ready(function(){
+					$("#article-subside").load("asset_live_list.html .subside-wrap");
+				});
+			</script>
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Asset</span>
+                            <span>Live</span>
+                            <span>$Live ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">Live Information</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">ID</th>
+										<td class="label-box-item-desc">
+											<span>12345</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">name</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-lm" placeholder=""/>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">type</th>
+										<td class="label-box-item-desc">
+											<input type="radio" name="live-type" checked>broadcast
+                                            <input type="radio" name="live-type">curated
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">stream source url</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-lm" placeholder=""/>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">created</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy (PST/D)</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">updated</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy (PST/D)</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
+                        </div>
+				    </div>
+                </div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

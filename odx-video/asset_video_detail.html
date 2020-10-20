@@ -63,27 +63,15 @@
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">Platform</th>
+                                        <th class="label-box-item-label">platform</th>
 										<td class="label-box-item-desc">
 											<span>inhouse / brightcove</span>
-										</td>
-									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">Stream Type</th>
-										<td class="label-box-item-desc">
-											<span>vod / live</span>
 										</td>
 									</tr>
                                     <tr>
                                         <th class="label-box-item-label">Ingest Type</th>
 										<td class="label-box-item-desc">
 											<span>manual / mediaHold</span>
-										</td>
-									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">S3 ID</th>
-										<td class="label-box-item-desc">
-											<span>123456789 (이런게 있나?)</span>
 										</td>
 									</tr>
                                     <tr>
@@ -97,30 +85,18 @@
 										<td class="label-box-item-desc">
                                             <p class="item-group">
                                                 <span>original-file-name.mp4</span>
-                                                <button class="btn-modify font-sm">change file name</button>
-                                            </p>
-                                            <p class=item-panel>
-                                                <input type="text" class="w-lm">
                                             </p>
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">transcoding</th>
+                                        <th class="label-box-item-label">processing</th>
 										<td class="label-box-item-desc">
                                             <p class="item-group">
-                                                <span>wait / progressing / done / fail / null</span>
+                                                <span>{status}</span>
                                                 <button class="btn-modify font-sm">retry</button>
                                             </p>
 										</td>
 									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">segmentagion</th>
-										<td class="label-box-item-desc">
-											<p class="item-group">
-                                                <span>wait / progressing / done / fail / null</span>
-                                                <button class="btn-modify font-sm">retry</button>
-                                            </p>
-										</td>
 									</tr>
                                     <tr>
                                         <th class="label-box-item-label">created</th>
@@ -142,16 +118,15 @@
 							<table class="label-box">
 								<tbody>
                                     <tr>
-                                        <th class="label-box-item-label">source urls</th>
+                                        <th class="label-box-item-label">sources</th>
                                         <td class="label-box-item-desc">
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
                                                             <th class="w-ms">type</th>
-                                                            <th class="w-ms">resolution</th>
+                                                            <th class="w-ms">preset</th>
                                                             <th>path</th>
-                                                            <th>action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -165,9 +140,6 @@
                                                             <td>
                                                                 <a>https://file.name/path.m3u8</a>
                                                             </td>
-                                                            <td>
-                                                                <button class="btn-common">preview</button>
-                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -179,9 +151,6 @@
                                                             <td>
                                                                 <a>https://file.name/path.m3u8</a>
                                                             </td>
-                                                            <td>
-                                                                <button class="btn-common">preview</button>
-                                                            </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -189,7 +158,7 @@
                                         </td>
                                     </tr>                                  
                                     <tr>
-                                        <th class="label-box-item-label">subtitles</th>
+                                        <th class="label-box-item-label">text tracks</th>
                                         <td class="label-box-item-desc">
                                             <div class="item-group item-panel">
                                                 <button type="button" class="btn-get">file upload</button>
