@@ -156,7 +156,7 @@
 												<ul class="simple-list">
 					  								<li>
 					  									<span class="item-id">12345</span>
-					  									<span>$selected video asset file name</span>
+					  									<span>$selected video asset id</span>
 					  								</li>
 					  							</ul>
 					  						</div>
@@ -170,17 +170,17 @@
 												<span class="item-group-desc">$video asset id</span>
 											</p>
                                             <p class="item-group">
-												<span class="item-group-label">asset file name</span>
-												<span class="item-group-desc">$file name</span>
-											</p>
-                                            <p class="item-group">
-												<span class="item-group-label">asset type</span>
-												<span class="item-group-desc">S3(inhouse) / brightcove / live</span>
+												<span class="item-group-label">type</span>
+												<span class="item-group-desc">inhouse / mediahold / relay / brightcove / live</span>
 											</p>
                                             <p class="item-group">
 												<span class="item-group-label">brightcove ID</span>
 												<span class="item-group-desc">$media ID</span>
                                                 <span class="info-message">brightcove가 아닐 때는 null</span>
+											</p>
+                                            <p class="item-group">
+												<span class="item-group-label">name</span>
+												<span class="item-group-desc">$name</span>
 											</p>
                                             <p class="item-group">
 												<span class="item-group-label">duration</span>
@@ -665,6 +665,7 @@
                                                         </select>
                                                     </td>
                                                 </tr>
+                                                <!--
                                                 <tr>
                                                     <th class="label-box-item-label">USA</th>
                                                     <td class="label-box-item-desc">
@@ -698,6 +699,7 @@
                                                         </select>
                                                     </td>
                                                 </tr>
+                                                -->
                                             </table>
                                             </div>
                                         </td>
@@ -919,41 +921,21 @@
 									<thead>
 										<tr>
 											<th class="">asset ID</th>
+                                            <th>type</th>
                                             <th class="">brightcove ID</th>
-											<th class="">image</th>
 											<th>name</th>
-                                            <th>platform</th>
-                                            <th>stream</th>
-                                            <th>ingest</th>
+                                            <th class="">image</th>
 											<th class="w-ms sub-info">select</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+                                        <tr>
 											<td>123456789</td>
-                                            <td>-</td>
-											<td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-video-thumbnail-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-											<td>
+                                            <td>brightcove</td>
+                                            <td>678910</td>
+                                            <td>
 												<a href="#">$video asset name</a>
 											</td>
-                                            <td>s3</td>
-                                            <td>vod</td>
-                                            <td>mediahold</td>
-											<td class="sub-info">
-												<button class="btn-get">select</button>
-											</td>
-										</tr>
-										<tr>
-											<td>123456789</td>
-                                            <td>678910</td>
 											<td class="table-list-item-img video-thumbnail">
 												<div class="img-embed-wrap">
 													<div class="img-embed-ratio">
@@ -963,16 +945,71 @@
 													</div>
 												</div>
 											</td>
-											<td>
-												<a href="#">$video asset name</a>
-											</td>
-                                            <td>brightcove</td>
-                                            <td>live</td>
-                                            <td>manual</td>
 											<td class="sub-info">
 												<button class="btn-get">select</button>
 											</td>
 										</tr>
+										<tr>
+											<td>123456789</td>
+                                            <td>inhouse</td>
+                                            <td>-</td>
+                                            <td>
+												<a href="#">$video asset name</a>
+											</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-video-thumbnail-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+                                        <tr>
+											<td>123456789</td>
+                                            <td>mediahold</td>
+                                            <td>-</td>
+                                            <td>
+												<a href="#">$video asset name</a>
+											</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+                                        <tr>
+											<td>123456789</td>
+                                            <td>relay</td>
+                                            <td>-</td>
+                                            <td>
+												<a href="#">$video asset name</a>
+											</td>
+											<td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-video-thumbnail-2.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+											<td class="sub-info">
+												<button class="btn-get">select</button>
+											</td>
+										</tr>
+										
 									</tbody>
 								</table>
 							</div>
