@@ -79,14 +79,15 @@
 										</td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label required-field">subscription_plan</th>
+										<th class="label-box-item-label">subscription plan</th>
 										<td class="label-box-item-desc">
                                             <select>
-                                                <option>{a plan}</option>
-                                                <option>{a plan}</option>
+                                                <option>{plus}</option>
+                                                <option>{premium}</option>
+                                                <option>{vip}</option>
                                             </select>
 										</td>
-                                    </tr>
+									</tr>
                                     <tr>
 										<th class="label-box-item-label">permissions</th>
 										<td class="label-box-item-desc">
@@ -96,12 +97,6 @@
                                                 <input type=checkbox name="plan_permissions">{a plan}
                                                 <input type=checkbox name="plan_permissions">{a plan}
                                             </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">description</th>
-										<td class="label-box-item-desc">
-                                            <textarea rows="5" cols="" class="w-100per"></textarea>
 										</td>
 									</tr>
                                 </tbody>
@@ -162,64 +157,6 @@
                                             </p>
                                         </td>
                                     </tr>
-                                    <!--
-                                    <tr>
-                                        <th class="label-box-item-label">price</th>
-                                        <td class="label-box-item-desc">
-                                            <p>
-                                                <label>default</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                            <p>
-                                                <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                            <p>
-                                                <label>{a membership}</label>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/ disabled>
-                                                <label>$</label>
-                                                <script>
-                                                    var prev = ""; 
-                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
-                                                    function imsi(obj) { 
-                                                        if(obj.value.search(regexp)==-1) { 
-                                                            obj.value = prev; 
-                                                        } 
-                                                        else { 
-                                                            prev = obj.value; 
-                                                        } 
-                                                    } 
-                                                </script>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    -->
                                 </tbody>
                             </table>					
                         </div>
@@ -229,10 +166,16 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">purchase_enable</th>
+                                        <th class="label-box-item-label">sales schedule</th>
                                         <td class="label-box-item-desc">
-                                            <label><input type="radio" name="purchase_enable" checked>archived</label>
-                                            <label><input type="radio" name="purchase_enable">active</label>
+                                            <div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                                <label>end
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>

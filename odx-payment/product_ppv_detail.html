@@ -78,6 +78,53 @@
                                             <input class="w-lm" type="text" placeholder="input product name" name=""/>
 										</td>
                                     </tr>
+                                    <tr>
+										<th class="label-box-item-label required-field">permissions</th>
+										<td class="label-box-item-desc">
+                                            <div class="list-option">
+                                                <ul class="list-option-action">
+                                                    <li>
+                                                        <button type="button" class="btn-new">
+                                                            <span class="icon fa fa-plus"></span>
+                                                            <span>add episode</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">ID</th>
+                                                            <th class="">program</th>
+                                                            <th class="w-ms">kind</th>
+                                                            <th class="w-ms">number</th>
+                                                            <th class="w-ms">part</th>
+                                                            <th class="w-ms">enable</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>12345</td>
+                                                            <td>{program-slug}</td>
+                                                            <td>{ep kind}</td>
+                                                            <td>{ep number}</td>
+                                                            <td>{ep part}</td>
+                                                            <td>true</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12345</td>
+                                                            <td>{program-slug}</td>
+                                                            <td>{ep kind}</td>
+                                                            <td>{ep number}</td>
+                                                            <td>{ep part}</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+										</td>
+									</tr>
                                 </tbody>
                             </table>
                         </div>
@@ -86,7 +133,7 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">price</th>
+                                        <th class="label-box-item-label required-field">price</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <label>default</label>
@@ -162,16 +209,21 @@
                                 </tbody>
                             </table>					
                         </div>
-  
                         <div class="con-sector">
                             <h3 class="con-sector-title">publish</h3>
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">purchase_enable</th>
+                                        <th class="label-box-item-label">sales schedule</th>
                                         <td class="label-box-item-desc">
-                                            <label><input type="radio" name="purchase_enable" checked>archived</label>
-                                            <label><input type="radio" name="purchase_enable">active</label>
+                                            <div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                                <label>end
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -182,12 +234,29 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>					
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
                         </div>
-                        <ul class="submit">
-                            <li><button type="button" class="btn-cancel">Cancel</button></li>
-                            <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
+                        <div class="con-sector item-box">
+                            <h3 class="con-sector-title">add episode modal</h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label required-field">episode ID</th>
+										<td class="label-box-item-desc">
+											<input type="number" class="" placeholder=""/>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Add</button></li>
+                            </ul>
+                        </div>
 					</div>
 				</div>
 			</article>
