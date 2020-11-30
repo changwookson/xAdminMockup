@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Billing Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>payments</span>
+							<span>Plan</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+							<div class="list-option">
+								<ul class="list-option-filter">
+									<li>
+                                        <label>service</label>
+										<select>
+                                            <option>all</option>
+											<option>odk</option>
+											<option>odc</option>
+										</select>
+									</li>
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+									<li>
+										<button type="button" class="btn-submit">filter apply</button>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>ID</th>
+                                            <th>pg</th>
+                                            <th>status</th>
+                                            <th>service</th>
+                                            <th>customer</th>
+                                            <th>product</th>
+                                            <th>amount</th>
+                                            <th>refunded</th>
+                                            <th>description</th>
+                                            <th>period</th>
+											<th>date</th>
+										</tr>
+									</thead>
+									<tbody>
+                                        <tr>
+                                            <td><a>{payments id}</a></td>
+                                            <td>stripe</td>
+                                            <td>succeeded</td>
+                                            <td>ODK</td> 
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>{product code}</td>
+                                            <td>4.99 / USD</td>
+                                            <td>0.00 / USD</td>
+                                            <td>subscription update</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+                                                    <span>~</span>
+                                                    <span>MM-DD-YYYY</span>
+												</p>
+											</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+                                            <td><a>{payments id}</a></td>
+                                            <td>stripe</td>
+                                            <td>refunded</td>
+                                            <td>ODK</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>{product code}</td>
+                                            <td>4.99 / USD</td>
+                                            <td>4.99 / USD</td>
+                                            <td>subscription update</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+                                                    <span>~</span>
+                                                    <span>MM-DD-YYYY</span>
+												</p>
+											</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+                                        <tr>
+											<td><a>{payments id}</a></td>
+                                            <td>stripe</td>
+                                            <td>partial refunded</td>
+                                            <td>ODK</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>{product code}</td>
+                                            <td>4.99 / USD</td>
+                                            <td>1.99 / USD</td>
+                                            <td>subscription update</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+                                                    <span>~</span>
+                                                    <span>MM-DD-YYYY</span>
+												</p>
+											</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+                            <p class="font-ml">
+								<a href="payments_plan_detail.html" class="font-lm">open detail page</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>

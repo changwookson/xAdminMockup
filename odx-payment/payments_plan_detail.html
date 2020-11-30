@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Billing Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="payments_plan_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>payments</span>
+							<span>Plan</span>
+							<span>$payments ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">payments info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">payments id</th>
+										<td class="label-box-item-desc">
+											<span>{payments id}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">pg</th>
+										<td class="label-box-item-desc">
+											<span>stripe</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">status</th>
+										<td class="label-box-item-desc">
+											<span>succeeded / refunded / partial refunded / fail</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<span>ODK / ODC / ODL / ODV</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">customer</th>
+										<td class="label-box-item-desc">
+											<span>jay@odkmedia.net</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">product</th>
+										<td class="label-box-item-desc">
+											<span>{product code}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">amount</th>
+										<td class="label-box-item-desc">
+											<span>4.99 / USD</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">refunded</th>
+										<td class="label-box-item-desc">
+											<span>1.99 / USD</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">description</th>
+										<td class="label-box-item-desc">
+											<span>{description}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">product period</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy ~ mm-dd-yyy</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">date</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy hh:mm:ss</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">actions</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">refund</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <button class="btn-modify">refund this payments</button>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">receipt</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <button class="btn-modify">send receipt email</button>
+                                            </p>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">refund option modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">reason</th>
+										<td class="label-box-item-desc">
+											<input type="radio" name="refund-reason" checked>change plan
+                                            <input type="radio" name="refund-reason">cancel subscription
+                                            <input type="radio" name="refund-reason">terminate subscription
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">refund amount</th>
+										<td class="label-box-item-desc">
+											 <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0.00"/>
+                                                <script>
+                                                    var prev = ""; 
+                                                    var regexp = /^\d*(\.\d{0,1})?$/; 
+                                                    function imsi(obj) { 
+                                                        if(obj.value.search(regexp)==-1) { 
+                                                            obj.value = prev; 
+                                                        } 
+                                                        else { 
+                                                            prev = obj.value; 
+                                                        } 
+                                                    } 
+                                                </script>
+                                            <select>
+                                                <option>USD</option>
+                                            </select>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">password</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-mm" placeholder="input admin password">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">send receipt option modal</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">email</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-lm" placeholder=""/>
+										</td>
+									</tr>
+									<tr>
+										<th class="label-box-item-label">password</th>
+										<td class="label-box-item-desc">
+											<input type="text" class="w-mm" placeholder="input admin password">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Send</button></li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
