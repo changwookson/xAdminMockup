@@ -53,6 +53,18 @@
 										</td>
 									</tr>
                                     <tr>
+										<th class="label-box-item-label">created</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy hh:mm:ss</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">modified</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy hh:mm:ss</span>
+										</td>
+									</tr>
+                                    <tr>
 										<th class="label-box-item-label">pg</th>
 										<td class="label-box-item-desc">
 											<span>stripe</span>
@@ -65,21 +77,34 @@
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">service</th>
-										<td class="label-box-item-desc">
-											<span>ODK / ODC / ODL / ODV</span>
-										</td>
-									</tr>
-                                    <tr>
 										<th class="label-box-item-label">customer</th>
 										<td class="label-box-item-desc">
 											<span>jay@odkmedia.net</span>
 										</td>
 									</tr>
                                     <tr>
+										<th class="label-box-item-label">payment method</th>
+										<td class="label-box-item-desc">
+											<p>credit card / VISA / **** **** **** 1234</p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<span>ODK / ODC / ODL / ODV</span>
+										</td>
+									</tr>
+                                    
+                                    <tr>
 										<th class="label-box-item-label">product</th>
 										<td class="label-box-item-desc">
 											<span>{product code}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">period</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy ~ mm-dd-yyy</span>
 										</td>
 									</tr>
                                     <tr>
@@ -89,29 +114,31 @@
 										</td>
 									</tr>
                                     <tr>
+										<th class="label-box-item-label">paid time</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy hh:mm:ss</span>
+										</td>
+									</tr>
+                                    <tr>
 										<th class="label-box-item-label">refunded</th>
 										<td class="label-box-item-desc">
 											<span>1.99 / USD</span>
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">description</th>
+										<th class="label-box-item-label">refunded reason</th>
 										<td class="label-box-item-desc">
-											<span>{description}</span>
+											<span>{reason}</span>
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">product period</th>
-										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy ~ mm-dd-yyy</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">date</th>
+										<th class="label-box-item-label">refunded time</th>
 										<td class="label-box-item-desc">
 											<span>mm-dd-yyyy hh:mm:ss</span>
 										</td>
 									</tr>
+                                    
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -128,26 +155,26 @@
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">receipt</th>
+										<th class="label-box-item-label">history</th>
 										<td class="label-box-item-desc">
-                                            <p>
-                                                <button class="btn-modify">send receipt email</button>
-                                            </p>
+                                            <p>2020.11.23 13:40 / refund / 1.45$ / 고객 요청의 사유로 / changwookson@odkmedia.net</p>
+                                            <p>2020.11.23 13:40 / refund / 1.45$ / 고객 요청의 사유로 / changwookson@odkmedia.net</p>
 										</td>
 									</tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="con-sector">
+                        <div class="con-sector item-box">
                             <h3 class="con-sector-title">refund option modal</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
 										<th class="label-box-item-label">reason</th>
 										<td class="label-box-item-desc">
-											<input type="radio" name="refund-reason" checked>change plan
-                                            <input type="radio" name="refund-reason">cancel subscription
-                                            <input type="radio" name="refund-reason">terminate subscription
+											<input type="radio" name="refund-reason" checked>change plan<br>
+                                            <input type="radio" name="refund-reason">cancel subscription<br>
+                                            <input type="radio" name="refund-reason">terminate subscription<br>
+                                            <input type="radio" name="refund-reason">ETC <input type="text" class="w-ll">
 										</td>
 									</tr>
                                     <tr>
@@ -171,40 +198,11 @@
                                             </select>
 										</td>
 									</tr>
-									<tr>
-										<th class="label-box-item-label">password</th>
-										<td class="label-box-item-desc">
-											<input type="text" class="w-mm" placeholder="input admin password">
-										</td>
-									</tr>
                                 </tbody>
                             </table>
                             <ul class="submit">
                                 <li><button type="button" class="btn-cancel">Cancel</button></li>
                                 <li><button type="button" class="btn-submit">Submit</button></li>
-                            </ul>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">send receipt option modal</h3>
-							<table class="label-box">
-								<tbody>
-                                    <tr>
-										<th class="label-box-item-label">email</th>
-										<td class="label-box-item-desc">
-											<input type="text" class="w-lm" placeholder=""/>
-										</td>
-									</tr>
-									<tr>
-										<th class="label-box-item-label">password</th>
-										<td class="label-box-item-desc">
-											<input type="text" class="w-mm" placeholder="input admin password">
-										</td>
-									</tr>
-                                </tbody>
-                            </table>
-                            <ul class="submit">
-                                <li><button type="button" class="btn-cancel">Cancel</button></li>
-                                <li><button type="button" class="btn-submit">Send</button></li>
                             </ul>
                         </div>
 					</div>
