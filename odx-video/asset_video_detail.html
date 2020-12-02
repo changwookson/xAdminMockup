@@ -63,15 +63,9 @@
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">platform</th>
+                                        <th class="label-box-item-label">source/th>
 										<td class="label-box-item-desc">
-											<span>inhouse / brightcove</span>
-										</td>
-									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">Ingest Type</th>
-										<td class="label-box-item-desc">
-											<span>manual / mediaHold</span>
+											<span>inhouse / mediahold / relay / brightcove</span>
 										</td>
 									</tr>
                                     <tr>
@@ -81,19 +75,18 @@
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">file name</th>
+                                        <th class="label-box-item-label">name</th>
 										<td class="label-box-item-desc">
                                             <p class="item-group">
-                                                <span>original-file-name.mp4</span>
+                                                <span>original-file-name</span>
                                             </p>
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">processing</th>
+                                        <th class="label-box-item-label">status</th>
 										<td class="label-box-item-desc">
                                             <p class="item-group">
                                                 <span>{status}</span>
-                                                <button class="btn-modify font-sm">retry</button>
                                             </p>
 										</td>
 									</tr>
@@ -118,7 +111,33 @@
 							<table class="label-box">
 								<tbody>
                                     <tr>
-                                        <th class="label-box-item-label">sources</th>
+                                        <th class="label-box-item-label">original videos</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>url</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a>https://file.name/path.mp4</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a>https://file.name/path.mp4</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">transcoded videos</th>
                                         <td class="label-box-item-desc">
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
@@ -126,7 +145,7 @@
                                                         <tr>
                                                             <th class="w-ms">type</th>
                                                             <th class="w-ms">preset</th>
-                                                            <th>path</th>
+                                                            <th>url</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -156,72 +175,161 @@
                                                 </table>
                                             </div>
                                         </td>
-                                    </tr>                                  
+                                    </tr>
                                     <tr>
-                                        <th class="label-box-item-label">text tracks</th>
+                                        <th class="label-box-item-label">original subtitles</th>
                                         <td class="label-box-item-desc">
+                                            <div class="item-group item-panel">
+                                                <button type="button" class="btn-get">file upload</button>
+                                            </div>
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>url</th>
+                                                            <th>action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a>$https://file.name/path.smi</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-new">transcode</button>
+                                                            </td>
+                                                        <tr>
+                                                            <td>
+                                                                <a>$https://file.name/path.smi</a>
+                                                            </td>
+                                                            <td>
+                                                                <button class="btn-new">transcode</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">transcoded subtitles</th>
+                                        <td class="label-box-item-desc">
+                                            <!--
                                             <div class="item-group item-panel">
                                                 <button type="button" class="btn-get">file upload</button>
                                                 <input type="text" placeholder="uloaded file path" disabled>
                                                 <select>
-                                                    <option>MIME</option>
+                                                    <option>type</option>
                                                     <option>VTT</option>
                                                     <option>SRT</option>
                                                 </select>
                                                 <select>
-                                                    <option>language code</option>
+                                                    <option>language</option>
                                                     <option>KO</option>
                                                     <option>EN</option>
                                                 </select>
                                                 <input type="text" class="w-mm" placeholder="language name">
                                                 <button type="button" class="btn-new">add</button>
                                             </div>
+                                            -->
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th class="w-sl sub-info">MIME</th>
-                                                            <th class="w-ms">language code</th>
-                                                            <th class="w-ms">language name</th>
-                                                            <th>path</th>
+                                                            <th class="w-ms">language</th>
+                                                            <th class="w-sl sub-info">type</th>
+                                                            <th>url</th>
+                                                            <th>active</th>
                                                             <th>action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
                                                             <td class="sub-info">
                                                                 <span>vtt</span>
                                                             </td>
                                                             <td>
-                                                                <span>KO</span>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                             <td>
-                                                                <span>한국어</span>
-                                                            </td>                                                    
-                                                            
-                                                            <td>
-                                                                <a>$https://file.name/path.vtt</a>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
                                                             </td>
                                                             <td>
                                                                 <button class="btn-cancel">remove</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
                                                             <td class="sub-info">
                                                                 <span>vtt</span>
                                                             </td>
                                                             <td>
-                                                                <span>EN</span>
-                                                            </td>
-                                                            <td>
-                                                                <span>English</span>
-                                                            </td>                                                    
-                                                            
-                                                            <td>
                                                                 <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                             <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
                                                                 <button class="btn-cancel">remove</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">text tracks (brightcove)</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">language</th>
+                                                            <th class="w-sl sub-info">type</th>
+                                                            <th>url</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span>KO</span>
+                                                            </td>
+                                                            <td class="sub-info">
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span>EN</span>
+                                                            </td>
+                                                            <td class="sub-info">
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -262,6 +370,10 @@
                                     </tr>                                  
                                 </tbody>
                             </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
                         </div>
 				    </div>
                 </div>

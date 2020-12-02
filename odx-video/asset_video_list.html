@@ -53,17 +53,13 @@
                             <div class="list-option">
                                 <ul class="list-option-filter">
                                     <li>
-                                        <label>Platform</label>
+                                        <label>Source</label>
 										<select>
-                                            <option>S3</option>
+                                            <option>Source:All</option>
+                                            <option>Inhouse</option>
+                                            <option>Mediahold</option>
+                                            <option>Relay</option>
 											<option>Brightcove</option>
-										</select>
-									</li>
-                                    <li>
-                                        <label>ingest</label>
-										<select>
-                                            <option>mediahold</option>
-											<option>manual</option>
 										</select>
 									</li>
                                     <li>
@@ -71,7 +67,7 @@
 											<tbody>
 												<tr>
 													<td class="search-bar-input">
-														<input type="search" placeholder="file name"/>
+														<input type="search" placeholder="name"/>
 													</td>
 													<td class="search-bar-btn">
 														<button type="button"><span class="icon fa fa-search"></span></button>
@@ -89,12 +85,6 @@
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button" class="btn-new">
-                                            <span class="icon fa fa-plus"></span>
-                                            <span>ingest LiveStream</span>
-                                        </button>
-                                    </li>
-                                    <li>
                                         <button type="button" class="btn-cancel">
                                             <span class="icon fa fa-times"></span>
                                             <span>remove</span>
@@ -108,10 +98,9 @@
                                         <tr>
                                             <th class="w-ss"><input type="checkbox" /></th>
                                             <th class="w-sl">ID</th>
-                                            <th>file name</th>
-                                            <th class="w-ms">platform</th>
-                                            <th class="w-ms">ingest</th>
-                                            <th class="w-ms">processing</th>
+                                            <th>name</th>
+                                            <th class="w-ms">source</th>
+                                            <th class="w-ms">status</th>
                                             <th class="w-ms">created</th>
                                             <th class="w-ms">updated</th>
                                         </tr>
@@ -121,9 +110,8 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
-                                                <a href="#">$file name</a>         
+                                                <a href="#">name</a>         
                                             </td>
-                                            <td>S3</td>
                                             <td>mediahold</td>
                                             <td>
                                                 <p>{status}</p>
@@ -134,12 +122,11 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
-                                                <a href="#">$file name</a>         
+                                                <a href="#">name</a>         
                                             </td>
                                             <td>Brightcove</td>
-                                            <td>manual</td>
                                             <td>
-                                                -
+                                                <p>{status}</p>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
@@ -148,12 +135,11 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
-                                                <a href="#">$file name</a>         
+                                                <a href="#">name</a>         
                                             </td>
-                                            <td>-</td>
-                                            <td>-</td>
+                                            <td>inhouse</td>
                                             <td>
-                                                -
+                                                <p>{status}</p>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
