@@ -53,6 +53,36 @@
 										</td>
 									</tr>
                                     <tr>
+										<th class="label-box-item-label">pg</th>
+										<td class="label-box-item-desc">
+											<span>stripe</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">total</th>
+										<td class="label-box-item-desc">
+											<span>4.99 / USD</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">customer</th>
+										<td class="label-box-item-desc">
+											<span>jay@odkmedia.net</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<span>ODK / ODC / ODL / ODV</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">paid time</th>
+										<td class="label-box-item-desc">
+											<span>mm-dd-yyyy hh:mm:ss</span>
+										</td>
+									</tr>
+                                    <tr>
 										<th class="label-box-item-label">created</th>
 										<td class="label-box-item-desc">
 											<span>mm-dd-yyyy hh:mm:ss</span>
@@ -64,37 +94,25 @@
 											<span>mm-dd-yyyy hh:mm:ss</span>
 										</td>
 									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">inventory info</h3>
+							<table class="label-box">
+								<tbody>
                                     <tr>
-										<th class="label-box-item-label">pg</th>
+										<th class="label-box-item-label">inventory</th>
 										<td class="label-box-item-desc">
-											<span>stripe</span>
+											<span>{inventory ID}</span>
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">status</th>
+										<th class="label-box-item-label">kind</th>
 										<td class="label-box-item-desc">
-											<span>succeeded / refunded / partial refunded / fail</span>
+											<span>{SUBSCRIPTION / PAY-PER-VIEW}</span>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">customer</th>
-										<td class="label-box-item-desc">
-											<span>jay@odkmedia.net</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">payment method</th>
-										<td class="label-box-item-desc">
-											<p>credit card / VISA / **** **** **** 1234</p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">service</th>
-										<td class="label-box-item-desc">
-											<span>ODK / ODC / ODL / ODV</span>
-										</td>
-									</tr>
-                                    
                                     <tr>
 										<th class="label-box-item-label">product</th>
 										<td class="label-box-item-desc">
@@ -102,79 +120,63 @@
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">period</th>
+										<th class="label-box-item-label">effective</th>
 										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy ~ mm-dd-yyy</span>
+											<span>{start}~>{end}</span>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">amount</th>
-										<td class="label-box-item-desc">
-											<span>4.99 / USD</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">paid time</th>
-										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy hh:mm:ss</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">refunded</th>
-										<td class="label-box-item-desc">
-											<span>1.99 / USD</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">refunded reason</th>
-										<td class="label-box-item-desc">
-											<span>{reason}</span>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">refunded time</th>
-										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy hh:mm:ss</span>
-										</td>
-									</tr>
-                                    
-                                    
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">actions</h3>
-							<table class="label-box">
-								<tbody>
+                            <h3 class="con-sector-title">charges</h3>
+                            <table class="table">
+                                <thead>
                                     <tr>
-										<th class="label-box-item-label">refund</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <button class="btn-modify">refund this receipt</button>
-                                            </p>
-										</td>
-									</tr>
+                                        <th>id</th>
+                                        <th>pg</th>
+                                        <th>pg_id</th>
+                                        <th>amount</th>
+                                        <th>method</th>
+                                        <th>paid</th>
+                                        <th>refunded</th>
+                                        <th>refunds</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     <tr>
-										<th class="label-box-item-label">history</th>
-										<td class="label-box-item-desc">
-                                            <p>2020.11.23 13:40 / refund / 1.45$ / 고객 요청의 사유로 / changwookson@odkmedia.net</p>
-                                            <p>2020.11.23 13:40 / refund / 1.45$ / 고객 요청의 사유로 / changwookson@odkmedia.net</p>
-										</td>
-									</tr>
+                                        <td>1234</td>
+                                        <td>stripe</td>
+                                        <td>ch_1HtsKXGwHmu2gYNSOkY66CIu"</td>
+                                        <td>1.29 USD</td>
+                                        <td>{type} / {brand} / {last4}</td>
+                                        <td>true</td>
+                                        <td>false</td>
+                                        <td><button class="btn-new">refund</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1234</td>
+                                        <td>stripe</td>
+                                        <td>ch_1HtsKXGwHmu2gYNSOkY66CIu"</td>
+                                        <td>1.29 USD</td>
+                                        <td>card / visa / 5915</td>
+                                        <td>true</td>
+                                        <td>true</td>
+                                        <td>
+                                            <a>refunds</a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="con-sector item-box">
-                            <h3 class="con-sector-title">refund option modal</h3>
+                            <h3 class="con-sector-title">refund option modal <span class="info-message">charges 목록에서 refund 버튼을 누르면 나옴</span></h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
 										<th class="label-box-item-label">reason</th>
 										<td class="label-box-item-desc">
-											<input type="radio" name="refund-reason" checked>change plan<br>
-                                            <input type="radio" name="refund-reason">cancel subscription<br>
-                                            <input type="radio" name="refund-reason">terminate subscription<br>
-                                            <input type="radio" name="refund-reason">ETC <input type="text" class="w-ll">
+                                            <input type="text" class="w-ll">
 										</td>
 									</tr>
                                     <tr>
@@ -203,6 +205,52 @@
                             <ul class="submit">
                                 <li><button type="button" class="btn-cancel">Cancel</button></li>
                                 <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector item-box">
+                            <h3 class="con-sector-title">refunds modal <span class="info-message">refund된 charges 목록에서 refunds 누르면 나옴</span></h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">id</th>
+										<td class="label-box-item-desc">
+                                            <span>{refund id}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">pg</th>
+										<td class="label-box-item-desc">
+                                            <span>{stripe}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">pg id</th>
+										<td class="label-box-item-desc">
+                                            <span>ch_1HtsKXGwHmu2gYNSOkY66CIu</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">amount</th>
+										<td class="label-box-item-desc">
+                                            <span>1.29 USD</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">refunded time</th>
+										<td class="label-box-item-desc">
+                                            <span>{date time}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">reason</th>
+										<td class="label-box-item-desc">
+                                            <span>{reason} 고객님이 즉시 종료를 요청해서</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Close</button></li>
                             </ul>
                         </div>
 					</div>

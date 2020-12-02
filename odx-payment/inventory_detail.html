@@ -31,47 +31,84 @@
 					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
 				});
 			</script>
-		<main id="main-article" class="article-subside-off">
+		<main id="main-article" class="article-subside-off" menu="customer_plan_list.html">
 			<article id="article-content">
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>receipt</span>
-							<span>Plan</span>
+							<span>Customer</span>
+							<span>Inventory</span>
+							<span>$inventory ID</span>
 						</h1>
 					</div>
 					<div class="con-body">
-						<div class="con-sector">
-							<div class="list-option">
-								<ul class="list-option-filter">
-									<li>
-                                        <label>service</label>
-										<select>
-                                            <option>all</option>
-											<option>odk</option>
-											<option>odc</option>
-										</select>
-									</li>
-									<li>
-										<table class="search-bar">
-											<tbody>
-												<tr>
-													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
-													</td>
-													<td class="search-bar-btn">
-														<button type="button"><span class="icon fa fa-search"></span></button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</li>
-									<li>
-										<button type="button" class="btn-submit">filter apply</button>
-									</li>
-								</ul>
-							</div>
-							<div class="table-wrap scroll-customed">
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">customer info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">customer</th>
+										<td class="label-box-item-desc">
+											<span>changwookson@odkmedia.net</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">free trial used</th>
+										<td class="label-box-item-desc">
+											<span>usded / unused</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">inventory info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">id</th>
+										<td class="label-box-item-desc">
+											<span>{inventory id}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<span>ODC / ODK / ODL / ODV</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">kind</th>
+										<td class="label-box-item-desc">
+											<span>{SUBSCRIPTION / PAY-PER-VIEW}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">product</th>
+										<td class="label-box-item-desc">
+											<span>{product code}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">effective</th>
+										<td class="label-box-item-desc">
+											<span>{start date-time}~{end date-time}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">request</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <button class="btn-modify">terminate this inventory</button>
+                                            </p>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">receipts</h3>
+                            <div class="table-wrap scroll-customed">
 								<table class="table">
 									<thead>
 										<tr>
@@ -154,10 +191,19 @@
 									</div>
 								</li>
 							</ul>
-                            <p class="font-ml">
-								<a href="receipt_plan_detail.html" class="font-lm">open detail page</a>
-							</p>
-						</div>
+                        </div>
+                        <div class="con-sector item-box">
+                            <h3 class="con-sector-title">terminate confirm modal <span class="info-message">terminate 버튼 누르면 나옴</span></h3>
+                            <div style="text-align: center">
+                                <p>This inventory will be terminated immediately.</p>
+                                <p>If a refund is needed, it can be processed in the [Receipt] menu.</p>
+                                <p>Are you sure?</p>
+                            </div>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
+                            </ul>
+                        </div>
 					</div>
 				</div>
 			</article>

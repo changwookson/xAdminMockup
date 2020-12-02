@@ -52,12 +52,22 @@
 											<option>odc</option>
 										</select>
 									</li>
+                                    <li>
+                                        <label>kind</label>
+										<select>
+                                            <option>subscription</option>
+											<option>ppv</option>
+										</select>
+									</li>
 									<li>
+                                        <select>
+                                            <option>customer e-mail</option>
+										</select>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
+														<input type="search" placeholder=""/>
 													</td>
 													<td class="search-bar-btn">
 														<button type="button"><span class="icon fa fa-search"></span></button>
@@ -79,12 +89,29 @@
 											<th class="w-sl">ID</th>
                                             <th>service</th>
 											<th>customer</th>
+                                            <th>kind</th>
                                             <th>product</th>
-                                            <th>status</th>
-											<th>date</th>
+											<th>period</th>
 										</tr>
 									</thead>
 									<tbody>
+                                        <tr>
+											<td><input type="checkbox" /></td>
+											<td>{id}</td>
+                                            <td>{service_name}</td>
+											<td>
+												<a href="#">{user.email}</a>
+											</td>
+                                            <td>{product.code}</td>
+                                            <td>{kind}</td>
+                                            <td>
+												<p>
+                                                    <span>{effective_start}</span>
+													<span>~</span>
+													<span>{effective_end}</span>
+												</p>
+											</td>
+										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
@@ -92,16 +119,13 @@
 											<td>
 												<a href="#">jay@odkmedia.net</a>
 											</td>
-                                            <td>ODK Plus Monthly</td>
-                                            <td>active</td>
+                                            <td>SUBSCRIPTION</td>
+                                            <td>VIP</td>
                                             <td>
 												<p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
-												</p>
-                                                <p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+													<span>~</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
 												</p>
 											</td>
 										</tr>
@@ -112,16 +136,13 @@
 											<td>
 												<a href="#">changwookson@odkmedia.net</a>
 											</td>
-                                            <td>ODK Plus Monthly</td>
-                                            <td>cancelled</td>
+                                            <td>PAY-PER-VIEW</td>
+                                            <td>avengers-4.99</td>
                                             <td>
 												<p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
-												</p>
-                                                <p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+													<span>~</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
 												</p>
 											</td>
 										</tr>
@@ -147,7 +168,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="customer_plan_detail.html" class="font-lm">open detail page</a>
+								<a href="inventory_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>
