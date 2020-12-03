@@ -53,6 +53,9 @@
 										</select>
 									</li>
 									<li>
+                                        <select>
+                                            <option>product</option>
+										</select>
 										<table class="search-bar">
 											<tbody>
 												<tr>
@@ -96,6 +99,27 @@
 										</tr>
 									</thead>
 									<tbody>
+                                        <tr>
+											<td><input type="checkbox" /></td>
+											<td>{product.id}</td>
+                                            <td>{service}</td>
+                                            <td>{pg}</td>
+											<td>
+												<a href="#">{product.code}</a>
+											</td>
+                                            <td>{product.name}</td>
+                                            <td>{price}  USD</td>
+                                            <td>{length} / {unit}</td>
+                                            <td>{enable}</td>
+                                            <td>
+												<p>
+                                                    <span>{created date-time}</span>
+												</p>
+                                                <p>
+                                                    <span>{modified date-time}</span>
+												</p>
+											</td>
+										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>

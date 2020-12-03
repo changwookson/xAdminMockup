@@ -36,8 +36,8 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Customer</span>
-							<span>Inventory</span>
+							<span>Customer Inventory</span>
+							<span>Subscription</span>
 							<span>$inventory ID</span>
 						</h1>
 					</div>
@@ -56,6 +56,7 @@
 										<th class="label-box-item-label">free trial used</th>
 										<td class="label-box-item-desc">
 											<span>usded / unused</span>
+                                            <span class="info-message">free trial을 계정당 1회만 쓸 수 있게 하기 위한 것임. BE쪽에서 추가 필요.</span>
 										</td>
 									</tr>
                                 </tbody>
@@ -107,7 +108,7 @@
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">receipts</h3>
+                            <h3 class="con-sector-title">receipts <span class="info-message">이 인벤토리에 해당하는 결제내역 목록을 출력</span></h3>
                             <div class="table-wrap scroll-customed">
 								<table class="table">
 									<thead>
@@ -124,25 +125,24 @@
 									<tbody>
                                         <tr>
                                             <td><a>{receipt id}</a></td>
-                                            <td>stripe</td>
-                                            <td>4.99 / USD</td>
+                                            <td>{pg}</td>
+                                            <td>{total} / USD</td>
                                             <td>{inventory id}</td>
                                             <td>
-												jay@odkmedia.net
+												{user.email}
 											</td>
-                                            <td>ODK</td> 
+                                            <td>{service}</td> 
                                             <td>
 												<p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
+                                                    <span>{paid_at date-time}</span>
 												</p>
 											</td>
 										</tr>
                                         <tr>
-                                            <td><a>{receipt id}</a></td>
+                                            <td><a>12345</a></td>
                                             <td>bango</td>
                                             <td>4.99 / USD</td>
-                                            <td>{inventory id}</td>
+                                            <td>1234</td>
                                             <td>
 												jay@odkmedia.net
 											</td>
@@ -155,10 +155,10 @@
 											</td>
 										</tr>
 										<tr>
-                                            <td><a>{receipt id}</a></td>
+                                            <td><a>12345</a></td>
                                             <td>appstore</td>
                                             <td>4.99 / USD</td>
-                                            <td>{inventory id}</td>
+                                            <td>1234</td>
                                             <td>
 												jay@odkmedia.net
 											</td>

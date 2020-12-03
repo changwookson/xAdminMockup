@@ -37,7 +37,7 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Product</span>
-							<span>Plan</span>
+							<span>Subscription</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -53,6 +53,9 @@
 										</select>
 									</li>
 									<li>
+                                        <select>
+                                            <option>product</option>
+										</select>
 										<table class="search-bar">
 											<tbody>
 												<tr>
@@ -89,7 +92,6 @@
                                             <th>pg</th>
 											<th>code</th>
                                             <th>name</th>
-                                            <th>plan</th>
                                             <th>price</th>
                                             <th>interval</th>
                                             <th>enable</th>
@@ -97,6 +99,27 @@
 										</tr>
 									</thead>
 									<tbody>
+                                        <tr>
+											<td><input type="checkbox" /></td>
+											<td>{product.id}</td>
+                                            <td>{service}</td>
+                                            <td>{pg}</td>
+											<td>
+												<a href="#">{product.code}</a>
+											</td>
+                                            <td>{product.name}</td>
+                                            <td>{price} USD</td>
+                                            <td>{length} / {unit}</td>
+                                            <td>{enable}</td>
+                                            <td>
+												<p>
+                                                    <span>{created date-time}</span>
+												</p>
+                                                <p>
+                                                    <span>{modified date-time}</span>
+												</p>
+											</td>
+										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
@@ -106,7 +129,6 @@
 												<a href="#">k-plus-m</a>
 											</td>
                                             <td>ODK Plus Monthly</td>
-                                            <td>plus</td>
                                             <td>4.99 / USD</td>
                                             <td>1 / month</td>
                                             <td>enable</td>
@@ -130,7 +152,6 @@
 												<a href="#">c-vip-m</a>
 											</td>
                                             <td>ODC VIP yearly</td>
-                                            <td>vip</td>
                                             <td>49.99 / USD</td>
                                             <td>1 / year</td>
                                             <td>enable</td>

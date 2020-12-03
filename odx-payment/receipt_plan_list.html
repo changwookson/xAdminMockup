@@ -36,8 +36,8 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>receipt</span>
-							<span>Plan</span>
+							<span>Receipt</span>
+							<span>Subscription</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -53,11 +53,14 @@
 										</select>
 									</li>
 									<li>
+                                        <select>
+                                            <option>customer e-mail</option>
+										</select>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-input">
-														<input type="search" placeholder="keyword"/>
+														<input type="search" placeholder=""/>
 													</td>
 													<td class="search-bar-btn">
 														<button type="button"><span class="icon fa fa-search"></span></button>
@@ -87,25 +90,24 @@
 									<tbody>
                                         <tr>
                                             <td><a>{receipt id}</a></td>
-                                            <td>stripe</td>
-                                            <td>4.99 / USD</td>
+                                            <td>{pg}</td>
+                                            <td>{total} / USD</td>
                                             <td>{inventory id}</td>
                                             <td>
-												jay@odkmedia.net
+												{user.email}
 											</td>
-                                            <td>ODK</td> 
+                                            <td>{service}</td> 
                                             <td>
 												<p>
-                                                    <span>MM-DD-YYYY</span>
-													<span>hh:mm:ss</span>
+                                                    <span>{paid_at date-time}</span>
 												</p>
 											</td>
 										</tr>
                                         <tr>
-                                            <td><a>{receipt id}</a></td>
+                                            <td><a>12345</a></td>
                                             <td>bango</td>
                                             <td>4.99 / USD</td>
-                                            <td>{inventory id}</td>
+                                            <td>1234</td>
                                             <td>
 												jay@odkmedia.net
 											</td>
@@ -118,10 +120,10 @@
 											</td>
 										</tr>
 										<tr>
-                                            <td><a>{receipt id}</a></td>
+                                            <td><a>12345</a></td>
                                             <td>appstore</td>
                                             <td>4.99 / USD</td>
-                                            <td>{inventory id}</td>
+                                            <td>1234</td>
                                             <td>
 												jay@odkmedia.net
 											</td>
