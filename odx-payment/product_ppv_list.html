@@ -82,7 +82,6 @@
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
                                             <th>service</th>
-                                            <th>pg</th>
 											<th>code</th>
                                             <th>name</th>
                                             <th>price</th>
@@ -96,12 +95,14 @@
 											<td><input type="checkbox" /></td>
 											<td>{product.id}</td>
                                             <td>{service}</td>
-                                            <td>{pg}</td>
 											<td>
 												<a href="#">{product.code}</a>
 											</td>
                                             <td>{product.name}</td>
-                                            <td>{price}  USD</td>
+                                            <td>
+                                                <li>{pg} / {default's price}</li>
+                                                <li>{pg} / {default's price}</li>
+                                                <li>{pg} / {default's price}</li>
                                             <td>{length} / {unit}</td>
                                             <td>{enable}</td>
                                             <td>
@@ -117,12 +118,15 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
                                             <td>ODK</td>
-                                            <td>stripe</td>
 											<td>
 												<a href="#">movie-ppv</a>
 											</td>
                                             <td>movie-ppv sample</td>
-                                            <td>4.99 / USD</td>
+                                            <td>
+                                                <li>stripe / 4.99</li>
+                                                <li>appstore / 5.99</li>
+                                                <li>playstore / 5.99</li>
+                                            </td>
                                             <td>2 / day</td>
                                             <td>enable</td>
                                             <td>
@@ -140,12 +144,15 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
                                             <td>ODC</td>
-                                            <td>stripe</td>
 											<td>
 												<a href="#">series-ppv</a>
 											</td>
                                             <td>series-ppv sample</td>
-                                            <td>49.99 / USD</td>
+                                            <td>
+                                                <li>stripe / 49.99</li>
+                                                <li>appstore / 59.99</li>
+                                                <li>playstore / 59.99</li>
+                                            </td>
                                             <td>7 / day</td>
                                             <td>enable</td>
                                             <td>
