@@ -713,8 +713,31 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
+                                        <th class="label-box-item-label new-item">sales type of parent program</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group">
+                                                <div>
+                                                    <p>{$parent program's default sales type}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <th class="label-box-item-label new-item">sales type</th>
                                         <td class="label-box-item-desc">
+                                            <div class="item-group">
+                                                <div>
+                                                    <select>
+                                                        <option>guest</option>
+                                                        <option>free</option>
+                                                        <option selected>plus</option>
+                                                        <option>premium</option>
+                                                        <option>ppv</option>
+                                                    </select>
+                                                </div>
+                                                <p class="info-message">The sales type of episode does not follow the sales type of the parent program directly. So, a certain value should be set for this episode.</p>
+											</div>
+                                            <!--
                                             <div class="item-group">
                                                 <label>
                                                     <input type="radio" name="sales_type_membership">depend on program</label>
@@ -733,6 +756,7 @@
                                                     </select>
                                                 </div>
 											</div>
+                                            -->
                                         </td>
                                     </tr>
                                 </tbody>
