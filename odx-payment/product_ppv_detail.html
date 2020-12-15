@@ -96,7 +96,7 @@
                                                     </li>
                                                     <li>
                                                         <button type="button" class="btn-cancel">
-                                                            <span class="icon fa fa-plus"></span>
+                                                            <span class="icon fa fa-minus"></span>
                                                             <span>remove</span>
                                                         </button>
                                                     </li>
@@ -146,6 +146,7 @@
                             <h3 class="con-sector-title">pricing</h3>
                             <table class="label-box">
                                 <tbody>
+                                    <!--
                                     <tr>
                                         <th class="label-box-item-label required-field">price</th>
                                         <td class="label-box-item-desc">
@@ -282,8 +283,142 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                                 
-                                           
+                                        </td>
+                                    </tr>
+                                    -->
+                                    <tr>
+                                        <th class="label-box-item-label required-field">price</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="info-message">The price by [All Plans and all PG] is the default. If you need a another price by a User's plan or PG, add a specific price.
+                                            </p>
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">User's subscription plan</th>
+                                                            <th class="w-ms">payment gateway</th>
+                                                            <th class="w-ms">price</th>
+                                                            <th class="w-ms"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <select disabled>
+                                                                    <option selected>all</option>
+                                                                    <option>plus</option>
+                                                                    <option>premium</option>
+                                                                </select>  
+                                                            </td>
+                                                            <td>
+                                                                <select disabled>
+                                                                    <option selected>all</option>
+                                                                    <option>stripe</option>
+                                                                    <option>appstore</option>
+                                                                    <option>playstore</option>
+                                                                    <option>bango</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" onkeyup="imsi(this)" class="w-sl" value="4.99"/>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn-cancel">
+                                                                    <span>remove</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>all</option>
+                                                                    <option selected>plus</option>
+                                                                    <option>premium</option>
+                                                                </select>  
+                                                            </td>
+                                                            <td>
+                                                                <select>
+                                                                    <option selected>all</option>
+                                                                    <option>stripe</option>
+                                                                    <option>appstore</option>
+                                                                    <option>playstore</option>
+                                                                    <option>bango</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" onkeyup="imsi(this)" class="w-sl" value="3.99"/>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn-cancel">
+                                                                    <span>remove</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>all</option>
+                                                                    <option>plus</option>
+                                                                    <option selected>premium</option>
+                                                                </select>  
+                                                            </td>
+                                                            <td>
+                                                                <select>
+                                                                    <optiond>all</option>
+                                                                    <option>stripe</option>
+                                                                    <option>appstore</option>
+                                                                    <option>playstore</option>
+                                                                    <option selected>bango</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" onkeyup="imsi(this)" class="w-sl" value="0.00"/>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn-cancel">
+                                                                    <span>remove</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option selected>unselected</option>
+                                                                    <option>all</option>
+                                                                    <option>plus</option>
+                                                                    <option>premium</option>
+                                                                </select>  
+                                                            </td>
+                                                            <td>
+                                                                <select>
+                                                                    <option>unselected</option>
+                                                                    <option>all</option>
+                                                                    <option>stripe</option>
+                                                                    <option>appstore</option>
+                                                                    <option>playstore</option>
+                                                                    <option>bango</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="number" onkeyup="imsi(this)" class="w-sl" value=""/>
+                                                            </td>
+                                                            <td>
+                                                                <button type="button" class="btn-cancel">
+                                                                    <span>remove</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <button type="button" class="btn-new font-mm">add a specific price</button>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
