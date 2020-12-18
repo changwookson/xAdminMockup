@@ -43,7 +43,148 @@
 					</div>
 					<div class="con-body">
                         <div class="con-sector">
-						  inventory_plan_detail.html과 같음
+                            <h3 class="con-sector-title">customer info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">customer</th>
+										<td class="label-box-item-desc">
+											<span>changwookson@odkmedia.net</span>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">inventory info</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">id</th>
+										<td class="label-box-item-desc">
+											<span>{inventory id}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">service</th>
+										<td class="label-box-item-desc">
+											<span>ODC / ODK / ODL / ODV</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">kind</th>
+										<td class="label-box-item-desc">
+											<span>{SUBSCRIPTION / PAY-PER-VIEW}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">product</th>
+										<td class="label-box-item-desc">
+											<span>{product code}</span>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">effective</th>
+										<td class="label-box-item-desc">
+											<span>{start date-time}~{end date-time}</span>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">inventory status<span class="explain-message">Kind가 ppv일 때</span>
+                                        </th>
+										<td class="label-box-item-desc">
+											<p>
+                                                - <span class="explain-message">미정: 일단 비워두시죠</span>
+                                            </p>
+										</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">receipts <span class="explain-message">(이 인벤토리에 해당하는 결제내역 목록을 출력)</span></h3>
+                            <div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>ID</th>
+                                            <th>pg</th>
+                                            <th>total</th>
+                                            <th>inventory</th>
+                                            <th>customer</th>
+                                            <th>service</th>
+											<th>paid time</th>
+										</tr>
+									</thead>
+									<tbody>
+                                        <tr>
+                                            <td><a>{receipt id}</a></td>
+                                            <td>{pg}</td>
+                                            <td>{total} / USD</td>
+                                            <td>{inventory id}</td>
+                                            <td>
+												{user.email}
+											</td>
+                                            <td>{service}</td> 
+                                            <td>
+												<p>
+                                                    <span>{paid_at date-time}</span>
+												</p>
+											</td>
+										</tr>
+                                        <tr>
+                                            <td><a>12345</a></td>
+                                            <td>bango</td>
+                                            <td>4.99 / USD</td>
+                                            <td>1234</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>ODK</td> 
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+                                            <td><a>12345</a></td>
+                                            <td>appstore</td>
+                                            <td>4.99 / USD</td>
+                                            <td>1234</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>ODK</td> 
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
                         </div>
 					</div>
 				</div>

@@ -78,6 +78,7 @@
                                             <th>kind</th>
                                             <th>product</th>
 											<th>period</th>
+                                            <th>inventory status<span class="explain-message">(kind가 구독일 때)</span></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -97,6 +98,7 @@
 													<span>{effective_end}</span>
 												</p>
 											</td>
+                                            <td>{status}</td>
 										</tr>
 										<tr>
 											<td><input type="checkbox" /></td>
@@ -114,6 +116,7 @@
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
 												</p>
 											</td>
+                                            <td>ACTIVE</td>
 										</tr>
                                         <tr>
 											<td><input type="checkbox" /></td>
@@ -131,6 +134,7 @@
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
 												</p>
 											</td>
+                                            <td>TERMINATED</td>
 										</tr>
 									</tbody>
 								</table>

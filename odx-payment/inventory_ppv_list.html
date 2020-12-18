@@ -42,11 +42,125 @@
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
-						  inventory_plan_list.html과 같음
-                        </div>
-                        <p class="font-ml">
-                            <a href="inventory_ppv_detail.html" class="font-lm">open detail page</a>
-                        </p>
+							<div class="list-option">
+								 <ul class="list-option-filter">
+									<li>
+										<select>
+                                            <option>service:all (filter)</option>
+											<option>odk</option>
+											<option>odc</option>
+										</select>
+									</li>
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-input w-ml">
+														<input type="search" placeholder="customer e-mail (search)"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-ss"><input type="checkbox" /></th>
+											<th class="w-sl">ID</th>
+                                            <th>service</th>
+											<th>customer</th>
+                                            <th>kind</th>
+                                            <th>product</th>
+											<th>period</th>
+                                            <th>inventory status<span class="explain-message">(kind가 ppv일 때)</span></th>
+										</tr>
+									</thead>
+									<tbody>
+                                        <tr>
+											<td><input type="checkbox" /></td>
+											<td><a href="#">{inventory.id}</a></td>
+                                            <td>{service}</td>
+											<td>
+												{user.email}
+											</td>
+                                            <td>{kind}</td>
+                                            <td>{product.code}</td>
+                                            <td>
+												<p>
+                                                    <span>{effective_start}</span>
+													<span>~</span>
+													<span>{effective_end}</span>
+												</p>
+											</td>
+                                            <td>미정</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+                                            <td><a href="#">123456789</a></td>
+                                            <td>ODK</td>
+											<td>
+												jay@odkmedia.net
+											</td>
+                                            <td>SUBSCRIPTION</td>
+                                            <td>VIP</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+													<span>~</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+											</td>
+                                            <td>-</td>
+										</tr>
+                                        <tr>
+											<td><input type="checkbox" /></td>
+                                            <td><a href="#">123456789</a></td>
+                                            <td>ODC</td>
+											<td>
+												changwookson@odkmedia.net
+											</td>
+                                            <td>PAY-PER-VIEW</td>
+                                            <td>avengers-4.99</td>
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+													<span>~</span>
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+												</p>
+											</td>
+                                            <td>-</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+							<p class="font-ml">
+								<a href="inventory_ppv_detail.html" class="font-lm">open detail page</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</article>

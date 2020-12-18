@@ -41,12 +41,118 @@
 						</h1>
 					</div>
 					<div class="con-body">
-                        <div class="con-sector">
-						  receipt_plan_list.html과 같음
-                        </div>
-                        <p class="font-ml">
-                            <a href="receipt_ppv_detail.html" class="font-lm">open detail page</a>
-                        </p>
+						<div class="con-sector">
+							<div class="list-option">
+                                <ul class="list-option-filter">
+									<li>
+										<select>
+                                            <option>service:all (filter)</option>
+											<option>odk</option>
+											<option>odc</option>
+										</select>
+									</li>
+									<li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-input w-ml">
+														<input type="search" placeholder="customer e-mail (search)"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrap scroll-customed">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>ID</th>
+                                            <th>pg</th>
+                                            <th>total</th>
+                                            <th>inventory</th>
+                                            <th>customer</th>
+                                            <th>service</th>
+											<th>paid time</th>
+										</tr>
+									</thead>
+									<tbody>
+                                        <tr>
+                                            <td><a>{receipt id}</a></td>
+                                            <td>{pg}</td>
+                                            <td>{total} / USD</td>
+                                            <td>{inventory id}</td>
+                                            <td>
+												{user.email}
+											</td>
+                                            <td>{service}</td> 
+                                            <td>
+												<p>
+                                                    <span>{paid_at date-time}</span>
+												</p>
+											</td>
+										</tr>
+                                        <tr>
+                                            <td><a>12345</a></td>
+                                            <td>bango</td>
+                                            <td>4.99 / USD</td>
+                                            <td>1234</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>ODK</td> 
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+										<tr>
+                                            <td><a>12345</a></td>
+                                            <td>appstore</td>
+                                            <td>4.99 / USD</td>
+                                            <td>1234</td>
+                                            <td>
+												jay@odkmedia.net
+											</td>
+                                            <td>ODK</td> 
+                                            <td>
+												<p>
+                                                    <span>MM-DD-YYYY</span>
+													<span>hh:mm:ss</span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+                            <p class="font-ml">
+								<a href="receipt_ppv_detail.html" class="font-lm">open detail page</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</article>

@@ -125,6 +125,11 @@ h6 {font-size:1.20rem;}
 .w-100per {width:100%; margin-right:0;}
 
 /* message */
+.explain-message {color:#aaa;}
+.explain-message {position:relative;}
+.explain-message:before {font-family: 'FontAwesome'; content: "*"; margin-right:0.25em; margin-left:0.5rem}
+
+
 .disable-message {color:#888;}
 .disable-message {position:relative;}
 .disable-message:before {font-family: 'FontAwesome'; content: "\f057"; margin-right:0.25em;}
