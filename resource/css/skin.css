@@ -36,7 +36,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 html {font-size: 62.5%;}
 body {font-size: 1.2rem; font-family: 'Open Sans', 'Nanum Gothic', sans-serif, helvetica, arial;}
 ol, ul, dl {list-style: none;}
-p {margin-bottom:0.5rem;}
+p {margin:0.5rem 0 0.5rem 0;}
 span {color:inherit;}
 label span {vertical-align:middle;}
 
@@ -80,12 +80,12 @@ a:hover {cursor:pointer; text-decoration:underline;}
 /*--------------------------------------------------*/
 
 /* font scale */
-h1 {font-size:2.00rem;}
-h2 {font-size:1.80rem;}
-h3 {font-size:1.60rem;}
-h4 {font-size:1.50rem;}
-h5 {font-size:1.30rem;}
-h6 {font-size:1.20rem;}
+h1 {font-size:2.00rem; margin:1rem 0 1rem 0}
+h2 {font-size:1.80rem; margin:1rem 0 1rem 0}
+h3 {font-size:1.60rem; margin:1rem 0 1rem 0}
+h4 {font-size:1.50rem; margin:1rem 0 1rem 0}
+h5 {font-size:1.30rem; margin:1rem 0 1rem 0}
+h6 {font-size:1.20rem; margin:1rem 0 1rem 0}
 
 .font-ss {font-size:0.80rem;} 
 .font-sm {font-size:0.90rem;} 

@@ -522,6 +522,82 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
+                                        <th class="label-box-item-label">category<span class="explain-message">ODK case</span></th>
+                                        <td class="label-box-item-desc">
+                                            <ul>
+                                                <li>
+                                                    <label>parent</label>
+                                                    <select name="select-category-odk-1">
+                                                        <option>not selected</option>
+                                                        <option selected>sports</option>
+                                                        <option>life</option>
+                                                    </select>
+                                                    <label>child</label>
+                                                    <select name="select-category-odk-1-1">
+                                                        <option>not selected</option>
+                                                        <option selected>golf</option>
+                                                        <option>baduk</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <input type=checkbox name="is_kocowa" checked>
+                                                    <label>is kocowa</label>
+                                                </li>
+                                            </ul>
+                                            <p class="explain-message">parent select box에서는 root=ture인 목록만 선택할 수 있도록 한다.</p>
+                                            <p class="explain-message">child select box에서는 선택한 parent의 child만 선택할 수 있도록 한다.</p>
+                                            <br>
+                                            <p class="explain-message">admin front에서 parent select box에서 kocowa는 숨김 처리한다.</p>
+                                            <p class="explain-message">is Kocowa를 check하면 'kocowa' category를 추가로 input한다.</p>
+                                            <br>
+                                            <p class="explain-message">만약 위와 같이 선택한 상태라면 categories는 sports, golf, kocowa 3개가 입력된다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">category<span class="explain-message">ODC case</span></th>
+                                        <td class="label-box-item-desc">
+                                            <ul>
+                                                <li>
+                                                    <label>parent</label>
+                                                    <select name="select-category-odc-1">
+                                                        <option>not selected</option>
+                                                        <option selected>sports</option>
+                                                        <option>life</option>
+                                                    </select>
+                                                    <label>child</label>
+                                                    <select name="select-category-odc-1-1">
+                                                        <option>not selected</option>
+                                                        <option selected>golf</option>
+                                                        <option>baduk</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label>parent</label>
+                                                    <select name="select-category-odc-2">
+                                                        <option>not selected</option>
+                                                        <option>sports</option>
+                                                        <option selected>life</option>
+                                                    </select>
+                                                    <label>child</label>
+                                                    <select name="select-category-odc-2-1">
+                                                        <option selected>not selected</option>
+                                                        <option>food</option>
+                                                        <option>health</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <button class="btn-new">Add a category form</button>
+                                                </li>
+                                            </ul>
+                                            <p class="explain-message">parent select box에서는 root=ture인 목록만 선택할 수 있도록 한다.</p>
+                                            <p class="explain-message">child select box에서는 선택한 parent의 child만 선택할 수 있도록 한다.</p>
+                                            <br>
+                                            <p class="explain-message">Add a category form을 누르면 입력 폼이 추가된다.</p>
+                                            <p class="explain-message">만약 위와 같이 선택한 상태라면 categories는 sports, golf, life 3개가 입력된다.</p>
+                                        </td>
+                                    </tr>
+                                    <!--
+                                    <tr>
                                         <th class="label-box-item-label required-field">category</th>
                                         <td class="label-box-item-desc">
                                             <table class="input-btn-group">
@@ -556,6 +632,7 @@
                                             </p>
                                         </td>
                                     </tr>
+                                    -->
                                     <tr>
                                         <th class="label-box-item-label">genre</th>
                                         <td class="label-box-item-desc">
