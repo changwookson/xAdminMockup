@@ -146,8 +146,14 @@ h6 {font-size:1.20rem; margin:1rem 0 1rem 0}
 .warning-message {position:relative;}
 .warning-message:before {font-family: 'FontAwesome'; content: "\f071"; margin-right:0.25em;}
 
-.required-field {color:#BF4040;}
-.required-field:after {content: "(*)"; margin-left:0.25em;}
+.required-field {}
+.required-field:before {font-family: 'FontAwesome'; content: "*";  margin-right:0.25em; color: #F20D0D; font-weight: bold;}
+.recommended-field {}
+.recommended-field:before {font-family: 'FontAwesome'; content: "*";  margin-right:0.25em; color: #0DF2F2; font-weight: bold;}
+.optional-field {}
+.optional-field:before {font-family: 'FontAwesome'; content: "*";  margin-right:0.25em; color: #F2CC0D; font-weight: bold;}
+.ignore-field {}
+.ignore-field:before {font-family: 'FontAwesome'; content: "*";  margin-right:0.25em; color: #BBB; font-weight: bold;}
 /*
 .new-item {font-weight: bold}
 .new-item:after {content: "new"; font-size:0.5em; color:#4095BF; background: #fff; margin-left:1em; border: 0.1rem solid #4095BF; padding:0.2em; border-radius: 0.5em;} 
@@ -640,6 +646,12 @@ input:checked + .switch-slider:before {
 .status-board .status-standby:before {color: #f2cc0d;}
 .status-board .status-inactive:before {color: #888;}
 .status-board .status-uncooked:before {color: #f20d0d;}
+
+/* field-guide */
+.field-guide {padding:0 1.0rem; text-align: right;}
+.field-guide a {color:#5CADD6;}
+.field-guide > li {display: inline-block; height:2.4rem; margin: 0.2rem 0.5rem 0.2rem 0; line-height: 2.4rem;}
+.field-guide> li:before {font-family: 'FontAwesome'; margin-right: 0.25em;}
 
 /* card-board */
 .card-board {text-align:center; color:#fff; padding:0.5rem;}

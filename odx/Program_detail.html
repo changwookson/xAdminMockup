@@ -43,6 +43,22 @@
 					</div>
                     <div class="con-body con-body-tabs-content">
                         <div class="con-sector">
+                            <ul class="field-guide">
+                                <li class="required-field">
+                                    <span>Required</span>
+                                </li>
+                                <li class=recommended-field>
+                                    <span>recommendeded</span>
+                                </li>
+                                <li class="optional-field">
+                                    <span>Optional</span>
+                                </li>
+                                <li class="ignore-field">
+                                    <span>Ignore</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con-sector">
                             <h3 class="con-sector-title">content info</h3>
                             <table class="label-box">
                                 <tbody>
@@ -73,7 +89,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th class="label-box-item-label required-field">program synop</th>
+                                                <th class="label-box-item-label recommended-field">program synop</th>
                                                 <td class="label-box-item-desc">
                                                     <textarea rows="5" cols="" class="w-100per"></textarea>
                                                 </td>
@@ -243,7 +259,7 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label">on-air date</th>
+                                        <th class="label-box-item-label required-field">on-air date</th>
                                         <td class="label-box-item-desc">
                                             <div class="datepicker">
                                                 <label>start
@@ -256,7 +272,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">release weekday</th>
+                                        <th class="label-box-item-label recommended-field">release weekday</th>
                                         <td class="label-box-item-desc">
                                             <div class="datepicker">
                                                 <input type="checkbox" checked/><label>sunday</label>
@@ -270,7 +286,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">produce year</th>
+                                        <th class="label-box-item-label optional-field">produce year</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <span>$YYYY</span>
@@ -278,7 +294,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label new-item">release status</th>
+                                        <th class="label-box-item-label new-item ignore-field">release status</th>
                                         <td class="label-box-item-desc">
                                             <p>
                                                 <span>$release status</span>

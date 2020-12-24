@@ -147,8 +147,7 @@
                                         <th>pg_id</th>
                                         <th>amount</th>
                                         <th>method</th>
-                                        <th>paid</th>
-                                        <th>refunded</th>
+                                        <th>action</th>
                                         <th>refunds</th>
                                     </tr>
                                 </thead>
@@ -158,21 +157,23 @@
                                         <td>stripe</td>
                                         <td>ch_1HtsKXGwHmu2gYNSOkY66CIu"</td>
                                         <td>1.29 USD</td>
-                                        <td>{type} / {brand} / {last4}</td>
-                                        <td>true</td>
-                                        <td>false</td>
+                                        <td><a>{type} / {brand} / {last4}</a></td>
                                         <td><button class="btn-new">refund</button></td>
+                                        <td>
+                                            -
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>1234</td>
                                         <td>stripe</td>
                                         <td>ch_1HtsKXGwHmu2gYNSOkY66CIu"</td>
                                         <td>1.29 USD</td>
-                                        <td>card / visa / 5915</td>
-                                        <td>true</td>
-                                        <td>true</td>
+                                        <td><a>card</a></td>
+                                        <td><button class="btn-new">refund</button></td>
                                         <td>
-                                            <a>refunded info</a>
+                                            <p><a>{refund id}</a></p>
+                                            <p><a>{refund id}</a></p>
+                                            <p><a>{refund id}</a></p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -217,7 +218,7 @@
                             </ul>
                         </div>
                         <div class="con-sector item-box">
-                            <h3 class="con-sector-title">refunds modal <span class="explain-message">refund된 charges 목록에서 refunded info 누르면 나옴</span></h3>
+                            <h3 class="con-sector-title">refunds modal <span class="explain-message">refund된 charges 목록에서 {refund id}누르면 나옴</span></h3>
                             <table class="label-box">
 								<tbody>
                                     <tr>
