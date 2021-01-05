@@ -37,18 +37,18 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Contract</span>
-							<span>Content Povider</span>
+							<span>Document</span>
 						</h1>
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
 							<div class="list-option">
 								<ul class="list-option-filter">
-									<li>
+                                    <li>
 										<select>
-                                            <option>Country:All</option>
-                                            <option>KR</option>
-											<option>CN</option>
+                                            <option>CP:All</option>
+                                            <option>{CP code}</option>
+											<option>{CP code}</option>
 										</select>
 									</li>
                                     <li>
@@ -88,11 +88,12 @@
 										<tr>
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
-											<th>code</th>
                                             <th>name</th>
-                                            <th>country</th>
-                                            <th>manager</th>
-											<th>date</th>
+                                            <th>cp</th>
+                                            <th>parent document</th>
+                                            <th>services</th>
+                                            <th>period</th>
+                                            <th>date</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -100,26 +101,45 @@
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">{cp code}</a>
+												<a href="#">{document name}</a>
 											</td>
-                                            <td>{cp name}</td>
-                                            <td>{country}</td>
-                                            <td>{manager}</td>
                                             <td>
-												<span>{date}</span>
+                                                <a href="#">{CP code}</a>
+                                            </td>
+                                            <td><a href="#">{parent document name}</a></td>
+                                            <td>
+                                                {services array}
+                                            </td>
+                                            <td>
+                                                <span>{start}</span>
+                                                <span>~</span>
+                                                <span>{end}</span>
+											</td>
+                                            <td>
+                                                <span>{date}</span>
 											</td>
 										</tr>
                                         <tr>
 											<td><input type="checkbox" /></td>
 											<td>123456789</td>
 											<td>
-												<a href="#">MARVEL</a>
+												<a href="#">CJENM 2021 updated</a>
 											</td>
-                                            <td>The Walt Disney Company</td>
-                                            <td>US</td>
-                                            <td>taehee@odkmedia.net</td>
                                             <td>
-												<span>MM-DD-YYYY hh:mm:ss</span>
+                                                <a href="#">CJENM</a>
+                                            </td>
+                                            <td><a href="#">CJENM annual</a></td>
+                                            <td>
+                                                <li>odk</li>
+                                                <li>odk</li>
+                                            </td>
+                                            <td>
+                                                <span>MM-DD-YYYY</span>
+                                                <span>~</span>
+                                                <span>MM-DD-YYYY</span>
+											</td>
+                                            <td>
+                                                <span>MM-DD-YYYY hh:mm:ss</span>
 											</td>
 										</tr>
 									</tbody>
@@ -144,7 +164,7 @@
 								</li>
 							</ul>
 							<p class="font-ml">
-								<a href="cp_detail.html" class="font-lm">open detail page</a>
+								<a href="document_detail.html" class="font-lm">open detail page</a>
 							</p>
 						</div>
 					</div>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>ODX Contract Admin</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="contract_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Contract</span>
+							<span>Condition</span>
+							<span>$Condition ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">Condition information</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">Condition Title</th>
+										<td class="label-box-item-desc">
+											<input class="w-lm" type="text" placeholder="input CP name" name=""/>
+                                            <p>
+                                                <span class="warning-message">It is required field. Please input the contract condition title.</span>
+                                            </p>
+										</td>
+                                    </tr>
+                                    <tr>
+										<th class="label-box-item-label">Related Document</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>{document name}</option>
+                                                    <option>{document name}</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Document File</th>
+										<td class="label-box-item-desc">
+                                            <div class="file-upload">
+                                                <p class="item-group">
+                                                    <button type="button" class="file-input-replace btn-new">select file</button>
+                                                    <span>selected file name</span>
+                                                </p>
+                                                <input type="file" class="file-input">
+                                            </div>
+                                            <div class="item-panel" style="margin-top:1.0rem">
+                                                <a>uploaded file name</a>
+                                                <span class="explain-message">click하면 다운로드가 됨</span>
+                                            </div>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Document Options</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">Years</th>
+										<td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>
+                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy" />
+                                                </label>
+                                                <p class="explain-message">api에 없음. 계약 적용 연도를 의미하기 때문에, 계약일은 적당치 않고. 계약 시작일의 년도에서 자동으로 가져와서 보여주기만 하는 방식도 가능은 해보입니다.</p>
+                                            </div>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Date of Signing</th>
+										<td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>
+                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
+                                                </label>
+                                            </div>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Contract Type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>ANNUAL-CONTRACT</option>
+                                                    <option>MULTIPLE-CONTRACT</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Country</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>KR</option>
+                                                    <option>CN</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Tax</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>NET</option>
+                                                    <option>GROSS</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Exclusive</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=checkbox name=exclusive><label>is exclusive?</label>
+                                            </p>
+                                        </td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Sub-Licence</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=checkbox name=sublicense><label>is sub-licensing?</label>
+                                            </p>
+                                        </td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Memo</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-100per"></textarea>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Period</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="datepicker">
+                                                <label>start
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                                <label>end
+                                                    <input type="text" class="datetimepicker-input w-mm" placeholder="yyyy.mm.dd hh:mm" />
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+										<th class="label-box-item-label">enable</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="data-status" checked>disable</label>
+											<label><input type="radio" name="data-status">enable</label>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Contract Options</h3>
+							<table class="label-box">
+								<tbody>
+                                    <tr>
+										<th class="label-box-item-label">Licence Type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>PLAT-PLUS-RS</option>
+                                                    <option>RS_PLUS_MATERIAL_FEE</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Total Price</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
+                                                <label>USD</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Unit Price</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
+                                                <label>USD</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Royalties</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
+                                                <label>%</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Allowed Services</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="checkbox" name="services"><label>ODC</label>
+                                                <input type="checkbox" name="services"><label>ODK</label>
+                                                <input type="checkbox" name="services"><label>ODL</label>
+                                                <input type="checkbox" name="services"><label>ODV</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Allowed Regions</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="checkbox" name="regions"><label>ALL</label>
+                                                <input type="checkbox" name="regions"><label>OC</label>
+                                                <input type="checkbox" name="regions"><label>EU</label>
+                                                <input type="checkbox" name="regions"><label>SEA</label>
+                                                <input type="checkbox" name="regions"><label>SA</label>
+                                                <input type="checkbox" name="regions"><label>NA</label>
+                                                <input type="checkbox" name="regions"><label>USA</label>
+                                                <input type="checkbox" name="regions"><label>ALL-EX-JP</label>
+                                                <input type="checkbox" name="regions"><label>ALL-EX-CN</label>
+                                            </p>
+                                            <p class="explain-message">여기는 한번 정비를 해야할 것 같음.</p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Num of Programs</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
+                                                <label>EA</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Num of Episodes</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
+                                                <label>EA</label>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Tax</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <select>
+                                                    <option selected>Not Selected</option>
+                                                    <option>NET</option>
+                                                    <option>GROSS</option>
+                                                </select>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Exclusive</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=checkbox name=exclusive><label>is exclusive?</label>
+                                            </p>
+                                        </td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Sub-Licence</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <input type=checkbox name=sublicense><label>is sub-licensing?</label>
+                                            </p>
+                                        </td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Memo</th>
+										<td class="label-box-item-desc">
+											<textarea rows="5" cols="" class="w-100per"></textarea>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Cancel</button></li>
+                            <li><button type="button" class="btn-submit">Save</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
