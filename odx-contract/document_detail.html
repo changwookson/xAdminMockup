@@ -49,9 +49,9 @@
                                     <tr>
                                         <th class="label-box-item-label required-field">Document Name</th>
 										<td class="label-box-item-desc">
-											<input class="w-lm" type="text" placeholder="input CP name" name=""/>
+											<input class="w-lm" type="text" placeholder="input Contract Document name" name=""/>
                                             <p>
-                                                <span class="warning-message">It is required field. Please input the contract document name.</span>
+                                                <span class="warning-message">It is required field.</span>
                                             </p>
 										</td>
                                     </tr>
@@ -92,24 +92,6 @@
                                             <div class="item-panel" style="margin-top:1.0rem">
                                                 <a>uploaded file name</a>
                                                 <span class="explain-message">click하면 다운로드가 됨</span>
-                                            </div>
-										</td>
-									</tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">Document Options</h3>
-							<table class="label-box">
-								<tbody>
-                                    <tr>
-										<th class="label-box-item-label">Years</th>
-										<td class="label-box-item-desc">
-                                            <div class="datepicker">
-                                                <label>
-                                                    <input type="text" class="datepicker-input w-sl" placeholder="yyyy" />
-                                                </label>
-                                                <p class="explain-message">api에 없음. 계약 적용 연도를 의미하기 때문에, 계약일은 적당치 않고. 계약 시작일의 년도에서 자동으로 가져와서 보여주기만 하는 방식도 가능은 해보입니다.</p>
                                             </div>
 										</td>
 									</tr>
@@ -205,7 +187,7 @@
                             </table>
                         </div>
                         <div class="con-sector">
-                            <h3 class="con-sector-title">Contract Options</h3>
+                            <h3 class="con-sector-title">Summary of Conditions</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
@@ -259,7 +241,7 @@
 										</td>
 									</tr>
                                     <tr>
-										<th class="label-box-item-label">Allowed Regions</th>
+										<th class="label-box-item-label">Regions</th>
 										<td class="label-box-item-desc">
                                             <p>
                                                 <input type="checkbox" name="regions"><label>ALL</label>
@@ -275,6 +257,40 @@
                                             <p class="explain-message">여기는 한번 정비를 해야할 것 같음.</p>
 										</td>
 									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Regions</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group item-panel">
+                                                <label>allowed</label>
+                                                <select>
+                                                    <option>ALL</option>
+                                                    <option>NA</option>
+                                                </select>
+                                                <label>exclude</label>                                            
+                                                <select>
+                                                    <option>KR</option>
+                                                    <option>JP</option>
+                                                    <option>CN</option>
+                                                </select>
+                                            </p>
+                                            <p class="item-group item-panel">
+                                                <label>allowed</label>
+                                                <select>
+                                                    <option>ALL</option>
+                                                    <option selected>NA</option>
+                                                </select>
+                                                <label>exclude</label>                                            
+                                                <select>
+                                                    <option>KR</option>
+                                                    <option selected>JP</option>
+                                                    <option>CN</option>
+                                                </select>
+                                            </p>
+                                            <p>
+                                                <button class="btn-new">add a row</button>
+                                            </p>
+                                        </td>
+                                    </tr>
                                     <tr>
 										<th class="label-box-item-label">Num of Programs</th>
 										<td class="label-box-item-desc">
@@ -293,48 +309,33 @@
                                             </p>
 										</td>
 									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Tax</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <select>
-                                                    <option selected>Not Selected</option>
-                                                    <option>NET</option>
-                                                    <option>GROSS</option>
-                                                </select>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Exclusive</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type=checkbox name=exclusive><label>is exclusive?</label>
-                                            </p>
-                                        </td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Sub-Licence</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type=checkbox name=sublicense><label>is sub-licensing?</label>
-                                            </p>
-                                        </td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Memo</th>
-										<td class="label-box-item-desc">
-											<textarea rows="5" cols="" class="w-100per"></textarea>
-										</td>
-									</tr>
-                                    
                                 </tbody>
                             </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
                         </div>
-                        <ul class="submit">
-                            <li><button type="button" class="btn-cancel">Cancel</button></li>
-                            <li><button type="button" class="btn-submit">Save</button></li>
-                        </ul>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">
+                                <label>Conditions of Contract</label>
+                            </h3>
+                            
+                            <div class="tabs">
+                                <ul class="tabs-menu scroll-customed">
+                                    <li><a>{child condition ID}</a></li>
+                                    <li><a>{child condition ID}</a></li>
+                                    <li><a style="color:red">add a new condition</a></li>
+                                </ul>
+                                <div class="tabs-content">
+                                    <p class="explain-message">condition_detail의 내용과 똑같이 구성됨</p>
+                                    
+                                </div>
+                                <div class="tabs-content">tabs-content-2</div>
+                                <div class="tabs-content">tabs-content-3</div>
+                            </div>
+                            
+                        </div>
 					</div>
 				</div>
 			</article>

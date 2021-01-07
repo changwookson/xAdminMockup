@@ -127,7 +127,7 @@ h6 {font-size:1.20rem; margin:1rem 0 1rem 0}
 /* message */
 .explain-message {color:#aaa;}
 .explain-message {position:relative;}
-.explain-message:before {font-family: 'FontAwesome'; content: "*"; margin-right:0.25em; margin-left:0.5rem}
+.explain-message:before {font-family: 'FontAwesome'; content: "*Dev Guide: "; margin-right:0.25em; margin-left:0.5rem}
 
 
 .disable-message {color:#888;}
@@ -387,6 +387,7 @@ h6 {font-size:1.20rem; margin:1rem 0 1rem 0}
 .accordion-menu > li > a:hover {text-decoration:none; color:#0ea5f2;}
 .accordion-menu > li > a:focus {outline: none;}
 .accordion-content {max-height: 50.0rem; padding:1.0rem; border-bottom:0.1rem solid #ddd; background:#fff;}
+.accordion-content-none-scroll {max-height: none;}
 
 .subside-list-filter .accordion-menu > li > a {background:#fff;}
 .subside-list-filter .accordion-content {max-height: 20.0rem; overflow: auto;}
