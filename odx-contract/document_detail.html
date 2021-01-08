@@ -164,7 +164,7 @@
 										</td>
 									</tr>
                                     <tr>
-                                        <th class="label-box-item-label">Period</th>
+                                        <th class="label-box-item-label">Contract Period</th>
                                         <td class="label-box-item-desc">
                                             <div class="datepicker">
                                                 <label>start
@@ -186,135 +186,17 @@
                                 </tbody>
                             </table>
                         </div>
+                                    
                         <div class="con-sector">
                             <h3 class="con-sector-title">Summary of Conditions</h3>
-							<table class="label-box">
-								<tbody>
-                                    <tr>
-										<th class="label-box-item-label">Licence Type</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <select>
-                                                    <option selected>Not Selected</option>
-                                                    <option>PLAT-PLUS-RS</option>
-                                                    <option>RS_PLUS_MATERIAL_FEE</option>
-                                                </select>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Total Price</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
-                                                <label>USD</label>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Unit Price</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
-                                                <label>USD</label>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Royalties</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
-                                                <label>%</label>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Allowed Services</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="checkbox" name="services"><label>ODC</label>
-                                                <input type="checkbox" name="services"><label>ODK</label>
-                                                <input type="checkbox" name="services"><label>ODL</label>
-                                                <input type="checkbox" name="services"><label>ODV</label>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Regions</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="checkbox" name="regions"><label>ALL</label>
-                                                <input type="checkbox" name="regions"><label>OC</label>
-                                                <input type="checkbox" name="regions"><label>EU</label>
-                                                <input type="checkbox" name="regions"><label>SEA</label>
-                                                <input type="checkbox" name="regions"><label>SA</label>
-                                                <input type="checkbox" name="regions"><label>NA</label>
-                                                <input type="checkbox" name="regions"><label>USA</label>
-                                                <input type="checkbox" name="regions"><label>ALL-EX-JP</label>
-                                                <input type="checkbox" name="regions"><label>ALL-EX-CN</label>
-                                            </p>
-                                            <p class="explain-message">여기는 한번 정비를 해야할 것 같음.</p>
-										</td>
-									</tr>
-                                    <tr>
-                                        <th class="label-box-item-label">Regions</th>
-                                        <td class="label-box-item-desc">
-                                            <p class="item-group item-panel">
-                                                <label>allowed</label>
-                                                <select>
-                                                    <option>ALL</option>
-                                                    <option>NA</option>
-                                                </select>
-                                                <label>exclude</label>                                            
-                                                <select>
-                                                    <option>KR</option>
-                                                    <option>JP</option>
-                                                    <option>CN</option>
-                                                </select>
-                                            </p>
-                                            <p class="item-group item-panel">
-                                                <label>allowed</label>
-                                                <select>
-                                                    <option>ALL</option>
-                                                    <option selected>NA</option>
-                                                </select>
-                                                <label>exclude</label>                                            
-                                                <select>
-                                                    <option>KR</option>
-                                                    <option selected>JP</option>
-                                                    <option>CN</option>
-                                                </select>
-                                            </p>
-                                            <p>
-                                                <button class="btn-new">add a row</button>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-										<th class="label-box-item-label">Num of Programs</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
-                                                <label>EA</label>
-                                            </p>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">Num of Episodes</th>
-										<td class="label-box-item-desc">
-                                            <p>
-                                                <input type="number" onkeyup="imsi(this)" class="w-sl" placeholder="0"/>
-                                                <label>EA</label>
-                                            </p>
-										</td>
-									</tr>
-                                </tbody>
-                            </table>
-                            <ul class="submit">
-                                <li><button type="button" class="btn-cancel">Cancel</button></li>
-                                <li><button type="button" class="btn-submit">Save</button></li>
-                            </ul>
+                            <div id="condition-options">
+                                <!--condition_detail.html에서 .condition-options 내용을 로드-->
+                                <script type="text/javascript">
+                                    $(document).ready(function(){
+                                        $("#condition-options").load("condition_detail.html .condition-options-table");
+                                    });
+                                </script>
+                            </div>
                         </div>
                         <div class="con-sector">
                             <h3 class="con-sector-title">
@@ -329,7 +211,14 @@
                                 </ul>
                                 <div class="tabs-content">
                                     <p class="explain-message">condition_detail의 내용과 똑같이 구성됨</p>
-                                    
+                                    <div id="child-condition">
+                                        <!--condition_detail.html에서 .con-body 내용을 로드-->
+                                        <script type="text/javascript">
+                                            $(document).ready(function(){
+                                                $("#child-condition").load("condition_detail.html .con-body");
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
                                 <div class="tabs-content">tabs-content-2</div>
                                 <div class="tabs-content">tabs-content-3</div>

@@ -53,9 +53,23 @@
 									</li>
                                     <li>
 										<select>
+                                            <option>Type:All</option>
+                                            <option>ANNUAL_CONTRACT</option>
+											<option>MULTIPLE_CONTRACT</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
                                             <option>Service:All</option>
                                             <option>ODC</option>
 											<option>ODK</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+                                            <option>Enable:All</option>
+                                            <option>Enable:true</option>
+											<option>Enable:false</option>
 										</select>
 									</li>
 									<li>
@@ -80,6 +94,12 @@
 					            			<span>create</span>
 										</button>
 									</li>
+                                    <li>
+										<button type="button" class="btn-cancel">
+											<span class="icon fa fa-plus"></span>
+					            			<span>remove</span>
+										</button>
+									</li>
 								</ul>
 							</div>
 							<div class="table-wrap scroll-customed">
@@ -92,7 +112,8 @@
                                             <th>cp</th>
                                             <th>parent document</th>
                                             <th>services</th>
-                                            <th>period</th>
+                                            <th>contract period</th>
+                                            <th>enable</th>
                                             <th>date</th>
 										</tr>
 									</thead>
@@ -111,9 +132,17 @@
                                                 {services array}
                                             </td>
                                             <td>
-                                                <span>{start}</span>
+                                                <span>{contract_start}</span>
                                                 <span>~</span>
-                                                <span>{end}</span>
+                                                <span>{contract_end}</span>
+											</td>
+                                            <td class="sub-info">
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
                                             <td>
                                                 <span>{date}</span>
@@ -137,6 +166,14 @@
                                                 <span>MM-DD-YYYY</span>
                                                 <span>~</span>
                                                 <span>MM-DD-YYYY</span>
+											</td>
+                                            <td class="sub-info">
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
                                             <td>
                                                 <span>MM-DD-YYYY hh:mm:ss</span>

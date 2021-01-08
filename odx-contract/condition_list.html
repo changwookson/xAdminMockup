@@ -37,7 +37,7 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Contract</span>
-							<span>Document</span>
+							<span>Condition</span>
 						</h1>
 					</div>
 					<div class="con-body">
@@ -46,16 +46,16 @@
 								<ul class="list-option-filter">
                                     <li>
 										<select>
-                                            <option>CP:All</option>
-                                            <option>{CP code}</option>
-											<option>{CP code}</option>
+                                            <option>Service:All</option>
+                                            <option>ODC</option>
+											<option>ODK</option>
 										</select>
 									</li>
                                     <li>
 										<select>
-                                            <option>Service:All</option>
-                                            <option>ODC</option>
-											<option>ODK</option>
+                                            <option>Enable:All</option>
+                                            <option>Enable:true</option>
+											<option>Enable:false</option>
 										</select>
 									</li>
 									<li>
@@ -89,10 +89,10 @@
 											<th class="w-ss"><input type="checkbox" /></th>
 											<th class="w-sl">ID</th>
                                             <th>title</th>
-                                            <th>cp</th>
                                             <th>document</th>
                                             <th>services</th>
-                                            <th>period</th>
+                                            <th>service period</th>
+                                            <th>enable</th>
                                             <th>date</th>
 										</tr>
 									</thead>
@@ -103,17 +103,22 @@
 											<td>
 												<a href="#">{condtition title}</a>
 											</td>
-                                            <td>
-                                                <a href="#">{CP code}</a>
-                                            </td>
                                             <td><a href="#">{parent document name}</a></td>
                                             <td>
                                                 {services array}
                                             </td>
                                             <td>
-                                                <span>{start}</span>
+                                                <span>{service_start}</span>
                                                 <span>~</span>
-                                                <span>{end}</span>
+                                                <span>{service_end}</span>
+											</td>
+                                            <td class="sub-info">
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
                                             <td>
                                                 <span>{date}</span>
@@ -125,9 +130,6 @@
 											<td>
 												<a href="#">CJENM 2021 updated</a>
 											</td>
-                                            <td>
-                                                <a href="#">CJENM</a>
-                                            </td>
                                             <td><a href="#">CJENM annual</a></td>
                                             <td>
                                                 <li>odk</li>
@@ -137,6 +139,14 @@
                                                 <span>MM-DD-YYYY</span>
                                                 <span>~</span>
                                                 <span>MM-DD-YYYY</span>
+											</td>
+                                            <td class="sub-info">
+												<p>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                            <span class="switch-slider"> </span>
+                                                    </label>
+                                                </p>
 											</td>
                                             <td>
                                                 <span>MM-DD-YYYY hh:mm:ss</span>
