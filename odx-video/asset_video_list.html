@@ -53,13 +53,21 @@
                             <div class="list-option">
                                 <ul class="list-option-filter">
                                     <li>
-                                        <label>Source</label>
 										<select>
                                             <option>Source:All</option>
                                             <option>Inhouse</option>
                                             <option>Mediahold</option>
                                             <option>Relay</option>
 											<option>Brightcove</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+                                            <option>Status:All</option>
+                                            <option>Created</option>
+                                            <option>Active</option>
+                                            <option>Inactive</option>
+                                            <option>Deleted</option>
 										</select>
 									</li>
                                     <li>
@@ -81,7 +89,13 @@
                                     <li>
                                         <button type="button" class="btn-new">
                                             <span class="icon fa fa-plus"></span>
-                                            <span>ingest S3</span>
+                                            <span>import from Unregisterd File</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-new">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>ingest from S3 URL</span>
                                         </button>
                                     </li>
                                     <li>
@@ -110,23 +124,23 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
+                                                <a href="#">{name}</a>         
+                                            </td>
+                                            <td>{source}</td>
+                                            <td>
+                                                <p>{status}</p>
+                                            <td>{created date time}</td>
+                                            <td>{modified date time}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
+                                            <td>
                                                 <a href="#">name</a>         
                                             </td>
                                             <td>mediahold</td>
                                             <td>
-                                                <p>{status}</p>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td>123456789</td>
-                                            <td>
-                                                <a href="#">name</a>         
-                                            </td>
-                                            <td>Brightcove</td>
-                                            <td>
-                                                <p>{status}</p>
+                                                <p>active</p>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
@@ -137,9 +151,9 @@
                                             <td>
                                                 <a href="#">name</a>         
                                             </td>
-                                            <td>inhouse</td>
+                                            <td>brightcove</td>
                                             <td>
-                                                <p>{status}</p>
+                                                <p>inactive</p>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
@@ -171,16 +185,9 @@
                         </div>
                         <br/><br/><br/>
                         <div class="con-sector item-box" style="width:50%;">
-                            <h3 class="con-sector-title">Ingest S3 Video Modal</h3>
+                            <h3 class="con-sector-title">Import from Unregisterd File</h3>
 							<div class="list-option">
                                 <ul class="list-option-filter">
-                                    <li>
-                                        <label>Bucket</label>
-										<select>
-                                            <option>a bucket</option>
-											<option>a bucket</option>
-										</select>
-									</li>
                                     <li>
 										<table class="search-bar">
 											<tbody>
@@ -201,26 +208,26 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>file name</th>
+                                            <th>file url</th>
                                             <th class="w-ms">action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <a href="#">$file name</a>         
+                                                <a href="#">$file url</a>         
                                             </td>
                                             <td>
-                                                <button class="btn-get">ingest this file</button>
+                                                <button class="btn-get">import</button>
                                             </td>
                                             
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="#">$file name</a>         
+                                                <a href="#">$file url</a>         
                                             </td>
                                             <td>
-                                                <button class="btn-get">ingest this file</button>
+                                                <button class="btn-get">import</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -243,6 +250,29 @@
                                         <button type="button" class="btn-common">></button>
                                     </div>
                                 </li>
+                            </ul>
+                        </div>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">Ingest from S3 URL</h3>
+                            <table class="label-box">
+                                <tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">CP URL</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="text" class="w-100per">										
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Backup URL</th>
+                                        <td class="label-box-item-desc">
+                                            <input type="text" class="w-100per">										
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
                             </ul>
                         </div>
                     </div>

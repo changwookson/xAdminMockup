@@ -83,6 +83,22 @@
 										</td>
 									</tr>
                                     <tr>
+                                        <th class="label-box-item-label">file name</th>
+										<td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span>{file name}</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">duration</th>
+										<td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span>{hh:mm:ss}</span>
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
                                         <th class="label-box-item-label">status</th>
 										<td class="label-box-item-desc">
                                             <p class="item-group">
@@ -90,17 +106,16 @@
                                             </p>
 										</td>
 									</tr>
-									</tr>
                                     <tr>
                                         <th class="label-box-item-label">created</th>
 										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy (PST/D)</span>
+											<span>{yyyy-mm-dd hh:mm:ss} (PST/D)</span>
 										</td>
 									</tr>
                                     <tr>
                                         <th class="label-box-item-label">updated</th>
 										<td class="label-box-item-desc">
-											<span>mm-dd-yyyy (PST/D)</span>
+											<span>{yyyy-mm-dd hh:mm:ss} (PST/D)</span>
 										</td>
 									</tr>
                                 </tbody>
@@ -179,31 +194,65 @@
                                     <tr>
                                         <th class="label-box-item-label">original subtitles</th>
                                         <td class="label-box-item-desc">
-                                            <div class="item-group item-panel">
-                                                <button type="button" class="btn-get">file upload</button>
+                                            <div class="list-option">
+                                                <ul class="item-group list-option-action">
+                                                    <li>
+                                                        <button type="button" class="btn-new">add new subtitle</button>
+                                                    </li>
+                                                </ul>
                                             </div>
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
+                                                            <th class="w-ms">language</th>
+                                                            <th class="w-ms">codec</th>
+                                                            <th class="w-ms">active</th>
                                                             <th>url</th>
-                                                            <th>action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <a>$https://file.name/path.smi</a>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
                                                             </td>
                                                             <td>
-                                                                <button class="btn-cancel">remove</button>
+                                                                <span>vtt</span>
                                                             </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            
+                                                        </tr>
                                                         <tr>
                                                             <td>
-                                                                <a>$https://file.name/path.smi</a>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
                                                             </td>
                                                             <td>
-                                                                <button class="btn-cancel">remove</button>
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -214,33 +263,15 @@
                                     <tr>
                                         <th class="label-box-item-label">transcoded subtitles</th>
                                         <td class="label-box-item-desc">
-                                            <!--
-                                            <div class="item-group item-panel">
-                                                <button type="button" class="btn-get">file upload</button>
-                                                <input type="text" placeholder="uloaded file path" disabled>
-                                                <select>
-                                                    <option>type</option>
-                                                    <option>VTT</option>
-                                                    <option>SRT</option>
-                                                </select>
-                                                <select>
-                                                    <option>language</option>
-                                                    <option>KO</option>
-                                                    <option>EN</option>
-                                                </select>
-                                                <input type="text" class="w-mm" placeholder="language name">
-                                                <button type="button" class="btn-new">add</button>
-                                            </div>
-                                            -->
                                             <div class="table-wrap scroll-customed">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
                                                             <th class="w-ms">language</th>
-                                                            <th class="w-sl sub-info">type</th>
+                                                            <th class="w-ms">codec</th>
+                                                            <th class="w-ms">active</th>
                                                             <th>url</th>
-                                                            <th>active</th>
-                                                            <th>action</th>
+                                                            <th>original_subtitle</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -252,11 +283,8 @@
                                                                     <option>EN</option>
                                                                 </select>
                                                             </td>
-                                                            <td class="sub-info">
-                                                                <span>vtt</span>
-                                                            </td>
                                                             <td>
-                                                                <a>$https://file.name/path.vtt</a>
+                                                                <span>vtt</span>
                                                             </td>
                                                             <td>
                                                                 <label class="switch">
@@ -265,7 +293,10 @@
                                                                 </label>
                                                             </td>
                                                             <td>
-                                                                <button class="btn-cancel">remove</button>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -276,20 +307,157 @@
                                                                     <option>EN</option>
                                                                 </select>
                                                             </td>
-                                                            <td class="sub-info">
+                                                            <td>
                                                                 <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
                                                             </td>
                                                             <td>
                                                                 <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                             <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">original admindir subtitles</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="list-option">
+                                                <ul class="item-group list-option-action">
+                                                    <li>
+                                                        <button type="button" class="btn-new">add new subtitle</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">language</th>
+                                                            <th class="w-ms">codec</th>
+                                                            <th class="w-ms">active</th>
+                                                            <th>url</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
                                                                 <label class="switch">
-                                                                    <input type="checkbox">
+                                                                    <input type="checkbox" checked>
                                                                         <span class="switch-slider"> </span>
                                                                 </label>
                                                             </td>
                                                             <td>
-                                                                <button class="btn-cancel">remove</button>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">transcoded admindir subtitles</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="table-wrap scroll-customed">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="w-ms">language</th>
+                                                            <th class="w-ms">codec</th>
+                                                            <th class="w-ms">active</th>
+                                                            <th>url</th>
+                                                            <th>original_subtitle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <select>
+                                                                    <option>language</option>
+                                                                    <option>KO</option>
+                                                                    <option>EN</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <span>vtt</span>
+                                                            </td>
+                                                            <td>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" checked>
+                                                                        <span class="switch-slider"> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
+                                                            </td>
+                                                            <td>
+                                                                <a>$https://file.name/path.vtt</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -338,7 +506,32 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label">images</th>
+                                        <th class="label-box-item-label">poster</th>
+                                        <td class="label-box-item-desc">
+                                            <ul>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                                <li class="item-panel" style="display:inline-block;">
+                                                    <p class="img-embed-pure img-w-200">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </p>
+                                                    <p><a>https://file.name/path.jpg</a></p>
+                                                </li>
+                                            </ul> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">thumbnail</th>
                                         <td class="label-box-item-desc">
                                             <ul>
                                                 <li class="item-panel" style="display:inline-block;">
@@ -368,6 +561,35 @@
                                             <textarea rows="10" class="w-100per">meta.json</textarea>
                                         </td>
                                     </tr>                                  
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Save</button></li>
+                            </ul>
+                        </div>
+                        <br><br><br>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">Adda new subtitle</h3>
+                            <table class="label-box">
+                                <tbody>                                 
+                                    <tr>
+                                        <th class="label-box-item-label">file</th>
+                                        <td class="label-box-item-desc">
+                                            <div class="item-group">
+                                                <button type="button" class="btn-new">select file</button>
+                                                <span>selected file name.vtt</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">codec</th>
+                                        <td class="label-box-item-desc">
+                                            <select>
+                                                <option>vtt</option>
+                                            </select>									
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                             <ul class="submit">
