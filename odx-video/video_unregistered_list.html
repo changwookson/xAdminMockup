@@ -44,27 +44,20 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Live</span>
-                            <span>Asset</span>
+							<span>Video</span>
+                            <span>Unregisterd Files</span>
 						</h1>
 					</div>					
                     <div class="con-body">
                         <div class="con-sector">
-                            <div class="list-option">
+							<div class="list-option">
                                 <ul class="list-option-filter">
-                                    <li>
-                                        <label>kind</label>
-										<select>
-                                            <option>broadcast</option>
-											<option>curated</option>
-										</select>
-									</li>
                                     <li>
 										<table class="search-bar">
 											<tbody>
 												<tr>
 													<td class="search-bar-input">
-														<input type="search" placeholder="file name"/>
+														<input type="search" placeholder="keyword"/>
 													</td>
 													<td class="search-bar-btn">
 														<button type="button"><span class="icon fa fa-search"></span></button>
@@ -74,53 +67,39 @@
 										</table>
 									</li>
                                 </ul>
-                                <ul class="list-option-action">
-                                    <li>
-                                        <button type="button" class="btn-new">
-                                            <span class="icon fa fa-plus"></span>
-                                            <span>Add Live Stream</span>
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn-cancel">
-                                            <span class="icon fa fa-times"></span>
-                                            <span>remove</span>
-                                        </button>
-                                    </li>
-                                </ul>
                             </div>
                             <div class="table-wrap scroll-customed">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="w-ss"><input type="checkbox" /></th>
-                                            <th class="w-sl">ID</th>
-                                            <th>name</th>
-                                            <th class="w-ms">kind</th>
-                                            <th class="w-ms">created</th>
-                                            <th class="w-ms">updated</th>
+                                            <th>file url</th>
+                                            <th class="w-ls">S3 folder path for backup</th>
+                                            <th class="w-ml">action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td>123456789</td>
                                             <td>
-                                                <a href="#">$name</a>         
+                                                <a href="#">$file url</a>         
                                             </td>
-                                            <td>broadcast</td>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>
+                                                <input class="w-100per" type="text" placeholder="/date-time/program-slug/episode-number">
+                                            </td>
+                                            <td>
+                                                <button class="btn-get">ingest to Video Asset</button>
+                                            </td>
+                                            
                                         </tr>
                                         <tr>
-                                            <td><input type="checkbox" /></td>
-                                            <td>123456789</td>
                                             <td>
-                                                <a href="#">$name</a>         
+                                                <a href="#">$file url</a>         
                                             </td>
-                                            <td>curated</td>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
-                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>
+                                                <input class="w-100per"  type="text" placeholder="/date-time/program-slug/episode-number">
+                                            </td>
+                                            <td>
+                                                <button class="btn-get">ingest to Video Asset</button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -130,7 +109,7 @@
                                 <li>
                                     <select>
                                         <option>10s</option>
-                                        <option current>20s</option>
+                                        <option selected>20s</option>
                                         <option>50s</option>
                                         <option>100s</option>
                                     </select>
@@ -143,9 +122,6 @@
                                     </div>
                                 </li>
                             </ul>
-                            <p class="font-ml">
-                                <a href="live_stream_detail.html" class="font-lm">open detail page</a>
-                            </p>
                         </div>
                     </div>
 				</div>
