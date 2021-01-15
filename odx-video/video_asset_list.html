@@ -45,7 +45,7 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Asset</span>
-							<span>Live</span>
+							<span>Video</span>
 						</h1>
 					</div>					
                     <div class="con-body">
@@ -53,10 +53,21 @@
                             <div class="list-option">
                                 <ul class="list-option-filter">
                                     <li>
-                                        <label>kind</label>
 										<select>
-                                            <option>broadcast</option>
-											<option>curated</option>
+                                            <option>Source:All</option>
+                                            <option>Inhouse</option>
+                                            <option>Mediahold</option>
+                                            <option>Relay</option>
+											<option>Brightcove</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+                                            <option>Status:All</option>
+                                            <option>Created</option>
+                                            <option>Active</option>
+                                            <option>Inactive</option>
+                                            <option>Deleted</option>
 										</select>
 									</li>
                                     <li>
@@ -64,7 +75,7 @@
 											<tbody>
 												<tr>
 													<td class="search-bar-input">
-														<input type="search" placeholder="file name"/>
+														<input type="search" placeholder="keyword"/>
 													</td>
 													<td class="search-bar-btn">
 														<button type="button"><span class="icon fa fa-search"></span></button>
@@ -78,7 +89,7 @@
                                     <li>
                                         <button type="button" class="btn-new">
                                             <span class="icon fa fa-plus"></span>
-                                            <span>Add Live Stream</span>
+                                            <span>ingest from Unregisterd Files</span>
                                         </button>
                                     </li>
                                     <li>
@@ -96,9 +107,10 @@
                                             <th class="w-ss"><input type="checkbox" /></th>
                                             <th class="w-sl">ID</th>
                                             <th>name</th>
-                                            <th class="w-ms">kind</th>
-                                            <th class="w-ms">created</th>
-                                            <th class="w-ms">updated</th>
+                                            <th class="w-ms">source</th>
+                                            <th class="w-ms">status</th>
+                                            <th class="w-mm">created</th>
+                                            <th class="w-mm">updated</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -106,9 +118,24 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
-                                                <a href="#">$name</a>         
+                                                <a href="#">{name}</a>         
                                             </td>
-                                            <td>broadcast</td>
+                                            <td>{source}</td>
+                                            <td>
+                                                <p>{status}</p>
+                                            <td>{created date time}</td>
+                                            <td>{modified date time}</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
+                                            <td>
+                                                <a href="#">name</a>         
+                                            </td>
+                                            <td>mediahold</td>
+                                            <td>
+                                                <p>active</p>
+                                            </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                         </tr>
@@ -116,9 +143,12 @@
                                             <td><input type="checkbox" /></td>
                                             <td>123456789</td>
                                             <td>
-                                                <a href="#">$name</a>         
+                                                <a href="#">name</a>         
                                             </td>
-                                            <td>curated</td>
+                                            <td>brightcove</td>
+                                            <td>
+                                                <p>inactive</p>
+                                            </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                         </tr>
@@ -144,8 +174,78 @@
                                 </li>
                             </ul>
                             <p class="font-ml">
-                                <a href="asset_live_detail.html" class="font-lm">open detail page</a>
+                                <a href="video_asset_detail.html" class="font-lm">open detail page</a>
                             </p>
+                        </div>
+                        <br/><br/><br/>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">Import from Unregisterd File<span class="explain-message">list의 버튼을 누르면 모달이 나타남</span></h3>
+							<div class="list-option">
+                                <ul class="list-option-filter">
+                                    <li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+                                </ul>
+                            </div>
+                            <div class="table-wrap scroll-customed">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>file url</th>
+                                            <th class="w-ms">action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#">$file url</a>         
+                                            </td>
+                                            <td>
+                                                <button class="btn-get">ingest</button>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">$file url</a>         
+                                            </td>
+                                            <td>
+                                                <button class="btn-get">ingest</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="pagenation-simple">
+                                <span>Rows per page</span>
+                                <li>
+                                    <select>
+                                        <option>10s</option>
+                                        <option selected>20s</option>
+                                        <option>50s</option>
+                                        <option>100s</option>
+                                    </select>
+                                </li>
+                                <span>1-6 of 9</span>
+                                <li>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn-common"><</button>
+                                        <button type="button" class="btn-common">></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="explain-message">page_size=20</span>
                         </div>
                     </div>
 				</div>
