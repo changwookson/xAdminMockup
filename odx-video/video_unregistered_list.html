@@ -73,7 +73,6 @@
                                     <thead>
                                         <tr>
                                             <th>file url</th>
-                                            <th class="w-ls">S3 folder path for backup</th>
                                             <th class="w-ml">action</th>
                                         </tr>
                                     </thead>
@@ -83,9 +82,6 @@
                                                 <a href="#">$file url</a>         
                                             </td>
                                             <td>
-                                                <input class="w-100per" type="text" placeholder="/date-time/program-slug/episode-number">
-                                            </td>
-                                            <td>
                                                 <button class="btn-get">ingest to Video Asset</button>
                                             </td>
                                             
@@ -93,9 +89,6 @@
                                         <tr>
                                             <td>
                                                 <a href="#">$file url</a>         
-                                            </td>
-                                            <td>
-                                                <input class="w-100per"  type="text" placeholder="/date-time/program-slug/episode-number">
                                             </td>
                                             <td>
                                                 <button class="btn-get">ingest to Video Asset</button>
@@ -121,6 +114,24 @@
                                         <button type="button" class="btn-common">></button>
                                     </div>
                                 </li>
+                            </ul>
+                        </div>
+                        <br/><br/><br/>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">Ingest to Video Asset<span class="explain-message">list의 버튼을 누르면 모달이 나타남</span></h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">Backup S3 Folder Path</th>
+										<td class="label-box-item-desc">
+											<input class="w-100per"  type="text" placeholder="example : /date-time/program-slug/episode-number">
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-submit">Submit</button></li>
                             </ul>
                         </div>
                     </div>
