@@ -44,14 +44,33 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
+							
 							<span>Video</span>
-                            <span>Unregistered Files</span>
+                            <span>Asset</span>
 						</h1>
 					</div>					
                     <div class="con-body">
                         <div class="con-sector">
-							<div class="list-option">
+                            <div class="list-option">
                                 <ul class="list-option-filter">
+                                    <li>
+										<select>
+                                            <option>Source:All</option>
+                                            <option>Inhouse</option>
+                                            <option>Mediahold</option>
+                                            <option>Relay</option>
+											<option>Brightcove</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+                                            <option>Status:All</option>
+                                            <option>Created</option>
+                                            <option>Active</option>
+                                            <option>Inactive</option>
+                                            <option>Deleted</option>
+										</select>
+									</li>
                                     <li>
 										<table class="search-bar">
 											<tbody>
@@ -67,32 +86,72 @@
 										</table>
 									</li>
                                 </ul>
+                                <ul class="list-option-action">
+                                    <li>
+                                        <button type="button" class="btn-new">
+                                            <span class="icon fa fa-plus"></span>
+                                            <span>ingest from S3 URI</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-cancel">
+                                            <span class="icon fa fa-times"></span>
+                                            <span>remove</span>
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="table-wrap scroll-customed">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>file url</th>
-                                            <th class="w-ml">action</th>
+                                            <th class="w-ss"><input type="checkbox" /></th>
+                                            <th class="w-sl">ID</th>
+                                            <th>name</th>
+                                            <th class="w-ms">source</th>
+                                            <th class="w-ms">status</th>
+                                            <th class="w-mm">created</th>
+                                            <th class="w-mm">updated</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
                                             <td>
-                                                <a href="#">$file url</a>         
+                                                <a href="#">{name}</a>         
                                             </td>
+                                            <td>{source}</td>
                                             <td>
-                                                <button class="btn-get">ingest to Video Asset</button>
-                                            </td>
-                                            
+                                                <p>{status}</p>
+                                            <td>{created date time}</td>
+                                            <td>{modified date time}</td>
                                         </tr>
                                         <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
                                             <td>
-                                                <a href="#">$file url</a>         
+                                                <a href="#">name</a>         
                                             </td>
+                                            <td>mediahold</td>
                                             <td>
-                                                <button class="btn-get">ingest to Video Asset</button>
+                                                <p>active</p>
                                             </td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
+                                            <td>
+                                                <a href="#">name</a>         
+                                            </td>
+                                            <td>brightcove</td>
+                                            <td>
+                                                <p>inactive</p>
+                                            </td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -102,7 +161,7 @@
                                 <li>
                                     <select>
                                         <option>10s</option>
-                                        <option selected>20s</option>
+                                        <option current>20s</option>
                                         <option>50s</option>
                                         <option>100s</option>
                                     </select>
@@ -115,16 +174,25 @@
                                     </div>
                                 </li>
                             </ul>
+                            <p class="font-ml">
+                                <a href="video_asset_detail.html" class="font-lm">open detail page</a>
+                            </p>
                         </div>
                         <br/><br/><br/>
                         <div class="con-sector item-box" style="width:50%;">
-                            <h3 class="con-sector-title">Ingest to Video Asset<span class="explain-message">list의 버튼을 누르면 모달이 나타남</span></h3>
+                            <h3 class="con-sector-title">Ingest from S3 URI<span class="explain-message">list의 버튼을 누르면 모달이 나타남</span></h3>
                             <table class="label-box">
 								<tbody>
                                     <tr>
-                                        <th class="label-box-item-label">S3 Folder Path</th>
+                                        <th class="label-box-item-label">S3 File URI</th>
 										<td class="label-box-item-desc">
-											<input class="w-100per"  type="text" placeholder="example : date/category/program/episode-number">
+											<input class="w-100per"  type="text" placeholder="S3://">
+										</td>
+									</tr>
+                                    <tr>
+                                        <th class="label-box-item-label">Video Name</th>
+										<td class="label-box-item-desc">
+											<input class="w-100per"  type="text" placeholder="date/cp-name/program-name/episode-number">
 										</td>
 									</tr>
                                 </tbody>
