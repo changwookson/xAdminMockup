@@ -230,7 +230,9 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                {language code}
+                                                                <select>
+                                                                    <option>language code</option>
+                                                                </select>
                                                             </td>
                                                             <td>
                                                                 <span>{codec}</span>
@@ -250,7 +252,9 @@
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                KO
+                                                                <select>
+                                                                    <option>language code</option>
+                                                                </select>
                                                             </td>
                                                             <td>
                                                                 <span>vtt</span>
@@ -270,6 +274,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
+                                                <p class="explain-message">language 선택값은 admin.constants api의 cc_language에 따른다.</p>
                                             </div>
                                         </td>
                                     </tr>
@@ -539,15 +544,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="label-box-item-label required-field">language</th>
+                                        <th class="label-box-item-label required-field">codec</th>
                                         <td class="label-box-item-desc">
-                                            <select>
-                                                <option>KO</option>
-                                                <option>EN</option>
-                                                <option>ES</option>
-                                                <option>zh-Hans</option>
-                                                <option>zh-Hant</option>
-                                            </select>									
+                                            <input value="vtt" disabled>
+                                            <p class="explain-message">codec 값은 선택한 파일의 확장자를 자동으로 입력해준다</p>
                                         </td>
                                     </tr>
                                 </tbody>
