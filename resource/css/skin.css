@@ -720,6 +720,7 @@ input:checked + .switch-slider:before {
 .table tbody td .td-desc span {color:#555; font-size:1.1rem; margin-right:0.5rem;}
 .table button {padding:0 0.5rem; margin-right:0.2rem;}
 
+
 .table .table-list-item-img {width:8.0rem; height: 6.0rem;}
 .table .table-list-item-img.profile-image {width:6.0rem; height: 6.0rem;}
 .table .table-list-item-img.video-thumbnail {width:10.67rem; height: 6.0rem;}
@@ -741,6 +742,8 @@ input:checked + .switch-slider:before {
 .table-pure {border:none; margin:0;}
 .table-pure tbody {border:none; margin:0;}
 .table-pure tbody td {border:none; margin:0;}
+.table-tr-focused {background: #FCCFCF;}
+.table-tr-semi-focused {background: #CFEDFC;}
 
 /* list-option */
 .list-option {width:100%;}

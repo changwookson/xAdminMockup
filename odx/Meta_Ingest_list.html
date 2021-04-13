@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off">
+            <div class="article-subside-switch">
+				<a class="article-subside-switch-close">Hide sub-siderbar</a>
+				<a class="article-subside-switch-open">Show sub-siderbar</a>
+			</div>			
+			<aside id="article-subside">
+				<div class="subside-wrap scroll-customed">
+				</div>
+			</aside>
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Contents</span>
+                            <span>Meta Ingest</span>
+						</h1>
+					</div>					
+                    <div class="con-body">
+                        <div class="con-sector">
+							<div class="list-option">
+                                <ul class="list-option-filter">
+                                    <li>
+										<select>
+											<option>meta type: All</option>
+											<option>series</option>
+                                            <option>seoson</option>
+                                            <option>episode</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+											<option>mapping status: All</option>
+											<option>unmatched</option>
+                                            <option>matched</option>
+										</select>
+									</li>
+                                    <li>
+										<table class="search-bar">
+											<tbody>
+												<tr>
+													<td class="search-bar-input">
+														<input type="search" placeholder="keyword"/>
+													</td>
+													<td class="search-bar-btn">
+														<button type="button"><span class="icon fa fa-search"></span></button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+                                </ul>
+                            </div>
+                            <div class="table-wrap scroll-customed">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>cp</th>
+                                            <th>meta level</th>
+                                            <th>meta id</th>
+                                            <th class="w-sl">meta image</th>
+                                            <th>meta title</th>
+                                            <th>meta service type</th>
+                                            <th>meta information</th>
+                                            <th>mapping status</th>
+                                            <th>mapping type</th>
+                                            <th>mapping program</th>
+                                            <th>EP Ingest Status</th>
+                                            <th>date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-tr-focused">
+                                            <td>
+                                                KCP
+                                            </td>
+                                            <td>
+                                                seoson
+                                            </td>
+                                            <td>
+                                                12345
+                                            </td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                seoson title
+                                            </td>
+                                            <td>
+                                                Kocowa
+                                            </td>
+                                            <td>
+                                                <li><a href="#">03-02-2021 16:00:33</a></li>
+                                            </td>
+                                            <td class="red">
+                                                unmatched
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>create</option>
+                                                    <option>exist</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <button class="btn-new">create</button>
+                                                <button class="btn-get">select</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn-new">start episodes ingest</button>
+                                            </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                        </tr>
+                                        <tr class="table-tr-semi-focused">
+                                            <td>
+                                                KCP
+                                            </td>
+                                            <td>
+                                                seoson
+                                            </td>
+                                            <td>
+                                                12345
+                                            </td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                seoson title
+                                            </td>
+                                            <td>
+                                                kocowa
+                                            </td>
+                                            <td>
+                                                <li><a href="#">03-02-2021 16:00:33</a></li>
+                                                <li><a href="#">03-01-2020 16:00:33</a></li>
+                                            </td>
+                                            <td>
+                                                matched
+                                            </td>
+                                            <td>
+                                                <select disabled>
+                                                    <option>create</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span>{program-slug}</span>
+                                            </td>
+                                            <td>
+                                                12ep/20ep
+                                            </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                KCP
+                                            </td>
+                                            <td>
+                                                seoson
+                                            </td>
+                                            <td>
+                                                12345
+                                            </td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                seoson title
+                                            </td>
+                                            <td>
+                                                Kocowa
+                                            </td>
+                                            <td>
+                                                <li><a href="#">03-02-2021 16:00:33</a></li>
+                                            </td>
+                                            <td>
+                                                matched
+                                            </td>
+                                            <td>
+                                                <select disabled>
+                                                    <option>exist</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span>{program-slug}</span>
+                                            </td>
+                                            <td>
+                                                12ep/20ep
+                                            </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="pagenation-simple">
+                                <span>Rows per page</span>
+                                <li>
+                                    <select>
+                                        <option>10s</option>
+                                        <option selected>20s</option>
+                                        <option>50s</option>
+                                        <option>100s</option>
+                                    </select>
+                                </li>
+                                <span>1-6 of 9</span>
+                                <li>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn-common"><</button>
+                                        <button type="button" class="btn-common">></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <br/><br/><br/>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">meta information<span class="explain-message">list의 meta information 시간 클릭시 모달</span></h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">meta</th>
+                                        <td class="label-box-item-desc">
+                                            <textarea rows="10" class="w-100per">
+{
+    "id": "12346",
+    "title": "runningman",
+    "service_type" : "kocowa"
+    "poster" : url
+}
+                                            </textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Close</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'create' 버튼 클릭시 모달</span></h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">program slug</th>
+										<td class="label-box-item-desc">
+											<input class="w-100per"  type="text" placeholder="">
+										</td>
+									</tr>
+                                     <tr>
+										<th class="label-box-item-label">enable</th>
+										<td class="label-box-item-desc">
+											<label><input type="radio" name="data-status" checked>disable</label>
+											<label><input type="radio" name="data-status">enable</label>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">in review</th>
+										<td class="label-box-item-desc">
+                                            <p class="info-message">If set the in review option, it will be displayed only in office IP.</p>
+											<label><input type="radio" name="in_review-status" checked>public</label>
+											<label><input type="radio" name="in_review-status">in review</label>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-modify">Save</button></li>
+                            </ul>
+                        </div>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'select' 버튼 클릭시 모달</span></h3>
+                            <table class="label-box">
+								<tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">select a program</th>
+										<td class="label-box-item-desc">
+                                            <select class="w-100per">
+                                                <option>search and select a program</option>
+                                                <option>program slug</option>
+                                            </select>
+										</td>
+									</tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-modify">Save</button></li>
+                            </ul>
+                        </div>
+                    </div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
