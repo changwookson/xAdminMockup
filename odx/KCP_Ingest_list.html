@@ -44,22 +44,14 @@
 				<div class="con-wrap">
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
-							<span>Contents</span>
-                            <span>Meta Ingest</span>
+							<span>Pipeline</span>
+                            <span>KCP Ingest List</span>
 						</h1>
 					</div>					
                     <div class="con-body">
                         <div class="con-sector">
 							<div class="list-option">
                                 <ul class="list-option-filter">
-                                    <li>
-										<select>
-											<option>Pipeline: All</option>
-											<option>KCP</option>
-                                            <option>RCN</option>
-                                            <option>MediaHold</option>
-										</select>
-									</li>
                                     <li>
 										<select>
 											<option>meta level: All</option>
@@ -71,8 +63,8 @@
                                     <li>
 										<select>
 											<option>mapping status: All</option>
-											<option>unmatched</option>
-                                            <option>matched</option>
+											<option>$status</option>
+                                            <option>mapping_end</option>
 										</select>
 									</li>
                                     <li>
@@ -95,24 +87,18 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Pipeline</th>
-                                            <th>meta level</th>
-                                            <th>meta id</th>
+                                            <th class="w-sl">meta level</th>
+                                            <th class="w-sl">meta id</th>
                                             <th class="w-sl">meta image</th>
                                             <th>meta title</th>
-                                            <th>meta service type</th>
-                                            <th>meta information</th>
-                                            <th>mapping status</th>
-                                            <th>mapping program</th>
-                                            <th>EP Ingest Status</th>
-                                            <th>date</th>
+                                            <th class="w-mm">meta service type</th>
+                                            <th class="w-ms">mapping status</th>
+                                            <th class="w-ml">mapping program</th>
+                                            <th class="w-mm">date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-tr-focused">
-                                            <td>
-                                                KCP
-                                            </td>
                                             <td>
                                                 seoson
                                             </td>
@@ -129,25 +115,19 @@
 												</div>
 											</td>
                                             <td>
-                                                seoson title
+                                                {seoson title}
                                             </td>
                                             <td>
                                                 Kocowa
                                             </td>
-                                            <td>
-                                                <li><a href="#">04-13-2021 16:00:33</a></li>
-                                            </td>
                                             <td class="red">
-                                                unmatched
+                                                ?
                                             </td>
                                             
                                             <td>
                                                 <button class="btn-new">create</button>
                                                 <button class="btn-get">select</button>
                                             </td>
-                                            <td>
-                                                <button class="btn-new">start episodes ingest</button>
-                                            </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
@@ -157,10 +137,7 @@
                                                 </p>
 											</td>
                                         </tr>
-                                        <tr class="table-tr-semi-focused">
-                                            <td>
-                                                KCP
-                                            </td>
+                                        <tr>
                                             <td>
                                                 seoson
                                             </td>
@@ -177,23 +154,16 @@
 												</div>
 											</td>
                                             <td>
-                                                seoson title
+                                                {seoson title}
                                             </td>
                                             <td>
                                                 kocowa
                                             </td>
                                             <td>
-                                                <li><a href="#">04-13-2021 16:00:33</a></li>
-                                                <li><a href="#">03-01-2020 16:00:33</a></li>
-                                            </td>
-                                            <td>
-                                                matched
+                                                mapping_end
                                             </td>
                                             <td>
                                                 <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td>
-                                                12ep/20ep
                                             </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
@@ -202,12 +172,9 @@
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
                                                 </p>
-											</td>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                KCP
-                                            </td>
                                             <td>
                                                 seoson
                                             </td>
@@ -224,22 +191,16 @@
 												</div>
 											</td>
                                             <td>
-                                                seoson title
+                                                {seoson title}
                                             </td>
                                             <td>
                                                 non-Kocowa
                                             </td>
                                             <td>
-                                                <li><a href="#">03-02-2021 16:00:33</a></li>
-                                            </td>
-                                            <td>
-                                                matched
+                                                mapping_end
                                             </td>
                                             <td>
                                                 <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td>
-                                                12ep/20ep
                                             </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
@@ -251,9 +212,6 @@
 											</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                KCP
-                                            </td>
                                             <td>
                                                 seoson
                                             </td>
@@ -270,22 +228,16 @@
 												</div>
 											</td>
                                             <td>
-                                                seoson title
+                                                {seoson title}
                                             </td>
                                             <td>
                                                 non-Kocowa
                                             </td>
                                             <td>
-                                                <li><a href="#">03-02-2021 16:00:33</a></li>
-                                            </td>
-                                            <td>
-                                                matched
+                                                mapping_end
                                             </td>
                                             <td>
                                                 <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td>
-                                                12ep/20ep
                                             </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
@@ -319,6 +271,7 @@
                             </ul>
                         </div>
                         <br/><br/><br/>
+                        <!--
                         <div class="con-sector item-box" style="width:50%;">
                             <h3 class="con-sector-title">meta information<span class="explain-message">list의 meta information 시간 클릭시 모달</span></h3>
                             <table class="label-box">
@@ -327,12 +280,12 @@
                                         <th class="label-box-item-label">meta</th>
                                         <td class="label-box-item-desc">
                                             <textarea rows="10" class="w-100per">
-{
-    "id": "12346",
-    "title": "runningman",
-    "service_type" : "kocowa"
-    "poster" : url
-}
+                                                {
+                                                    "id": "12346",
+                                                    "title": "runningman",
+                                                    "service_type" : "kocowa"
+                                                    "poster" : url
+                                                }
                                             </textarea>
                                         </td>
                                     </tr>
@@ -342,6 +295,7 @@
                                 <li><button type="button" class="btn-cancel">Close</button></li>
                             </ul>
                         </div>
+                        -->
                         <div class="con-sector item-box" style="width:50%;">
                             <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'create' 버튼 클릭시 모달</span></h3>
                             <table class="label-box">
@@ -352,19 +306,11 @@
 											<input class="w-100per"  type="text" placeholder="">
 										</td>
 									</tr>
-                                     <tr>
+                                    <tr>
 										<th class="label-box-item-label">enable</th>
 										<td class="label-box-item-desc">
 											<label><input type="radio" name="data-status" checked>disable</label>
 											<label><input type="radio" name="data-status">enable</label>
-										</td>
-									</tr>
-                                    <tr>
-										<th class="label-box-item-label">in review</th>
-										<td class="label-box-item-desc">
-                                            <p class="info-message">If set the in review option, it will be displayed only in office IP.</p>
-											<label><input type="radio" name="in_review-status" checked>public</label>
-											<label><input type="radio" name="in_review-status">in review</label>
 										</td>
 									</tr>
                                 </tbody>
@@ -376,23 +322,122 @@
                         </div>
                         <div class="con-sector item-box" style="width:50%;">
                             <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'select' 버튼 클릭시 모달</span></h3>
-                            <table class="label-box">
-								<tbody>
-                                    <tr>
-                                        <th class="label-box-item-label">select a program</th>
-										<td class="label-box-item-desc">
-                                            <select class="w-100per">
-                                                <option>search and select a program</option>
-                                                <option>program slug</option>
-                                            </select>
-										</td>
-									</tr>
-                                </tbody>
-                            </table>
-                            <ul class="submit">
-                                <li><button type="button" class="btn-cancel">Cancel</button></li>
-                                <li><button type="button" class="btn-modify">Save</button></li>
-                            </ul>
+                            <div class="subside-wrap scroll-customed">
+                                <ul class="subside-list-filter">
+                                    <li>
+                                        <ul class="list-option-filter">							
+                                            <li>
+                                                <table class="search-bar">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="search-bar-input">
+                                                                <input type="search" placeholder="keyword"/>
+                                                            </td>
+                                                            <td class="search-bar-btn">
+                                                                <button type="button"><span class="icon fa fa-search"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="table-wrap scroll-customed">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-ss"><input type="checkbox" /></th>
+                                                        <th class="w-sl">ID</th>
+                                                        <th class="w-sl">image</th>
+                                                        <th>program</th>
+                                                        <th class="w-sl">select</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p><input type="checkbox" /></p>
+                                                        </td>
+                                                        <td>
+                                                            <p>123456789</p>
+                                                        </td>
+                                                        <td class="table-list-item-img video-thumbnail">
+                                                            <div class="img-embed-wrap">
+                                                                <div class="img-embed-ratio">
+                                                                    <div class="img-embed-code">
+                                                                        <img src="../resource/image/sample-poster-1.jpg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                <a href="#">$program slug</a>
+                                                            </p>
+                                                            <p class="td-desc">
+                                                                <span class="sub-te">$program_title_ko</span>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                <button type="button" class="btn-get font-sm">select</button>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p><input type="checkbox" /></p>
+                                                        </td>
+                                                        <td>
+                                                            <p>123456789</p>
+                                                        </td>
+                                                        <td class="table-list-item-img video-thumbnail">
+                                                            <div class="img-embed-wrap">
+                                                                <div class="img-embed-ratio">
+                                                                    <div class="img-embed-code">
+                                                                        <img src="../resource/image/sample-poster-2.jpg" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                <a href="#">$program slug</a>
+                                                            </p>
+                                                            <p class="td-desc">
+                                                                <span class="sub-te">$program_title_ko</span>
+                                                        </td>
+                                                        <td>
+                                                            <p>
+                                                                <button type="button" class="btn-get font-sm">select</button>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                        <ul class="pagenation-simple">
+                                            <span>Rows per page</span>
+                                            <li>
+                                                <select>
+                                                    <option>10s</option>
+                                                    <option current>20s</option>
+                                                    <option>50s</option>
+                                                    <option>100s</option>
+                                                </select>
+                                            </li>
+                                            <span>1-6 of 9</span>
+                                            <li>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn-common"><</button>
+                                                    <button type="button" class="btn-common">></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 				</div>
