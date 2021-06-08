@@ -127,7 +127,9 @@ h6 {font-size:1.20rem; margin:1rem 0 1rem 0}
 /* message */
 .explain-message {color:#aaa;}
 .explain-message {position:relative;}
-.explain-message:before {font-family: 'FontAwesome'; content: "*Dev Guide: "; margin-right:0.25em; margin-left:0.5rem}
+.explain-message:before {font-family: 'FontAwesome'; content: "(*"; margin-left:0.5rem}
+.explain-message:after {font-family: 'FontAwesome'; content: ")"; margin-right:0.5rem}
+.dev-message h3, li {color:green}
 
 
 .disable-message {color:#888;}

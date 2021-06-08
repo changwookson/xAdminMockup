@@ -45,7 +45,7 @@
 					<div class="con-header">
 						<h1 class="con-header-title depth-item">
 							<span>Pipeline</span>
-                            <span>KCP Ingest List</span>
+                            <span>KCP Expired List</span>
 						</h1>
 					</div>					
                     <div class="con-body">
@@ -58,13 +58,6 @@
 											<option>series</option>
                                             <option>seoson</option>
                                             <option>episode</option>
-										</select>
-									</li>
-                                    <li>
-										<select>
-											<option>mapping status: All</option>
-											<option>$status</option>
-                                            <option>mapping_end</option>
 										</select>
 									</li>
                                     <li>
@@ -91,13 +84,45 @@
                                             <th class="w-sl">meta id</th>
                                             <th class="w-sl">meta image</th>
                                             <th>meta title</th>
-                                            <th class="w-mm">meta service type</th>
-                                            <th class="w-mm">mapping status</th>
-                                            <th class="w-ls">mapping content</th>
-                                            <th class="w-mm">date</th>
+                                            <th class="w-mm">meta status</th>
+                                            <th class="w-mm">meta expired date</th>
+                                            <th class="w-ls">mapping contents</th>
+                                            <th class="w-mm">mapping contents publish status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr class="">
+                                            <td>
+                                                series / seoson / episode
+                                            </td>
+                                            <td>
+                                                12345
+                                            </td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                {meta title}
+                                            </td>
+                                            <td>
+                                                active / inactive / deleted
+                                            </td>
+                                            <td>
+                                                YYYY.MM.DD hh:mm:ss
+                                            </td>
+                                            <td>
+                                                <a href="#">{program-slug}</a>
+                                            </td>
+                                            <td>
+                                                unscheduled / scheduled / published / expired / disabled / inreview
+                                            </td>
+                                        </tr>
                                         <tr class="table-tr-focused">
                                             <td>
                                                 seoson
@@ -118,26 +143,51 @@
                                                 {seoson title}
                                             </td>
                                             <td>
-                                                Kocowa
+                                                inactive
                                             </td>
-                                            <td class="red">
-                                                ?
-                                            </td>
-                                            
                                             <td>
-                                                <button class="btn-new">create</button>
-                                                <button class="btn-get">select</button>
+                                                YYYY.MM.DD hh:mm:ss
                                             </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-											</td>
+                                            <td>
+                                                <a href="#">{program-slug}</a>
+                                            </td>
+                                            <td>
+                                                published
+                                            </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="table-tr-focused">
+                                            <td>
+                                                episode
+                                            </td>
+                                            <td>
+                                                12345
+                                            </td>
+                                            <td class="table-list-item-img video-thumbnail">
+												<div class="img-embed-wrap">
+													<div class="img-embed-ratio">
+														<div class="img-embed-code">
+															<img src="../resource/image/sample-poster-1.jpg" />
+														</div>
+													</div>
+												</div>
+											</td>
+                                            <td>
+                                                {episode title}
+                                            </td>
+                                            <td>
+                                                active
+                                            </td>
+                                            <td>
+                                                2021.06.07 00:00:00
+                                            </td>
+                                            <td>
+                                                <a href="#">{episode-slug}</a>
+                                            </td>
+                                            <td>
+                                                published
+                                            </td>
+                                        </tr>
+                                        <tr class="">
                                             <td>
                                                 seoson
                                             </td>
@@ -157,26 +207,21 @@
                                                 {seoson title}
                                             </td>
                                             <td>
-                                                kocowa
+                                                inactive
                                             </td>
                                             <td>
-                                                mapping_end
+                                                2021.06.07 00:00:00
                                             </td>
                                             <td>
-                                                <a href="#">{program-slug}</a>
+                                                <a href="#">{episode-slug}</a>
                                             </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
+                                            <td>
+                                                expired
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="">
                                             <td>
-                                                seoson
+                                                episode
                                             </td>
                                             <td>
                                                 12345
@@ -191,62 +236,20 @@
 												</div>
 											</td>
                                             <td>
-                                                {seoson title}
+                                                {episode title}
                                             </td>
                                             <td>
-                                                non-Kocowa
+                                                inactive
                                             </td>
                                             <td>
-                                                mapping_end
+                                                2021.06.07 00:00:00
                                             </td>
                                             <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-											</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                seoson
+                                                <a href="#">{episode-slug}</a>
                                             </td>
                                             <td>
-                                                12345
+                                                disabled
                                             </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {seoson title}
-                                            </td>
-                                            <td>
-                                                non-Kocowa
-                                            </td>
-                                            <td>
-                                                mapping_end
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-											</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -271,7 +274,8 @@
                             </ul>
                             <ul class="dev-message">
                                 <h3>*Dev guide</h3>
-                                <li>mapping status가 'mapping_end'가 아닌 경우, tr 배경에 강조색을 넣어준다</li>
+                                <li>meta의 status가 inactive이거나 deleted인 경우, 또는 meta expired date가 {현 시점+30일} 보다 작은 경우 list에 나타난다. (API 작업)</li>
+                                <li>mapping된 conten의 publish status가 published인 경우 tr 백그라운드에 강조 색을 넣어준다..</li>
                                 <li>mapping content의 slug를 클릭하면 새창으로, 해당 프로그램의 admin 상세 페이지로 이동한다.</li>
                             </ul>
                         </div>
