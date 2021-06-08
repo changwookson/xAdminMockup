@@ -80,15 +80,15 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="w-sl">meta level</th>
-                                            <th class="w-sl">meta id</th>
-                                            <th class="w-sl">meta image</th>
-                                            <th>meta title</th>
-                                            <th class="w-mm">meta status</th>
-                                            <th class="w-mm">meta expired date</th>
+                                            <th class="w-sl">kcp level</th>
+                                            <th class="w-sl">kcp id</th>
+                                            <th class="w-sl">kcp image</th>
+                                            <th>kcp title</th>
+                                            <th class="w-mm">kcp status</th>
+                                            <th class="w-mm">kcp expired date</th>
                                             <th class="w-ls">mapping contents</th>
-                                            <th class="w-mm">mapping contents publish status</th>
-                                            <th class="w-mm">mapping contents enable</th>
+                                            <th class="w-mm">publish status</th>
+                                            <th class="w-mm">action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -124,12 +124,7 @@
                                                 unscheduled / scheduled / published / expired / disabled / inreview
                                             </td>
                                             <td class="sub-info">
-												<p>
-                                                    <label class="switch">
-                                                        <input type="checkbox">
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+												<button class="btn-modify">update to disabled</button>
 											</td>
                                         </tr>
                                         <tr class="table-tr-focused">
@@ -164,12 +159,7 @@
                                                 published
                                             </td>
                                             <td class="sub-info">
-												<p>
-                                                    <label class="switch">
-                                                        <input type="checkbox" checked>
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+												<button class="btn-modify">update to disabled</button>
 											</td>
                                         </tr>
                                         <tr class="table-tr-focused">
@@ -204,12 +194,7 @@
                                                 published
                                             </td>
                                             <td class="sub-info">
-												<p>
-                                                    <label class="switch">
-                                                        <input type="checkbox" checked>
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+												<button class="btn-modify">update to disabled</button>
 											</td>
                                         </tr>
                                         <tr class="">
@@ -244,12 +229,7 @@
                                                 expired
                                             </td>
                                             <td class="sub-info">
-												<p>
-                                                    <label class="switch">
-                                                        <input type="checkbox" checked>
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+												-
 											</td>
                                         </tr>
                                         <tr class="">
@@ -284,12 +264,7 @@
                                                 disabled
                                             </td>
                                             <td class="sub-info">
-												<p>
-                                                    <label class="switch">
-                                                        <input type="checkbox">
-                                                            <span class="switch-slider"> </span>
-                                                    </label>
-                                                </p>
+												-
 											</td>
                                         </tr>
                                         <tr class="">
@@ -350,9 +325,12 @@
                             </ul>
                             <ul class="dev-message">
                                 <h3>*Dev guide</h3>
-                                <li>meta의 status가 inactive이거나 deleted인 경우, 또는 meta expired date가 {현 시점+30일} 보다 작은 경우 list에 나타난다. (API 작업)</li>
-                                <li>mapping된 conten의 publish status가 published인 경우 tr 백그라운드에 강조 색을 넣어준다..</li>
-                                <li>mapping content의 slug를 클릭하면 새창으로, 해당 프로그램의 admin 상세 페이지로 이동한다.</li>
+                                <li>API</li>
+                                <li>- meta의 status가 inactive이거나 deleted인 경우, 또는 meta expired date가 {현 시점+14일} 보다 작은 경우 list에 나타난다.</li>
+                                <li>Front</li>
+                                <li>- mapping된 conten의 publish_status가 published인 경우 tr에 하이라이트를 넣어준다.</li>
+                                <li>- mapping된 conten의 publish_status가 published인 경우 action 버튼이 나타난다.</li>
+                                <li>- mapping content의 slug를 클릭하면 새창으로, 해당 프로그램의 admin 상세 페이지로 이동한다.</li>
                             </ul>
                         </div>
                         <br/><br/><br/>
