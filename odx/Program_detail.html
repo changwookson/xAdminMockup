@@ -63,16 +63,67 @@
                             <table class="label-box">
                                 <tbody>
                                     <tr>
-                                        <th class="label-box-item-label required-field">program name-slug</th>
+                                        <th class="label-box-item-label required-field">program slug</th>
                                         <td class="label-box-item-desc">
-                                            <input class="w-lm" type="text" placeholder="input program name by english" name=""/>
-                                            <p>
-                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
-                                            </p>
+                                            <div>
+                                                <p class="explain-message">when create mode</p>
+                                                <p>
+                                                    <input class="w-lm" type="text" placeholder="input program name by english" name=""/>
+                                                </p>
+                                                
+                                                <p>
+                                                    <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="explain-message">when edit mode</p>
+                                                <p>
+                                                    <input class="w-lm" type="text" placeholder="{entered current slug}" name=""/ disabled>
+                                                    <button class="btn-modify">change slug</button>
+                                                </p>
+                                                
+                                            </div>
+                                            
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="con-sector item-box" style="width:50%;">
+                                <h3 class="con-sector-title">change slug<span class="explain-message">change slug 클릭시 모달</span></h3>
+                                <table class="label-box">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label-box-item-label">history of slug</th>
+                                            <td class="label-box-item-desc">
+                                                <p class="item-group">
+                                                    <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                                </p>
+                                                <p class="item-group">
+                                                    <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                                </p>
+                                                <p class="item-group">
+                                                    <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="label-box-item-label">next slug</th>
+                                            <td class="label-box-item-desc">
+                                                <p>
+                                                    <input class="w-100per"  type="text" placeholder="">
+                                                </p>
+                                                <p>
+                                                    <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="submit">
+                                    <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                    <li><button type="button" class="btn-modify">Save</button></li>
+                                </ul>
+                            </div>
                             <div class="tabs">
                                 <ul class="tabs-menu scroll-customed">
                                     <li><a class="required-field">Default Langs</a></li>

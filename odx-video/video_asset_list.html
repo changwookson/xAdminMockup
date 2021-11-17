@@ -111,6 +111,7 @@
                                             <th class="w-sl">ID</th>
                                             <th>name</th>
                                             <th class="w-ms">source</th>
+                                            <th class="w-ms">profile</th>
                                             <th class="w-ms">status</th>
                                             <th class="w-mm">created</th>
                                             <th class="w-mm">updated</th>
@@ -125,7 +126,12 @@
                                             </td>
                                             <td>{source}</td>
                                             <td>
-                                                <p>{status}</p>
+                                                <button class="btn-common font-sm">{item}</button>
+                                                <button class="btn-common font-sm">{item}</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-sm">{status}</button>
+                                            </td>
                                             <td>{created date time}</td>
                                             <td>{modified date time}</td>
                                         </tr>
@@ -135,9 +141,28 @@
                                             <td>
                                                 <a href="#">name</a>         
                                             </td>
+                                            <td>inhouse</td>
+                                            <td>
+                                                <button class="btn-common font-sm">DRM</button>
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-sm">processing</button>
+                                            </td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                            <td>MM-DD-YYYY hh:mm:ss</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>123456789</td>
+                                            <td>
+                                                <a href="#">name</a>         
+                                            </td>
                                             <td>mediahold</td>
                                             <td>
-                                                <p>active</p>
+                                                
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-sm">processing</button>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
@@ -150,7 +175,9 @@
                                             </td>
                                             <td>brightcove</td>
                                             <td>
-                                                <p>inactive</p>
+                                            </td>
+                                            <td>
+                                                <button class="btn-common font-sm">failed</button>
                                             </td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>
                                             <td>MM-DD-YYYY hh:mm:ss</td>

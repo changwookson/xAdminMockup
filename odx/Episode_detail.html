@@ -54,7 +54,7 @@
 					</div>
 					<div class="con-body">
 						<div class="con-sector">
-                            <h3 class="con-sector-title">Program</h3>
+                            <h3 class="con-sector-title">Info</h3>
 							<table class="label-box">
 								<tbody>
                                     <tr>
@@ -80,45 +80,62 @@
                                             <p class="info-message">list에서 program을 select하고 create한 경우, 자동으로 입력되어 생성</p>
 										</td>
 									</tr>									
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="con-sector">
-                            <h3 class="con-sector-title">type</h3>
-							<table class="label-box">
-								<tbody>
 									<tr>
 										<th class="label-box-item-label">episode kind</th>
 										<td class="label-box-item-desc">
                                             <label>
-                                                <input type="radio" name="episode-type" checked>a episode of series
+                                                <input type="radio" name="episode-type" checked>series
                                             </label>
                                             <label>
-                                                <input type="radio" name="episode-type">one main episode
+                                                <input type="radio" name="episode-type">main
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="episode-type">additional
                                             </label>
 											<label>
                                                 <input type="radio" name="episode-type">trailer
                                             </label>
 											<label>
-                                                <input type="radio" name="episode-type">additional clip
+                                                <input type="radio" name="episode-type">clip
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th class="label-box-item-label required-field">episode number</th>
 										<td class="label-box-item-desc">
-                                            <label>
-                                                <input type="radio" name="episode-type-number-type" checked>order number
-                                                <input class="w-sl" type="number" name=""/>
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="episode-type-number-type">date
-                                                <input type="text" class="datepicker-input w-sl" placeholder="yyyy-mm-dd" />
-                                            </label>
-                                            <p>
-                                                <span class="warning-message">There is same number aleady.</span>
-                                            </p>
+                                            <input class="w-sl" type="number" name=""/>
                                         </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">episode part</th>
+										<td class="label-box-item-desc">
+                                            <input class="w-sl" type="number" name=""/>
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label required-field">episode slug</th>
+                                        <td class="label-box-item-desc">
+                                            <div>
+                                                <p class="explain-message">when create mode</p>
+                                                <p>
+                                                    <input class="w-lm" type="text" placeholder="input program name by english" name=""/>
+                                                    <button class="btn-common">auto generate</button>
+                                                </p>
+                                                
+                                                <p>
+                                                    <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="explain-message">when edit mode</p>
+                                                <p>
+                                                    <input class="w-lm" type="text" placeholder="{entered current slug}" name=""/ disabled>
+                                                    <button class="btn-modify">change slug</button>
+                                                </p>
+                                                
+                                            </div>
+                                            
+                                        </td>
                                     </tr>
                                     <!--
                                     <tr>
@@ -134,7 +151,43 @@
 									</tr>
                                     -->
 								</tbody>
-							</table>						
+							</table>
+                        <div class="con-sector item-box" style="width:50%;">
+                            <h3 class="con-sector-title">change slug<span class="explain-message">change slug 클릭시 모달</span></h3>
+                            <table class="label-box">
+                                <tbody>
+                                    <tr>
+                                        <th class="label-box-item-label">history of slug</th>
+                                        <td class="label-box-item-desc">
+                                            <p class="item-group">
+                                                <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                            </p>
+                                            <p class="item-group">
+                                                <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                            </p>
+                                            <p class="item-group">
+                                                <span>{entered previous slug 1}</span><span> | </span><span class="sub-info">yyyy.dd.mm hh:mm:ss</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="label-box-item-label">next slug</th>
+                                        <td class="label-box-item-desc">
+                                            <p>
+                                                <input class="w-100per"  type="text" placeholder="">
+                                            </p>
+                                            <p>
+                                                <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="submit">
+                                <li><button type="button" class="btn-cancel">Cancel</button></li>
+                                <li><button type="button" class="btn-modify">Save</button></li>
+                            </ul>
+                        </div>
                         </div>
 						<div class="con-sector">
                             <h3 class="con-sector-title">asset</h3>
