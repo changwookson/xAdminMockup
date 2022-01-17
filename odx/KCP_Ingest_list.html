@@ -62,9 +62,17 @@
 									</li>
                                     <li>
 										<select>
-											<option>mapping status: All</option>
-											<option>$status</option>
-                                            <option>mapping_end</option>
+											<option>status: All</option>
+											<option>start</option>
+                                            <option>processing</option>
+                                            <option>end</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+											<option>meta_enable: All</option>
+											<option>true</option>
+                                            <option>false</option>
 										</select>
 									</li>
                                     <li>
@@ -87,158 +95,82 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="w-sl">kcp level</th>
-                                            <th class="w-sl">kcp id</th>
-                                            <th class="w-sl">kcp image</th>
-                                            <th>kcp title</th>
-                                            <th class="w-mm">kcp service type</th>
-                                            <th class="w-mm">mapping status</th>
-                                            <th class="w-ls">mapping content</th>
+                                            <th class="w-sl">id</th>
+                                            <th class="w-sl">source</th>
+                                            <th class="w-mm">file_path</th>
+                                            <th class="w-sl">status</th>
+                                            <th class="w-sl">meta_status</th>
+                                            <th class="w-sl">meta_enable</th>
+                                            <th class="w-mm">ingest_to</th>
+                                            <th class="w-mm">ingest_at</th>
                                             <th class="w-mm">date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>
+                                                <a>12345</a>
+                                            </td>
+                                            <td>
+                                                kcp
+                                            </td>
+                                            <td>
+                                                <a>$path</a>
+											</td>
+                                            <td>
+                                                end
+                                            </td>
+                                            <td>
+                                                $string
+                                            </td>
+                                            <td>
+                                                true/false
+                                            </td>
+                                            <td>
+                                                <a>$mapping program slug</a>
+                                            </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                        </tr>
                                         <tr class="table-tr-focused">
                                             <td>
-                                                seoson
+                                                <a>12345</a>
                                             </td>
                                             <td>
-                                                12345
+                                                kcp
                                             </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
+                                            <td>
+                                                <a>$path</a>
 											</td>
                                             <td>
-                                                {seoson title}
+                                                start
                                             </td>
                                             <td>
-                                                Kocowa
+                                                $string
                                             </td>
-                                            <td class="red">
-                                                ?
-                                            </td>
-                                            
                                             <td>
-                                                <button class="btn-new">create</button>
-                                                <button class="btn-get">select</button>
+                                                true/false
+                                            </td>
+                                            <td>
+                                                <button class="btn-new">new program</button>
+                                                <button class="btn-get">exist program</button>
                                             </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                    <span>-</span>
                                                 </p>
 											</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                seoson
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {seoson title}
-                                            </td>
-                                            <td>
-                                                kocowa
-                                            </td>
-                                            <td>
-                                                mapping_end
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                seoson
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {seoson title}
-                                            </td>
-                                            <td>
-                                                non-Kocowa
-                                            </td>
-                                            <td>
-                                                mapping_end
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td class="sub-info">
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-                                                <p class="td-desc">
-                                                    <span>MM-DD-YYYY hh:mm:ss</span>
-                                                </p>
-											</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                seoson
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {seoson title}
-                                            </td>
-                                            <td>
-                                                non-Kocowa
-                                            </td>
-                                            <td>
-                                                mapping_end
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
                                             <td class="sub-info">
                                                 <p class="td-desc">
                                                     <span>MM-DD-YYYY hh:mm:ss</span>
@@ -271,10 +203,9 @@
                             </ul>
                             <ul class="dev-message">
                                 <h3>*Dev guide</h3>
-                                <li>API</li>
-                                <li>정확한 status와 field 이름은 api 완료 후 갱신합니다.</li>
                                 <li>front</li>
-                                <li>mapping status가 'mapping_end'가 아닌 경우, tr 배경에 하이라이트를 넣어준다</li>
+                                <li>id와 file_path를 클릭하면 detail page로 이동한다.</li>
+                                <li>meta_status가 "ready_for_mapping"인 경우, tr 배경에 하이라이트를 넣어주고, 버튼이 활성화된다.</li>
                                 <li>mapping content의 slug를 클릭하면 새창으로, 해당 프로그램의 admin 상세 페이지로 이동한다.</li>
                             </ul>
                         </div>
@@ -305,13 +236,21 @@
                         </div>
                         -->
                         <div class="con-sector item-box" style="width:50%;">
-                            <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'create' 버튼 클릭시 모달</span></h3>
+                            <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'new program' 버튼 클릭시 모달</span></h3>
                             <table class="label-box">
 								<tbody>
                                     <tr>
                                         <th class="label-box-item-label">program slug</th>
 										<td class="label-box-item-desc">
-											<input class="w-100per"  type="text" placeholder="">
+                                            <div>
+                                                <p>
+                                                    <input class="w-100per" type="text" placeholder="input program name by english" name=""/>
+                                                </p>
+                                                
+                                                <p>
+                                                    <span class="warning-message">Unique value is required. It is usually all lowercase and contains only english letters, numbers, and hyphens.</span>
+                                                </p>
+                                            </div>
 										</td>
 									</tr>
                                     <tr>
@@ -331,6 +270,14 @@
                                 Cannot be replaced after mapping. Please check it again and save it. 매핑 후에는 바꿀 수 없습니다. 다시 한번 확인 후 저장해주세요. 
                             </p>
                         </div>
+                        <div>
+                            <ul class="dev-message">
+                                <h3>*Dev guide</h3>
+                                <li>신규 프로그램의 경우 inreview 상태로 생성합니다</li>
+                                <li>UI에서는 disable 상태로 표현해서, 의지만 드러냅니다.</li>
+                            </ul>
+                        </div>
+                        <br/><br/><br/>
                         <div class="con-sector item-box" style="width:50%;">
                             <h3 class="con-sector-title">meta information<span class="explain-message">list의 mapping program - 'select' 버튼 클릭시 모달</span></h3>
                             <div class="subside-wrap scroll-customed">
