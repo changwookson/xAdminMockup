@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="Category_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Content Ingest</span>
+							<span>KCP Ingest</span>
+							<span>$ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label">ID</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                12345
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Soruce</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                KCP
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $meta_source_content_type
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">File_Path</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $path
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Status</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                start / processing / end
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Meta_Status</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $status
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Meta_Enable</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                True / False
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Mapping_to</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $mapping content id / slug
+                                            </p>
+                                            <ul class="dev-message">
+                                                <li>*특정 IO 콘텐츠와 맵핑된 후 콘텐츠 ID와 Slug를 보여줌</li>
+                                            </ul>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Mapping_to</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                <button class="btn-new">new program</button>
+                                                <button class="btn-get">select program</button>
+                                            </p>
+                                            <ul class="dev-message">
+                                                <li>*content_type=season이고, meta_status가 "ready_for_mapping"인 경우 버튼 활성화</li>
+                                                <li>*버튼 클릭시 모달은 List에서의 모달과 같음</li>
+                                            </ul>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Ingest_at</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Created</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Modified</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+								</tbody>
+							</table>                     
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Back to List</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
