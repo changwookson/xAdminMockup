@@ -54,10 +54,31 @@
                                 <ul class="list-option-filter">
                                     <li>
 										<select>
-											<option>meta level: All</option>
+											<option>type: All</option>
 											<option>series</option>
-                                            <option>seoson</option>
+                                            <option>season</option>
                                             <option>episode</option>
+                                            <option>teaser</option>
+                                            <option>pilot</option>
+                                            <option>special</option>
+                                            <option>behind scenes</option>
+                                            <option>music video</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+											<option>status: All</option>
+											<option>start</option>
+                                            <option>processing</option>
+                                            <option>end</option>
+										</select>
+									</li>
+                                    <li>
+										<select>
+											<option>deletion type: All</option>
+											<option>active</option>
+                                            <option>inactive</option>
+                                            <option>delete</option>
 										</select>
 									</li>
                                     <li>
@@ -80,227 +101,100 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="w-sl">kcp level</th>
-                                            <th class="w-sl">kcp id</th>
-                                            <th class="w-sl">kcp image</th>
-                                            <th>kcp title</th>
-                                            <th class="w-mm">kcp status</th>
-                                            <th class="w-mm">kcp expired date</th>
-                                            <th class="w-ls">mapping contents</th>
-                                            <th class="w-mm">publish status</th>
-                                            <th class="w-mm">action</th>
+                                            <th class="w-sl">id</th>
+                                            <th class="w-sl">type</th>
+                                            <th class="w-mm">file_path</th>
+                                            <th class="w-sl">status</th>
+                                            <th class="w-sl">meta_status</th>
+                                            <th class="w-sl">deletion_type</th>
+                                            <th class="w-mm">deletion_at</th>
+                                            <th class="w-mm">mapping_to</th>
+                                            <th class="w-mm">ingest_at</th>
+                                            <th class="w-mm">date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="">
+                                        <tr>
                                             <td>
-                                                series / seoson / episode
+                                                <a>12345</a>
                                             </td>
                                             <td>
-                                                12345
+                                                $meta_source_content_type
                                             </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
+                                            <td>
+                                                <a>$path</a>
 											</td>
                                             <td>
-                                                {meta title}
+                                                end
                                             </td>
                                             <td>
-                                                active / inactive / deleted
-                                            </td>
-                                            <td>
-                                                YYYY.MM.DD hh:mm:ss
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td>
-                                                unscheduled / scheduled / published / expired / disabled / inreview
-                                            </td>
-                                            <td class="sub-info">
-												<button class="btn-modify">update to disabled</button>
-											</td>
-                                        </tr>
-                                        <tr class="table-tr-focused">
-                                            <td>
-                                                seoson
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {seoson title}
-                                            </td>
-                                            <td>
-                                                inactive
-                                            </td>
-                                            <td>
-                                                YYYY.MM.DD hh:mm:ss
-                                            </td>
-                                            <td>
-                                                <a href="#">{program-slug}</a>
-                                            </td>
-                                            <td>
-                                                published
-                                            </td>
-                                            <td class="sub-info">
-												<button class="btn-modify">update to disabled</button>
-											</td>
-                                        </tr>
-                                        <tr class="table-tr-focused">
-                                            <td>
-                                                episode
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
-											</td>
-                                            <td>
-                                                {episode title}
+                                                $meta_status
                                             </td>
                                             <td>
                                                 active
                                             </td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
                                             <td>
-                                                2021.06.07 00:00:00
-                                            </td>
-                                            <td>
-                                                <a href="#">{episode-slug}</a>
-                                            </td>
-                                            <td>
-                                                published
+                                                <a>-</a>
                                             </td>
                                             <td class="sub-info">
-												<button class="btn-modify">update to disabled</button>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+											</td>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
 											</td>
                                         </tr>
-                                        <tr class="">
+                                        <tr class="table-tr-focused">
                                             <td>
-                                                seoson
+                                                <a>12345</a>
                                             </td>
                                             <td>
-                                                12345
+                                                $meta_source_content_type
                                             </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
+                                            <td>
+                                                <a>$path</a>
 											</td>
                                             <td>
-                                                {seoson title}
+                                                start
                                             </td>
                                             <td>
-                                                inactive
+                                                $meta_status
                                             </td>
                                             <td>
-                                                2021.06.07 00:00:00
-                                            </td>
-                                            <td>
-                                                <a href="#">{episode-slug}</a>
-                                            </td>
-                                            <td>
-                                                expired
+                                                inactive/delete
                                             </td>
                                             <td class="sub-info">
-												-
-											</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td>
-                                                episode
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
+                                                <p class="td-desc">
+                                                    <span>-</span>
+                                                </p>
 											</td>
                                             <td>
-                                                {episode title}
-                                            </td>
-                                            <td>
-                                                inactive
-                                            </td>
-                                            <td>
-                                                2021.06.07 00:00:00
-                                            </td>
-                                            <td>
-                                                <a href="#">{episode-slug}</a>
-                                            </td>
-                                            <td>
-                                                disabled
+                                                <a>$mapping content slug</a>
                                             </td>
                                             <td class="sub-info">
-												-
+                                                <p class="td-desc">
+                                                    <span>-</span>
+                                                </p>
 											</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td>
-                                                series
-                                            </td>
-                                            <td>
-                                                12345
-                                            </td>
-                                            <td class="table-list-item-img video-thumbnail">
-												<div class="img-embed-wrap">
-													<div class="img-embed-ratio">
-														<div class="img-embed-code">
-															<img src="../resource/image/sample-poster-1.jpg" />
-														</div>
-													</div>
-												</div>
+                                            <td class="sub-info">
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
+                                                <p class="td-desc">
+                                                    <span>MM-DD-YYYY hh:mm:ss</span>
+                                                </p>
 											</td>
-                                            <td>
-                                                {series title}
-                                            </td>
-                                            <td>
-                                                inactive
-                                            </td>
-                                            <td>
-                                                2021.06.07 00:00:00
-                                            </td>
-                                            <td>
-                                                <a href="#">null</a>
-                                            </td>
-                                            <td>
-                                                null
-                                            </td>
-                                            <td>
-                                                -
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -326,10 +220,9 @@
                             <ul class="dev-message">
                                 <h3>*Dev guide</h3>
                                 <li>API</li>
-                                <li>- meta의 status가 inactive이거나 deleted인 경우, 또는 meta expired date가 {현 시점+14일} 보다 작은 경우 list에 나타난다.</li>
+                                <li>- deletion_type가 inactive이거나 deleted인 경우, 또는 deletion_at가 {현 시점+30일} 보다 작은 경우 list에 나타난다.</li>
                                 <li>Front</li>
-                                <li>- mapping된 conten의 publish_status가 published인 경우 tr에 하이라이트를 넣어준다.</li>
-                                <li>- mapping된 conten의 publish_status가 published인 경우 action 버튼이 나타난다.</li>
+                                <li>- mapping된 content가 존재하는 경우 경우 tr에 하이라이트를 넣어준다.</li>
                                 <li>- mapping content의 slug를 클릭하면 새창으로, 해당 프로그램의 admin 상세 페이지로 이동한다.</li>
                             </ul>
                         </div>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>IO Guide</title>
+		<!--resource start-->
+		<script type="text/javascript" src="../resource/load-resource-head.js"></script>
+		<!--resource end-->
+	</head>
+	<body>
+	    <section name="hidden-item-default"></section>
+			<!--layout-hiddenItemDefault.html에서 hidden-item-default 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=hidden-item-default]").load("layout-hiddenItemDefault.html .hidden-item-default-wrap");
+				});
+			</script>
+		<header id="header-gnb"></header>
+			<!--layout-headerGnb.html에서 #header-gnb 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#header-gnb").load("layout-headerGnb.html .header-gnb-wrap");
+				});
+			</script>
+		<nav id="nav-sidebar"></nav>
+			<!--layout-navSidebar.html에서 #nav-sidebar 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#nav-sidebar").load("layout-navSidebar.html .sidebar-wrap");
+				});
+			</script>
+		<main id="main-article" class="article-subside-off" menu="KCP_Expired_list.html">
+			<article id="article-content">
+				<div class="con-wrap">
+					<div class="con-header">
+						<h1 class="con-header-title depth-item">
+							<span>Content Ingest</span>
+							<span>KCP Expired</span>
+							<span>$ID</span>
+						</h1>
+					</div>
+					<div class="con-body">
+						<div class="con-sector">
+                            <h3 class="con-sector-title">information</h3>
+							<table class="label-box">
+								<tbody>
+									<tr>
+										<th class="label-box-item-label">ID</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                12345
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $meta_source_content_type
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">File_Path</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $path
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Status</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                start / processing / end
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Meta_Status</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                $status
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Deletion_Type</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                active / inactive / delete
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Deletion_at</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Created</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+                                    <tr>
+										<th class="label-box-item-label">Modified</th>
+										<td class="label-box-item-desc">
+                                            <p>
+                                                MM-DD-YYYY hh:mm:ss
+                                            </p>
+										</td>
+									</tr>
+								</tbody>
+							</table>                     
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Mapping Content (meta_source_content_type = series 인 경우)</h3>
+                        </div>
+                            <ul class="list-option-action">
+                                <li class="item-group">
+                                    <span>Change the seleted contents status to</span>
+                                    <button type="button" class="btn-cancel">
+                                        <span>Disabled</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-ss"><input type="checkbox" /></th>
+                                        <th class="w-sl">ID</th>
+                                        <th class="w-sl">image</th>
+                                        <th>Program</th>
+                                        <th class="w-mm sub-info">Category</th>
+                                        <th class="w-mm sub-info">Content Provider</th>
+                                        <th class="w-sl sub-info">Episodes</th>
+                                        <th class="w-ms sub-info">Sales Type</th>
+                                        <th class="w-ms sub-info">Publish Status</th>
+                                        <th class="w-ms sub-info">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><input type="checkbox" /></p>
+                                        </td>
+                                        <td>
+                                            <p>123456789</p>
+                                        </td>
+                                        <td class="table-list-item-img video-thumbnail">
+                                            <div class="img-embed-wrap">
+                                                <div class="img-embed-ratio">
+                                                    <div class="img-embed-code">
+                                                        <img src="../resource/image/sample-poster-1.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <a href="#">$program slug</a>
+                                            </p>
+                                            <p class="td-desc">
+                                                <span class="sub-te">$program_title_ko</span>
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>drama</p>
+                                            <p>movie</p>
+                                        </td>
+                                        <td>
+                                            SBS
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>23</p>
+                                        </td>
+                                        <td>
+                                            Free
+                                        </td>
+                                        <td>
+                                            published
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>MM-DD-YYYY</p> 
+                                            <p class="td-desc">
+                                                <span>hh:mm:ss</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><input type="checkbox" /></p>
+                                        </td>
+                                        <td>
+                                            <p>123456789</p>
+                                        </td>
+                                        <td class="table-list-item-img video-thumbnail">
+                                            <div class="img-embed-wrap">
+                                                <div class="img-embed-ratio">
+                                                    <div class="img-embed-code">
+                                                        <img src="../resource/image/sample-poster-2.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <a href="#">$program slug</a>
+                                            </p>
+                                            <p class="td-desc">
+                                                <span class="sub-te">$program_title_ko</span>
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>$category name</p>
+                                            <p>$category name</p>
+                                        </td>
+                                        <td>
+                                            KBS
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>1</p>
+                                        </td>
+                                        <td>
+                                            Premium
+                                        </td>
+                                        <td>
+                                            disabled
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>MM-DD-YYYY</p> 
+                                            <p class="td-desc">
+                                                <span>hh:mm:ss</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagenation-simple">
+								<span>Rows per page</span>
+								<li>
+									<select>
+										<option>10s</option>
+										<option current>20s</option>
+										<option>50s</option>
+										<option>100s</option>
+									</select>
+								</li>
+								<span>1-6 of 9</span>
+								<li>
+									<div class="btn-group">
+										<button type="button" class="btn-common"><</button>
+										<button type="button" class="btn-common">></button>
+									</div>
+								</li>
+							</ul>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Mapping Content (meta_source_content_type = season 인 경우)</h3>
+                            <ul class="list-option-action">
+                                <li class="item-group">
+                                    <span>Change the seleted contents status to</span>
+                                    <button type="button" class="btn-cancel">
+                                        <span>Disabled</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-ss"><input type="checkbox" /></th>
+                                        <th class="w-sl">ID</th>
+                                        <th class="w-sl">image</th>
+                                        <th>Program</th>
+                                        <th class="w-mm sub-info">Category</th>
+                                        <th class="w-mm sub-info">Content Provider</th>
+                                        <th class="w-sl sub-info">Episodes</th>
+                                        <th class="w-ms sub-info">Sales Type</th>
+                                        <th class="w-ms sub-info">Publish Status</th>
+                                        <th class="w-ms sub-info">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><input type="checkbox" /></p>
+                                        </td>
+                                        <td>
+                                            <p>123456789</p>
+                                        </td>
+                                        <td class="table-list-item-img video-thumbnail">
+                                            <div class="img-embed-wrap">
+                                                <div class="img-embed-ratio">
+                                                    <div class="img-embed-code">
+                                                        <img src="../resource/image/sample-poster-1.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <a href="#">$program slug</a>
+                                            </p>
+                                            <p class="td-desc">
+                                                <span class="sub-te">$program_title_ko</span>
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>drama</p>
+                                            <p>movie</p>
+                                        </td>
+                                        <td>
+                                            SBS
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>23</p>
+                                        </td>
+                                        <td>
+                                            Free
+                                        </td>
+                                        <td>
+                                            published
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>MM-DD-YYYY</p> 
+                                            <p class="td-desc">
+                                                <span>hh:mm:ss</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="con-sector">
+                            <h3 class="con-sector-title">Mapping Content (meta_source_content_type = sriese, season이 아닌 경우)</h3>
+                            <ul class="list-option-action">
+                                <li class="item-group">
+                                    <span>Change the seleted contents status to</span>
+                                    <button type="button" class="btn-cancel">
+                                        <span>Disabled</span>
+                                    </button>
+                                </li>
+                            </ul>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-ss"><input type="checkbox" /></th>
+                                        <th class="w-sl">ID</th>
+                                        <th class="w-sl">Thumbnail</th>
+                                        <th>Episode</th>
+                                        <th class="w-ms sub-info">Kind</th>
+                                        <th class="w-ms sub-info">Number</th>
+                                        <th class="w-ms sub-info">Part</th>
+                                        <th class="w-ms sub-info">Sales Type</th>
+                                        <th class="w-ms sub-info">Publish Status</th>                                      
+                                        <th class="w-ms sub-info">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" /></td>
+                                        <td>123456789</td>
+                                        <td class="table-list-item-img video-thumbnail">
+                                            <div class="img-embed-wrap">
+                                                <div class="img-embed-ratio">
+                                                    <div class="img-embed-code">
+                                                        <img src="../resource/image/sample-video-thumbnail-1.jpg" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#">$episode slug</a>
+                                            <p class="td-desc">
+                                                <span>$episode title</span>
+                                            </p>                                                                                        
+                                        </td>
+                                        <td class="sub-info">main</td>
+                                        <td class="sub-info">2</td>   
+                                        <td class="sub-info">1</td>   
+                                        <td class="sub-info">
+                                            Plus
+                                        </td>
+                                        <td class="sub-info">
+                                            Published
+                                        </td>
+                                        <td class="sub-info">
+                                            <p>MM-DD-YYYY</p> 
+                                            <p class="td-desc">
+                                                <span>hh:mm:ss</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="submit">
+                            <li><button type="button" class="btn-cancel">Back to List</button></li>
+                        </ul>
+					</div>
+				</div>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+			<!--layout-footer.html에서 #footer 내용을 로드-->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#footer").load("layout-footer.html .footer-wrap");
+				});
+			</script>
+			
+		<section name="hidden-item">
+		</section>
+			
+		<!--last import resources start-->
+		<section name="last-import-resources" style="display:none"></section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("[name=last-import-resources]").load("../resource/load-resource-foot.js");
+				});
+			</script>
+		<!--last import resource end-->
+	</body>
+</html>
